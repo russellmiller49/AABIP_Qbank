@@ -6,17 +6,77 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		18B3488D447F45679C3A6858F13DAA67 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82B26094B0241A2ACE038D5ADA22CFD /* ContentView.swift */; };
+		28ED945C3CBB4A5FB828F54551CCA037 /* iprepApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46026CD14BC40359C763C160BA632DE /* iprepApp.swift */; };
+		44DF851586B848EC8E715DE2CC1D5CF9 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07C759E3F054EC1941DE79C9C09DD3F /* AppEnvironment.swift */; };
+		A75DCF6288A048009FA249649AAF6B4E /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1603593839C043A1B2DF9C40EEAA8F1B /* Typography.swift */; };
+		3CB825099C264F3DA4B11912DDA700CE /* Color+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF5A6BB8A2D4FAC919D3F14E6D203F3 /* Color+Theme.swift */; };
+		C56568C821054BCA8274349E3316B2B6 /* ModuleCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867EAA7E0857465EB85541EE6B6F6956 /* ModuleCard.swift */; };
+		0F700BEE169142CE820DA16FA6135139 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FC45669166482E82BEFE55B1FE4ED3 /* SettingsView.swift */; };
+		4D0396234B6D45428DDD15956A4ABCB6 /* LandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C4BCB37AD543D988E87B2E93C5C127 /* LandingView.swift */; };
+		EB6224622CD7487D8421BEA35B8543E2 /* QuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93A783C837A4F8F8EFB884E8E87E31A /* QuizViewModel.swift */; };
+		C2C573FC49FA40EFB3E9A11CE0FA95CE /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9325A22A51C548D4918ED3CD24108945 /* QuizView.swift */; };
+		D216FAB3824E4E669AB328C668C59ACC /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A193B45676494E6F86C0577318F5D53C /* DashboardView.swift */; };
+		D153F22415F04D3BAE96B8211CBB5CA4 /* ReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EF59ED330A46CC811F33119E569BBB /* ReviewView.swift */; };
+		088A2BD1CBEC45F8BA5740370111CAB7 /* AnalyticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6EB0CE9ACB4A3BB5971898D1472535 /* AnalyticsView.swift */; };
+		7AF711252B62401D999358C3BA29AEC2 /* AppRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC83BFD1814D4A86FC79F9E9D875F1 /* AppRoute.swift */; };
+		FECAA48C5DB04A9F8E8CB17D9965359C /* QuizSessionState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E878849A04C447B5BAE56C95F5A9A25F /* QuizSessionState.swift */; };
+		00EE6F84EBAA4AC4B5721267616D2D47 /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AA16E272014F318F0E3ED919A6228B /* Module.swift */; };
+		78FDA9F444CE417A90BBD511CF6027AA /* FeatureFlagKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5E6B7FE3E944A084667119DCB51437 /* FeatureFlagKey.swift */; };
+		C00440B036254D539CB1183D8D65DBE5 /* QuizQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C5AF69351E42D5B7D17261E90F13BF /* QuizQuestion.swift */; };
+		AC177ADA13BA494BAA875685F00E4C44 /* PersistencePlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABB22DF1A5741F1B5370F60642C6BD0 /* PersistencePlaceholder.swift */; };
+		22979F2A83E146E19C4398AA0E6C28B2 /* SyncManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC62B4D842D145ADA7840F500EF7FADA /* SyncManager.swift */; };
+		E6670BB829D64B9DAAD4FCE683ACD745 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6A4C295EFF4018B94718796CD385B1 /* StorageService.swift */; };
+		C72875661A69457CAD01BCB71D80CE83 /* QuestionBankService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE70CAF56ECC4BFE8772461EC8A7F4F2 /* QuestionBankService.swift */; };
+		DA29A49195504BF7B054C4369B3D8461 /* MediaCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC545C4D83B43A891470ACB43BE8D94 /* MediaCache.swift */; };
+		9DE08A01724444F085B8FC6726D2545B /* LocalStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AA673CAF064039AEE3E9D50C37DB2A /* LocalStore.swift */; };
+		2BBCE414B7C9450E8986843E1E81E8CA /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CB7CA82495475D97773CAE91E47A24 /* AuthService.swift */; };
+		04D5C50EE97C4D34AF2A59ADA78C4E63 /* FeatureFlags.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C2FAC8B27F4A6184234696398E8BC3 /* FeatureFlags.swift */; };
+		8CBDBEC7A2344BB99522C81F76516892 /* RemoteConfigService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E018E58804774A4878363821EC6E7 /* RemoteConfigService.swift */; };
+		7BA104C02DFE45829F6E0720170DD0D5 /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C6C133872F42DCB81D987D9A102357 /* FirestoreService.swift */; };
+		1CD5903B8C6C444E94B8A3BC3C52206E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27E9C1BFF33147AA93F5940EC5C44D11 /* Assets.xcassets */; };
+		06FC1821039C4626BE7000E0C850A105 /* QuestionBank.json in Resources */ = {isa = PBXBuildFile; fileRef = C1883FB36F654D3B871D0A97245EFDA7 /* QuestionBank.json */; };
+		1774F936AAED4DF890800778752C8097 /* RemoteConfigDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = B2AFDA42D2264F55B9BB51F9D440DDF6 /* RemoteConfigDefaults.plist */; };
+		71281BA6D6504160B51D9CE5C311BB32 /* Bundle+Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DDC5ACE4BF42CD8320257E93057C92 /* Bundle+Module.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		7023E4712E7F974B00502576 /* iprep.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iprep.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F82B26094B0241A2ACE038D5ADA22CFD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C46026CD14BC40359C763C160BA632DE /* iprepApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iprepApp.swift; sourceTree = "<group>"; };
+		B07C759E3F054EC1941DE79C9C09DD3F /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
+		1603593839C043A1B2DF9C40EEAA8F1B /* Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
+		9DF5A6BB8A2D4FAC919D3F14E6D203F3 /* Color+Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Theme.swift"; sourceTree = "<group>"; };
+		867EAA7E0857465EB85541EE6B6F6956 /* ModuleCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleCard.swift; sourceTree = "<group>"; };
+		40FC45669166482E82BEFE55B1FE4ED3 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		35C4BCB37AD543D988E87B2E93C5C127 /* LandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingView.swift; sourceTree = "<group>"; };
+		C93A783C837A4F8F8EFB884E8E87E31A /* QuizViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewModel.swift; sourceTree = "<group>"; };
+		9325A22A51C548D4918ED3CD24108945 /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
+		A193B45676494E6F86C0577318F5D53C /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		80EF59ED330A46CC811F33119E569BBB /* ReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewView.swift; sourceTree = "<group>"; };
+		3E6EB0CE9ACB4A3BB5971898D1472535 /* AnalyticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsView.swift; sourceTree = "<group>"; };
+		CBAC83BFD1814D4A86FC79F9E9D875F1 /* AppRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRoute.swift; sourceTree = "<group>"; };
+		E878849A04C447B5BAE56C95F5A9A25F /* QuizSessionState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizSessionState.swift; sourceTree = "<group>"; };
+		11AA16E272014F318F0E3ED919A6228B /* Module.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Module.swift; sourceTree = "<group>"; };
+		1F5E6B7FE3E944A084667119DCB51437 /* FeatureFlagKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureFlagKey.swift; sourceTree = "<group>"; };
+		34C5AF69351E42D5B7D17261E90F13BF /* QuizQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizQuestion.swift; sourceTree = "<group>"; };
+		DABB22DF1A5741F1B5370F60642C6BD0 /* PersistencePlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistencePlaceholder.swift; sourceTree = "<group>"; };
+		EC62B4D842D145ADA7840F500EF7FADA /* SyncManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncManager.swift; sourceTree = "<group>"; };
+		CB6A4C295EFF4018B94718796CD385B1 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
+		AE70CAF56ECC4BFE8772461EC8A7F4F2 /* QuestionBankService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBankService.swift; sourceTree = "<group>"; };
+		4FC545C4D83B43A891470ACB43BE8D94 /* MediaCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaCache.swift; sourceTree = "<group>"; };
+		56AA673CAF064039AEE3E9D50C37DB2A /* LocalStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStore.swift; sourceTree = "<group>"; };
+		04CB7CA82495475D97773CAE91E47A24 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		C2C2FAC8B27F4A6184234696398E8BC3 /* FeatureFlags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureFlags.swift; sourceTree = "<group>"; };
+		325E018E58804774A4878363821EC6E7 /* RemoteConfigService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteConfigService.swift; sourceTree = "<group>"; };
+		74C6C133872F42DCB81D987D9A102357 /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
+		27E9C1BFF33147AA93F5940EC5C44D11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C1883FB36F654D3B871D0A97245EFDA7 /* QuestionBank.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = QuestionBank.json; sourceTree = "<group>"; };
+		B2AFDA42D2264F55B9BB51F9D440DDF6 /* RemoteConfigDefaults.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = RemoteConfigDefaults.plist; sourceTree = "<group>"; };
+		D8DDC5ACE4BF42CD8320257E93057C92 /* Bundle+Module.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Module.swift"; sourceTree = "<group>"; };
+		BE3DC45D12BC465E82770A7277022BD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		7023E4732E7F974B00502576 /* iprep */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = iprep;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		7023E46E2E7F974B00502576 /* Frameworks */ = {
@@ -29,6 +89,131 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		47DD315047DE44B3A6AF0D37005731FA /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				1603593839C043A1B2DF9C40EEAA8F1B /* Typography.swift */,
+				9DF5A6BB8A2D4FAC919D3F14E6D203F3 /* Color+Theme.swift */,
+				867EAA7E0857465EB85541EE6B6F6956 /* ModuleCard.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		8A24FB93CABF436CAF01F89D73B74D5D /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				F2E253672B034B3796B35B37548A7FFF /* Analytics */,
+				5CBFA699A2E8482CA47ECBB52463AC9D /* Dashboard */,
+				3B1D911481264BDFAAB1A58C8E089F6E /* Landing */,
+				AF893AE8C8C144029D796BF162583478 /* Quiz */,
+				440CEA0E133545B6B15F48B5AEE2F019 /* Review */,
+				0BCBC8BDEFC044D98313FD51918F98DD /* Settings */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		0BCBC8BDEFC044D98313FD51918F98DD /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				40FC45669166482E82BEFE55B1FE4ED3 /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		3B1D911481264BDFAAB1A58C8E089F6E /* Landing */ = {
+			isa = PBXGroup;
+			children = (
+				35C4BCB37AD543D988E87B2E93C5C127 /* LandingView.swift */,
+			);
+			path = Landing;
+			sourceTree = "<group>";
+		};
+		AF893AE8C8C144029D796BF162583478 /* Quiz */ = {
+			isa = PBXGroup;
+			children = (
+				C93A783C837A4F8F8EFB884E8E87E31A /* QuizViewModel.swift */,
+				9325A22A51C548D4918ED3CD24108945 /* QuizView.swift */,
+			);
+			path = Quiz;
+			sourceTree = "<group>";
+		};
+		5CBFA699A2E8482CA47ECBB52463AC9D /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				A193B45676494E6F86C0577318F5D53C /* DashboardView.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		440CEA0E133545B6B15F48B5AEE2F019 /* Review */ = {
+			isa = PBXGroup;
+			children = (
+				80EF59ED330A46CC811F33119E569BBB /* ReviewView.swift */,
+			);
+			path = Review;
+			sourceTree = "<group>";
+		};
+		F2E253672B034B3796B35B37548A7FFF /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				3E6EB0CE9ACB4A3BB5971898D1472535 /* AnalyticsView.swift */,
+			);
+			path = Analytics;
+			sourceTree = "<group>";
+		};
+		5C409892914A4A6E9BD0821B7DA8D28A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CBAC83BFD1814D4A86FC79F9E9D875F1 /* AppRoute.swift */,
+				E878849A04C447B5BAE56C95F5A9A25F /* QuizSessionState.swift */,
+				11AA16E272014F318F0E3ED919A6228B /* Module.swift */,
+				1F5E6B7FE3E944A084667119DCB51437 /* FeatureFlagKey.swift */,
+				34C5AF69351E42D5B7D17261E90F13BF /* QuizQuestion.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FF14B1E9CC394BF88BE52B92677F65CE /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				DABB22DF1A5741F1B5370F60642C6BD0 /* PersistencePlaceholder.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		E4B606AD2BC84DEFBFD398182B34F3A1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				EC62B4D842D145ADA7840F500EF7FADA /* SyncManager.swift */,
+				CB6A4C295EFF4018B94718796CD385B1 /* StorageService.swift */,
+				AE70CAF56ECC4BFE8772461EC8A7F4F2 /* QuestionBankService.swift */,
+				4FC545C4D83B43A891470ACB43BE8D94 /* MediaCache.swift */,
+				56AA673CAF064039AEE3E9D50C37DB2A /* LocalStore.swift */,
+				04CB7CA82495475D97773CAE91E47A24 /* AuthService.swift */,
+				C2C2FAC8B27F4A6184234696398E8BC3 /* FeatureFlags.swift */,
+				325E018E58804774A4878363821EC6E7 /* RemoteConfigService.swift */,
+				74C6C133872F42DCB81D987D9A102357 /* FirestoreService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		C255CC14A31C48D2AA64C2A9DEF3F06D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C1883FB36F654D3B871D0A97245EFDA7 /* QuestionBank.json */,
+				B2AFDA42D2264F55B9BB51F9D440DDF6 /* RemoteConfigDefaults.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3F4297B0710B4E238AFF7C08889F3867 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				D8DDC5ACE4BF42CD8320257E93057C92 /* Bundle+Module.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
 		7023E4682E7F974B00502576 = {
 			isa = PBXGroup;
 			children = (
@@ -45,6 +230,25 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		7023E4732E7F974B00502576 /* iprep */ = {
+			isa = PBXGroup;
+			children = (
+				C46026CD14BC40359C763C160BA632DE /* iprepApp.swift */,
+				F82B26094B0241A2ACE038D5ADA22CFD /* ContentView.swift */,
+				B07C759E3F054EC1941DE79C9C09DD3F /* AppEnvironment.swift */,
+				47DD315047DE44B3A6AF0D37005731FA /* Components */,
+				8A24FB93CABF436CAF01F89D73B74D5D /* Features */,
+				5C409892914A4A6E9BD0821B7DA8D28A /* Models */,
+				FF14B1E9CC394BF88BE52B92677F65CE /* Persistence */,
+				E4B606AD2BC84DEFBFD398182B34F3A1 /* Services */,
+				C255CC14A31C48D2AA64C2A9DEF3F06D /* Resources */,
+				3F4297B0710B4E238AFF7C08889F3867 /* Support */,
+				27E9C1BFF33147AA93F5940EC5C44D11 /* Assets.xcassets */,
+				BE3DC45D12BC465E82770A7277022BD8 /* Info.plist */,
+			);
+			path = iprep;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -59,9 +263,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				7023E4732E7F974B00502576 /* iprep */,
 			);
 			name = iprep;
 			packageProductDependencies = (
@@ -109,6 +310,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CD5903B8C6C444E94B8A3BC3C52206E /* Assets.xcassets in Resources */,
+				06FC1821039C4626BE7000E0C850A105 /* QuestionBank.json in Resources */,
+				1774F936AAED4DF890800778752C8097 /* RemoteConfigDefaults.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +323,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71281BA6D6504160B51D9CE5C311BB32 /* Bundle+Module.swift in Sources */,
+				18B3488D447F45679C3A6858F13DAA67 /* ContentView.swift in Sources */,
+				28ED945C3CBB4A5FB828F54551CCA037 /* iprepApp.swift in Sources */,
+				44DF851586B848EC8E715DE2CC1D5CF9 /* AppEnvironment.swift in Sources */,
+				A75DCF6288A048009FA249649AAF6B4E /* Typography.swift in Sources */,
+				3CB825099C264F3DA4B11912DDA700CE /* Color+Theme.swift in Sources */,
+				C56568C821054BCA8274349E3316B2B6 /* ModuleCard.swift in Sources */,
+				0F700BEE169142CE820DA16FA6135139 /* SettingsView.swift in Sources */,
+				4D0396234B6D45428DDD15956A4ABCB6 /* LandingView.swift in Sources */,
+				EB6224622CD7487D8421BEA35B8543E2 /* QuizViewModel.swift in Sources */,
+				C2C573FC49FA40EFB3E9A11CE0FA95CE /* QuizView.swift in Sources */,
+				D216FAB3824E4E669AB328C668C59ACC /* DashboardView.swift in Sources */,
+				D153F22415F04D3BAE96B8211CBB5CA4 /* ReviewView.swift in Sources */,
+				088A2BD1CBEC45F8BA5740370111CAB7 /* AnalyticsView.swift in Sources */,
+				7AF711252B62401D999358C3BA29AEC2 /* AppRoute.swift in Sources */,
+				FECAA48C5DB04A9F8E8CB17D9965359C /* QuizSessionState.swift in Sources */,
+				00EE6F84EBAA4AC4B5721267616D2D47 /* Module.swift in Sources */,
+				78FDA9F444CE417A90BBD511CF6027AA /* FeatureFlagKey.swift in Sources */,
+				C00440B036254D539CB1183D8D65DBE5 /* QuizQuestion.swift in Sources */,
+				AC177ADA13BA494BAA875685F00E4C44 /* PersistencePlaceholder.swift in Sources */,
+				22979F2A83E146E19C4398AA0E6C28B2 /* SyncManager.swift in Sources */,
+				E6670BB829D64B9DAAD4FCE683ACD745 /* StorageService.swift in Sources */,
+				C72875661A69457CAD01BCB71D80CE83 /* QuestionBankService.swift in Sources */,
+				DA29A49195504BF7B054C4369B3D8461 /* MediaCache.swift in Sources */,
+				9DE08A01724444F085B8FC6726D2545B /* LocalStore.swift in Sources */,
+				2BBCE414B7C9450E8986843E1E81E8CA /* AuthService.swift in Sources */,
+				04D5C50EE97C4D34AF2A59ADA78C4E63 /* FeatureFlags.swift in Sources */,
+				8CBDBEC7A2344BB99522C81F76516892 /* RemoteConfigService.swift in Sources */,
+				7BA104C02DFE45829F6E0720170DD0D5 /* FirestoreService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,12 +488,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7GX83T5H9X;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = iprep/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -286,12 +515,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7GX83T5H9X;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = iprep/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

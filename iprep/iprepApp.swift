@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct iprepApp: App {
+    @StateObject private var environment = AppEnvironment.shared
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootView()
+                .environmentObject(environment)
         }
     }
 }
