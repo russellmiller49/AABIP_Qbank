@@ -188,7 +188,7 @@ public struct DashboardView: View {
     }
 
     private func startQuickQuiz() {
-        navigate(.quiz(resume: false))
+        navigate(.quiz(.quickStart(resume: false)))
     }
 
     private func continueQuiz() {
@@ -196,7 +196,7 @@ public struct DashboardView: View {
             startQuickQuiz()
             return
         }
-        navigate(.quiz(resume: true))
+        navigate(.quiz(.quickStart(resume: true)))
     }
 
     private func loadContent() async {
@@ -212,9 +212,12 @@ public struct DashboardView: View {
     }
 
     private func handleDownload(for module: Module) {
-        guard !environment.downloadedModuleIDs.contains(module.id) else { return }
+        if environment.downloadedModuleIDs.contains(module.id) {
+            downloadAlert = DownloadAlert(message: "\(module.title) is already available offline.")
+            return
+        }
         environment.markModuleDownloaded(module.id)
-        downloadAlert = DownloadAlert(message: "\(module.title) is ready offline.")
+        downloadAlert = DownloadAlert(message: "\(module.title) questions are now available offline.")
     }
 }
 

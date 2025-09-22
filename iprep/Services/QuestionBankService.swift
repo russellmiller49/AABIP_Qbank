@@ -114,6 +114,21 @@ final class QuestionBankService {
         return Array(pool.prefix(max(1, min(limit, pool.count))))
     }
 
+
+    func sessionQuestions(forModule id: String) -> [QuizSessionQuestion] {
+        guard let module = modulesById[id] else { return [] }
+        return module.questions.map { QuizSessionQuestion(module: module, question: $0) }
+    }
+
+    func sessionQuestion(for reference: QuizSessionQuestionReference) -> QuizSessionQuestion? {
+        guard let module = modulesById[reference.moduleID],
+              let question = module.questions.first(where: { $0.id == reference.questionID }) else {
+            return nil
+        }
+        return QuizSessionQuestion(module: module, question: question)
+    }
+
+
     func moduleCount() -> Int {
         modules.count
     }

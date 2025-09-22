@@ -8,10 +8,16 @@ struct RootView: View {
     var body: some View {
         NavigationStack(path: $navigationPath) {
             LandingView(
-                onStartPractice: { navigationPath.append(.quiz(resume: false)) },
-                onContinueSession: { navigationPath.append(.quiz(resume: true)) },
+                onStartPractice: { navigationPath.append(.quiz(.quickStart(resume: false))) },
+                onContinueSession: { navigationPath.append(.quiz(.quickStart(resume: true))) },
                 onShowProgress: { navigationPath.append(.analytics) },
-                onBrowseModules: { navigationPath.append(.dashboard) }
+                onShowDashboard: { navigationPath.append(.dashboard) },
+                onSelectModule: { module in
+                    navigationPath.append(.quiz(.module(id: module.id, title: module.title)))
+                },
+                onRetryIncorrect: {
+                    navigationPath.append(.quiz(.incorrectOnly))
+                }
             )
             .environmentObject(environment)
             .navigationDestination(for: AppRoute.self) { route in
@@ -21,8 +27,11 @@ struct RootView: View {
                         navigationPath.append(destination)
                     }
                     .environmentObject(environment)
-                case let .quiz(resume):
-                    QuizView(initialAction: resume ? .resumeIfAvailable : .startFresh)
+                case let .quiz(mode):
+                    QuizView(mode: mode)
+                        .environmentObject(environment)
+                case .progressReport:
+                    ProgressReportView()
                         .environmentObject(environment)
                 case .review:
                     ReviewView()

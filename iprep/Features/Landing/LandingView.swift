@@ -7,10 +7,19 @@ struct LandingView: View {
     let onStartPractice: () -> Void
     let onContinueSession: () -> Void
     let onShowProgress: () -> Void
-    let onBrowseModules: () -> Void
+    let onShowDashboard: () -> Void
+    let onSelectModule: (Module) -> Void
+    let onRetryIncorrect: () -> Void
+
+    @State private var showModulePicker = false
+    @State private var showNoIncorrectAlert = false
 
     private var hasActiveSession: Bool {
         environment.activeQuizSession != nil
+    }
+
+    private var canRetryIncorrect: Bool {
+        environment.hasIncorrectQuestions()
     }
 
     private var isRegularWidth: Bool {
@@ -22,7 +31,7 @@ struct LandingView: View {
     }
 
     var body: some View {
-        GeometryReader { proxy in
+        GeometryReader { _ in
             ZStack {
                 LandingBackground()
                 ScrollView(showsIndicators: false) {
@@ -38,6 +47,21 @@ struct LandingView: View {
                 }
             }
             .ignoresSafeArea()
+        }
+        .sheet(isPresented: $showModulePicker) {
+            ModulePickerView(
+                modules: environment.questionBankService.moduleSummaries(),
+                onSelect: { module in
+                    showModulePicker = false
+                    onSelectModule(module)
+                },
+                onCancel: { showModulePicker = false }
+            )
+        }
+        .alert("No incorrect answers yet", isPresented: $showNoIncorrectAlert) {
+            Button("OK", role: .cancel) { }
+        } message: {
+            Text("Complete a quiz first so we can track which questions to retry.")
         }
     }
 
@@ -83,15 +107,6 @@ struct LandingView: View {
                 .clipShape(Circle())
                 .shadow(color: Color.black.opacity(0.1), radius: 10, y: 6)
 
-            VStack(spacing: 4) {
-                Text("BRONCHMONKEY")
-                    .font(.headline.smallCaps())
-                    .foregroundStyle(Color.white.opacity(0.88))
-                Text("App Creator")
-                    .font(.footnote)
-                    .foregroundStyle(Color.white.opacity(0.7))
-            }
-
             VStack(spacing: 14) {
                 Button(action: onStartPractice) {
                     Text("Start Practice")
@@ -104,6 +119,30 @@ struct LandingView: View {
                 .buttonStyle(LandingButtonStyle(variant: .secondary))
                 .disabled(!hasActiveSession)
                 .opacity(hasActiveSession ? 1 : 0.6)
+
+                Button(action: onShowDashboard) {
+                    Text("Dashboard")
+                }
+                .buttonStyle(LandingButtonStyle(variant: .secondary))
+
+                Button {
+                    showModulePicker = true
+                } label: {
+                    Text("Study by Category")
+                }
+                .buttonStyle(LandingButtonStyle(variant: .secondary))
+
+                Button {
+                    if canRetryIncorrect {
+                        onRetryIncorrect()
+                    } else {
+                        showNoIncorrectAlert = true
+                    }
+                } label: {
+                    Text("Retry Incorrect Questions")
+                }
+                .buttonStyle(LandingButtonStyle(variant: .secondary))
+                .opacity(canRetryIncorrect ? 1 : 0.6)
 
                 Button(action: onShowProgress) {
                     Text("My Progress")
@@ -129,16 +168,6 @@ struct LandingView: View {
                 LandingProgressSummary(session: session)
                     .onTapGesture { onShowProgress() }
             }
-
-            Button(action: onBrowseModules) {
-                HStack(spacing: 6) {
-                    Text("Browse Question Bank")
-                    Image(systemName: "arrow.right.circle.fill")
-                }
-                .font(.callout.weight(.semibold))
-                .foregroundStyle(Color.white.opacity(0.85))
-            }
-            .buttonStyle(.plain)
         }
     }
 }
@@ -278,41 +307,26 @@ private struct LandingProgressSummary: View {
 
     var body: some View {
         HStack(spacing: 16) {
-            VStack(alignment: .leading, spacing: 4) {
-                Text("Latest Quiz")
+            VStack(alignment: .leading, spacing: 6) {
+                Text("Last Session")
                     .font(.caption.weight(.semibold))
-                    .foregroundStyle(Color.white.opacity(0.75))
-                Text(summaryLine)
-                    .font(.headline)
-                    .foregroundStyle(Color.white)
-                Text(detailLine)
-                    .font(.footnote)
-                    .foregroundStyle(Color.white.opacity(0.7))
+                    .foregroundStyle(Color.white.opacity(0.8))
+                Text(Self.dateFormatter.string(from: session.completedAt))
+                    .font(.callout)
+                    .foregroundStyle(Color.white.opacity(0.9))
+                Text("Score: \(session.correctCount)/\(session.totalQuestions)")
+                    .font(.footnote.weight(.semibold))
+                    .foregroundStyle(Color.white.opacity(0.85))
             }
             Spacer()
-            Image(systemName: "chevron.right")
-                .font(.headline.weight(.semibold))
-                .foregroundStyle(Color.white.opacity(0.7))
+            Image(systemName: "arrow.right.circle.fill")
+                .font(.title)
+                .foregroundStyle(Color.white.opacity(0.75))
         }
         .padding(18)
-        .frame(maxWidth: 420)
-        .background(
-            RoundedRectangle(cornerRadius: 24, style: .continuous)
-                .fill(Color.white.opacity(0.14))
-        )
-        .overlay(
-            RoundedRectangle(cornerRadius: 24, style: .continuous)
-                .stroke(Color.white.opacity(0.22), lineWidth: 1)
-        )
-        .shadow(color: Color.black.opacity(0.15), radius: 18, y: 20)
-    }
-
-    private var summaryLine: String {
-        let percent = Int((session.accuracy * 100).rounded())
-        return "\(percent)% accuracy • \(session.correctCount)/\(session.totalQuestions) correct"
-    }
-
-    private var detailLine: String {
-        return "Completed \(Self.dateFormatter.string(from: session.completedAt))"
+        .background(Color.white.opacity(0.15))
+        .clipShape(RoundedRectangle(cornerRadius: 22, style: .continuous))
+        .shadow(color: Color.black.opacity(0.15), radius: 18, y: 12)
+        .padding(.horizontal, 24)
     }
 }

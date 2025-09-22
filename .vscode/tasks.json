@@ -1,0 +1,55 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "xcode-build",
+            "type": "shell",
+            "command": "xcodebuild",
+            "args": [
+                "-project", "iprep.xcodeproj",
+                "-scheme", "iprep",
+                "-destination", "platform=iOS Simulator,name=iPhone 15",
+                "build"
+            ],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "xcode-clean",
+            "type": "shell",
+            "command": "xcodebuild",
+            "args": [
+                "-project", "iprep.xcodeproj",
+                "-scheme", "iprep",
+                "clean"
+            ],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "build-script",
+            "type": "shell",
+            "command": "./build.sh",
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        }
+    ]
+}

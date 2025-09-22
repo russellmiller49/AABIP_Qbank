@@ -1,0 +1,3 @@
+module AABIP_Qbank {
+    header "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/include/AABIP_Qbank-Swift.h"
+}

@@ -1,0 +1,55 @@
+{
+    "name": "AABIP Qbank",
+    "type": "swift",
+    "request": "launch",
+    "program": "${workspaceFolder}/iprep.xcodeproj",
+    "console": "integratedTerminal",
+    "preLaunchTask": "swift-build",
+    "buildTasks": [
+        {
+            "label": "swift-build",
+            "type": "shell",
+            "command": "./build.sh",
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            }
+        }
+    ],
+    "tasks": [
+        {
+            "label": "swift-build",
+            "type": "shell",
+            "command": "swift",
+            "args": ["build"],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "xcode-build",
+            "type": "shell",
+            "command": "xcodebuild",
+            "args": [
+                "-project", "iprep.xcodeproj",
+                "-scheme", "iprep",
+                "-destination", "platform=iOS Simulator,name=iPhone 15",
+                "build"
+            ],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            }
+        }
+    ]
+}

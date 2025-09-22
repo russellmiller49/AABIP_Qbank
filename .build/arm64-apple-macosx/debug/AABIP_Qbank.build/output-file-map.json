@@ -1,0 +1,215 @@
+{
+  "": {
+    "swift-dependencies": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/master.swiftdeps"
+  },
+  "/Users/russellmiller/Projects/iprep/iprep/AppEnvironment.swift": {
+    "dependencies": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/AppEnvironment.d",
+    "object": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/AppEnvironment.swift.o",
+    "swiftmodule": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/AppEnvironment~partial.swiftmodule",
+    "swift-dependencies": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/AppEnvironment.swiftdeps",
+    "diagnostics": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/AppEnvironment.dia"
+  },
+  "/Users/russellmiller/Projects/iprep/iprep/Components/Color+Theme.swift": {
+    "dependencies": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/Color+Theme.d",
+    "object": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/Color+Theme.swift.o",
+    "swiftmodule": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/Color+Theme~partial.swiftmodule",
+    "swift-dependencies": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/Color+Theme.swiftdeps",
+    "diagnostics": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/Color+Theme.dia"
+  },
+  "/Users/russellmiller/Projects/iprep/iprep/Components/ModuleCard.swift": {
+    "dependencies": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/ModuleCard.d",
+    "object": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/ModuleCard.swift.o",
+    "swiftmodule": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/ModuleCard~partial.swiftmodule",
+    "swift-dependencies": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/ModuleCard.swiftdeps",
+    "diagnostics": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/ModuleCard.dia"
+  },
+  "/Users/russellmiller/Projects/iprep/iprep/Components/Typography.swift": {
+    "dependencies": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/Typography.d",
+    "object": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/Typography.swift.o",
+    "swiftmodule": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/Typography~partial.swiftmodule",
+    "swift-dependencies": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/Typography.swiftdeps",
+    "diagnostics": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/Typography.dia"
+  },
+  "/Users/russellmiller/Projects/iprep/iprep/ContentView.swift": {
+    "dependencies": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/ContentView.d",
+    "object": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/ContentView.swift.o",
+    "swiftmodule": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/ContentView~partial.swiftmodule",
+    "swift-dependencies": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/ContentView.swiftdeps",
+    "diagnostics": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/ContentView.dia"
+  },
+  "/Users/russellmiller/Projects/iprep/iprep/Features/Analytics/AnalyticsView.swift": {
+    "dependencies": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/AnalyticsView.d",
+    "object": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/AnalyticsView.swift.o",
+    "swiftmodule": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/AnalyticsView~partial.swiftmodule",
+    "swift-dependencies": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/AnalyticsView.swiftdeps",
+    "diagnostics": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/AnalyticsView.dia"
+  },
+  "/Users/russellmiller/Projects/iprep/iprep/Features/Dashboard/DashboardView.swift": {
+    "dependencies": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/DashboardView.d",
+    "object": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/DashboardView.swift.o",
+    "swiftmodule": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/DashboardView~partial.swiftmodule",
+    "swift-dependencies": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/DashboardView.swiftdeps",
+    "diagnostics": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/DashboardView.dia"
+  },
+  "/Users/russellmiller/Projects/iprep/iprep/Features/Landing/LandingView.swift": {
+    "dependencies": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/LandingView.d",
+    "object": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/LandingView.swift.o",
+    "swiftmodule": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/LandingView~partial.swiftmodule",
+    "swift-dependencies": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/LandingView.swiftdeps",
+    "diagnostics": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/LandingView.dia"
+  },
+  "/Users/russellmiller/Projects/iprep/iprep/Features/Landing/ModulePickerView.swift": {
+    "dependencies": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/ModulePickerView.d",
+    "object": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/ModulePickerView.swift.o",
+    "swiftmodule": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/ModulePickerView~partial.swiftmodule",
+    "swift-dependencies": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/ModulePickerView.swiftdeps",
+    "diagnostics": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/ModulePickerView.dia"
+  },
+  "/Users/russellmiller/Projects/iprep/iprep/Features/Quiz/QuizView.swift": {
+    "dependencies": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/QuizView.d",
+    "object": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/QuizView.swift.o",
+    "swiftmodule": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/QuizView~partial.swiftmodule",
+    "swift-dependencies": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/QuizView.swiftdeps",
+    "diagnostics": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/QuizView.dia"
+  },
+  "/Users/russellmiller/Projects/iprep/iprep/Features/Quiz/QuizViewModel.swift": {
+    "dependencies": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/QuizViewModel.d",
+    "object": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/QuizViewModel.swift.o",
+    "swiftmodule": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/QuizViewModel~partial.swiftmodule",
+    "swift-dependencies": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/QuizViewModel.swiftdeps",
+    "diagnostics": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/QuizViewModel.dia"
+  },
+  "/Users/russellmiller/Projects/iprep/iprep/Features/Review/ReviewView.swift": {
+    "dependencies": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/ReviewView.d",
+    "object": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/ReviewView.swift.o",
+    "swiftmodule": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/ReviewView~partial.swiftmodule",
+    "swift-dependencies": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/ReviewView.swiftdeps",
+    "diagnostics": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/ReviewView.dia"
+  },
+  "/Users/russellmiller/Projects/iprep/iprep/Features/Settings/SettingsView.swift": {
+    "dependencies": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/SettingsView.d",
+    "object": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/SettingsView.swift.o",
+    "swiftmodule": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/SettingsView~partial.swiftmodule",
+    "swift-dependencies": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/SettingsView.swiftdeps",
+    "diagnostics": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/SettingsView.dia"
+  },
+  "/Users/russellmiller/Projects/iprep/iprep/Models/AppRoute.swift": {
+    "dependencies": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/AppRoute.d",
+    "object": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/AppRoute.swift.o",
+    "swiftmodule": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/AppRoute~partial.swiftmodule",
+    "swift-dependencies": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/AppRoute.swiftdeps",
+    "diagnostics": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/AppRoute.dia"
+  },
+  "/Users/russellmiller/Projects/iprep/iprep/Models/FeatureFlagKey.swift": {
+    "dependencies": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/FeatureFlagKey.d",
+    "object": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/FeatureFlagKey.swift.o",
+    "swiftmodule": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/FeatureFlagKey~partial.swiftmodule",
+    "swift-dependencies": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/FeatureFlagKey.swiftdeps",
+    "diagnostics": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/FeatureFlagKey.dia"
+  },
+  "/Users/russellmiller/Projects/iprep/iprep/Models/Module.swift": {
+    "dependencies": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/Module.d",
+    "object": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/Module.swift.o",
+    "swiftmodule": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/Module~partial.swiftmodule",
+    "swift-dependencies": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/Module.swiftdeps",
+    "diagnostics": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/Module.dia"
+  },
+  "/Users/russellmiller/Projects/iprep/iprep/Models/QuizQuestion.swift": {
+    "dependencies": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/QuizQuestion.d",
+    "object": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/QuizQuestion.swift.o",
+    "swiftmodule": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/QuizQuestion~partial.swiftmodule",
+    "swift-dependencies": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/QuizQuestion.swiftdeps",
+    "diagnostics": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/QuizQuestion.dia"
+  },
+  "/Users/russellmiller/Projects/iprep/iprep/Models/QuizSessionState.swift": {
+    "dependencies": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/QuizSessionState.d",
+    "object": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/QuizSessionState.swift.o",
+    "swiftmodule": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/QuizSessionState~partial.swiftmodule",
+    "swift-dependencies": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/QuizSessionState.swiftdeps",
+    "diagnostics": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/QuizSessionState.dia"
+  },
+  "/Users/russellmiller/Projects/iprep/iprep/Services/AuthService.swift": {
+    "dependencies": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/AuthService.d",
+    "object": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/AuthService.swift.o",
+    "swiftmodule": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/AuthService~partial.swiftmodule",
+    "swift-dependencies": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/AuthService.swiftdeps",
+    "diagnostics": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/AuthService.dia"
+  },
+  "/Users/russellmiller/Projects/iprep/iprep/Services/FeatureFlags.swift": {
+    "dependencies": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/FeatureFlags.d",
+    "object": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/FeatureFlags.swift.o",
+    "swiftmodule": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/FeatureFlags~partial.swiftmodule",
+    "swift-dependencies": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/FeatureFlags.swiftdeps",
+    "diagnostics": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/FeatureFlags.dia"
+  },
+  "/Users/russellmiller/Projects/iprep/iprep/Services/FirestoreService.swift": {
+    "dependencies": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/FirestoreService.d",
+    "object": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/FirestoreService.swift.o",
+    "swiftmodule": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/FirestoreService~partial.swiftmodule",
+    "swift-dependencies": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/FirestoreService.swiftdeps",
+    "diagnostics": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/FirestoreService.dia"
+  },
+  "/Users/russellmiller/Projects/iprep/iprep/Services/LocalStore.swift": {
+    "dependencies": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/LocalStore.d",
+    "object": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/LocalStore.swift.o",
+    "swiftmodule": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/LocalStore~partial.swiftmodule",
+    "swift-dependencies": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/LocalStore.swiftdeps",
+    "diagnostics": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/LocalStore.dia"
+  },
+  "/Users/russellmiller/Projects/iprep/iprep/Services/MediaCache.swift": {
+    "dependencies": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/MediaCache.d",
+    "object": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/MediaCache.swift.o",
+    "swiftmodule": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/MediaCache~partial.swiftmodule",
+    "swift-dependencies": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/MediaCache.swiftdeps",
+    "diagnostics": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/MediaCache.dia"
+  },
+  "/Users/russellmiller/Projects/iprep/iprep/Services/QuestionBankService.swift": {
+    "dependencies": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/QuestionBankService.d",
+    "object": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/QuestionBankService.swift.o",
+    "swiftmodule": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/QuestionBankService~partial.swiftmodule",
+    "swift-dependencies": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/QuestionBankService.swiftdeps",
+    "diagnostics": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/QuestionBankService.dia"
+  },
+  "/Users/russellmiller/Projects/iprep/iprep/Services/RemoteConfigService.swift": {
+    "dependencies": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/RemoteConfigService.d",
+    "object": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/RemoteConfigService.swift.o",
+    "swiftmodule": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/RemoteConfigService~partial.swiftmodule",
+    "swift-dependencies": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/RemoteConfigService.swiftdeps",
+    "diagnostics": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/RemoteConfigService.dia"
+  },
+  "/Users/russellmiller/Projects/iprep/iprep/Services/StorageService.swift": {
+    "dependencies": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/StorageService.d",
+    "object": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/StorageService.swift.o",
+    "swiftmodule": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/StorageService~partial.swiftmodule",
+    "swift-dependencies": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/StorageService.swiftdeps",
+    "diagnostics": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/StorageService.dia"
+  },
+  "/Users/russellmiller/Projects/iprep/iprep/Services/SyncManager.swift": {
+    "dependencies": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/SyncManager.d",
+    "object": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/SyncManager.swift.o",
+    "swiftmodule": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/SyncManager~partial.swiftmodule",
+    "swift-dependencies": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/SyncManager.swiftdeps",
+    "diagnostics": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/SyncManager.dia"
+  },
+  "/Users/russellmiller/Projects/iprep/iprep/Support/Bundle+Module.swift": {
+    "dependencies": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/Bundle+Module.d",
+    "object": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/Bundle+Module.swift.o",
+    "swiftmodule": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/Bundle+Module~partial.swiftmodule",
+    "swift-dependencies": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/Bundle+Module.swiftdeps",
+    "diagnostics": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/Bundle+Module.dia"
+  },
+  "/Users/russellmiller/Projects/iprep/iprep/iprepApp.swift": {
+    "dependencies": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/iprepApp.d",
+    "object": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/iprepApp.swift.o",
+    "swiftmodule": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/iprepApp~partial.swiftmodule",
+    "swift-dependencies": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/iprepApp.swiftdeps",
+    "diagnostics": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/iprepApp.dia"
+  },
+  "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/DerivedSources/resource_bundle_accessor.swift": {
+    "dependencies": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/resource_bundle_accessor.d",
+    "object": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/resource_bundle_accessor.swift.o",
+    "swiftmodule": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/resource_bundle_accessor~partial.swiftmodule",
+    "swift-dependencies": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/resource_bundle_accessor.swiftdeps",
+    "diagnostics": "/Users/russellmiller/Projects/iprep/.build/arm64-apple-macosx/debug/AABIP_Qbank.build/resource_bundle_accessor.dia"
+  }
+}

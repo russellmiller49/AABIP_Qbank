@@ -5,12 +5,44 @@ struct QuizView: View {
     @StateObject private var viewModel: QuizViewModel
     @State private var didConfigure = false
     @State private var didPrepareInitialSession = false
-    @State private var quickStartCount = 10
-    private let initialAction: QuizViewModel.InitialSessionAction
+    @State private var quickStartCount: Int = 10
 
-    init(initialAction: QuizViewModel.InitialSessionAction = .startFresh) {
+    private let mode: QuizMode
+
+    init(mode: QuizMode = .quickStart(resume: false)) {
+        self.mode = mode
         self._viewModel = StateObject(wrappedValue: QuizViewModel())
-        self.initialAction = initialAction
+    }
+
+    private var navigationTitle: String {
+        switch mode {
+        case .quickStart:
+            return "Quiz"
+        case let .module(_, title):
+            return title
+        case .incorrectOnly:
+            return "Retry Incorrect"
+        }
+    }
+
+    private var questionCountOptions: [Int] {
+        func sanitizedOptions(upTo total: Int) -> [Int] {
+            guard total > 0 else { return [5, 10, 15, 20] }
+            let seeds = [5, 10, 15, 20, total]
+            let filtered = Array(Set(seeds)).sorted().filter { $0 <= total }
+            return filtered.isEmpty ? [total] : filtered
+        }
+
+        switch mode {
+        case .quickStart:
+            return [5, 10, 15, 20]
+        case let .module(id, _):
+            let total = environment.questionBankService.questions(forModule: id).count
+            return sanitizedOptions(upTo: total)
+        case .incorrectOnly:
+            let total = environment.incorrectQuestionCount()
+            return sanitizedOptions(upTo: total)
+        }
     }
 
     var body: some View {
@@ -28,8 +60,8 @@ struct QuizView: View {
                     Text(message)
                         .font(.body)
                         .multilineTextAlignment(.center)
-                    Button("Retry") {
-                        viewModel.startQuickStart(limit: quickStartCount)
+                    Button("Try Again") {
+                        startQuiz(initial: false)
                     }
                     .buttonStyle(.borderedProminent)
                 }
@@ -48,27 +80,9 @@ struct QuizView: View {
                 }
             }
         }
-        .navigationTitle("Quiz")
+        .navigationTitle(navigationTitle)
         .background(Color.ipBackground.ignoresSafeArea())
-        .toolbar {
-#if os(iOS)
-            ToolbarItem(placement: .topBarTrailing) {
-                Menu {
-                    Picker("Number of Questions", selection: $quickStartCount) {
-                        ForEach([5, 10, 15, 20], id: \.self) { count in
-                            Text("\(count) questions").tag(count)
-                        }
-                    }
-                    Divider()
-                    Button("Start Over", role: .none) {
-                        viewModel.restart(limit: quickStartCount)
-                    }
-                } label: {
-                    Image(systemName: "ellipsis.circle")
-                }
-            }
-#endif
-        }
+        .toolbar { questionCountToolbar }
         .task {
             if !didConfigure {
                 viewModel.configure(
@@ -78,9 +92,71 @@ struct QuizView: View {
                 didConfigure = true
             }
             if !didPrepareInitialSession {
-                viewModel.prepareInitialSession(limit: quickStartCount, resumePreference: initialAction)
+                adjustQuestionCountForMode()
+                startQuiz(initial: true)
                 didPrepareInitialSession = true
             }
+        }
+    }
+
+    private var questionCountToolbar: some ToolbarContent {
+        ToolbarItemGroup(placement: .topBarTrailing) {
+            if !viewModel.questions.isEmpty {
+                Menu {
+                    ForEach(Array(viewModel.questions.enumerated()), id: \.offset) { index, question in
+                        Button {
+                            viewModel.jumpToQuestion(at: index)
+                        } label: {
+                            let status = viewModel.isAnswered(question) ? "✓" : ""
+                            Text("Question \(index + 1) \(status)")
+                        }
+                    }
+                } label: {
+                    Image(systemName: "list.number")
+                }
+            }
+            Menu {
+                Picker("Number of Questions", selection: $quickStartCount) {
+                    ForEach(questionCountOptions, id: \.self) { count in
+                        Text("\(count) questions").tag(count)
+                    }
+                }
+                Divider()
+                Button("Start Over", role: .none) {
+                    viewModel.restart(with: normalizedModeForRestart, limit: quickStartCount)
+                }
+            } label: {
+                Image(systemName: "ellipsis.circle")
+            }
+        }
+    }
+
+    private var normalizedModeForRestart: QuizMode {
+        switch mode {
+        case .quickStart:
+            return .quickStart(resume: false)
+        case let .module(id, title):
+            return .module(id: id, title: title)
+        case .incorrectOnly:
+            return .incorrectOnly
+        }
+    }
+
+    private func adjustQuestionCountForMode() {
+        guard let maxOption = questionCountOptions.max() else { return }
+        quickStartCount = min(quickStartCount, maxOption)
+    }
+
+    private func startQuiz(initial: Bool) {
+        adjustQuestionCountForMode()
+        switch mode {
+        case let .quickStart(resume):
+            let action: QuizViewModel.InitialSessionAction = initial ? (resume ? .resumeIfAvailable : .startFresh) : .startFresh
+            viewModel.prepareQuickStart(limit: quickStartCount, resumePreference: action)
+        case let .module(id, _):
+            viewModel.startModuleQuiz(moduleID: id, limit: quickStartCount)
+        case .incorrectOnly:
+            viewModel.startIncorrectOnly(limit: quickStartCount)
         }
     }
 
@@ -201,170 +277,99 @@ struct QuizView: View {
         }
     }
 
-    private func choiceBackground(isAnswered: Bool, isSelected: Bool, isCorrect: Bool) -> Color {
-        if isAnswered {
-            if isSelected {
-                return isCorrect ? Color.green.opacity(0.18) : Color.red.opacity(0.18)
-            }
-            return isCorrect ? Color.green.opacity(0.12) : Color.ipSurface
-        } else {
-            return isSelected ? Color.ipSurfaceElevated.opacity(0.6) : Color.ipSurface
-        }
-    }
-
-    private func choiceBorder(isAnswered: Bool, isSelected: Bool, isCorrect: Bool) -> Color {
-        if isAnswered {
-            if isSelected {
-                return isCorrect ? Color.green : Color.red
-            }
-            return isCorrect ? Color.green : Color.clear
-        }
-        return isSelected ? Color.ipAccent : Color.clear
-    }
-
     private func explanation(for sessionQuestion: QuizSessionQuestion) -> some View {
-        let selected = viewModel.selection(for: sessionQuestion)
-        let isCorrect = selected == sessionQuestion.question.correctOptionId
-        return VStack(alignment: .leading, spacing: 12) {
-            HStack(spacing: 8) {
-                Image(systemName: isCorrect ? "checkmark.circle.fill" : "xmark.octagon.fill")
-                    .foregroundStyle(isCorrect ? Color.green : Color.red)
-                Text(isCorrect ? "Correct" : "Keep practicing")
-                    .font(.headline)
-                    .foregroundStyle(isCorrect ? Color.green : Color.red)
-            }
+        VStack(alignment: .leading, spacing: 12) {
+            Text("Explanation")
+                .font(.headline)
             Text(sessionQuestion.question.explanation)
                 .font(.body)
-                .foregroundStyle(Color.primary)
+                .foregroundStyle(Color.secondary)
             if !sessionQuestion.question.references.isEmpty {
-                DisclosureGroup("References") {
-                    VStack(alignment: .leading, spacing: 8) {
-                        ForEach(sessionQuestion.question.references, id: \.self) { reference in
-                            Text(reference)
-                                .font(.footnote)
-                                .foregroundStyle(Color.secondary)
-                                .frame(maxWidth: .infinity, alignment: .leading)
-                        }
-                    }
-                    .padding(.top, 4)
+                Divider()
+                Text("References")
+                    .font(.headline)
+                ForEach(sessionQuestion.question.references, id: \.self) { reference in
+                    Text(reference)
+                        .font(.footnote)
+                        .foregroundStyle(Color.secondary)
                 }
-                .font(.subheadline)
             }
         }
         .padding(16)
         .frame(maxWidth: .infinity, alignment: .leading)
         .background(Color.ipSurface)
-        .clipShape(RoundedRectangle(cornerRadius: 18, style: .continuous))
+        .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
     }
 
     private func controlBar(for sessionQuestion: QuizSessionQuestion) -> some View {
-        let isAnswered = viewModel.isAnswered(sessionQuestion)
-        let isLast = viewModel.currentIndex == viewModel.questions.count - 1
-        return HStack {
-            Spacer()
-            Button(isLast ? "Finish Quiz" : "Next Question") {
-                withAnimation(.spring(response: 0.4, dampingFraction: 0.8)) {
-                    viewModel.advance()
-                }
+        HStack(spacing: 12) {
+            Button {
+                viewModel.goBack()
+            } label: {
+                Label("Previous", systemImage: "arrow.left")
+                    .font(.headline)
+                    .frame(maxWidth: .infinity)
+            }
+            .buttonStyle(.bordered)
+            .disabled(!viewModel.canGoBack)
+            .opacity(viewModel.canGoBack ? 1 : 0.6)
+
+            Button(action: viewModel.advance) {
+                Label(viewModel.currentIndex + 1 == viewModel.questions.count ? "Finish" : "Next", systemImage: "arrow.right")
+                    .font(.headline)
+                    .frame(maxWidth: .infinity)
             }
             .buttonStyle(.borderedProminent)
-            .disabled(!isAnswered)
+            .disabled(!viewModel.isAnswered(sessionQuestion))
+            .opacity(viewModel.isAnswered(sessionQuestion) ? 1 : 0.6)
         }
+    }
+
+    private func choiceBackground(isAnswered: Bool, isSelected: Bool, isCorrect: Bool) -> some View {
+        RoundedRectangle(cornerRadius: 16, style: .continuous)
+            .fill(backgroundColor(isAnswered: isAnswered, isSelected: isSelected, isCorrect: isCorrect))
+    }
+
+    private func backgroundColor(isAnswered: Bool, isSelected: Bool, isCorrect: Bool) -> Color {
+        guard isAnswered else { return Color.ipSurface } 
+        if isSelected {
+            return isCorrect ? Color.green.opacity(0.25) : Color.red.opacity(0.2)
+        }
+        return isCorrect ? Color.green.opacity(0.15) : Color.ipSurface
+    }
+
+    private func choiceBorder(isAnswered: Bool, isSelected: Bool, isCorrect: Bool) -> Color {
+        guard isAnswered else { return Color.clear }
+        if isSelected {
+            return isCorrect ? Color.green : Color.red
+        }
+        return isCorrect ? Color.green.opacity(0.7) : Color.clear
     }
 
     private var summaryView: some View {
-        let total = max(viewModel.questions.count, 1)
-        let correct = viewModel.score
-        let percentage = Int((Double(correct) / Double(total)) * 100)
-        let breakdown = moduleBreakdown()
+        VStack(spacing: 20) {
+            Image(systemName: "checkmark.seal.fill")
+                .font(.system(size: 64))
+                .foregroundStyle(Color.ipAccent)
 
-        return ScrollView {
-            VStack(alignment: .leading, spacing: 24) {
-                VStack(alignment: .leading, spacing: 12) {
-                    Text("Quick Start Summary")
-                        .font(Typography.heading(size: .title2))
-                    HStack(alignment: .lastTextBaseline, spacing: 12) {
-                        Text("\(correct)")
-                            .font(.system(size: 48, weight: .bold))
-                        Text("out of \(total) correct")
-                            .font(.title3.weight(.semibold))
-                    }
-                    Text("Score: \(percentage)% • Time: \(formattedDuration(viewModel.duration))")
-                        .font(.subheadline)
-                        .foregroundStyle(Color.secondary)
-                }
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(20)
-                .background(Color.ipSurface)
-                .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
+            Text("Great work!")
+                .font(Typography.heading(size: .title))
 
-                if !breakdown.isEmpty {
-                    VStack(alignment: .leading, spacing: 12) {
-                        Text("Module Breakdown")
-                            .font(.headline)
-                        ForEach(breakdown, id: \.module.id) { item in
-                            HStack {
-                                VStack(alignment: .leading) {
-                                    Text(item.module.summary.title)
-                                        .font(.body.weight(.semibold))
-                                    Text("\(item.correct)/\(item.total) correct")
-                                        .font(.caption)
-                                        .foregroundStyle(Color.secondary)
-                                }
-                                Spacer()
-                                ProgressView(value: Double(item.correct), total: Double(item.total))
-                                    .progressViewStyle(.linear)
-                                    .frame(width: 120)
-                                    .tint(Color.ipAccent)
-                            }
-                        }
-                    }
-                    .padding(20)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .background(Color.ipSurface)
-                    .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
-                }
-
-                Button {
-                    viewModel.restart(limit: quickStartCount)
-                } label: {
-                    Text("Start New Quick Quiz")
-                        .font(.body.weight(.semibold))
-                        .frame(maxWidth: .infinity)
-                }
-                .buttonStyle(.borderedProminent)
+            VStack(spacing: 8) {
+                Text("Score: \(viewModel.score)/\(viewModel.questions.count)")
+                    .font(.title3.weight(.semibold))
+                Text("Time: \(Int(viewModel.duration)) seconds")
+                    .font(.subheadline)
+                    .foregroundStyle(Color.secondary)
             }
-            .padding(24)
-            .frame(maxWidth: .infinity, alignment: .leading)
+
+            Button("Start Over") {
+                viewModel.restart(with: normalizedModeForRestart, limit: quickStartCount)
+            }
+            .buttonStyle(.borderedProminent)
         }
-        .background(Color.ipBackground.ignoresSafeArea())
+        .padding()
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Color.ipBackground)
     }
-
-    private func formattedDuration(_ interval: TimeInterval) -> String {
-        let formatter = DateComponentsFormatter()
-        formatter.allowedUnits = interval >= 60 ? [.minute, .second] : [.second]
-        formatter.unitsStyle = .abbreviated
-        return formatter.string(from: interval) ?? "0s"
-    }
-
-    private func moduleBreakdown() -> [ModuleBreakdownItem] {
-        let grouped = Dictionary(grouping: viewModel.questions) { $0.module.id }
-        return grouped.compactMap { key, questions in
-            guard let module = questions.first?.module else { return nil }
-            let correct = questions.reduce(into: 0) { partialResult, sessionQuestion in
-                if viewModel.selection(for: sessionQuestion) == sessionQuestion.question.correctOptionId {
-                    partialResult += 1
-                }
-            }
-            return ModuleBreakdownItem(module: module, correct: correct, total: questions.count)
-        }.sorted { $0.module.summary.title < $1.module.summary.title }
-    }
-}
-
-private struct ModuleBreakdownItem: Identifiable {
-    let module: QuizModule
-    let correct: Int
-    let total: Int
-
-    var id: String { module.id }
 }

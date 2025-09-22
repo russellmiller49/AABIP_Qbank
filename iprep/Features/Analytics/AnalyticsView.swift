@@ -15,6 +15,7 @@ struct AnalyticsView: View {
                 ScrollView {
                     VStack(spacing: 24) {
                         summaryGrid
+                        reportCTA
                         trendSection
                         modulePerformanceSection
                     }
@@ -52,6 +53,36 @@ struct AnalyticsView: View {
                 detail: "Longest \(longestStreak)"
             )
         }
+    }
+
+
+    private var reportCTA: some View {
+        NavigationLink {
+            ProgressReportView()
+        } label: {
+            HStack(spacing: 16) {
+                Image(systemName: "doc.text.magnifyingglass")
+                    .font(.system(size: 30))
+                    .foregroundStyle(Color.ipAccent)
+                VStack(alignment: .leading, spacing: 4) {
+                    Text("Generate Progress Report")
+                        .font(Typography.heading(size: .title3))
+                        .foregroundStyle(Color.primary)
+                    Text("Create a shareable summary for your program director.")
+                        .font(.subheadline)
+                        .foregroundStyle(Color.secondary)
+                }
+                Spacer()
+                Image(systemName: "chevron.right")
+                    .foregroundStyle(Color.secondary)
+            }
+            .padding(20)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .background(Color.ipSurface)
+            .clipShape(RoundedRectangle(cornerRadius: 24, style: .continuous))
+            .shadow(color: Color.black.opacity(0.05), radius: 12, y: 8)
+        }
+        .buttonStyle(.plain)
     }
 
     private var trendSection: some View {

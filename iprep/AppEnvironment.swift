@@ -76,6 +76,27 @@ public final class AppEnvironment: ObservableObject {
             .store(in: &cancellables)
     }
 
+    func incorrectQuestionCount() -> Int {
+        let sessions = localStore.completedQuizSessions()
+        var seen = Set<String>()
+        var count = 0
+        for session in sessions {
+            for reference in session.questionReferences {
+                guard let sessionQuestion = questionBankService.sessionQuestion(for: reference) else { continue }
+                let questionID = sessionQuestion.question.id
+                if session.selections[questionID] != sessionQuestion.question.correctOptionId,
+                   seen.insert(questionID).inserted {
+                    count += 1
+                }
+            }
+        }
+        return count
+    }
+
+    func hasIncorrectQuestions() -> Bool {
+        incorrectQuestionCount() > 0
+    }
+
     func markModuleDownloaded(_ id: String) {
         localStore.markModuleDownloaded(id)
     }
