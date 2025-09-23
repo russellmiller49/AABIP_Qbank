@@ -32,4 +32,12 @@ struct CompletedQuizSession: Codable, Identifiable, Equatable, Hashable {
         guard totalQuestions > 0 else { return 0 }
         return Double(correctCount) / Double(totalQuestions)
     }
+
+    static func == (lhs: CompletedQuizSession, rhs: CompletedQuizSession) -> Bool {
+        lhs.id == rhs.id
+    }
+
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
 }

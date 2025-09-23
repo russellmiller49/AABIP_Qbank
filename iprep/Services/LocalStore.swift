@@ -13,6 +13,8 @@ protocol LocalStoreType: AnyObject {
     var completedQuizSessionsPublisher: AnyPublisher<[CompletedQuizSession], Never> { get }
     func completedQuizSessions() -> [CompletedQuizSession]
     func addCompletedQuizSession(_ session: CompletedQuizSession)
+    func answeredQuestionIDs() -> Set<String>
+    func resetProgress()
 }
 
 final class LocalStore: LocalStoreType {
@@ -104,6 +106,23 @@ final class LocalStore: LocalStoreType {
 
     func completedQuizSessions() -> [CompletedQuizSession] {
         completedSessionsSubject.value
+    }
+
+    func answeredQuestionIDs() -> Set<String> {
+        let sessions = completedSessionsSubject.value
+        var ids: Set<String> = []
+        for session in sessions {
+            for questionID in session.selections.keys {
+                ids.insert(questionID)
+            }
+        }
+        return ids
+    }
+
+    func resetProgress() {
+        completedSessionsSubject.send([])
+        defaults.removeObject(forKey: Constants.completedQuizKey)
+        saveActiveQuizSession(nil)
     }
 
     func addCompletedQuizSession(_ session: CompletedQuizSession) {

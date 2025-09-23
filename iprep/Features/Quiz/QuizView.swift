@@ -214,7 +214,7 @@ struct QuizView: View {
                         image
                             .resizable()
                             .scaledToFit()
-                            .frame(maxWidth: .infinity)
+                            .frame(maxWidth: .infinity, maxHeight: 260)
                             .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
                     case .failure:
                         VStack(spacing: 12) {
@@ -251,15 +251,41 @@ struct QuizView: View {
                         viewModel.select(optionId: option.id)
                     }
                 } label: {
-                    HStack(alignment: .center, spacing: 12) {
-                        Text(option.id.uppercased())
-                            .font(.headline)
-                            .frame(width: 32, height: 32)
-                            .background(Circle().fill(Color.ipSurfaceElevated))
-                        Text(option.text)
-                            .font(.body)
-                            .multilineTextAlignment(.leading)
-                        Spacer()
+                    VStack(alignment: .leading, spacing: 12) {
+                        HStack(alignment: .top, spacing: 12) {
+                            Text(option.id.uppercased())
+                                .font(.headline)
+                                .frame(width: 32, height: 32)
+                                .background(Circle().fill(Color.ipSurfaceElevated))
+                            if !option.text.isEmpty {
+                                Text(option.text)
+                                    .font(.body)
+                                    .multilineTextAlignment(.leading)
+                            }
+                            Spacer()
+                        }
+                        if let imageURL = option.imageURL {
+                            AsyncImage(url: imageURL) { phase in
+                                switch phase {
+                                case .empty:
+                                    ProgressView()
+                                        .frame(maxWidth: .infinity, minHeight: 140)
+                                case .success(let image):
+                                    image
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(maxWidth: .infinity, maxHeight: 140)
+                                        .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
+                                case .failure:
+                                    Image(systemName: "photo")
+                                        .font(.largeTitle)
+                                        .foregroundStyle(Color.secondary)
+                                        .frame(maxWidth: .infinity, minHeight: 120)
+                                @unknown default:
+                                    EmptyView()
+                                }
+                            }
+                        }
                     }
                     .padding(16)
                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -272,7 +298,7 @@ struct QuizView: View {
                 }
                 .buttonStyle(.plain)
                 .disabled(isAnswered)
-                .accessibilityLabel(Text("Option \(option.id). \(option.text)"))
+                .accessibilityLabel(Text("Option \(option.id)" + (option.text.isEmpty ? " image" : ": \(option.text)")))
             }
         }
     }
@@ -284,6 +310,32 @@ struct QuizView: View {
             Text(sessionQuestion.question.explanation)
                 .font(.body)
                 .foregroundStyle(Color.secondary)
+            if !sessionQuestion.question.explanationImageURLs.isEmpty {
+                VStack(alignment: .leading, spacing: 12) {
+                    ForEach(sessionQuestion.question.explanationImageURLs, id: \.self) { url in
+                        AsyncImage(url: url) { phase in
+                            switch phase {
+                            case .empty:
+                                ProgressView()
+                                    .frame(maxWidth: .infinity, minHeight: 140)
+                            case .success(let image):
+                                image
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(maxWidth: .infinity, maxHeight: 200)
+                                    .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
+                            case .failure:
+                                Image(systemName: "photo")
+                                    .font(.largeTitle)
+                                    .foregroundStyle(Color.secondary)
+                                    .frame(maxWidth: .infinity, minHeight: 120)
+                            @unknown default:
+                                EmptyView()
+                            }
+                        }
+                    }
+                }
+            }
             if !sessionQuestion.question.references.isEmpty {
                 Divider()
                 Text("References")

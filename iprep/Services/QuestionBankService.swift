@@ -67,17 +67,50 @@ final class QuestionBankService {
                     difficulty: difficulty
                 )
                 let questions = moduleDTO.questions.map { questionDTO -> QuizQuestion in
-                    let options = questionDTO.options.map { QuizOption(id: $0.id, text: $0.text) }
-                    let urls: [URL] = questionDTO.imageURLs.compactMap { URL(string: $0) }
+                    var promptText = questionDTO.prompt
+                    var options = questionDTO.options.map {
+                        QuizOption(id: $0.id.lowercased(), text: $0.text, imageURL: nil)
+                    }
+                    if options.isEmpty, let parsed = QuestionBankService.parseEmbeddedOptions(from: promptText) {
+                        promptText = parsed.prompt
+                        options = parsed.options
+                    }
+
+                    var promptImages: [URL] = []
+                    var explanationImages: [URL] = []
+                    var optionImageMap: [String: URL] = [:]
+
+                    for urlString in questionDTO.imageURLs {
+                        guard let url = URL(string: urlString) else { continue }
+                        let lower = urlString.lowercased()
+                        if let optionId = QuestionBankService.optionIdentifier(from: lower) {
+                            optionImageMap[optionId] = url
+                        } else if lower.contains("diss") || lower.contains("discuss") || lower.contains("explanation") {
+                            explanationImages.append(url)
+                        } else {
+                            promptImages.append(url)
+                        }
+                    }
+
+                    let normalizedOptions = options.map { option -> QuizOption in
+                        let optionId = option.id.lowercased()
+                        return QuizOption(
+                            id: optionId,
+                            text: option.text,
+                            imageURL: optionImageMap[optionId]
+                        )
+                    }
+
                     return QuizQuestion(
                         id: questionDTO.id,
                         number: questionDTO.number,
-                        prompt: questionDTO.prompt,
-                        options: options,
-                        correctOptionId: questionDTO.correctOptionId,
+                        prompt: promptText,
+                        options: normalizedOptions,
+                        correctOptionId: questionDTO.correctOptionId.lowercased(),
                         explanation: questionDTO.explanation,
                         references: questionDTO.references,
-                        imageURLs: urls
+                        imageURLs: promptImages,
+                        explanationImageURLs: explanationImages
                     )
                 }
                 return QuizModule(summary: summary, questions: questions)
@@ -93,6 +126,39 @@ final class QuestionBankService {
         }
     }
 
+    private static func parseEmbeddedOptions(from prompt: String) -> (prompt: String, options: [QuizOption])? {
+        let pattern = #" ([a-zA-Z])\)"#
+        guard let regex = try? NSRegularExpression(pattern: pattern, options: []) else { return nil }
+        let nsPrompt = prompt as NSString
+        let matches = regex.matches(in: prompt, range: NSRange(location: 0, length: nsPrompt.length))
+        guard !matches.isEmpty else { return nil }
+
+        var parsedOptions: [QuizOption] = []
+        for (index, match) in matches.enumerated() {
+            let labelRange = match.range(at: 1)
+            let label = nsPrompt.substring(with: labelRange).lowercased()
+            let start = match.range.location + match.range.length
+            let end: Int
+            if index + 1 < matches.count {
+                end = matches[index + 1].range.location
+            } else {
+                end = nsPrompt.length
+            }
+            let optionText = nsPrompt.substring(with: NSRange(location: start, length: end - start)).trimmingCharacters(in: .whitespacesAndNewlines)
+            parsedOptions.append(QuizOption(id: label, text: optionText, imageURL: nil))
+        }
+
+        let questionText = nsPrompt.substring(to: matches[0].range.location).trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !parsedOptions.isEmpty, !questionText.isEmpty else { return nil }
+        return (questionText, parsedOptions)
+    }
+
+    private static func optionIdentifier(from filename: String) -> String? {
+        guard let range = filename.range(of: #"\(([a-z])\)"#, options: .regularExpression) else { return nil }
+        let substring = filename[range]
+        return substring.trimmingCharacters(in: CharacterSet(charactersIn: "() ")).lowercased()
+    }
+
     func moduleSummaries() -> [Module] {
         modules.map { $0.summary }
     }
@@ -105,19 +171,28 @@ final class QuestionBankService {
         modulesById[id]?.questions ?? []
     }
 
-    func quickStartQuestions(limit: Int = 10) -> [QuizSessionQuestion] {
+    func quickStartQuestions(limit: Int = 10, excluding excludedIDs: Set<String> = []) -> [QuizSessionQuestion] {
         guard !modules.isEmpty else { return [] }
-        var pool: [QuizSessionQuestion] = modules.flatMap { module in
+        let allQuestions: [QuizSessionQuestion] = modules.flatMap { module in
             module.questions.map { QuizSessionQuestion(module: module, question: $0) }
         }
+        let filtered = allQuestions.filter { !excludedIDs.contains($0.question.id) }
+        guard !filtered.isEmpty else { return [] }
+        var pool = filtered
         pool.shuffle()
         return Array(pool.prefix(max(1, min(limit, pool.count))))
     }
 
-
     func sessionQuestions(forModule id: String) -> [QuizSessionQuestion] {
         guard let module = modulesById[id] else { return [] }
         return module.questions.map { QuizSessionQuestion(module: module, question: $0) }
+    }
+
+    func sessionQuestions(forModule id: String, excluding excludedIDs: Set<String>) -> [QuizSessionQuestion] {
+        let base = sessionQuestions(forModule: id)
+        guard !base.isEmpty else { return [] }
+        let filtered = base.filter { !excludedIDs.contains($0.question.id) }
+        return filtered.isEmpty ? [] : filtered
     }
 
     func sessionQuestion(for reference: QuizSessionQuestionReference) -> QuizSessionQuestion? {
@@ -127,7 +202,6 @@ final class QuestionBankService {
         }
         return QuizSessionQuestion(module: module, question: question)
     }
-
 
     func moduleCount() -> Int {
         modules.count

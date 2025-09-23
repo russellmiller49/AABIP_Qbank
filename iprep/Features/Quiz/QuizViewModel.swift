@@ -79,16 +79,22 @@ final class QuizViewModel: ObservableObject {
         guard let questionBank else { return }
         guard state != .loading else { return }
         state = .loading
-        let sessionQuestions = questionBank.quickStartQuestions(limit: limit)
+        let answered = localStore?.answeredQuestionIDs() ?? []
+        let sessionQuestions = questionBank.quickStartQuestions(limit: limit, excluding: answered)
+        guard !sessionQuestions.isEmpty else {
+            state = .error("You're all caught up! Reset progress in Settings to practice again.")
+            return
+        }
         beginNewSession(with: sessionQuestions, limit: nil)
     }
 
     func startModuleQuiz(moduleID: String, limit: Int) {
         guard let questionBank else { return }
         state = .loading
-        var sessionQuestions = questionBank.sessionQuestions(forModule: moduleID)
+        let answered = localStore?.answeredQuestionIDs() ?? []
+        var sessionQuestions = questionBank.sessionQuestions(forModule: moduleID, excluding: answered)
         guard !sessionQuestions.isEmpty else {
-            state = .error("This category is not available yet.")
+            state = .error("All questions in this category are complete. Reset progress in Settings to study it again.")
             return
         }
         sessionQuestions.shuffle()

@@ -84,12 +84,6 @@ struct LandingView: View {
 
     private var landingCard: some View {
         VStack(spacing: 24) {
-            Image("AABIPLogo", bundle: .module)
-                .resizable()
-                .scaledToFit()
-                .frame(width: 160, height: 160)
-                .shadow(color: Color.black.opacity(0.15), radius: 16, y: 12)
-
             VStack(spacing: 8) {
                 Text("AABIP-IPREP")
                     .font(.system(size: isRegularWidth ? 42 : 36, weight: .bold, design: .rounded))
@@ -103,7 +97,7 @@ struct LandingView: View {
             Image("AABIPLogo", bundle: .module)
                 .resizable()
                 .scaledToFit()
-                .frame(width: 140, height: 140)
+                .frame(width: 200, height: 200)
                 .clipShape(Circle())
                 .shadow(color: Color.black.opacity(0.1), radius: 10, y: 6)
 

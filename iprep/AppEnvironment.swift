@@ -97,6 +97,15 @@ public final class AppEnvironment: ObservableObject {
         incorrectQuestionCount() > 0
     }
 
+
+    func answeredQuestionIDs() -> Set<String> {
+        localStore.answeredQuestionIDs()
+    }
+
+    func resetPracticeProgress() {
+        localStore.resetProgress()
+    }
+
     func markModuleDownloaded(_ id: String) {
         localStore.markModuleDownloaded(id)
     }

@@ -3,7 +3,7 @@ import SwiftUI
 struct ReviewView: View {
     @EnvironmentObject private var environment: AppEnvironment
     @Environment(\.horizontalSizeClass) private var horizontalSizeClass
-    @State private var selectedSession: CompletedQuizSession?
+    @State private var selectedSessionID: CompletedQuizSession.ID?
 
     private var sessions: [CompletedQuizSession] {
         environment.completedQuizSessions
@@ -17,11 +17,20 @@ struct ReviewView: View {
         horizontalSizeClass == .regular
     }
 
+    private var selectedSession: CompletedQuizSession? {
+        guard let id = selectedSessionID else { return nil }
+        return session(with: id)
+    }
+
+    private func session(with id: CompletedQuizSession.ID) -> CompletedQuizSession? {
+        sessions.first(where: { $0.id == id })
+    }
+
     var body: some View {
         Group {
             if hasHistory {
                 if isRegularWidth {
-                    splitView
+                    regularLayout
                 } else {
                     NavigationStack { stackList }
                 }
@@ -35,43 +44,76 @@ struct ReviewView: View {
 
     private var stackList: some View {
         List(sessions, id: \.id) { session in
-            NavigationLink(value: session) {
+            NavigationLink(value: session.id) {
                 ReviewSessionRow(session: session)
             }
         }
 #if os(iOS)
         .listStyle(.insetGrouped)
 #endif
-        .navigationDestination(for: CompletedQuizSession.self) { session in
-            SessionReviewDetailView(session: session)
+        .navigationDestination(for: CompletedQuizSession.ID.self) { identifier in
+            if let session = session(with: identifier) {
+                SessionReviewDetailView(session: session)
+            } else {
+                missingSessionView
+            }
         }
     }
 
-    private var splitView: some View {
-        NavigationSplitView(columnVisibility: .constant(.all)) {
-            List(sessions, id: \.id, selection: $selectedSession) { session in
+    private var regularLayout: some View {
+        HStack(spacing: 0) {
+            List(sessions, id: \.id, selection: $selectedSessionID) { session in
                 ReviewSessionRow(session: session)
-                    .tag(session)
+                    .tag(session.id)
             }
 #if os(iOS)
             .listStyle(.insetGrouped)
+#else
+            .listStyle(.sidebar)
 #endif
-            .navigationTitle("Sessions")
-        } detail: {
-            if let session = selectedSession ?? sessions.first {
-                SessionReviewDetailView(session: session)
-            } else {
-                Text("Select a session to review details")
-                    .font(.body)
-                    .foregroundStyle(Color.secondary)
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .frame(minWidth: 280, idealWidth: 320, maxWidth: 360)
+
+            Divider()
+
+            Group {
+                if let session = selectedSession {
+                    SessionReviewDetailView(session: session)
+                } else if let firstSession = sessions.first {
+                    SessionReviewDetailView(session: firstSession)
+                } else {
+                    Text("Select a session to review details")
+                        .font(.body)
+                        .foregroundStyle(Color.secondary)
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                }
             }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
+        .background(Color.ipBackground.ignoresSafeArea())
         .onAppear {
-            if selectedSession == nil {
-                selectedSession = sessions.first
+            if selectedSessionID == nil && !sessions.isEmpty {
+                selectedSessionID = sessions.first?.id
             }
         }
+        .onChange(of: sessions) { _, newSessions in
+            guard let currentID = selectedSessionID else {
+                if !newSessions.isEmpty {
+                    selectedSessionID = newSessions.first?.id
+                }
+                return
+            }
+            let stillExists = newSessions.contains { $0.id == currentID }
+            if !stillExists && !newSessions.isEmpty {
+                selectedSessionID = newSessions.first?.id
+            }
+        }
+    }
+
+    private var missingSessionView: some View {
+        Text("Session no longer available")
+            .font(.body)
+            .foregroundStyle(Color.secondary)
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 
     private var emptyState: some View {

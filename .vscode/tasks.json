@@ -50,6 +50,65 @@
                 "panel": "shared"
             },
             "problemMatcher": []
+        },
+        {
+            "label": "run-unit-tests",
+            "type": "shell",
+            "command": "xcodebuild",
+            "args": [
+                "-project", "iprep.xcodeproj",
+                "-scheme", "iprep",
+                "-destination", "platform=iOS Simulator,name=iPhone 15",
+                "test",
+                "-only-testing:iprepTests"
+            ],
+            "group": "test",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "run-ui-tests",
+            "type": "shell",
+            "command": "xcodebuild",
+            "args": [
+                "-project", "iprep.xcodeproj",
+                "-scheme", "iprep",
+                "-destination", "platform=iOS Simulator,name=iPhone 15",
+                "test",
+                "-only-testing:iprepUITests"
+            ],
+            "group": "test",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "run-all-tests",
+            "type": "shell",
+            "command": "xcodebuild",
+            "args": [
+                "-project", "iprep.xcodeproj",
+                "-scheme", "iprep",
+                "-destination", "platform=iOS Simulator,name=iPhone 15",
+                "test"
+            ],
+            "group": "test",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            },
+            "problemMatcher": []
         }
     ]
 }

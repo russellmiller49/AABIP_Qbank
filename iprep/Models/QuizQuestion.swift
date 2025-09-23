@@ -3,6 +3,7 @@ import Foundation
 struct QuizOption: Identifiable, Hashable {
     let id: String
     let text: String
+    let imageURL: URL?
 }
 
 struct QuizQuestion: Identifiable, Hashable {
@@ -14,6 +15,7 @@ struct QuizQuestion: Identifiable, Hashable {
     let explanation: String
     let references: [String]
     let imageURLs: [URL]
+    let explanationImageURLs: [URL]
 
     func option(withId id: String) -> QuizOption? {
         options.first { $0.id == id }
