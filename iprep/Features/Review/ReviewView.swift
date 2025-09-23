@@ -32,7 +32,7 @@ struct ReviewView: View {
                 if isRegularWidth {
                     regularLayout
                 } else {
-                    NavigationStack { stackList }
+                    stackList
                 }
             } else {
                 emptyState
@@ -44,20 +44,15 @@ struct ReviewView: View {
 
     private var stackList: some View {
         List(sessions, id: \.id) { session in
-            NavigationLink(value: session.id) {
+            NavigationLink {
+                SessionReviewDetailView(session: session)
+            } label: {
                 ReviewSessionRow(session: session)
             }
         }
 #if os(iOS)
         .listStyle(.insetGrouped)
 #endif
-        .navigationDestination(for: CompletedQuizSession.ID.self) { identifier in
-            if let session = session(with: identifier) {
-                SessionReviewDetailView(session: session)
-            } else {
-                missingSessionView
-            }
-        }
     }
 
     private var regularLayout: some View {
@@ -107,13 +102,6 @@ struct ReviewView: View {
                 selectedSessionID = newSessions.first?.id
             }
         }
-    }
-
-    private var missingSessionView: some View {
-        Text("Session no longer available")
-            .font(.body)
-            .foregroundStyle(Color.secondary)
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 
     private var emptyState: some View {
