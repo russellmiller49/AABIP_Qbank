@@ -10,6 +10,8 @@ struct LandingView: View {
     let onShowDashboard: () -> Void
     let onSelectModule: (Module) -> Void
     let onRetryIncorrect: () -> Void
+    let onExploreQuestions: () -> Void
+    let onShowLeaderboard: () -> Void
 
     @State private var showModulePicker = false
     @State private var showNoIncorrectAlert = false
@@ -123,6 +125,16 @@ struct LandingView: View {
                     showModulePicker = true
                 } label: {
                     Text("Study by Category")
+                }
+                .buttonStyle(LandingButtonStyle(variant: .secondary))
+
+                Button(action: onExploreQuestions) {
+                    Text("Question Explorer")
+                }
+                .buttonStyle(LandingButtonStyle(variant: .secondary))
+
+                Button(action: onShowLeaderboard) {
+                    Text("Leaderboards")
                 }
                 .buttonStyle(LandingButtonStyle(variant: .secondary))
 

@@ -17,6 +17,12 @@ struct RootView: View {
                 },
                 onRetryIncorrect: {
                     navigationPath.append(.quiz(.incorrectOnly))
+                },
+                onExploreQuestions: {
+                    navigationPath.append(.questionExplorer)
+                },
+                onShowLeaderboard: {
+                    navigationPath.append(.leaderboard)
                 }
             )
             .environmentObject(environment)
@@ -41,6 +47,12 @@ struct RootView: View {
                         .environmentObject(environment)
                 case .settings:
                     SettingsView()
+                        .environmentObject(environment)
+                case .questionExplorer:
+                    QuestionExplorerView()
+                        .environmentObject(environment)
+                case .leaderboard:
+                    LeaderboardView()
                         .environmentObject(environment)
                 }
             }

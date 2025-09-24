@@ -13,4 +13,6 @@ public enum AppRoute: Hashable {
     case review
     case analytics
     case settings
+    case questionExplorer
+    case leaderboard
 }

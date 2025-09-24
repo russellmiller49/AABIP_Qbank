@@ -3796,8 +3796,2151 @@
       "description": "High-yield mixed review across the IP board blueprint.",
       "estimatedTimeMinutes": 30,
       "difficulty": "moderate",
-      "questionCount": 0,
-      "questions": []
+      "questionCount": 61,
+      "questions": [
+        {
+          "id": "miscellaneous-q1",
+          "number": 1,
+          "prompt": "A 67 years-old male is found to have a left lower lobe 2.5 cm nodule on low dose screening CT. EUS is performed for staging and adenocarcinoma is discovered in the celiac axis lymph node, with positive Napsin-A and thyroid transcription factor (TTF)-1 immunohistochemical stains. What is the patient\u2019s clinical radiological stage?https://firebasestorage.googleapis.com/v0/b/aabip-app.appspot.com/o/image31.png?alt=media&token=5387b7a2-310c-406d-9b62-7b8a515ecd13",
+          "options": [
+            {
+              "id": "a",
+              "text": "Stage 1"
+            },
+            {
+              "id": "b",
+              "text": "Stage 2"
+            },
+            {
+              "id": "c",
+              "text": "Stage 3"
+            },
+            {
+              "id": "d",
+              "text": "Stage 4 "
+            }
+          ],
+          "correctOptionId": "d",
+          "explanation": "The immunohistochemical profile (Napsin A and TTF-1 positive) is specific to a lung primary.  A celiac axis lymph node is considered an extra-thoracic metastatic focus and would classify this patient as stage 4.",
+          "references": [
+            "Sobin L, Gospodarowicz M, Wittekind C. TNM Classification of Malignant Tumors 7th edn Wiley. Blackwell: Oxford, UK; 2009."
+          ],
+          "imageURLs": [
+            "https://firebasestorage.googleapis.com/v0/b/aabip-app.appspot.com/o/image31.png?alt=media&token=5387b7a2-310c-406d-9b62-7b8a515ecd13"
+          ]
+        },
+        {
+          "id": "miscellaneous-q2",
+          "number": 2,
+          "prompt": "Which one of the following statements is INCORRECT about early detection of lung cancer in the central airways?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Autofluorescence bronchoscopy (AFB) is more sensitive than white light bronchoscopy but its specificity is low"
+            },
+            {
+              "id": "b",
+              "text": "Narrow band imaging (NBI) enhances mucosal vascular visualization"
+            },
+            {
+              "id": "c",
+              "text": "Annual white-light bronchoscopy is standard of care for early detection of central lung cancer in high-risk population"
+            },
+            {
+              "id": "d",
+              "text": "AFB and NBI are complementary techniques "
+            }
+          ],
+          "correctOptionId": "c",
+          "explanation": "Autofluorescence and Narrow Band Imaging are both complementary tools used in the detection of early lung malignancy. Both of these technologies increase the sensitivity of detection of neoplastic and pre-neoplastic bronchial lesions in comparison to white light bronchoscopy but these tools are limited by the lack of specificity.  In patients with severe dysplasia or carcinoma in situ (CIS) found in sputum cytology who also have chest imaging showing no localizing abnormality, standard white light bronchoscopy is suggested to exclude an endobronchial lesion.  However, the routine use of bronchoscopy for detection of early lung cancer in high-risk patients is not considered to be standard of care.",
+          "references": [
+            "Herth FJ, Eberhardt R, Anantham D, Gompelmann D, Zakaria MW, Ernst A. Narrow-band imaging bronchoscopy increases the specificity of bronchoscopic early lung cancer detection. Journal of Thoracic Oncology. 2009;4",
+            ":1060-1065. https://www.jto.org/article/S1556-0864",
+            "31544-6/fulltext",
+            "Wisnivesky JP, Yung RC, Mathur PN, Zulueta JJ. Diagnosis and treatment of bronchial intraepithelial neoplasia and early lung cancer of the central airways: Diagnosis and management of lung cancer, 3rd ed: American College of Chest Physicians evidence-based clinical practice guidelines. Chest. 2013;143(5 Suppl):e263S-277S. https://pubmed.ncbi.nlm.nih.gov/23649442/",
+            "Haussinger K, Becker H, Stanzel F, et al. Autofluorescence bronchoscopy with white light bronchoscopy compared with white light bronchoscopy alone for the detection of precancerous lesions: a European randomised controlled multicentre trial. Thorax. 2005;60",
+            ":496-503. https://pubmed.ncbi.nlm.nih.gov/15923251/"
+          ],
+          "imageURLs": []
+        },
+        {
+          "id": "miscellaneous-q3",
+          "number": 3,
+          "prompt": "A 69 years-old male, active 50 pack-year tobacco smoker, is referred to pulmonary clinic for management of COPD and is inquiring about lung cancer risk and screening \u201cbecause it runs in his family.\u201d Which of the following is proper advice for this patient?",
+          "options": [
+            {
+              "id": "a",
+              "text": "He is not in the appropriate age range for screening."
+            },
+            {
+              "id": "b",
+              "text": "The efficacy of screening with low-dose chest CT is enhanced when supplemented by surveillance bronchoscopy or sputum cytology"
+            },
+            {
+              "id": "c",
+              "text": "A family history does not increase risk for lung cancer."
+            },
+            {
+              "id": "d",
+              "text": "Screening with low-dose chest CT decreases lung cancer mortality by 20% in properly selected high-risk individuals."
+            },
+            {
+              "id": "e",
+              "text": "Quitting smoking now would obviate the need for lung cancer screening. "
+            }
+          ],
+          "correctOptionId": "d",
+          "explanation": "The National Lung Screening Trial (NLST) studied over 56,000 subjects at high risk for developing lung cancer.  It found that participants who received yearly low-dose helical CT scans had a 20% lower risk of dying from lung cancer than those who received chest X-ray. Enrolled patients were aged 55-74 years, and were current or former 30 pack-year tobacco smokers having quit within the prior 15 years.  However, the USPSTF has expanded the screening recommendation to include patients aged 50-80 years with former smoking history of 20 pack-years (Choice D is correct but A and E are incorrect).  The use of routine bronchoscopy or sputum cytology for the detection of lung cancer has not been shown to have an effect on mortality (Choice B is incorrect).",
+          "references": [
+            "Team NLSTR. Reduced lung-cancer mortality with low-dose computed tomographic screening. The New England journal of medicine. 2011;365",
+            ":395. https://www.nejm.org/doi/full/10.1056/nejmoa1102873",
+            "Wood DE, Kazerooni E, Baum SL, et al. Lung cancer screening, version 1.2015. Journal of the National Comprehensive Cancer Network. 2015;13",
+            ":23-34. https://pubmed.ncbi.nlm.nih.gov/25583767/",
+            "Detterbeck FC, Mazzone PJ, Naidich DP, Bach PB. Screening for lung cancer: diagnosis and management of lung cancer: American College of Chest Physicians evidence-based clinical practice guidelines. CHEST Journal. 2013;143(5_suppl):e78S-e92S. https://pubmed.ncbi.nlm.nih.gov/23649455/"
+          ],
+          "imageURLs": []
+        },
+        {
+          "id": "miscellaneous-q4",
+          "number": 4,
+          "prompt": "A 59-year-old male with a past medical history significant for hypertension and diabetes mellitus was admitted to the medical ICU with acute respiratory failure due to Influenza B infection. He has repeatedly failed spontaneous breathing trials due to agitation and currently is on day 14 of mechanical ventilation. You have been consulted for a percutaneous tracheostomy placement. Family members are concerned about you doing the procedure bedside rather than a surgeon in the operating room.  When comparing surgical tracheostomy (ST) to percutaneous tracheostomy (PT), you explain to them that the evidence states:",
+          "options": [
+            {
+              "id": "a",
+              "text": "There is decreased mortality and bleeding in favor of PT"
+            },
+            {
+              "id": "b",
+              "text": "There is increased mortality and bleeding in favor of ST"
+            },
+            {
+              "id": "c",
+              "text": "There is decreased wound infection and scarring in favor of ST"
+            },
+            {
+              "id": "d",
+              "text": "There is decreased wound infection and scarring in favor of PT"
+            },
+            {
+              "id": "e",
+              "text": "There is increased tracheal stenosis in favor of ST "
+            }
+          ],
+          "correctOptionId": "d",
+          "explanation": "The Cochrane database meta-analysis of 20 trials comparing percutaneous tracheostomy (PT) with surgical tracheostomy (ST) reported no difference in mortality or major bleeding but a significant reduction in the rate of wound infection and scarring in favor of PT. Based on the available data, it appears that bedside PT is at least as safe as ST with proper patient selection.",
+          "references": [
+            "Nanchal R. Percutaneous Tracheostomy: Indications, Complications and Techniques. Frontiers in Respiratory Medicine. Advances in Interventional Pulmonology 2017;",
+            ":127-141.",
+            "Brass P, Hellmich M, Ladra A, et al. Percutaneous Tracheostomy Techniques Vs Surgical Techniques for Tracheostomy. Cochrane Database Syst Rev 2016;7:CD008045"
+          ],
+          "imageURLs": []
+        },
+        {
+          "id": "miscellaneous-q5",
+          "number": 5,
+          "prompt": "In which of the following individuals with an incidental solid nodule greater than 8 mm in size is surveillance with serial CT scan recommended as the next appropriate step in management?",
+          "options": [
+            {
+              "id": "a",
+              "text": "For an actively tobacco smoking patient with 30 pack-year history"
+            },
+            {
+              "id": "b",
+              "text": "If the nodule is in the right upper lobe, has spiculated borders, and discovered in a patient with COPD"
+            },
+            {
+              "id": "c",
+              "text": "If the nodule is smooth and round, discovered in a non-smoking patient, and functional imaging is negative"
+            },
+            {
+              "id": "d",
+              "text": "When needle biopsy is non-diagnostic and functional imaging is positive "
+            }
+          ],
+          "correctOptionId": "c",
+          "explanation": "The 2013 ACCP lung cancer guidelines suggest clinicians assign a pre-test clinical probability of lung cancer for all solid nodules > 8mm in diameter.  When a patient has a low pre-test probability of malignancy and functional imaging is negative the post-test probability of malignancy will be extremely low and surveillance imaging is acceptable (choice C correct).  In a patient with a high pre-test probability of malignancy, a negative functional imaging test or needle biopsy would not decrease the probability of malignancy to a sufficient level to obviate further testing or excision.",
+          "references": [
+            "Gould MK, Donington J, Lynch WR, et al. Evaluation of individuals with pulmonary nodules: When is it lung cancer?: diagnosis and management of lung cancer, 3rd ed: american college of chest physicians evidence-based clinical practice guidelines. Chest. 2013;143(5_suppl):e93S-e120S. https://pubmed.ncbi.nlm.nih.gov/23649456/"
+          ],
+          "imageURLs": []
+        },
+        {
+          "id": "miscellaneous-q6",
+          "number": 6,
+          "prompt": "A 65 years old African American man with 50 pack year smoking history is referred to you for evaluation of right middle lobe lung mass and mediastinal lymphadenopathy with FDG avidity.  His medical history is significant for diabetes and coronary disease with placement of drug eluting stent five months ago.  He is currently on 81 mg Aspirin and 75 mg Clopidogrel daily along with his other medications.  What would be your next step in evaluating his lung mass?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Stop Clopidogrel and continue Aspirin; Start Enoxaparin and proceed with EBUS after five days"
+            },
+            {
+              "id": "b",
+              "text": "Stop Clopidogrel and Aspirin; start GPIIb/IIIa inhibitor stopping the drug 4 hours prior to EBUS five days later"
+            },
+            {
+              "id": "c",
+              "text": "Continue Aspirin and Clopidogrel and proceed with EBUS-TBNA"
+            },
+            {
+              "id": "d",
+              "text": "Continue with Aspirin and Clopidogrel and perform CT guided biopsy of the lung mass. "
+            }
+          ],
+          "correctOptionId": "c",
+          "explanation": "This patient has had a drug eluting stent (DES) placed within the last 6 months. According to the ACC/AHA 2016 guidelines, dual antiplatelet agents are recommended for at least 6 months following the placement of a DES to prevent in stent thrombosis.  Published data suggests that EBUS-guided TBNA is safe in patients receiving dual antiplatelet treatment with aspirin and clopidogrel (Choice C is correct).  Since the bleeding risk is low and the risk of discontinuing dual antiplatelet agents is high, proceeding with EBUS-TBNA is appropriate.  Choices A and B are incorrect as this will risk in-stent thrombosis.  Use of GPIIb/IIIa inhibitor as an alternative to clopidogrel is not supported by guidelines and also does not prevent in stent thrombosis (choice B incorrect).  Given this patient\u2019s FDG avid mediastinal lymphadenopathy, mediastinal staging is required. Therefore, CT guided biopsy of the lung mass would not be the appropriate procedure (Choice D is incorrect).  This approach also carries a risk of pulmonary hemorrhage and hemoptysis which can be difficult to control in the setting of concomitant dual antiplatelet therapy.",
+          "references": [
+            "Safety of endobronchial ultrasound-guided transbronchial needle aspiration for patients taking clopidogrel: a report of 12 consecutive cases. Respiration. 2012;83",
+            ":330-4. https://pubmed.ncbi.nlm.nih.gov/22286347/",
+            "Outcomes of Preoperative Bridging Therapy for Patients undergoing Surgery After Coronary Stent Implantation: A Weighted Meta-Analysis of 280 Patients from Eight Studies. Catheterization and Cardiovascular Interventions 85:25\u201331",
+            "https://pubmed.ncbi.nlm.nih.gov/24740634/",
+            "EBUS-TBNA and EUS-FNA: Risk Assessment for Patients Receiving Clopidogrel. J Bronchology Interv Pulmonol. 2016 Oct;23",
+            ":303-307. https://pubmed.ncbi.nlm.nih.gov/27479011/",
+            "Complication rates of CT-guided transthoracic lung biopsy: meta-analysis. Eur Radiol",
+            "27:138\u2013148 https://pubmed.ncbi.nlm.nih.gov/27108299/",
+            "Effect of Routine Clopidogrel Use on Bleeding Complications After Endobronchial Ultrasound-guided Fine Needle Aspiration. J Bronchology Interv Pulmonol. 2018 Apr 16. https://pubmed.ncbi.nlm.nih.gov/29664760/",
+            "2016 ACC/AHA Guideline Focused Update on Duration of Dual Antiplatelet Therapy in Patients With Coronary Artery Disease. J Am Coll Cardiol 2016;68:1082\u2013115 https://pubmed.ncbi.nlm.nih.gov/27026020/"
+          ],
+          "imageURLs": []
+        },
+        {
+          "id": "miscellaneous-q7",
+          "number": 7,
+          "prompt": "Which of the following is true about tracheobronchomalacia?",
+          "options": [
+            {
+              "id": "a",
+              "text": "17% patients present with normal pulmonary function testing."
+            },
+            {
+              "id": "b",
+              "text": "Tracheoplasty can be a treatment of choice wherein anterior wall of trachea is reinforced with mesh."
+            },
+            {
+              "id": "c",
+              "text": "Dynamic CT scan showing more than 50% collapse of upper and lower trachea has very high specificity for tracheobronchomalacia."
+            },
+            {
+              "id": "d",
+              "text": "Prevalence of TBM/EDAC is less than 1%."
+            },
+            {
+              "id": "e",
+              "text": "50% of patients undergoing tracheoplasty suffer from post-operative respiratory failure and require mechanical ventilation greater than 24 hours. "
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Tracheobronchomalacia is characterized by weakness of the cartilaginous portion of airway resulting in its collapse during expiration.  Excessive dynamic airway collapse (EDAC), meanwhile, results from a weak posterior membrane. The exact prevalence of TBM/EDAC is unclear, with studies suggesting a range between 4% to 44% (Choice D is incorrect).  Etiology of TBM/EDAC include mechanical injury (intubation, tracheostomy, tracheal surgery), inflammation (COPD, Asthma, recurrent infections, collagen vascular disease) and congenital.  Lung function tests may show various anomalies including notching of the flow volume loop, a biphasic loop, and flow oscillations. However, up to 17% of patients can have a normal PFT (Choice A is correct).  Dynamic CT chest during full expiration is better for diagnosis as compared to standard CT chest which is usually done at full inspiration. However, it is not specific (Choice C is incorrect). In the study by Boiselle et al., up to 78% of healthy volunteer met the criteria of 50% collapsibility during forceful expiration. Management of TBM/EDAC can be non-surgical, including application of central positive airway pressure (CPAP). Selected surgical candidates, after a successful stent trial, can be considered for tracheobronchoplasty, which involves reinforcing the posterior membrane of trachea and bronchi with the use of mesh (Choice B is incorrect). ~20% of patients undergoing tracheobronchoplasty require mechanical ventilation greater than 24 hours (Choice E is incorrect).",
+          "references": [
+            "Boiselle PM, O\u2019Donnell CR, Bankier AA, et al.Tracheal collapsibility in healthy volunteers during forced expiration: assessment with multidetector CT. Radiology 2009;252",
+            ":255\u201362.https://pubmed.ncbi.nlm.nih.gov/19420322/",
+            "Hammond K et al. Tracheobronchomalacia and Excessive Dynamic Airway Collapse. Clin Chest Med. 2018 Mar;39",
+            ":223-228. https://pubmed.ncbi.nlm.nih.gov/29433717/"
+          ],
+          "imageURLs": []
+        },
+        {
+          "id": "miscellaneous-q8",
+          "number": 8,
+          "prompt": "You see for follow-up a 58-year-old, non-smoking East-Asian man who originally presented with an incidental irregular 11 mm peripheral right upper lobe pure ground glass nodule.  The current scan, performed 9 months after the original, shows the nodule to have grown by 4 mm and developed a partial solid component which itself measures 7 mm.  The rest of the thorax is normal, without any nodes visible in the chest.  He is healthy and asymptomatic, without known environmental exposures or underlying cardiopulmonary disease.  Assuming the patient is amenable to all options available and will follow your recommendation, which of the following is the most appropriate next step in management?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Repeat CT chest in 1 year"
+            },
+            {
+              "id": "b",
+              "text": "PET scan"
+            },
+            {
+              "id": "c",
+              "text": "Transthoracic needle biopsy of the nodule"
+            },
+            {
+              "id": "d",
+              "text": "Radial EBUS and/or navigational transbronchial sampling of the nodule"
+            },
+            {
+              "id": "e",
+              "text": "Refer for surgical resection "
+            }
+          ],
+          "correctOptionId": "e",
+          "explanation": "After incidental discovery of a 11 mm subsolid nodule, this patient had an appropriately scheduled follow-up scan per Fleischner 2017 recommendations (6-12 months for a pure ground glass nodule measuring 6 mm or greater).1 It is now growing and solidifying, which is suspicious for a stage 1a peripheral lung adenocarcinoma.  While the chance of occult metastases in a clinical stage 1 lung cancer patient can be up to 10%, the chest CT in this patient is without evidence of any nodes.  This, along with the nodule\u2019s small size, peripheral location and part-solid density, suggests a low risk for mediastinal and distant metastases.4,5 Therefore, there is little utility in metabolic imaging and no indication for sampling the mediastinum by EBUS or mediastinoscopy at this time.  Furthermore, additional unnecessary testing may delay appropriate therapy, which in this case is surgical resection (choice E correct, A and B incorrect).  Sampling of the nodule by either transthoracic or guided bronchoscopy would be reasonable if the patient was adamant about establishing a diagnosis before surgery.  However, given the high pre-test clinical suspicion for a primary lung cancer, even a negative test should be interpreted with caution and not be taken as convincing evidence of lack of malignancy.",
+          "references": [
+            "Miao H, Shaolei L, Nan L, et al. Occult mediastinal lymph node metastasis in FDG-PET/CT node-negative lung adenocarcinoma patients: Risk factors and histopathological study. Thorac Cancer. 2019;10",
+            ":1453\u20101460. doi:10.1111/1759-7714.13093 https://pubmed.ncbi.nlm.nih.gov/31127706/",
+            "Gould MK, Donington J, Lynch WR, et al. Evaluation of individuals with pulmonary nodules: when is it lung cancer? Diagnosis and management of lung cancer, 3rd ed: American College of Chest Physicians evidence-based clinical practice guidelines. Chest 2013;143:e93S-e120S. https://pubmed.ncbi.nlm.nih.gov/23649456/",
+            "Dyas AR, King RW, Ghanim AF, Cerfolio RJ. Clinical Misstagings and Risk Factors of Occult Nodal Disease in Non-Small Cell Lung Cancer. Ann Thorac Surg. 2018;106",
+            ":1492\u20101498. doi:10.1016/j.athoracsur.2018.05.045 https://pubmed.ncbi.nlm.nih.gov/29908981/",
+            "MacMahon H, Naidich DP, Goo JM, et al. Guidelines for Management of Incidental Pulmonary Nodules Detected on CT Images: From the Fleischner Society 2017. Radiology 2017;284:228-43. https://pubs.rsna.org/doi/10.1148/radiol.2017161659"
+          ],
+          "imageURLs": []
+        },
+        {
+          "id": "miscellaneous-q9",
+          "number": 9,
+          "prompt": "You are asked to see a 54-year-old male with a history of hypertension who was admitted 3 days ago with a left MCA stroke, for potential percutaneous tracheostomy.  He was intubated on presentation to the emergency room for airway protection.  Today on exam he is awake but does not follow commands.  He has a right facial drop and is noted to not be moving his right arm or leg. His nurse notes that for the past two days he has not tolerated his spontaneous breathing trials.  According to the TracMan trial, a large multicentered randomized control trial of early (<4 days) versus late (> 10 days) tracheostomy in patients requiring mechanical ventilation, which of the following is true regarding the timing of tracheostomy.",
+          "options": [
+            {
+              "id": "a",
+              "text": "Within the first 48 hours of mechanical ventilation clinicians correctly predict which patients will require prolonged ventilator support > 50% of the time."
+            },
+            {
+              "id": "b",
+              "text": "Early tracheostomy compared to late tracheostomy improves 30-day mortality"
+            },
+            {
+              "id": "c",
+              "text": "In survivors, early tracheostomy compared to late tracheostomy increases the number of days free from sedative medications"
+            },
+            {
+              "id": "d",
+              "text": "Early tracheostomy compared to late tracheostomy reduces the number of days spent in the intensive care unit "
+            }
+          ],
+          "correctOptionId": "c",
+          "explanation": "The TracMan trial published by Young et al. in 2013 was a large, multicenter, randomized controlled trial of early versus late tracheostomy in mechanically ventilated ICU patients conducted in the United Kingdom.  In this trial 909 mechanically ventilated patients who were identified by their treating physicians as likely to require mechanical ventilation for > 7 days were randomized either to receive early tracheostomy (< 4 days) versus late tracheostomy (> 10 days).  The primary outcome was 30-day mortality.  There was no difference between groups in terms of 30-day mortality (30.8% vs 31.5%, p=0.89) or duration of ICU stay (13.0 days vs 13.1 days, p=0.74) (Options B and D are incorrect).  Of the 454 patients randomized to the late tracheostomy group, 254 patients (53.7%) never received a tracheostomy (Option A is incorrect).  In survivors, the mean number of days in which patients received IV sedation was significantly lower in the early tracheostomy group compared to the late group (5 days (IQR 3-9) vs 8 days (IQR 4-12), p < 0.001) (choice C correct).",
+          "references": [
+            "Young D et al. JAMA. 2013 May 22;309",
+            ":2121-9 https://www.ncbi.nlm.nih.gov/pubmed/23695482"
+          ],
+          "imageURLs": []
+        },
+        {
+          "id": "miscellaneous-q10",
+          "number": 10,
+          "prompt": "You perform an advanced diagnostic flexible bronchoscopy targeting moderate sedation on a 100kg woman.  The patient has multiple compensated medical comorbidities including renal insufficiency, liver cirrhosis, mild obstructive sleep apnea, and moderate emphysematous obstructive lung disease.  The procedure is initially complicated by frequent cough and agitation, which subsides later in the case with liberal application of mucosal lidocaine (600mg in total) and additional IV sedation and anti-tussives.  However, you are then required to perform occasional jaw thrust maneuvers for brief upper airway obstructive events.  These reduce in frequency with insertion of a nasal 'trumpet.'     The bronchoscopy lasts about 60 minutes.  You notice at the end of the procedure that the patient does not open eyes to verbal or light tactile stimulation.  Vital signs are preserved, with BP 99/60, HR 65, RR 11, spo2 96% on oxygen supplementation 8L/min by nasal cannula.  However, this level of sedation persists for about 20 minutes after termination of the bronchoscopy, after which the patient slowly recovers over the following two hours.    Which of the following is most likely CORRECT about this clinical scenario?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Meperidine, rather than Fentanyl, was the likely narcotic used"
+            },
+            {
+              "id": "b",
+              "text": "There is unlikely to be hypercarbia, as oxygenation is preserved"
+            },
+            {
+              "id": "c",
+              "text": "Intravenous administration of 20% lipid emulsion is indicated"
+            },
+            {
+              "id": "d",
+              "text": "Propofol, rather than Midazolam, was the likely sedative used"
+            },
+            {
+              "id": "e",
+              "text": "Sedation level is considered 'moderate,' as vital signs are preserved "
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation": "According to commonly used sedation scales such as the Richmond Agitation Sedation Scale (RASS), the American Society of Anesthesiologist Sedation Scale (ASASS), or Modified Observer\u2019s Assessment of Alertness/Sedation score (MOAA/S), at the conclusion of the procedure this patient is deeply sedated (not responsive to voice or light tactile stimulation).1 This classification is not dependent on status of vital signs (choice E incorrect), though instability is more likely with deeper sedation levels.   Several factors contributed to deep sedation of this patient.  The patient likely has compromised drug metabolism owing to renal and hepatic dysfunction.  The procedure was of longer-than-average duration.  The patient had several upper airway obstructive events which could have contributed to hypercapnia.  The patient recovers slowly over a period of 120 minutes without incident.  This is consistent with the use of medium-duration sedative or narcotic agents, such as meperidine (choice A correct).    Current sedation practice recommendations for bronchoscopy when targeting moderate sedation suggest a combination of midazolam and fentanyl.2 Propofol has also been successfully used, including for advanced diagnostic bronchoscopy.3-5 Slower metabolism of midazolam in the setting of renal and/or hepatic dysfunction can result in a prolonged recovery.  This is much less likely with propofol, which has a very short effect duration allowing for fast recovery, even with longer infusion times.  Propofol is also not entirely dependent on hepatic and renal metabolism/excretion (choice D incorrect).  Hypercarbia precedes hypoxemia, especially in setting of oxygen supplementation, and hence oxygenation is a suboptimal marker of hypoventilation (choice B incorrect).  An end-tidal CO2 monitor was not used for this case, and is not a required practice during bronchoscopy targeting moderate sedation.2,6    Lidocaine toxicity after bronchoscopy has been reported.  Topical lidocaine is efficiently absorbed into blood from mucosal surfaces and peaks 30-45 minutes after application.  Toxicity usually manifests as circumoral paresthesia, dizziness, blurred vision, dysphoria.  Severe symptoms occur with high serum levels including seizures, cardiovascular collapse and coma.  Current recommendations for sedation and anesthesia for bronchoscopy suggest using the lowest lidocaine dose possible to achieve the desired effect, and that with administration of greater than 7mg/kg toxicity becomes more likely.2  Various studies have demonstrated safety of topical lidocaine during bronchoscopy at doses up to 10-15mg/kg, though there is considerable patient variability, and elderly patients and those with hepatic and cardiac dysfunction may be at higher risk.6-9  Nevertheless, the symptoms presented in this clinical scenario in which 6mg/kg lidocaine was applied are unlikely to represent lidocaine toxicity, and advanced therapy is not indicated (choice C incorrect).",
+          "references": [
+            "Chrissian AA, Bedi H. Bronchoscopist-directed Continuous Propofol Infusion for Targeting Moderate Sedation During Endobronchial Ultrasound Bronchoscopy: A Practical and Effective Protocol. J Bronchology Interv Pulmonol 2015;22:226-36. https://pubmed.ncbi.nlm.nih.gov/26165893/",
+            "Wahidi MM, Jain P, Jantz M, et al. American College of Chest Physicians consensus statement on the use of topical anesthesia, analgesia, and sedation during flexible bronchoscopy in adult patients. Chest 2011;140:1342-50 https://pubmed.ncbi.nlm.nih.gov/22045879/",
+            "Mainland PA, Kong AS, Chung DC, Chan CH, Lai CK. Absorption of lidocaine during aspiration anesthesia of the airway. J Clin Anesth. 2001;13",
+            ":440\u2010446. doi:10.1016/s0952-8180",
+            "00298-7 https://pubmed.ncbi.nlm.nih.gov/11578889/",
+            "Langmack EL, Martin RJ, Pak J, Kraft M. Serum lidocaine concentrations in asthmatics undergoing research bronchoscopy. Chest. 2000;117",
+            ":1055\u20101060.https://pubmed.ncbi.nlm.nih.gov/10767239/",
+            "Khemasuwan D, Teerapuncharoen K, Griffin DC. Diagnostic Yield and Safety of Bronchoscopist-directed Moderate Sedation With a Bolus Dose Administration of Propofol During Endobronchial Ultrasound Bronchoscopy. J Bronchology Interv Pulmonol 2018;25:181-8.https://pubmed.ncbi.nlm.nih.gov/29346245/",
+            "Newton T, Pop I, Duvall E. Sedation scales and measures--a literature review. SAAD Dig. 2013;29:88\u201099. https://pubmed.ncbi.nlm.nih.gov/23544226/",
+            "Frey WC, Emmons EE, Morris, M. Safety of High Dose Lidocaine in Flexible Bronchoscopy, Journal of Bronchology: January 2008 - Volume 15 - Issue 1 - p 33-37",
+            "Du Rand IA, Blaikley J, Booton R, et al. British Thoracic Society guideline for diagnostic flexible bronchoscopy in adults: accredited by NICE. Thorax 2013;68 Suppl 1:i1-i44. https://thorax.bmj.com/content/68/Suppl_1/i1",
+            "Jose RJ, Shaefi S, Navani N. Sedation for flexible bronchoscopy: current and emerging evidence. Eur Respir Rev 2013;22:106-16. https://pubmed.ncbi.nlm.nih.gov/23728864/"
+          ],
+          "imageURLs": []
+        },
+        {
+          "id": "miscellaneous-q11",
+          "number": 11,
+          "prompt": "You are performing bronchoscopy in a patient with acute myelogenous leukemia and secondary pancytopenia (platelets = 65,000/microliter) to evaluate an enlarging right upper lobe mass-like consolidation with new multifocal ipsilateral thoracic adenopathy.  Clinical considerations are either an atypical infection or malignancy.  Rapid on-site evaluation was not available for this case.    You have already completed right upper lobe bronchoalveolar lavage, peripheral TBNA, and bronchial brushings under fluoroscopic guidance.  You are now performing transbronchial lung biopsies and have obtained six adequate pieces of tissue.  Just after you take your 7th biopsy from the anterior segment (which results in a robust sample) there is brisk bleeding.  After about 25ml of blood loss and routine bronchoscopic measures to manage this complication are employed, your airway of interest is as seen below.https://firebasestorage.googleapis.com/v0/b/aabip-app.appspot.com/o/image24.jpg?alt=media&token=5387b7a2-310c-406d-9b62-7b8a515ecd13The middle, right lower, and all contralateral airways are easily visualized and relatively free of aspirated blood.  Vital signs are all within normal limits, including heart rate, blood pressure and oxygen saturation on nasal cannula supplementation.  The patient is comfortably sedated.  What is the most appropriate next step in management?",
+          "options": [
+            {
+              "id": "a",
+              "text": "STAT CBC and platelet transfusion to above 100,000/microliter"
+            },
+            {
+              "id": "b",
+              "text": "Use suctioning and forceps to clear the anterior segmental bronchus as there will likely be distal lung atelectasis"
+            },
+            {
+              "id": "c",
+              "text": "Place a temporary tamponade balloon into the right upper lobe anterior segmental bronchus"
+            },
+            {
+              "id": "d",
+              "text": "Proceed with planned convex probe EBUS evaluation of thoracic nodes"
+            },
+            {
+              "id": "e",
+              "text": "Abort the procedure "
+            }
+          ],
+          "correctOptionId": "d",
+          "explanation": "The case presented is one of a bleeding complication during advanced diagnostic bronchoscopy, specifically after transbronchial peripheral lung biopsy (TBLB).  Significant bleeding during bronchoscopy is rare, though coagulopathies such as hematologic disorders increase the risk.  Proper management of a peripheral bleed after TBLB is to isolate the bleeding segment by wedging the bronchoscope within the target airway while awaiting distal clotting and preventing flooding of the rest of the respiratory tree.  Adjuncts such as topical iced saline may be used.  Topical epinephrine has little use in this scenario as the bleeding source is too distal.  Escalation of care, including endotracheal intubation and blood transfusion, are usually unnecessary.    In this case, hemostasis seems to have been achieved.  There is clearly visible clot in the RB3 segmental airway and lack of aspiration of blood in the rest of the respiratory tree.  A bronchial blocker is not needed (choice C incorrect), and this clot should not be immediately disturbed (choice B incorrect).  As the patient is stable, aggressive measures such as blood transfusions are not necessary and the remining portion of the procedure may be completed as scheduled while taking care to not dislodge the clot (choice D correct, choice E incorrect).",
+          "references": [
+            "Du Rand IA, Blaikley J, Booton R, et al. British Thoracic Society guideline for diagnostic flexible bronchoscopy in adults: accredited by NICE. Thorax 2013;68 Suppl 1:i1-i44. https://thorax.bmj.com/content/68/Suppl_1/i1",
+            "Davidson K, Shojaee S. Managing Massive Hemoptysis. Chest 2020;157:77-88. https://pubmed.ncbi.nlm.nih.gov/31374211/"
+          ],
+          "imageURLs": [
+            "https://firebasestorage.googleapis.com/v0/b/aabip-app.appspot.com/o/image24.jpg?alt=media&token=5387b7a2-310c-406d-9b62-7b8a515ecd13The"
+          ]
+        },
+        {
+          "id": "miscellaneous-q12",
+          "number": 12,
+          "prompt": "A 42-year-old morbidly obese female with past medical history of well-controlled severe persistent asthma on high dose inhaled corticosteroids presents to the emergency department (ED) with severe respiratory distress and hypoxia. Other co-morbidities include severe knee osteoarthritis limiting her exercise tolerance and severe esophageal reflux. She started smoking cigarettes 2 weeks ago. CT chest is shows diffuse bilateral lung parenchymal opacities. While in the ED, her condition deteriorates and is intubated. In the intensive care unit, a bronchoscopy is performed by your colleagues and it reveals severe tracheobronchomalacia (>90% collapse). Bronchoalveolar lavage yields an eosinophilic cellular pattern fluid (>50% eosinophils). She is started on doses of steroids and 10 days after she is successfully extubated. She is here today in clinic for follow-up, six weeks after the initial event. She stopped smoking and finished her taper of prednisone. She complains of mild dyspnea on exercise. What would be the best next step?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Perform rigid bronchoscopy and deploy a Y silicone stent"
+            },
+            {
+              "id": "b",
+              "text": "Perform flexible bronchoscopy and deploy covered self-expanding metallic stent(s)"
+            },
+            {
+              "id": "c",
+              "text": "Encourage pulmonary rehabilitation, enrolling in a weight loss program, lung function testing and gastroesophageal reflux evaluation."
+            },
+            {
+              "id": "d",
+              "text": "Refer patient to thoracic surgery for tracheobronchoplasty"
+            },
+            {
+              "id": "e",
+              "text": "Order dynamic airway CT and perform dynamic flexible bronchoscopy next week "
+            }
+          ],
+          "correctOptionId": "c",
+          "explanation": "Tracheobronchomalacia (TBM) is defined as the weakness of airway cartilage with or without an excessive dynamic invagination of the posterior membranous wall. Excessive Dynamic Airway collapse (EDAC) is the excessive dynamic invagination of the posterior tracheal membrane.1 Importantly, both TBM and EDAC can co-exist and respond to the same treatment. 1 The majority of experts suggest that only symptomatic severe TBM (>90% of airway collapse) should be treated either with medical or surgical management.1   A prospective observational study aimed to evaluate the effect of silicone stents in 75 patients with moderate to severe diffuse TBM. Among those, 58 patients underwent stent placement. While the study did report improvement in respiratory symptoms, quality of life and functional status, the complications rate was high (49 events) including 21 partial stent obstructions, 14 infections, and 10 stent migrations.2 In addition, other comorbidities should first be treated (choice A incorrect). Achieving central airway stabilization with the deployment of a self-expanding metallic (SEM) stent is another option for symptomatic patients, however, well-randomized controlled trials are needed to evaluate its safety, long term efficacy and their complication rates. Currently, in large volume TBM centers, SEM stents are only deployed as part of a short term (<2 week) trial to obtain objective information (quality of life and exercise capacity) in TBM patients that might respond to surgical intervention.3 (Answer B is incorrect)   Tracheobronchoplasty (TBP) is the surgical stabilization of the airway by posterior splinting with polypropylene mesh and should be reserved only for patients with severe TBM who are surgical candidates and who remain symptomatic despite optimal treatment of all other comorbidities.3,4 (choice D incorrect).   Dynamic flexible bronchoscopy is the gold standard for the diagnosis of TBM 5 and complements dynamic Airway CT. This type of chest imaging protocol shows dilation of the airways during inspiration with premature collapse during exhalation (>70%).6 The expiratory CT scan is remarkably different from the inspiratory images.6 These two tests are key in order to diagnose TBM, however in this case, the patient is minimally symptomatic, and had a clear diagnosis based on the bronchoscopy, thus further evaluation is not warranted at this time. (choice E incorrect). TBM is a complex disease associated with multiple confounding co-morbid conditions that should be addressed first before any type of invasive treatment. Medical therapy for TBM include the combination of non-invasive ventilation, expectorant and mucolytic drugs such guaifenesin and N acetyl-cysteine, mechanical devices to facilitate phlegm expectoration (i.e flutter valve), weight loss and most importantly pulmonary rehabilitation. In this case, her comorbidities and recent critical care illness need to be addressed first before considering an airway stent (choice C correct)",
+          "references": [
+            "Gangadharan SP. Tracheobronchomalacia in adults. Semin Thorac Cardiovasc Surg. 2010 Summer;22",
+            ":165-73. doi: 10.1053/j.semtcvs.2010.07.001.",
+            "Ernst A, Majid A, Feller-Kopman D, et al Airway stabilization with silicone stents for treating adult tracheobronchomalacia: a prospective observational study. Chest. 2007 Aug;132",
+            ":609-16. https://pubmed.ncbi.nlm.nih.gov/17699133/",
+            "Majid A, Gaurav K, Sanchez JM,  et al . Evaluation of tracheobronchomalacia by dynamic flexible bronchoscopy. A pilot study. Ann Am Thorac Soc. 2014 Jul;11",
+            ":951-5. doi: 10.1513/AnnalsATS.201312-435BC. https://www.ncbi.nlm.nih.gov/pubmed/24960030",
+            "Folch, E. Tracheobronchomalacia and Excessive dynamic airway collapse.. In: Diseases of the Central Airways.  Metha AC et al (Eds). Springer 2016. p133-145",
+            "Lee EY, Litmanovich D, Boiselle PM. Multidetector CT evaluation of tracheobronchomalacia. Radiol Clin North Am. 2009 Mar;47",
+            ":261-9. doi: 10.1016/j.rcl.2008.11.007. https://www.ncbi.nlm.nih.gov/pubmed/19249455",
+            "Buitrago DH, Wilson JL, Parikh M, Majid A, Gangadharan SP. Current concepts in severe adult tracheobronchomalacia: evaluation and treatment. J Thorac Dis. 2017 Jan;9",
+            ":E57-E66. doi: 10.21037/jtd.2017.01.13. https://pubmed.ncbi.nlm.nih.gov/28203438/"
+          ],
+          "imageURLs": []
+        },
+        {
+          "id": "miscellaneous-q13",
+          "number": 13,
+          "prompt": "A 45-year-old female with past medical history significant for asthma (no ICU admissions or intubations) is referred to your office for a second opinion. She was evaluated for chronic cough and underwent flexible bronchoscopy after a CT neck showed the following:https://firebasestorage.googleapis.com/v0/b/aabip-app.appspot.com/o/image47.png?alt=media&token=5387b7a2-310c-406d-9b62-7b8a515ecd13Flexible bronchoscopy revealed a circumferential subglottic stenosis about 1.5 cm below the vocal cords, <1 cm in length. Working diagnosis is idiopathic subglottic stenosis.https://firebasestorage.googleapis.com/v0/b/aabip-app.appspot.com/o/image48.png?alt=media&token=5387b7a2-310c-406d-9b62-7b8a515ecd13The patient wishes to be managed with the technique that will have the most durable response. Which is the best approach to treat her condition?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Endoscopic dilation surgery"
+            },
+            {
+              "id": "b",
+              "text": "Endoscopic resection with adjuvant medical therapy"
+            },
+            {
+              "id": "c",
+              "text": "Cricotracheal resection surgery"
+            },
+            {
+              "id": "d",
+              "text": "Montgomery T tube placement"
+            },
+            {
+              "id": "e",
+              "text": "Tracheostomy placement "
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "The management of subglottic stenosis remains controversial and is primarily driven by local expertise. Choices D and E are incorrect as patient is not having respiratory failure. Choice D requires a tracheostoma for placement. A recent publication demonstrated that endoscopic dilation has a high recurrence rate \u2013 28%, however, this can be up to 80% in some case series.  Cricotracheal resection offered the most durable results (only 1.2% had recurrence), amid high perioperative risk and worse long-term voice-related outcomes. With this surgery, anastomotic complications occur in 10-20% while unilateral vocal fold paralysis occurs in 5-10%. Endoscopic resection with adjuvant medical therapy had better outcomes than endoscopic dilation and minimal involvement in voice function. However, 12.4% had recurrence.",
+          "references": [
+            "Gelbard A, Anderson C, Berry LD, et al. Comparative Treatment Outcomes for Patients With Idiopathic Subglottic Stenosis. JAMA Otolaryngol Head Neck Surg. Doi:10.1001/jamaoto.2019.3022 https://pubmed.ncbi.nlm.nih.gov/31670805/",
+            "Hseu F, Benninger MS, Haffery TM, et al. Subglottic Stenosis: A Ten-Year Review of Treatment Outcomes. Laryngoscope 2014;124",
+            ":736-741. https://pubmed.ncbi.nlm.nih.gov/24122779/"
+          ],
+          "imageURLs": [
+            "https://firebasestorage.googleapis.com/v0/b/aabip-app.appspot.com/o/image47.png?alt=media&token=5387b7a2-310c-406d-9b62-7b8a515ecd13Flexible",
+            "https://firebasestorage.googleapis.com/v0/b/aabip-app.appspot.com/o/image48.png?alt=media&token=5387b7a2-310c-406d-9b62-7b8a515ecd13The"
+          ]
+        },
+        {
+          "id": "miscellaneous-q14",
+          "number": 14,
+          "prompt": "A 58 years-old female with a 20 pack-year smoking history was recently diagnosed with adenocarcinoma of the left upper lobe by CT guided transthoracic biopsy at another institution.  A contrast enhanced CT and PET/CT show an enlarged FDG avid AP window lymph node (station 5) and enlarged FDG non-avid paraesophageal lymph node (station 8). You are being asked to see this patient for invasive mediastinal staging via endosonography prior to potential tri-modality treatment. Which of the following is true regarding endosonographic invasive mediastinal staging?",
+          "options": [
+            {
+              "id": "a",
+              "text": "The diagnostic yield of EBUS-TBNA is similar to mediastinoscopy for lung cancer staging"
+            },
+            {
+              "id": "b",
+              "text": "The sensitivity of combined EBUS/EUS for lymph node staging is similar to EBUS alone"
+            },
+            {
+              "id": "c",
+              "text": "Only EUS-FNA can sample paraesophageal lymph nodes"
+            },
+            {
+              "id": "d",
+              "text": "If paratracheal and subcarinal lymph nodes are negative on EBUS-TBNA, you should proceed to EUS-FNA for sampling of AP window lymph nodes"
+            },
+            {
+              "id": "e",
+              "text": "For patients with LUL lung cancer, invasive sampling of the AP window LN is not required if other mediastinal lymph nodes are uninvolved by cancer "
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Multiple prospective trials comparing EBUS-TBNA to cervical mediastinoscopy for lung cancer staging have shown EBUS-TBNA to be at least equivalent to mediastinoscopy in regards to diagnostic yield, sensitivity and negative predictive value (Choice A is correct). In a 2013 systematic review and meta-analysis of 22 studies and over 2000 patients the sensitivity of EBUS for mediastinal staging ranged between 88-93% and was equivalent to mediastinoscopy in regards to sensitivity, negative predictive value and diagnostic accuracy. The need for addition of EUS to routine EBUS guided mediastinal staging is controversial. Herth et al. evaluated the comparative effectiveness of EBUS, EUS and combined EBUS/EUS in 150 patients with a high pre-test probability of lung cancer. The sensitivity of EUS-FNA was 89% compared to 92% of EBUS-TBNA while the combined procedure resulted in a sensitivity of 96% (Choice B is incorrect).  The added benefit of EUS-FNA however was small and only 3 additional cancers were discovered by EUS that were missed by EBUS.  Sampling of AP window (station 5) lymph nodes is challenging by EUS and the added benefit of EUS following EBUS has not been shown in the radiographically negative mediastinum (Choice D is incorrect).  Notability however, the ACCP guidelines recommend sampling of the AP window lymph nodes either through VATS or a Chamberlain procedure in the staging of left upper lobe malignancies (Choice E is incorrect).",
+          "references": [
+            "Silvestri GA, Gonzalez AV, Jantz MA, et al. Methods for staging non-small cell lung cancer: diagnosis and management of lung cancer: American College of Chest Physicians evidence-based clinical practice guidelines. CHEST Journal. 2013;143(5_suppl):e211S-e250S. https://pubmed.ncbi.nlm.nih.gov/23649440/",
+            "Yasufuku K, Pierre A, Darling G, et al. A prospective controlled trial of endobronchial ultrasound-guided transbronchial needle aspiration compared with mediastinoscopy for mediastinal lymph node staging of lung cancer. J Thorac Cardiovasc Surg. 2011;142",
+            ":1393-1400.e1391. https://pubmed.ncbi.nlm.nih.gov/21963329/",
+            "Gu P, Zhao YZ, Jiang LY, Zhang W, Xin Y, Han BH. Endobronchial ultrasound-guided transbronchial needle aspiration for staging of lung cancer: a systematic review and meta-analysis. European journal of cancer (Oxford, England : 1990). 2009;45",
+            ":1389-1396. https://www.ncbi.nlm.nih.gov/books/NBK77946/",
+            "Hwangbo B, Lee GK, Lee HS, et al. Transbronchial and transesophageal fine-needle aspiration using an ultrasound bronchoscope in mediastinal staging of potentially operable lung cancer. Chest. 2010;138",
+            ":795-802. https://pubmed.ncbi.nlm.nih.gov/20348194/",
+            "Zhang R, Ying K, Shi L, Zhang L, Zhou L. Combined endobronchial and endoscopic ultrasound-guided fine needle aspiration for mediastinal lymph node staging of lung cancer: a meta-analysis. European journal of cancer (Oxford, England : 1990). 2013;49",
+            ":1860-1867. https://pubmed.ncbi.nlm.nih.gov/23481511/",
+            "Ernst A, Anantham D, Eberhardt R, Krasnik M, Herth FJ. Diagnosis of mediastinal adenopathy-real-time endobronchial ultrasound guided needle aspiration versus mediastinoscopy. Journal of thoracic oncology : official publication of the International Association for the Study of Lung Cancer. 2008;3",
+            ":577-582. https://pubmed.ncbi.nlm.nih.gov/18520794/",
+            "Um SW, Kim HK, Jung SH, et al. Endobronchial ultrasound versus mediastinoscopy for mediastinal nodal staging of non-small-cell lung cancer. Journal of thoracic oncology : official publication of the International Association for the Study of Lung Cancer. 2015;10",
+            ":331-337. https://pubmed.ncbi.nlm.nih.gov/25611227/",
+            "Adams K, Shah PL, Edmonds L, Lim E. Test performance of endobronchial ultrasound and transbronchial needle aspiration biopsy for mediastinal staging in patients with lung cancer: systematic review and meta-analysis. Thorax. 2009;64",
+            ":757-762. https://pubmed.ncbi.nlm.nih.gov/19454408/",
+            "Herth FJ, Krasnik M, Kahn N, Eberhardt R, Ernst A. Combined endoscopic-endobronchial ultrasound-guided fine-needle aspiration of mediastinal lymph nodes through a single bronchoscope in 150 patients with suspected lung cancer. CHEST Journal. 2010;138",
+            ":790-794. https://pubmed.ncbi.nlm.nih.gov/20154073/"
+          ],
+          "imageURLs": []
+        },
+        {
+          "id": "miscellaneous-q15",
+          "number": 15,
+          "prompt": "74-year-old female with history of heart failure undergoes an uneventful bronchoscopy with transbronchial biopsy. After returning to her room on medical floor she develops respiratory distress.  Physical exam shows shallow and fast breathing, distant breath sounds bilaterally and \u201cstrawberry tongue\u201d (see picture below)https://firebasestorage.googleapis.com/v0/b/aabip-app.appspot.com/o/image36.jpg?alt=media&token=5387b7a2-310c-406d-9b62-7b8a515ecd13You decide to review the upper airway anesthesia process with your respiratory therapist and find out that he decided to use 4% lidocaine to \u201cspeed things up\u201d.  What is the recommended total dose of the topical lidocaine that should not be exceeded during a topical anesthesia of the upper airway prior to a bronchoscopy?",
+          "options": [
+            {
+              "id": "a",
+              "text": "4.5 mg/kg when used in conjunction with epinephrine and 7 mg/kg when used alone"
+            },
+            {
+              "id": "b",
+              "text": "12 mg/kg when used in conjunction with epinephrine and 7 mg/kg when used alone"
+            },
+            {
+              "id": "c",
+              "text": "7 mg/kg when used in conjunction with epinephrine and 4.5 mg/kg when used alone"
+            },
+            {
+              "id": "d",
+              "text": "7 mg/kg when used in conjunction with epinephrine and 12 mg/kg when used alone "
+            }
+          ],
+          "correctOptionId": "c",
+          "explanation": "Lidocaine toxicity not only is determined by the total dose but also by the rate of absorption, which is dependent on the blood flow of that tissue. To reduce blood flow to the injection site and therefore the rate of absorption, vasoconstrictors such as epinephrine 1:20000 is frequently used and may increase the toxic dose threshold to 7 mg/kg. Attention to the dosage should be given to acutely ill patients, pregnant women, small children, patients of advanced age, and patients with liver or cardiovascular disease.",
+          "references": [
+            "Torp KD, Simon LV. Lidocaine toxicity. StatPearls [Internet]. Treasure Island (FL): StatPearls Publishing; 2019-2019 Mar 21.https://www.ncbi.nlm.nih.gov/books/NBK482479/",
+            "Sekimoto K, Tobe M, Saito S. Local anesthetic toxicity: acute and chronic management. Acute Med Surg. 2017 Mar 6;4",
+            ":152-160https://pubmed.ncbi.nlm.nih.gov/29123854/"
+          ],
+          "imageURLs": [
+            "https://firebasestorage.googleapis.com/v0/b/aabip-app.appspot.com/o/image36.jpg?alt=media&token=5387b7a2-310c-406d-9b62-7b8a515ecd13You"
+          ]
+        },
+        {
+          "id": "miscellaneous-q16",
+          "number": 16,
+          "prompt": "You are consulted on the inpatient service to see a patient with a thoracic mass and post-obstructive pneumonia.  During bronchoscopy you find the lesion invading into the airway as seen from the proximal left main stem bronchus.https://firebasestorage.googleapis.com/v0/b/aabip-app.appspot.com/o/image25.jpg?alt=media&token=5387b7a2-310c-406d-9b62-7b8a515ecd13This lesion is also most likely invading which mediastinal structure?",
+          "options": [
+            {
+              "id": "a",
+              "text": "The left atrium"
+            },
+            {
+              "id": "b",
+              "text": "The thoracic duct"
+            },
+            {
+              "id": "c",
+              "text": "The left pulmonary artery"
+            },
+            {
+              "id": "d",
+              "text": "The aortic arch"
+            },
+            {
+              "id": "e",
+              "text": "The left inferior pulmonary vein "
+            }
+          ],
+          "correctOptionId": "c",
+          "explanation": "As noted in the question stem, this image is taken looking into the proximal left mainstem bronchus.  Further orientation is accomplished by recognizing the airway\u2019s posterior membranous stripes between 6 and 9 o\u2019clock of the image.  This places the mass intrusion over the left lateral aspect of the proximal-mid left mainstem bronchus.  Only one of the mediastinal structures listed, the left pulmonary artery, is normally found in this location (choice C correct). The left atrium is medial to the left mainstem in the subcarinal location (choice A incorrect).  The thoracic duct is usually posterior to the esophagus which is in turn usually posterior to the left mainstem bronchus (choice B incorrect).  The aortic arch is left lateral to the airway, but is located more cephalad, in the mid-lower paratracheal region (choice D incorrect).  The left inferior pulmonary vein crosses the airway posteriorly at about the level of the hilum, which is fairly caudad to the mass (choice E incorrect).",
+          "references": [
+            "Proto AV. Mediastinal anatomy: emphasis on conventional images with anatomic and computed tomographic correlations. J Thorac Imaging 1987;2:1-48. https://pubmed.ncbi.nlm.nih.gov/3612915/"
+          ],
+          "imageURLs": [
+            "https://firebasestorage.googleapis.com/v0/b/aabip-app.appspot.com/o/image25.jpg?alt=media&token=5387b7a2-310c-406d-9b62-7b8a515ecd13This"
+          ]
+        },
+        {
+          "id": "miscellaneous-q17",
+          "number": 17,
+          "prompt": "Which of the following is true about tracheal bronchus?",
+          "options": [
+            {
+              "id": "a",
+              "text": "True incidence of tracheal bronchus is around 3%."
+            },
+            {
+              "id": "b",
+              "text": "It always arises from right side"
+            },
+            {
+              "id": "c",
+              "text": "The most common presentation of tracheal bronchus is displacement of branch of right upper lobe bronchus."
+            },
+            {
+              "id": "d",
+              "text": "Bronchus arising from proximal to the origin of right upper lobe bronchus is called prehyparterial."
+            },
+            {
+              "id": "e",
+              "text": "ASD is the most common congenital heart disease associated with tracheal bronchus. "
+            }
+          ],
+          "correctOptionId": "c",
+          "explanation": "Tracheal bronchus is a congenital variation in tracheobronchial anatomy. It is defined as bronchus originating from trachea or main bronchus. They are directed at the upper lobes. Prevalence of tracheal bronchus is between 0.1-2%. Pig bronchus is defined as entire right upper lobe originating from trachea which has prevalence of 0.2%. A left side bronchus has prevalence of 0.3-1%. Reduction, migration and selection theory has been proposed as a mechanism of development of tracheal bronchus. They are classified on 4 morphological patterns- displaced, rudimentary, supernumerary and anomalous. Displaced bronchus (77% of tracheal bronchus) is the most common presentation wherein a branch of the right upper lobe is missing and the displaced tracheal bronchus aerates the segment of the upper lobe where the missing branch is located. If a tracheal bronchus exists with normal branches of right upper lobe, it is considered supernumerary. If a tracheal bronchus ends in a blind out pouch, it is considered a rudimentary bronchus. If entire right upper lobe bronchus originates above the bifurcation of trachea, it is considered anomalous tracheal bronchus. Normal right upper lobe bronchus arises above the point where the right pulmonary artery crosses the right main bronchus and therefore described as eparterial. Normal left upper lobe bronchus arises below the point where the left pulmonary artery crosses the left main bronchus and therefore described as hyparterial.   If tracheal bronchus arises proximal to the origin of upper lobe bronchus, they are considered pre-eparterial and prehyparterial on right and left side, respectively. If it arises distally, then they are considered posteparterial and posthyparterial on right and left side, respectively. Tracheal bronchus is associated with various congenital anomalies such as tracheoesophageal fistula, tracheal stenosis, bronchostenosis, rib variations, vertebral variations, pectus excavatum, esophageal anomalies and congenital heart diseases. Tetrology of Fallot and Ventricular Septal defect are the most common congenital heart disease associated with tracheal bronchus.",
+          "references": [
+            "Wooten C. et al. Variations of  the tracheobronchial tree: anatomical and clinical significance. Clin Anat. 2014 Nov;27",
+            ":1223-33 https://pubmed.ncbi.nlm.nih.gov/24453071/",
+            "Ghaye B et al. Congenital bronchial abnormalities revisited. Radiographics. 2001 Jan-Feb;21",
+            ":105-19. https://pubs.rsna.org/doi/10.1148/radiographics.21.1.g01ja06105"
+          ],
+          "imageURLs": []
+        },
+        {
+          "id": "miscellaneous-q18",
+          "number": 18,
+          "prompt": "Which of the following statements is most accurate in regards to cervical mediastinoscopy for invasive lymph node staging of lung cancer?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Cervical mediastinoscopy requires general anesthetic and overnight admission post procedure"
+            },
+            {
+              "id": "b",
+              "text": "All mediastinal lymph nodes can be assessed by cervical mediastinoscopy"
+            },
+            {
+              "id": "c",
+              "text": "Contraindications to mediastinoscopy includes tracheostomy and severe cervical arthritis"
+            },
+            {
+              "id": "d",
+              "text": "The mortality of cervical mediastinoscopy is around 0.5%, similar to minimally invasive endoscopic lymph node staging modalities."
+            },
+            {
+              "id": "e",
+              "text": "According to the Society of Thoracic Surgeons survey, cervical mediastinoscopy is a routine practice in thoracic surgery and is performed in over 40% of patients undergoing surgical management of lung cancer "
+            }
+          ],
+          "correctOptionId": "c",
+          "explanation": "In a nine-year review of complications related to surgical mediastinoscopy approximately 1% of patients experienced major complications to include hemorrhage, vocal cord injury, tracheal injury and pneumothorax with a morbidity of 0.5%.  This is in comparison to EBUS which carries a rate of major complications of approximately 1/800. The mortality of cervical mediastinoscopy is 0.08%, which is low but still higher than minimally invasive endoscopic lymph node staging modalities (Choice D is incorrect).  Mediastinoscopy can access paratracheal (2R, 4R, 2L, 4L), and subcarinal (7) lymph nodes not retrotracheal lymph nodes (station 3P).  The presence of a tracheostomy and severe cervical arthritis are considered contraindications to surgical mediastinoscopy (Choice C is correct).",
+          "references": [
+            "Little AG, Rusch VW, Bonner JA, et al. Patterns of surgical care of lung cancer patients. The Annals of thoracic surgery. 2005;80",
+            ":2051-2056.  https://pubmed.ncbi.nlm.nih.gov/16305843/",
+            "Boffa DJ, Allen MS, Grab JD, Gaissert HA, Harpole DH, Wright CD. Data from The Society of Thoracic Surgeons General Thoracic Surgery database: the surgical management of primary lung tumors. J Thorac Cardiovasc Surg. 2008;135",
+            ":247-254. https://pubmed.ncbi.nlm.nih.gov/18242243/",
+            "Lemaire A, Nikolic I, Petersen T, et al. Nine-year single center experience with cervical mediastinoscopy: complications and false negative rate. Ann Thorac Surg. 2006;82",
+            ":1185-1189; \ndiscussion\n 1189-1190. https://pubmed.ncbi.nlm.nih.gov/16996905/",
+            "Yasufuku K, Keshavjee S. Staging Non\u2013Small Cell Lung Cancer: Endobronchial Ultrasound Versus Mediastinoscopy. Clinical Pulmonary Medicine. 2010;17",
+            ":223-231. https://pubmed.ncbi.nlm.nih.gov/21963329/",
+            "Hammoud ZT, Anderson RC, Meyers BF, et al. The current role of mediastinoscopy in the evaluation of thoracic disease. The Journal of Thoracic and Cardiovascular Surgery. 1999;118",
+            ":894-899. https://pubmed.ncbi.nlm.nih.gov/10534695/"
+          ],
+          "imageURLs": []
+        },
+        {
+          "id": "miscellaneous-q19",
+          "number": 19,
+          "prompt": "Which of the following pattern of calcification of pulmonary nodules on CXR is NOT commonly associated with \u201cbenign\u201d processes?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Central"
+            },
+            {
+              "id": "b",
+              "text": "Diffuse"
+            },
+            {
+              "id": "c",
+              "text": "Laminated"
+            },
+            {
+              "id": "d",
+              "text": "Eccentric"
+            },
+            {
+              "id": "e",
+              "text": "Popcorn "
+            }
+          ],
+          "correctOptionId": "d",
+          "explanation": "Patterns of calcification may help contribute to determining the pre-test probability of malignancy for a pulmonary nodule.   Diffuse, central, popcorn and laminar (or concentric) calcification are usually associated with benign processes while stippled and eccentric calcifications are associated with malignancy.https://firebasestorage.googleapis.com/v0/b/aabip-app.appspot.com/o/image29.png?alt=media&token=5387b7a2-310c-406d-9b62-7b8a515ecd13",
+          "references": [
+            "Gould MK, Donington J, Lynch WR, et al. Evaluation of individuals with pulmonary nodules: When is it lung cancer?: diagnosis and management of lung cancer, 3rd ed: american college of chest physicians evidence-based clinical practice guidelines. Chest. 2013;143(5_suppl):e93S-e120S. https://pubmed.ncbi.nlm.nih.gov/23649456/",
+            "Webb WR. Radiologic evaluation of the solitary pulmonary nodule. American Journal of Roentgenology. 1990;154",
+            ":701-708. https://pubmed.ncbi.nlm.nih.gov/2107661/"
+          ],
+          "imageURLs": [
+            "https://firebasestorage.googleapis.com/v0/b/aabip-app.appspot.com/o/image29.png?alt=media&token=5387b7a2-310c-406d-9b62-7b8a515ecd13"
+          ]
+        },
+        {
+          "id": "miscellaneous-q20",
+          "number": 20,
+          "prompt": "You are asked to perform percutaneous dilatational tracheostomy (PDT) on a 28-year-old male with ARDS post-flu with superimposed MRSA pneumonia. His hospital course is complicated by right-sided segmental PE and he is on heparin infusion. His most recent aPTT is 74 sec.  His baseline Hgb is 7.2. He has been intubated for 18 days and failed one extubation attempt.  He is currently on PEEP of 10, FiO2 60% and his O2 saturation ranges between 94-96%. You review the chart and his most recent CT chest.  All anatomic land marks appear acceptable for percutaneous approach and you ask to hold heparin infusion 4 hours prior the procedure. He has an uneventful PDT.   Heparin infusion is restarted without a bolus one hour post-procedure. In the middle of the night you get a call from the MICU fellow about significant amount of bloody secretions that has been suctioned out from the patient\u2019s airway. He has already performed bronchoscopy and has not seen any active bleeding. Patient\u2019s aPTT is 90 sec and repeat Hgb is 7 g/dL. You decide to come and evaluate the patient. You note dried blood around the tracheostomy tube with very small amount of a fresh blood and around 50-100 mL of bloody secretions in the canister. Patient is hemodynamically stable and maintain his O2 saturation.  What is the best next step in management of this patient?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Hold the heparin infusion, administer protamine sulfate, remove the trach and perform bronchoscopy via stoma in attempt to identify source of bleeding."
+            },
+            {
+              "id": "b",
+              "text": "Hold heparin infusion, wrap Surgicel around the tracheostomy, and if bleeding persists consider inflating the cuff with 10 mL of saline instead of air."
+            },
+            {
+              "id": "c",
+              "text": "Replace tracheostomy with an ET tube and call ENT surgeon for help"
+            },
+            {
+              "id": "d",
+              "text": "Adjust heparin infusion for aPTT goal of 40 seconds and ask for CTA of neck for possible IR embolization of the inferior thyroid artery. "
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Bleeding is the most common early complication of tracheostomy and can lead to patient death.  Minor oozing during or after the placement may be managed by local pressure, light packing with adrenaline or tranexamic acid-soaked gauze packs. Tracheo-innominate arterial fistula or erosion of the tube through a tracheal wall are rare but often devastating complications of the procedure.  Hyperinflation of the cuff or using a saline instead of air creates significantly higher pressure on a surrounding tissue and can be used as a temporizing measure. In case of significant bleeding or ongoing bleeding around the tracheostomy tube after placement despite initial measures, the stoma may need to be explored to locate a bleeding vessel which can then be either cauterized or sutured. Dislodgment of the tube or creating a false lumen may be a fatal complication in the first few days after tracheotomy. If tracheostomy tube is removed in the first few days one should rather perform translaryngeal intubation than attempting to insert ET tube or tracheostomy tube in a fresh stoma.",
+          "references": [
+            "Otolaryngol Head Neck Surg. 2000 Oct;123",
+            ":495-500https://pubmed.ncbi.nlm.nih.gov/11020193/",
+            "J Thorac Dis. 2017 Sep; 9(Suppl 10): S1128\u2013S1138https://pubmed.ncbi.nlm.nih.gov/29214070/"
+          ],
+          "imageURLs": []
+        },
+        {
+          "id": "miscellaneous-q21",
+          "number": 21,
+          "prompt": "A 62-year-old female with a past medical history of COPD, hypertension and GERD is referred to your clinic for chronic cough and dyspnea despite tiotropium 2 puffs daily, fluticasone-salmeterol 500/50 1 puff BID and PRN albuterol.   Her cough is constant and barking in nature.  Dynamic CT chest demonstrates severe expiratory tracheal collapse which is confirmed on flexible bronchoscopy. She undergoes rigid bronchoscopy with placement of a silicone Y stent with subjective improvement in her symptoms and mild improvement in her FEV1 from 1.1 L to 1.3L.  Referral for tracheobronchoplasty is considered.  Which of the following statements are true?https://firebasestorage.googleapis.com/v0/b/aabip-app.appspot.com/o/image40.png?alt=media&token=5387b7a2-310c-406d-9b62-7b8a515ecd13https://firebasestorage.googleapis.com/v0/b/aabip-app.appspot.com/o/image41.png?alt=media&token=5387b7a2-310c-406d-9b62-7b8a515ecd13https://firebasestorage.googleapis.com/v0/b/aabip-app.appspot.com/o/image42.png?alt=media&token=5387b7a2-310c-406d-9b62-7b8a515ecd13https://firebasestorage.googleapis.com/v0/b/aabip-app.appspot.com/o/image43.png?alt=media&token=5387b7a2-310c-406d-9b62-7b8a515ecd13",
+          "options": [
+            {
+              "id": "a",
+              "text": "This patient would not be expected to have improvement in her symptoms with tracheobronchoplasty because her tracheobronchomalacia is likely secondary to her COPD"
+            },
+            {
+              "id": "b",
+              "text": "Tracheobronchoplasty has been shown to improve dyspnea and quality of life in select patients with tracheobronchomalacia who have symptomatic improvement with airway stenting"
+            },
+            {
+              "id": "c",
+              "text": "Long term stabilization of this patient\u2019s tracheomalacia with a covered metallic stent is another accepted option for treatment of this patient\u2019s disease"
+            },
+            {
+              "id": "d",
+              "text": "This patient would not benefit from optimization of her co-existing medical conditions including therapy for GERD and participation in pulmonary rehabilitation "
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Majid et al. described 104 patients referred to a single center for evaluation of tracheobrochomalacia.  Of that group 57 patients were found to have severe tracheobronchomalacia on dynamic functional bronchoscopy and underwent silicone stent placement.  Of this group, 37 patients had symptomatic improvement after airway stenting and 35 ultimately underwent surgical tracheobronchoplasty.  Post-operatively, patients were shown to have improvement in their quality of life scores, bode dyspnea index and 6MWT. 20 of the 35 patients who underwent surgery had underlying obstructive lung disease and 18 out of 20 (90%) such patients had improvement in dyspnea and quality of life (Choice B is correct and A is incorrect). Long term placement of metallic stents is not considered an accepted option for patients with tracheobronchomalacia given concerns with use of metallic stents in patients with benign disease (Choice C is incorrect).  Optimization of co-existing medical conditions prior to consideration of stenting or surgical management is recommended for all patients with tracheobronchomalacia (Choice D is incorrect).   More recently, uncovered self-expandable metallic stents have largely replaced silicone stent use for stent trials.",
+          "references": [
+            "Majid A, Guerrero J, Gangadharan S, et al. Tracheobronchoplasty for severe tracheobronchomalacia: a prospective outcome analysis. Chest. 2008;134",
+            ":801-7.https://pubmed.ncbi.nlm.nih.gov/18842912/",
+            "Majid A, Alape D, Kheir F, et al. Short-Term Use of Uncovered Self-Expanding Metallic Airway Stents for Severe Expiratory Central Airway Collapse. Respiration. 2016;92",
+            ":389-396.https://www.karger.com/Article/Fulltext/450961"
+          ],
+          "imageURLs": [
+            "https://firebasestorage.googleapis.com/v0/b/aabip-app.appspot.com/o/image40.png?alt=media&token=5387b7a2-310c-406d-9b62-7b8a515ecd13https://firebasestorage.googleapis.com/v0/b/aabip-app.appspot.com/o/image41.png?alt=media&token=5387b7a2-310c-406d-9b62-7b8a515ecd13https://firebasestorage.googleapis.com/v0/b/aabip-app.appspot.com/o/image42.png?alt=media&token=5387b7a2-310c-406d-9b62-7b8a515ecd13https://firebasestorage.googleapis.com/v0/b/aabip-app.appspot.com/o/image43.png?alt=media&token=5387b7a2-310c-406d-9b62-7b8a515ecd13"
+          ]
+        },
+        {
+          "id": "miscellaneous-q22",
+          "number": 22,
+          "prompt": "For which of the following patients is it most appropriate to DISCONTINUE further surveillance imaging?",
+          "options": [
+            {
+              "id": "a",
+              "text": "A 50 years-old smoking white man with recent diagnosis melanoma and a new 6mm middle lobe non-calcified nodule; previous Chest CT normal"
+            },
+            {
+              "id": "b",
+              "text": "A 50 years-old Asian non-smoking woman with an 11mm peripheral ground glass lung nodule, stable over 24 months"
+            },
+            {
+              "id": "c",
+              "text": "A 50 years-old non-smoking man with a smooth 13mm LLL nodule containing central calcification and fat, no previous imaging"
+            },
+            {
+              "id": "d",
+              "text": "A 50 years-old heavy smoker with a 9mm LUL nodule, stable over 12 months "
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Of the choices listed, choice C is the least suspicious nodule for malignancy as it represents a likely hamartoma in a low risk individual.  All other scenarios require further surveillance.  A new nodule that is still not large enough to reliably biopsy or further characterize in a patient with existing malignancy requires close follow-up, usually by CT scan within 3 months (choice A).  An incidental ground glass nodule greater than 6mm in size requires surveillance up to 5 years to document stability (choice B).  An incidental lung nodule greater than 8mm in size in a patient with risk factors for lung cancer requires additional evaluation for a total of 24 months to document stability (choice D).",
+          "references": [
+            "MacMahon H, Naidich DP, Goo JM, et al. Guidelines for Management of Incidental Pulmonary Nodules Detected on CT Images: From the Fleischner Society 2017. Radiology 2017;284:228-43. https://pubmed.ncbi.nlm.nih.gov/28240562/",
+            "Gould MK, Donington J, Lynch WR, et al. Evaluation of individuals with pulmonary nodules: when is it lung cancer? Diagnosis and management of lung cancer, 3rd ed: American College of Chest Physicians evidence-based clinical practice guidelines. Chest 2013;143:e93S-e120S. https://pubmed.ncbi.nlm.nih.gov/23649456/"
+          ],
+          "imageURLs": []
+        },
+        {
+          "id": "miscellaneous-q23",
+          "number": 23,
+          "prompt": "One of your patients from the lung cancer screening clinic comes for follow-up very upset.  She is a 67-year-old woman with a heavy smoking history, ischemia-related systolic heart dysfunction (LVEF=45%) and COPD with FEV1=55% of predicted.  Eight weeks ago, unbeknownst to you, she visited a local clinic with chest discomfort and cough.  After a round of antibiotics was unsuccessful in relieving symptoms, chest imaging revealed a 32mm central lung mass with mediastinal extension and was diagnosed as a primary lung cancer by biopsy.  Her first three rounds of LDCT screening were negative (Lung-RADS=1), with the last of the three LDCTs (reviewed by you) about 13 months ago.  She has been told the tumor has \u201cadvanced to a stage not curable by surgery.\u201d    She is confused and angrily states \u201cYou must have missed something on my last year\u2019s CT scan!\u201d  After confirming all her records are accurate, you explain that protocol was followed, and even though screening with yearly LDCT is intended to detect cancer at an early stage, the system isn\u2019t foolproof.    Which of the following circumstances most likely explains this patient\u2019s situation?",
+          "options": [
+            {
+              "id": "a",
+              "text": "This tumor likely could have been cured by local ablative therapy at an early stage, and a bronchoscopy should have been performed in concert with last LDCT."
+            },
+            {
+              "id": "b",
+              "text": "The tumor cells stain with synaptophysin and show a strong, diffuse positivity for Ki-67."
+            },
+            {
+              "id": "c",
+              "text": "The tumor may be treated with a tyrosine kinase inhibitor (TKI)"
+            },
+            {
+              "id": "d",
+              "text": "A ground glass nodule in the area of the current mass was missed on the most recent LDCT screen."
+            },
+            {
+              "id": "e",
+              "text": "Surgical resection would have been feasible if the tumor was diagnosed at a pre-invasive stage. "
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "The case presented is an unfortunate situation in which a tumor developed in a patient undergoing lung cancer screening in the one-year interval between LDCT scans.  This is most likely to occur with an aggressive tumor, such as small cell carcinoma (SCLC), as confirmed in this case with biopsy showing a consistent immunohistochemical profile (choice B correct).    Non-adenocarcinoma tumors do not typically harbor tyrosine kinase cascade driver mutations such as EGFR, and thus are not treated with TKIs (choice C incorrect).  Given its central and mediastinal location, it is unlikely the tumor would have been curable surgically.  Ablative therapy for early, microinvasive squamous cell cancer is possible for curative intent.1 However, bronchoscopy as an adjunct to lung cancer screening or for ablative therapy in SCLC are not recommended approaches (choices A and E incorrect).2,3 The most likely type of tumor to be detected on lung cancer screening is an adenocarcinoma, which may develop from a pre-invasive lesion and initially present as a peripheral sub-solid nodule.  This would have been detected on a CT scan.  However, even if missed on the initial scan, volume doubling times are over one year in a large majority of adenocarcinomas.4 Thus, such a tumor is unlikely to have grown from a subtle finding to the current size in the given CT scan interval (choice D incorrect).",
+          "references": [
+            "Wilson DO, Ryan A, Fuhrman C, et al. Doubling times and CT screen\u2013detected lung cancers in the Pittsburgh Lung Screening Study. Am J Respir Crit Care Med. 2012;185",
+            ":85\u201089. https://pubmed.ncbi.nlm.nih.gov/21997335/",
+            "Wisnivesky JP, Yung RC, Mathur PN, Zulueta JJ. Diagnosis and treatment of bronchial intraepithelial neoplasia and early lung cancer of the central airways: Diagnosis and management of lung cancer, 3rd ed: American College of Chest Physicians evidence-based clinical practice guidelines. Chest. 2013;143(5 Suppl):e263S\u2010e277S. https://pubmed.ncbi.nlm.nih.gov/23649442/",
+            "Tanoue LT, Tanner NT, Gould MK, Silvestri GA. Lung cancer screening. Am J Respir Crit Care Med 2015;191:19-33. https://pubmed.ncbi.nlm.nih.gov/25369325/",
+            "Arenberg D. Update on screening for lung cancer. Transl Lung Cancer Res 2019;8:S77-S87. https://pubmed.ncbi.nlm.nih.gov/31211108/"
+          ],
+          "imageURLs": []
+        },
+        {
+          "id": "miscellaneous-q24",
+          "number": 24,
+          "prompt": "A primary care physician refers to you a 72-year-old man without known past medical history for abnormal CT scan of chest that was obtained for non-specific chest discomfort. Patient has 30 pack-year smoking history; however, he quit smoking 10 years ago. CT scan of chest showed a 7 mm solid nodule in left upper lobe.  Patient has no prior chest imaging.  What is the next step in the management of this pulmonary nodule?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Low dose CT scan of chest in 3 months"
+            },
+            {
+              "id": "b",
+              "text": "Low dose CT scan of chest in 6-12 months"
+            },
+            {
+              "id": "c",
+              "text": "PET/ CT scan now"
+            },
+            {
+              "id": "d",
+              "text": "Tissue biopsy since patient is high risk"
+            },
+            {
+              "id": "e",
+              "text": "Surgical resection would have been feasible if the tumor was diagnosed at a pre-invasive stage. "
+            }
+          ],
+          "correctOptionId": "d",
+          "explanation": "Surveillance of a single solid incidentally-found lung nodule is primarily dictated by its size and, to a lesser extent, presence of patient risk factors for malignancy.  Fleischner Society guidelines for management of pulmonary nodules was revised in 2017 and several changes were incorporated.  Minimum cutoff size for routine follow-up increased, given the average risk of cancer in solid nodules smaller than 6 mm is less than 1%, even in high risk patients.  Follow-up intervals are also given as a range.  This patient is a high risk for malignancy (smoking, age, history of cancer).  The nodule falls within the 6-8mm range, and therefore a follow-up low dose chest CT scan without contrast in 6-12 months is appropriate.  A nodule greater than 8mm would require more vigilance, with either a short term (3-month) CT chest, PET/CT, or diagnostic sampling.",
+          "references": [
+            "MacMahon H., et al. Guidelines for Management of Incidental Pulmonary Nodules Detected on CT Images: From the Fleischner Society 2017. Radiology. 2017;Vol 284:1, 228-243. https://pubs.rsna.org/doi/10.1148/radiol.2017161659",
+            "Ost DE., et al. Decision making in patients with pulmonary nodules. American Journal of Respiratory and Critical Care Medicine. 2012; Vol 185, pp 363\u2013372. https://www.atsjournals.org/doi/full/10.1164/rccm.201104-0679CI"
+          ],
+          "imageURLs": []
+        },
+        {
+          "id": "miscellaneous-q25",
+          "number": 25,
+          "prompt": "What is the typical time frame for development of an airway complication (AC) following lung transplant?",
+          "options": [
+            {
+              "id": "a",
+              "text": "First week"
+            },
+            {
+              "id": "b",
+              "text": "< 12 months"
+            },
+            {
+              "id": "c",
+              "text": "> 12 months"
+            },
+            {
+              "id": "d",
+              "text": "Risk for AC after lung transplant remains fairly constant over time "
+            }
+          ],
+          "correctOptionId": "d",
+          "explanation": "Early airway complications are typically defined as those that develop in the first three months after lung transplantation while late complications develop after three months. The most common early complications are typically development of necrosis and dehiscence while late complications are more commonly a result of remodeling and typically present as either stenosis or malacia.  However, even the late complications generally develop within the first year after lung transplantation.",
+          "references": [
+            "Murthy SC, Gildea TR, Machuzak MS. Anastomotic airway complications after lung transplantation. Current opinion in organ transplantation. 2010;15",
+            ":582-587 https://pubmed.ncbi.nlm.nih.gov/20733486/"
+          ],
+          "imageURLs": []
+        },
+        {
+          "id": "miscellaneous-q26",
+          "number": 26,
+          "prompt": "A 66 years-old male, smoker with mild COPD presents with mild intermittent hemoptysis.  A CT of the chest is read as normal and he subsequently undergoes inspection bronchoscopy which reveals a 12 mm, mildly raised, broad based lesion, overlying his right upper lobe carina. Radial probe EBUS denotes cartilage invasion and biopsy reveals a squamous cell carcinoma. Which of the following statements is correct in regards to this patient?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Both photodynamic therapy (PDT) and brachytherapy would be appropriate treatment strategies"
+            },
+            {
+              "id": "b",
+              "text": "Given cartilage invasion, appropriate staging followed by thoracic surgery consultation is indicated"
+            },
+            {
+              "id": "c",
+              "text": "Argon plasma coagulation and/or cryotherapy would be adequate alternatives for treatment"
+            },
+            {
+              "id": "d",
+              "text": "Only palliative management of hemoptysis is indicated"
+            },
+            {
+              "id": "e",
+              "text": "Surgical resection would have been feasible if the tumor was diagnosed at a pre-invasive stage. "
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "In patients with early central airway lung cancer defined as radiographically occult squamous cell carcinoma less than 2 cm in surface area, with clear visible margins, appearing superficial endoscopically and without invasion beyond the bronchial cartilage assessed either by pathologic assessment or by imaging such as radial probe EBUS, curative intent bronchoscopic treatment with PDT, electrocautery, cryotherapy or brachytherapy is warranted. However, the presence of cartilaginous invasion as seen in this case with radial-probe ultrasound suggests this is an invasive carcinoma and should prompt surgical consultation (choice B correct).",
+          "references": [
+            "Miyazu Y, Miyazawa T, Kurimoto N, Iwamoto Y, Kanoh K, Kohno N. Endobronchial ultrasonography in the assessment of centrally located early-stage lung cancer before photodynamic therapy. American journal of respiratory and critical care medicine. 2002;165",
+            ":832-837. https://pubmed.ncbi.nlm.nih.gov/11897652/",
+            "Ikeda N, Hayashi A, Iwasaki K, et al. Comprehensive diagnostic bronchoscopy of central type early stage lung cancer. Lung Cancer. 2007;56",
+            ":295-302. https://pubmed.ncbi.nlm.nih.gov/17291623/",
+            "Miyazu Y, Miyazawa T, Iwamoto Y, Kano K, Kurimoto N. The role of endoscopic techniques, laser-induced fluorescence endoscopy, and endobronchial ultrasonography in choice of appropriate therapy for bronchial cancer. Journal of Bronchology & Interventional Pulmonology. 2001;8",
+            ":10-16."
+          ],
+          "imageURLs": []
+        },
+        {
+          "id": "miscellaneous-q27",
+          "number": 27,
+          "prompt": "Which of the following risk factors are associated with increased risk of airway complications in lung transplant recipients?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Duration of donor\u2019s mechanical ventilation prior to organ recovery"
+            },
+            {
+              "id": "b",
+              "text": "Height mismatch between donor and recipient"
+            },
+            {
+              "id": "c",
+              "text": "Type of surgical anastomosis"
+            },
+            {
+              "id": "d",
+              "text": "Post-operative bronchopneumonitis"
+            },
+            {
+              "id": "e",
+              "text": "All of the above "
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Risk factors for airway complications following lung transplant can be divided into the donor and recipient factors. Typical donor factors include longer duration of donor\u2019s mechanical ventilation, significant height mismatch between the donor and recipient with a taller donor more likely to result in complications due to larger bronchial diameter which sometimes requires a telescoping anastomosis, which is itself independently associated with airway complications.  Recipient factors associated with airway complications include ischemia of the donor bronchus in the immediate postoperative period, shorter height, development of infections, immunosuppression and the requirement for postoperative tracheostomy.",
+          "references": [
+            "Murthy SC, Gildea TR, Machuzak MS. Anastomotic airway complications after lung transplantation. Current opinion in organ transplantation. 2010;15",
+            ":582-587. https://pubmed.ncbi.nlm.nih.gov/20733486/",
+            "De Boer WJ, Mannes GP, Van Der Bij W. Preoperative corticosteroids. A contraindication to lung transplantation? Chest. 1994;105",
+            ":1908. https://journal.chestnet.org/article/S0012-3692",
+            "44134-0/pdf",
+            "Colquhoun IW, Gascoigne AD, Au J, Corris PA, Hilton CJ, Dark JH. Airway complications after pulmonary transplantation. Ann Thorac Surg. 1994;57",
+            ":141-145. https://pubmed.ncbi.nlm.nih.gov/8279880/",
+            "Schafers HJ, Haverich A, Wagner TO, Wahlers T, Alken A, Borst HG. Decreased incidence of bronchial complications following lung transplantation. European journal of cardio-thoracic surgery : official journal of the European Association for Cardio-thoracic Surgery. 1992;6",
+            ":174-178; \ndiscussion\n 179. https://pubmed.ncbi.nlm.nih.gov/1586491/",
+            "Groetzner J, Kur F, Spelsberg F, et al. Airway anastomosis complications in de novo lung transplantation with sirolimus-based immunosuppression. The Journal of heart and lung transplantation: the official publication of the International Society for Heart Transplantation. 2004;23",
+            ":632-638. https://pubmed.ncbi.nlm.nih.gov/15135383/",
+            "Garfein ES, McGregor CC, Galantowicz ME, Schulman LL. Deleterious effects of telescoped bronchial anastomosis in single and bilateral lung transplantation. Annals of transplantation. 2000;5",
+            ":5-11. https://pubmed.ncbi.nlm.nih.gov/10850603/",
+            "Hasegawa T, Iacono AT, Orons PD, Yousem SA. Segmental nonanastomotic bronchial stenosis after lung transplantation. Ann Thorac Surg. 2000;69",
+            ":1020-1024. https://pubmed.ncbi.nlm.nih.gov/10800787/",
+            "Van De Wauwer C, Van Raemdonck D, Verleden GM, et al. Risk factors for airway complications within the first year after lung transplantation. European journal of cardio-thoracic surgery : official journal of the European Association for Cardio-thoracic Surgery. 2007;31",
+            ":703-710. https://pubmed.ncbi.nlm.nih.gov/17306556/",
+            "Murthy SC, Blackstone EH, Gildea TR, et al. Impact of anastomotic airway complications after lung transplantation. Ann Thorac Surg. 2007;84",
+            ":401-409, 409.e401-404. https://pubmed.ncbi.nlm.nih.gov/17643606/"
+          ],
+          "imageURLs": []
+        },
+        {
+          "id": "miscellaneous-q28",
+          "number": 28,
+          "prompt": "A 24 years-old, 26 weeks pregnant female with a history of right main stem narrowing secondary to an old traumatic injury in a motor vehicle accident requiring multiple airway dilatation procedures in the past presents with worsening dyspnea on exertion and a rapid decline in respiratory status during past two weeks. The patient\u2019s heart rate is 112, blood pressure 130/80, respiratory rate 25/min and oxygen saturation is 96% on room air. On physical exam she is noted to have mild use of accessory respiratory muscles and decreased breath sounds on the right side. She is scheduled for a bronchoscopic airway exam and possible intervention. You elect to sedate the patient with 4 mg of Midazolam and 150 ug of Fentanyl. The patient becomes hypotensive and responds only to painful stimuli by withdrawal and oxygen saturation remains at 96%. Which of the following statements is correct?",
+          "options": [
+            {
+              "id": "a",
+              "text": "The patient is moderately sedated with a Ramsay sedation score of 3"
+            },
+            {
+              "id": "b",
+              "text": "First intervention should be to place a wedge under the right hip and administer supplemental O2."
+            },
+            {
+              "id": "c",
+              "text": "Midazolam and Fentanyl are class B by FDA pregnancy risk category"
+            },
+            {
+              "id": "d",
+              "text": "Fetal heart rate monitoring is indicated. "
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Uterine mass effect on abdominal great vessels can reduce venous return, a consequence which can be enhanced during anesthesia.  In this patient the first intervention should be to place a wedge under the right hip and administer supplemental oxygen (choice B correct).  Left uterine displacement can relieve aortocaval compression by the pregnant uterus and improve venous return.  Sitting or semi-recombinant position is associated with more hypotension and desaturation.  Oxygen should be administered during the procedure to keep the oxygen saturation between 97 and 100% at all times in pregnant patients.  A patient who is only responsive to painful stimuli by withdrawal would be given a Ramsay score of 6.  A Ramsay score of 3 would be consistent with the patient who responds to verbal commands. Fentanyl is considered a pregnancy risk category C and should be used in low doses for flexible bronchoscopy while midazolam is category D and should be used cautiously in low doses.  Evidence is insufficient to determine whether the potential benefits of benzodiazepines to the mother outweigh the risks to the fetus.  There is no formal recommendation regarding fetal heart monitoring during flexible bronchoscopy under moderate sedation and is likely only indicated in high risk pregnancy or during the third trimester.",
+          "references": [
+            "Morgan RK, Ernst A. Interventional chest procedures in pregnancy. Clinics in chest medicine. 2011;32",
+            ":61-74. https://pubmed.ncbi.nlm.nih.gov/21277450/",
+            "Bahhady IJ, Ernst A. Risks of and recommendations for flexible bronchoscopy in pregnancy: a review. CHEST Journal. 2004;126",
+            ":1974-1981.https://journal.chestnet.org/article/S0012-3692",
+            "31450-1/fulltext"
+          ],
+          "imageURLs": []
+        },
+        {
+          "id": "miscellaneous-q29",
+          "number": 29,
+          "prompt": "You are referred a 49-year-old female with a history of metastatic lung cancer for evaluation of cough and abnormal chest imaging.  The patient was diagnosed with lung cancer 12 months prior when she presented with a right lower lobe pulmonary lung nodule and right pleural effusion.  At the time of diagnosis she had positive pleural fluid cytology and molecular testing revealed a mutation in the EGFR gene and was started on erlotinib.  Initially she had an excellent clinical response with resolution of the pleural effusion and pulmonary nodule.  Her most recent imaging, however, shows new innumerable pulmonary nodules and new mediastinal adenopathy.  Endobronchial ultrasound guided lymph node aspiration of the right paratracheal lymph node is consistent with pulmonary adenocarcinoma.  Which of the following statements about EGFR positive pulmonary adenocarcinomas is correct?https://firebasestorage.googleapis.com/v0/b/aabip-app.appspot.com/o/image37.png?alt=media&token=5387b7a2-310c-406d-9b62-7b8a515ecd13https://firebasestorage.googleapis.com/v0/b/aabip-app.appspot.com/o/image38.png?alt=media&token=5387b7a2-310c-406d-9b62-7b8a515ecd13https://firebasestorage.googleapis.com/v0/b/aabip-app.appspot.com/o/image39.png?alt=media&token=5387b7a2-310c-406d-9b62-7b8a515ecd13",
+          "options": [
+            {
+              "id": "a",
+              "text": "Acquired resistance to first generation EGFR inhibitors such as erlotinib frequently occurs through secondary mutations in the EGFR kinase domain such as the T790M substitution"
+            },
+            {
+              "id": "b",
+              "text": "Acquired resistance to a first generation EGFR tyrosine kinase inhibitor would not be expected to occur within the first year of treatment"
+            },
+            {
+              "id": "c",
+              "text": "Repeat molecular testing on the patient\u2019s new biopsy specimens is unnecessary as it would not change management"
+            },
+            {
+              "id": "d",
+              "text": "The patient most likely has acquired a second driver mutation outside of the EGFR gene"
+            },
+            {
+              "id": "e",
+              "text": "Treatment with the third generation EGFR inhibitor osimertinib upfront as opposed to first generation erlotinib would have been unlikely to provide this patient a longer period of progression free survival "
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation": "In patients with EGFR mutations treated with first generation EGFR inhibitors acquired resistance typically occurs within 9 to 12 months (Choice B is incorrect).  The most frequent alteration in patients who progress is acquisition of a second missense mutation in exon 20 T790M which occurs in 40 to 60% of patients (Choice A is correct)1.  Osimertinib is a 3rd generation EGFR inhibitor that has been shown to have a response rate of 61% in patients harboring the T790M mutation whose disease has progressed on a first generation EGFR inhibitor2. In the FLAURA trial patients with untreated EGFR positive advanced non-small cell cancer were randomized to receive osimertinib versus erlotinib (Soria et al. 2018).  The median progression free survival was significantly longer in patients randomized to osimertinib compared to erlotinib (18.9 months vs 10.2 months, p < 0.001)3.",
+          "references": [
+            "FLAURA trial Soria J et al. N Engl J Med 2018; 378:113-125https://www.nejm.org/doi/10.1056/NEJMoa1713137",
+            "Reck M and Rabe K. N Engl J Med 2017; 377:849-861https://pubmed.ncbi.nlm.nih.gov/28854088/",
+            "Janne PA et al. N Engl J Med 2015; 372:1689-1699https://www.nejm.org/doi/full/10.1056/nejmoa1411817"
+          ],
+          "imageURLs": [
+            "https://firebasestorage.googleapis.com/v0/b/aabip-app.appspot.com/o/image37.png?alt=media&token=5387b7a2-310c-406d-9b62-7b8a515ecd13https://firebasestorage.googleapis.com/v0/b/aabip-app.appspot.com/o/image38.png?alt=media&token=5387b7a2-310c-406d-9b62-7b8a515ecd13https://firebasestorage.googleapis.com/v0/b/aabip-app.appspot.com/o/image39.png?alt=media&token=5387b7a2-310c-406d-9b62-7b8a515ecd13"
+          ]
+        },
+        {
+          "id": "miscellaneous-q30",
+          "number": 30,
+          "prompt": "Which of the following pathogenic mechanisms best explains the current state of the lesions seen in the images below taken from the right and left bronchial trees in the same patient?https://firebasestorage.googleapis.com/v0/b/aabip-app.appspot.com/o/image27.jpg?alt=media&token=5387b7a2-310c-406d-9b62-7b8a515ecd13https://firebasestorage.googleapis.com/v0/b/aabip-app.appspot.com/o/image28.jpg?alt=media&token=5387b7a2-310c-406d-9b62-7b8a515ecd13",
+          "options": [
+            {
+              "id": "a",
+              "text": "Influx of neutrophils and enhanced blood flow related to local release of cytokines and vasodilatory mediators"
+            },
+            {
+              "id": "b",
+              "text": "Mucosal and submucosal infiltration by a CK-5 and p40 stain-positive carcinoma"
+            },
+            {
+              "id": "c",
+              "text": "Exuberant deposition of collagen and extracellular matrix by TGFB-mediated activation of myofibroblasts"
+            },
+            {
+              "id": "d",
+              "text": "A Th-1 dependent organization of epithelioid histiocytes surrounded by CD8 lymphocytes e. These are normal bronchi "
+            }
+          ],
+          "correctOptionId": "c",
+          "explanation": "These airway images from a patient with microscopic polyangiitis (MPA) show classic features of cicatricial bronchial stenosis (fibrotic strictures).  Note the \u2018hurricane\u2019 or \u2018corkscrew\u2019-like mucosal pattern.  These are chronic fibrotic changes mediated by fibroblast deposition of collagen (choice C correct).  Fibrotic airway stenosis can be seen in patients with any autoimmune disease such as rheumatoid arthritis, sarcoidosis, or lupus.  However, it is most common in granulomatosis with polyangiitis (GPA) and MPA, affecting up to 10% of patients.  Airway stenosis in GPA/MPA can be focal or multifocal and present at any stage of the disease, regardless of extrapulmonary activity.1,2 Non-malignant cicatricial airway stenosis can also develop at sites of airway injury due to endotracheal intubation or tracheostomy, at surgical anastomoses, as a sequela of endobronchial ablation (i.e. laser therapy), or after radiation.3   Choice A describes a typical acute inflammatory response that would manifest as airway erythema, edema, or granulation.  Choice B describes an invasive squamous cell carcinoma which grossly could appear irregular, raised, erythematous, edematous, and sometimes polypoid or necrotic, but not be confused with a fibrotic stricture.  Choice D describes a non-caseating granuloma, which macroscopically appears as granular or nodular mucosa.",
+          "references": [
+            "Quinn KA, Gelbard A, Sibley C, et al. Subglottic stenosis and endobronchial disease in granulomatosis with polyangiitis. Rheumatology (Oxford) 2019;58:2203-11. https://pubmed.ncbi.nlm.nih.gov/31199488/",
+            "Guardiani E, Moghaddas HS, Lesser J, et al. Multilevel airway stenosis in patients with granulomatosis with polyangiitis (Wegener's). Am J Otolaryngol 2015;36:361-3. https://pubmed.ncbi.nlm.nih.gov/25630847/",
+            "Oberg CL, Holden VK, Channick CL. Benign Central Airway Obstruction. Semin Respir Crit Care Med 2018;39:731-46. https://pubmed.ncbi.nlm.nih.gov/30641591/"
+          ],
+          "imageURLs": [
+            "https://firebasestorage.googleapis.com/v0/b/aabip-app.appspot.com/o/image27.jpg?alt=media&token=5387b7a2-310c-406d-9b62-7b8a515ecd13https://firebasestorage.googleapis.com/v0/b/aabip-app.appspot.com/o/image28.jpg?alt=media&token=5387b7a2-310c-406d-9b62-7b8a515ecd13"
+          ]
+        },
+        {
+          "id": "miscellaneous-q31",
+          "number": 31,
+          "prompt": "A 70 years-old man is admitted to your ICU with sepsis and respiratory failure from pneumonia with underlying COPD. By day 3 sepsis has improved with appropriate treatment, he is hemodynamically stable, and remains on the vent in volume-control mode with FIO2 of 0.5 and PEEP 5. He failed breathing trial this morning with RSBI of 130 after 10 minutes and was placed back on full support. Which is the most appropriate strategy?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Arrange for percutaneous tracheostomy now b/c of the benefit of early tracheostomy for reducing length of stay and ICU mortality"
+            },
+            {
+              "id": "b",
+              "text": "Arrange for surgical tracheostomy now b/c of the benefit of surgical tracheostomy over PDT for bleeding and mortality"
+            },
+            {
+              "id": "c",
+              "text": "Continue current management with daily spontaneous breathing trial"
+            },
+            {
+              "id": "d",
+              "text": "Change to SIMV as it is a superior mode for weaning from mechanical ventilation "
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Neither surgical tracheostomy nor percutaneous tracheostomy, whether performed early or late, have shown any benefit in mortality, length of stay, or bleeding (Choices A, and B are incorrect).  Percutaneous tracheostomy was shown to decrease wound infections and scarring when compared to surgical tracheostomy.  Early tracheostomy was shown to decrease the use of sedative medications when compares to late tracheostomy.2-3  SIMV has been shown to be inferior to pressure support ventilation for weaning from ventilatory support (Choice D is incorrect).",
+          "references": [
+            "Brochard L, Rauss A, Benito S, et al. Comparison of three methods of gradual withdrawal from ventilatory support during weaning from mechanical ventilation. American journal of respiratory and critical care medicine. 1994;150",
+            ":896-903. https://pubmed.ncbi.nlm.nih.gov/7921460/",
+            "Huang H, Li Y, Ariani F, Chen X, Lin J. Timing of tracheostomy in critically ill patients: a meta-analysis. PloS one. 2014;9",
+            ":e92981. https://pubmed.ncbi.nlm.nih.gov/24667875/",
+            "Madsen KR, Lorentzen K, Clausen N, et al. Guideline for stress ulcer prophylaxis in the intensive care unit. Danish medical journal. 2014;61",
+            ":C4811. https://pubmed.ncbi.nlm.nih.gov/24814922/",
+            "Young D, Harrison DA, Cuthbertson BH, Rowan K, TracMan Collaborators f. Effect of early vs late tracheostomy placement on survival in patients receiving mechanical ventilation: The tracman randomized trial. JAMA. 2013;309",
+            ":2121-2129. https://pubmed.ncbi.nlm.nih.gov/23695482/"
+          ],
+          "imageURLs": []
+        },
+        {
+          "id": "miscellaneous-q32",
+          "number": 32,
+          "prompt": "Which of the following statements regarding anesthesia medications during bronchoscopy is correct?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Even though Propofol has the same efficacy as Midazolam, it has the advantage of rapid onset, short recovery and turn over time"
+            },
+            {
+              "id": "b",
+              "text": "Dexmedetomidine is preferred in outpatient setting due to minimal respiratory depressant effect"
+            },
+            {
+              "id": "c",
+              "text": "Benzocaine is the preferred local anesthetic due to lack of risk of methemoglobinemia"
+            },
+            {
+              "id": "d",
+              "text": "Anti-cholinergic agents produce clinically meaningful improvement in lung function and decrease in secretions "
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Both propofol and the midazolam are GABA agonists. The advantages of propofol over midazolam include patient and bronchoscopist satisfaction, faster onset with shorter emergence, as well as rapid turnover time which potentially would improve cost effectiveness.  The major disadvantages of propofol include its narrow therapeutic window, lack of reversal agent, need for appropriate monitoring and that is not recommended for use by non-trained practitioners.  Dexmetomidine is an alpha agonist which provides a combination of sedative, analgesic and antisialagogue effects with minimal respiratory depression and the ability to attenuate sympathetic response to bronchoscopy.  The biggest disadvantage however is the long recovery time which makes it a poor choice in the outpatient setting. Lidocaine is generally considered the topical anesthetic of choice for bronchoscopy, as benzocaine and tetracaine have narrow therapeutic range for methemoglobinemia. Lidocaine toxicity to include circum-oral numbness seizures and arrhythmias are typically dose-related and usually occur when >8.3 milligrams per kilogram is applied topically in the airways or 5 milligrams per kilogram intravenously.  Caution should be used with liver failure advanced age and congestive heart failure. 1% and 2% lidocaine have been shown to have similar efficacy during bronchoscopy. Anticholinergic agents antagonize the muscarinic effect of acetylcholine on bronchial smooth muscle and glands causing bronchodilatation and decrease in secretions. Atropine intravenously or intramuscularly prior to bronchoscopy has been shown to improve lung function during the procedure but this affect is not sustained following the procedure. Glycopyrrolate decrease his secretions but has no significant reduction in cough, discomfort desaturation or procedural time. Both drugs are associated with an increase in heart rate and blood pressure.",
+          "references": [
+            "Wahidi MM, Jain P, Jantz M, et al. American College of Chest Physicians consensus statement on the use of topical anesthesia, analgesia, and sedation during flexible bronchoscopy in adult patients. CHEST Journal. 2011;140",
+            ":1342-1350. https://journal.chestnet.org/article/S0012-3692",
+            "60604-1/fulltext",
+            "Thorburn JR, James MF, Feldman C, Moyes DG, Du Toit PS. Comparison of the effects of atropine and glycopyrrolate on pulmonary mechanics in patients undergoing fiberoptic bronchoscopy. Anesthesia & Analgesia. 1986;65",
+            ":1285-1289. https://pubmed.ncbi.nlm.nih.gov/3777458/",
+            "Hasmoni MH, Rani MFA, Harun R, Manap RA, Tajudin NAA, Anshar FM. Randomized-controlled trial to study the equivalence of 1% versus 2% lignocaine in cough suppression and satisfaction during bronchoscopy. Journal of Bronchology & Interventional Pulmonology. 2008;15",
+            ":78-82. https://www.semanticscholar.org/paper/Randomized-controlled-Trial-to-Study-the-of-1-2-in-Hasmoni-Rani/003263b9e956d2dd1f1234b6e725771092a3fbc9",
+            "Cowl CT, Prakash UB, Kruger BR. The role of anticholinergics in bronchoscopy: a randomized clinical trial. CHEST Journal. 2000;118",
+            ":188-192. https://pubmed.ncbi.nlm.nih.gov/10893378/#:~:text=Background%3A%20Anticholinergic%20medications%20have%20been,procedure%2C%20and%20increase%20patient%20comfort.",
+            "Stolz D, Kurer G, Meyer A, et al. Propofol versus combined sedation in flexible bronchoscopy: a randomised non-inferiority trial. European Respiratory Journal. 2009;34",
+            ":1024-1030. https://erj.ersjournals.com/content/34/5/1024",
+            "Ryu J, Lee S, Lee J, Lee E, Do S, Kim C. Randomized double-blind study of remifentanil and dexmedetomidine for flexible bronchoscopy. British journal of anaesthesia. 2011:aer400.https://pubmed.ncbi.nlm.nih.gov/22174346/"
+          ],
+          "imageURLs": []
+        },
+        {
+          "id": "miscellaneous-q33",
+          "number": 33,
+          "prompt": "Which of the following combinations of thoracic adenopathy found during surgical R0 resection of non-small cell lung cancer portends the worst prognosis, assuming similar T-stage and M0 stage for all choices?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Left upper lobe tumor with level 5 metastases"
+            },
+            {
+              "id": "b",
+              "text": "Right lower lobe tumor with level 10R, 11R, and 12R metastases"
+            },
+            {
+              "id": "c",
+              "text": "Right upper lobe tumor with level 2R and 4R metastases"
+            },
+            {
+              "id": "d",
+              "text": "Left lower lobe tumor with level 11L and 4L metastases"
+            },
+            {
+              "id": "e",
+              "text": "Middle lobe tumor with level 11R metastases "
+            }
+          ],
+          "correctOptionId": "c",
+          "explanation": "The choices above all represent lung cancer metastases to various thoracic nodal stations.  In addition to classifying pathologic N-stage by level of node involvement (ipsilateral pulmonary, ipsilateral mediastinal, contralateral), the latest iteration of the IASLC staging project also substratified prognosis within the same N-stage based on pathologic assessment during tumor resection (this did not change the N-staging recommendations, however).  The worst prognosis was seen with multinodal pN2 disease (choice C).  Among the other choices, \u2018D,\u2019 a single pN1/N2 tumor, had the next worst prognosis, while \u2018E,\u2019 a single station pulmonary node (pN1) tumor, had the best prognosis.  Choices A and B (a single N2 and multinodal N1, respectively) have similar 5-year survival characteristics.",
+          "references": [
+            "Asamura H, Chansky K, Crowley J, et al. The International Association for the Study of Lung Cancer Lung Cancer Staging Project: Proposals for the Revision of the N Descriptors in the Forthcoming 8th Edition of the TNM Classification for Lung Cancer. J Thorac Oncol 2015;10:1675-84. https://pubmed.ncbi.nlm.nih.gov/26709477/"
+          ],
+          "imageURLs": []
+        },
+        {
+          "id": "miscellaneous-q34",
+          "number": 34,
+          "prompt": "Which of the following scenarios will result in loss of only the sensory arm of the cough reflex during transglottic insertion of the bronchoscope?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Injury to the external laryngeal nerve"
+            },
+            {
+              "id": "b",
+              "text": "A superior laryngeal nerve block"
+            },
+            {
+              "id": "c",
+              "text": "Injury to the recurrent laryngeal nerve"
+            },
+            {
+              "id": "d",
+              "text": "Injury to the vagus nerve"
+            },
+            {
+              "id": "e",
+              "text": "Injury to the internal laryngeal nerve "
+            }
+          ],
+          "correctOptionId": "e",
+          "explanation": "The cough reflex is the result of a complex afferent and efferent loop triggered by sensory receptors in the airway.  Among these include both C-fiber nociceptors and myelinated mechanoreceptors (also known as Widdicombe cough receptors).  The latter respond to short bursts of tactile stimuli and are concentrated in the larynx and over central bifurcations of the lower respiratory tree.  Widdicombe cough receptors are likely the primary sensory receptors activated during bronchoscopy.      The vagus (CN-X) is the primary nerve mediating the cough reflex (and the motor arm of the gag reflex).  Its main contributory branches are the recurrent laryngeal nerve and the superior laryngeal nerve.   Both of these have sensory and motor arms, and therefore injury to one or a combination of the vagus, superior laryngeal, and/or recurrent laryngeal nerves will give deficits in both sensory and motor function (choices B, C and D incorrect).  The superior laryngeal nerve in turn gives off the internal (ILN) and external laryngeal (ELN) branches.  The ILN is the primary afferent nerve involved in initiating cough related to a laryngeal stimulus.  It is purely sensory and innervates most of the larynx, including the epiglottis and base of tongue.  Thus, injury to the ILN would inhibit the sensory arm of the reflex only (choice E correct).   Injury to the ELN, which supplies the cricothyroid muscle, would result in motor deficit of the cough reflex (choice A incorrect).   All internal laryngeal muscles aside from the cricothyroid are innervated by the recurrent laryngeal nerve, which does not have a supraglottic sensory role but does provide subglottic sensory innervation (choice C incorrect).  The RLN mainly contributes to cough by mediating laryngeal muscle contraction that closes the vocal cords, thus generating the pressure against which contracting expiratory muscles can exert an adequate force.",
+          "references": [
+            "Allen E, Minutello K, Murcek BW. Anatomy, Head and Neck, Larynx Recurrent Laryngeal Nerve.  StatPearls. Treasure Island (FL)2020.",
+            "Canning BJ, Chang AB, Bolser DC, et al. Anatomy and neurophysiology of cough: CHEST Guideline and Expert Panel report. Chest 2014;146:1633-48. https://pubmed.ncbi.nlm.nih.gov/25188530/"
+          ],
+          "imageURLs": []
+        },
+        {
+          "id": "miscellaneous-q35",
+          "number": 35,
+          "prompt": "For which of the following patients is it most appropriate to discontinue lung cancer screening?",
+          "options": [
+            {
+              "id": "a",
+              "text": "A 57 years-old man who continues to smoke despite presence of a 7mm right upper lobe solid nodule found on baseline LDCT exam."
+            },
+            {
+              "id": "b",
+              "text": "A 74 years-old woman with severe COPD (FEV1=40% predicted) and a new diagnosis of metastatic melanoma; baseline LDCT screen last year was without nodules."
+            },
+            {
+              "id": "c",
+              "text": "A 68 years-old woman with a 50 pack-year smoking history, quit 13 years ago, four previous LDCT scans negative (Lung-RADS=1)."
+            },
+            {
+              "id": "d",
+              "text": "A 65 years-old man with a 40 pack-year smoking history, who quit three years ago at the time of diagnosis with a stage 1a right upper lobe adenocarcinoma that was surgically cured with lobectomy. "
+            }
+          ],
+          "correctOptionId": "d",
+          "explanation": "The decision to discontinue lung cancer screening is dictated by the criteria for inclusion.  While specific recommendations differ slightly among various expert societies, there is consensus that patients between the ages of 55-74 and a past heavy smoking history, actively smoking or having quit within the last 15 years, should undergo screening.1-3 Because these individuals are at higher risk for developing lung cancer in the near future, screening allows for early detection and maximizes chances for cure. Infact, the USPSTF updated its recommendations recently to include adults aged 50 to 80 years who have a 20-pack year smoking history and currently smoke or have quit within the past 15 years. However, this model is only appropriate when patients have an otherwise reasonable life expectancy to benefit from definitive intervention such as surgical resection, and do not have exclusionary criteria for such intervention.  The patient in choice B is not a surgical candidate and is also suffering from another cancer with a poor long-term prognosis.  Thus, they would not be appropriate for lung cancer screening, regardless of age.  Patients in choices A and C fall within criteria and are appropriate for lung cancer screening.  There remains uncertainty over the benefit of screening in patients with past cancers, including lung cancer, who otherwise fit criteria (choice D).4 These individuals were excluded from the large screening trials including the National Lung Screening Trial (NLST).5 However, it is recognized that past cancer history is an independent risk factor for developing a lung primary, and the National Comprehensive Cancer Network (NCCN) incorporates this variable into their screening inclusion criteria.6 Therefore, it would be reasonable to continue yearly LDCT for the patient in choice D.",
+          "references": [
+            "National Lung Screening Trial Research T, Aberle DR, Adams AM, et al. Reduced lung-cancer mortality with low-dose computed tomographic screening. N Engl J Med 2011;365:395-409. https://www.nejm.org/doi/full/10.1056/nejmoa1102873",
+            "Usman Ali M, Miller J, Peirson L, et al. Screening for lung cancer: A systematic review and meta-analysis. Prev Med 2016;89:301-14. https://pubmed.ncbi.nlm.nih.gov/27130532/",
+            "Wood DE. National Comprehensive Cancer Network (NCCN) Clinical Practice Guidelines for Lung Cancer Screening. Thorac Surg Clin. 2015;25",
+            ":185\u2010197. https://pubmed.ncbi.nlm.nih.gov/25901562/",
+            "Arenberg D. Update on screening for lung cancer. Transl Lung Cancer Res 2019;8:S77-S87. https://pubmed.ncbi.nlm.nih.gov/31211108/",
+            "Erkmen CP, Kaiser LR, Ehret AL.  Lung cancer screening: Should we be excluding people with previous malignancy?  World J Respirology 2016;6",
+            ":1-13 https://www.wjgnet.com/2218-6255/full/v6/i1/1.htm",
+            "Tanoue LT, Tanner NT, Gould MK, Silvestri GA. Lung cancer screening. Am J Respir Crit Care Med 2015;191:19-33.A 60 years-old female is found to have an irregular 1.4cm right lower lobe solid lung nodule on CT performed in the evaluation of atypical chest pain.  She has a 25 pack-year smoking history and the remainder of her clinical history is unremarkable. She has no personal history of cancer or family history of lung cancer.  Subsequent PET imaging is performed, showing no significant uptake in the RLL nodule. What is the next step? https://pubmed.ncbi.nlm.nih.gov/25369325/"
+          ],
+          "imageURLs": []
+        },
+        {
+          "id": "miscellaneous-q36",
+          "number": 36,
+          "prompt": "A 52 years-old male with T4N1M0 adenocarcinoma who underwent uneventful right pneumonectomy one year ago presents to your emergency department with two months of progressive dyspnea.  On initial examination the patient was in mild distress with an oxygen saturation of 91% on room air and the left lung was clear.  There is no fever or pleurisy.  A CT angiogram is performed to rule out pulmonary embolism with representative images shown below. What is the treatment of choice for this patient\u2019s current disorder?https://firebasestorage.googleapis.com/v0/b/aabip-app.appspot.com/o/image20.png?alt=media&token=5387b7a2-310c-406d-9b62-7b8a515ecd13",
+          "options": [
+            {
+              "id": "a",
+              "text": "Right sided chest tube placement"
+            },
+            {
+              "id": "b",
+              "text": "Bronchoscopy with left main stem stenting"
+            },
+            {
+              "id": "c",
+              "text": "Systemic thrombolytics"
+            },
+            {
+              "id": "d",
+              "text": "Thoracic surgical consultation "
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Postpneumonectomy syndrome (PPS), a late complication of pneumonectomy, is secondary to shift of the mediastinum and remaining lung toward the pneumonectomy side resulting in compression of critical structures. The most common form of PPS results in obstruction of the trachobronchial tree. This type of PPS can be treated with endoluminal stenting in patients deemed to be poor surgical candidates. This patient however had an even less common presentation of PPS with symptoms attributable to compression of not the airway but the left inferior pulmonary vein. In this patient re-do thoracotomy with placement of pleural prosthesis (saline-implant) is the procedure of choice.https://firebasestorage.googleapis.com/v0/b/aabip-app.appspot.com/o/image21.png?alt=media&token=5387b7a2-310c-406d-9b62-7b8a515ecd13",
+          "references": [
+            "Shen KR, Wain JC, Wright CD, Grillo HC, Mathisen DJ. Postpneumonectomy syndrome: surgical management and long-term results. J Thorac Cardiovasc Surg. 2008;135",
+            ":1210-1216; \ndiscussion\n 1216-1219. https://pubmed.ncbi.nlm.nih.gov/18544355/",
+            "Partington SL, Graham A, Weeks SG. Pulmonary vein stenosis following left pneumonectomy: a variant contributor to postpneumonectomy syndrome. Chest. 2010;137",
+            ":205-206. You are seeking informed consent for bronchoscopy with transbronchial biopsies from a 62-year-old obese male with coronary artery disease, obstructive sleep apnea (OSA), and combined pulmonary fibrosis and emphysema (CPFE) who is on 2L/min home oxygen therapy. Which of the following statements would be appropriate?"
+          ],
+          "imageURLs": [
+            "https://firebasestorage.googleapis.com/v0/b/aabip-app.appspot.com/o/image20.png?alt=media&token=5387b7a2-310c-406d-9b62-7b8a515ecd13",
+            "https://firebasestorage.googleapis.com/v0/b/aabip-app.appspot.com/o/image21.png?alt=media&token=5387b7a2-310c-406d-9b62-7b8a515ecd13"
+          ]
+        },
+        {
+          "id": "miscellaneous-q37",
+          "number": 37,
+          "prompt": "A 45 years-old male develops perioral numbness 10 minutes after moderate sedation bronchoscopy followed by a brief seizure and cardiac arrest. In addition to standard ACLS practices what medication should be considered?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Methylene Blue"
+            },
+            {
+              "id": "b",
+              "text": "IV Nicardipine"
+            },
+            {
+              "id": "c",
+              "text": "Hydrocobalamin"
+            },
+            {
+              "id": "d",
+              "text": "Lipid emulsion infusion"
+            },
+            {
+              "id": "e",
+              "text": "Glucagon "
+            }
+          ],
+          "correctOptionId": "d",
+          "explanation": "This patient has symptoms consistent with lidocaine toxicity. Initial manifestations of toxicity typically appear 1-5 minutes after the injection, but onset may occur up to 60 minutes post instillation.  Classically, patients experience CNS symptoms such as perioral numbness, metallic taste, lightheadedness and dizziness which can occasionally advance to seizure activity. Arrhythmias and cardiac arrest can also occur in rare cases.  IV infusion of a 20% lipid emulsion (eg, Intralipid 20%) has become an accepted part of treatment for systemic toxicity from local anesthetics, and particularly for cardiac arrest that is unresponsive to standard therapy (choice D correct). The American Society of Regional Anesthesia and Pain Medicine guidelines now recommend considering the use of lipid emulsion therapy at the first signs of systemic toxicity from local anesthetics, after airway management.",
+          "references": [
+            "Neal JM, Bernards CM, Butterworth IV JF, et al. ASRA practice advisory on local anesthetic systemic toxicity. Regional anesthesia and pain medicine. 2010;35",
+            ":152-161. https://pubmed.ncbi.nlm.nih.gov/20216033/",
+            "Ozcan MS, Weinberg G. Update on the use of lipid emulsions in local anesthetic systemic toxicity: a focus on differential efficacy and lipid emulsion as part of advanced cardiac life support. International anesthesiology clinics. 2011;49",
+            ":91-103. https://pubmed.ncbi.nlm.nih.gov/21956080/"
+          ],
+          "imageURLs": []
+        },
+        {
+          "id": "miscellaneous-q38",
+          "number": 38,
+          "prompt": "A 60 years-old female is found to have a 1.2cm right lower lobe lung nodule as an incidental finding on a CT scan obtained during evaluation for chest pain.  There are several small lymph nodes in the chest.  She has a 25 pack-year smoking history and the remainder of her clinical history is unremarkable. She has no personal history of cancer or family history of lung cancer. Which of the following is true regarding this patient?https://firebasestorage.googleapis.com/v0/b/aabip-app.appspot.com/o/image30.png?alt=media&token=5387b7a2-310c-406d-9b62-7b8a515ecd13",
+          "options": [
+            {
+              "id": "a",
+              "text": "This patient has a low likelihood for malignancy"
+            },
+            {
+              "id": "b",
+              "text": "PET imaging is recommended"
+            },
+            {
+              "id": "c",
+              "text": "Referral for surgical excision is recommended"
+            },
+            {
+              "id": "d",
+              "text": "A follow-up CT scan should be performed in 6 months "
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Pre-test probability for malignant potential of a lung nodule can be determined either by clinical judgment or various mathematical calculators.  The nodule is irregular/spiculated and found in a tobacco smoker, so the pre-test probability is elevated.  However, the nodule is still fairly small and located in the lower lobe.  Diagnostic considerations besides lung cancer are possible.  Using the Mayo clinic model, this patient\u2019s nodule risk for malignancy would be ~25%.  A patient is considered low risk when the pre-test probability of malignancy is < 5-10% and high risk if > 65%.  Consistent with clinical judgement, the Mayo model predicts an intermediate risk for this patient.  The 2013 ACCP guidelines suggest that functional imaging be performed for intermediate probability nodules to help guide further management.  A high-risk patient may proceed directly to resection, if an appropriate candidate otherwise.  If the nodule was low risk, surveillance CT imaging, with the next in 3-6 months, would be advised.",
+          "references": [
+            "MacMahon H, Austin JHM, Gamsu G, et al. Guidelines for Management of Small Pulmonary Nodules Detected on CT Scans: A Statement from the Fleischner Society. Radiology. 2005;237",
+            ":395-400. https://pubs.rsna.org/doi/abs/10.1148/radiol.2372041887?journalCode=radiology",
+            "Gould MK, Donington J, Lynch WR, et al. Evaluation of individuals with pulmonary nodules: When is it lung cancer?: diagnosis and management of lung cancer, 3rd ed: american college of chest physicians evidence-based clinical practice guidelines. Chest. 2013;143(5_suppl):e93S-e120S. https://pubmed.ncbi.nlm.nih.gov/23649456/"
+          ],
+          "imageURLs": [
+            "https://firebasestorage.googleapis.com/v0/b/aabip-app.appspot.com/o/image30.png?alt=media&token=5387b7a2-310c-406d-9b62-7b8a515ecd13"
+          ]
+        },
+        {
+          "id": "miscellaneous-q39",
+          "number": 39,
+          "prompt": "A 65 years-old man on mechanical ventilation for 9 days is evaluated for tracheostomy.  He has no obvious contraindications and neck anatomy is favorable.  At your facility, you have the expertise and resources to perform either open tracheostomy in the operating room (OR) or percutaneous dilational tracheostomy (PDT) at the bedside.  Which of the following statements is an accurate consideration to guide your ultimate decision on approach?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Risk of wound infection is lower with surgical trach because of better visualization and sterile conditions in OR"
+            },
+            {
+              "id": "b",
+              "text": "Bleeding risk is higher with PDT"
+            },
+            {
+              "id": "c",
+              "text": "Procedure time is shorter with PDT"
+            },
+            {
+              "id": "d",
+              "text": "Surgical tracheostomy offers a better cosmetic outcome with a more favorable scar than PDT "
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation": "A meta-analysis performed by Delaney et al. in 2006 found that percutaneous tracheostomy was equivalent to surgical tracheostomy for bleeding complications and major periprocedural complications as well as mortality however percutaneous tracheostomy was superior to surgical tracheostomy in regards to infection risk. In a separate meta-analysis by Higgins et al. published in 2007 percutaneous tracheostomy was associated with a decreased risk of wound infections, unfavorable scar, procedural cost and procedural time in comparison to surgical tracheostomy which had a lower rate of accidental decannulation and stomal obstruction.",
+          "references": [
+            "Higgins KM, Punthakee X. Meta\u2010analysis comparison of open versus percutaneous tracheostomy. The Laryngoscope. 2007;117",
+            ":447-454. https://pubmed.ncbi.nlm.nih.gov/17334304/",
+            "Delaney A, Bagshaw SM, Nalos M. Percutaneous dilatational tracheostomy versus surgical tracheostomy in critically ill patients: a systematic review and meta-analysis. Critical care. 2006;10",
+            ":R55. https://pubmed.ncbi.nlm.nih.gov/16606435/"
+          ],
+          "imageURLs": []
+        },
+        {
+          "id": "miscellaneous-q40",
+          "number": 40,
+          "prompt": "You are performing bronchoscopy using a diagnostic bronchoscope (2.0mm working channel) via a laryngeal mask airway (LMA) in a young patient for post-lung transplant surveillance. Immediately following a transbronchial biopsy from the lateral basal segment of the right lower lobe, you notice bright red blood occluding the lumen that persists despite instillation of ice-cold saline. What should you do next?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Keep the bronchoscope in place while holding down the suction button and turn the patient to the right side"
+            },
+            {
+              "id": "b",
+              "text": "Keep the bronchoscope in place while holding down the suction button and turn the patient to the left side"
+            },
+            {
+              "id": "c",
+              "text": "Quickly withdraw the bronchoscope while holding down the suction button and intubate the patient with a double-lumen endotracheal tube"
+            },
+            {
+              "id": "d",
+              "text": "Quickly withdraw the bronchoscope while holding down the suction button and replace it with a therapeutic bronchoscope (2.8mm working channel) for more effective removal of blood from the airways "
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation": "As with bleeding during other procedures, tamponade and facilitation of hemostasis are key components of the management strategy here. Keeping the bronchoscope in a \u201cwedged\u201d position and holding down suction collapses the distal airways and allows tamponade of the bleeding vessel by the blood contained within the airway. This maneuver, first described by Donald Zavala in 1976, also helps contain the bleeding and allows continuing effective ventilation of the remaining lung tissue. Finally, turning the patient in order to keep the bleeding lung down helps prevent blood from spilling over to the unaffected lung. Removing the bronchoscope in these circumstances can have deleterious and potentially fatal consequences as that could enable blood to spread to other airways, potentially leading to hypoxia, asphyxiation, and cardiac arrest.",
+          "references": [
+            "Zavala DC. Pulmonary hemorrhage in fiberoptic transbronchial biopsy. Chest 1976; 70",
+            ":584-8 (ISSN: 0012-3692)https://pubmed.ncbi.nlm.nih.gov/975972/",
+            "Davidson K, Shojaee S. Managing Massive Hemoptysis. Chest. 2020 Jan;157",
+            ":77-88https://pubmed.ncbi.nlm.nih.gov/31374211/"
+          ],
+          "imageURLs": []
+        },
+        {
+          "id": "miscellaneous-q41",
+          "number": 41,
+          "prompt": "60 years-old patient with history of 40 pack-year smoking was sent for the evaluation of 3.5 cm peripheral right upper lobe spiculated mass. His chest CT also showed a few mediastinal nodes, all between 5 and 10mm in short-axis diameter.  Patient underwent CT-guided biopsy which diagnosed adenocarcinoma. EGFR mutation was positive.  PET scan was negative for any mediastinal uptake.  Pulmonary function testing showed FEV1 of 2 L, 65% of predicted and DLCO of 62% of predicated. What would be the most appropriate next step?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Refer patient for robotic right upper lobe lobectomy."
+            },
+            {
+              "id": "b",
+              "text": "Refer patient for stereotactic radiation surgery of right upper lobe lesion."
+            },
+            {
+              "id": "c",
+              "text": "Advised patient that he is not a candidate for the any intervention as he is an active smoker."
+            },
+            {
+              "id": "d",
+              "text": "Perform endobronchial and/or endoscopic ultrasound staging. "
+            }
+          ],
+          "correctOptionId": "c",
+          "explanation": "Pre-operative staging of lung cancer along with pulmonary function testing is an important part of pre-operative assessment for stage I and stage II lung cancers. Often PET CT is done as an initial staging work up for these patients. In meta-analysis, PET CT has negative predictive value of 94% in tumor less than 3 cm. However, tumor > 3 cm, negative predictive value decreased to 89%.  Furthermore, in a systematic review, Ghosh et al. suggested that PET CT has 22% false negative rate to detect mediastinal metastasis for central tumors.  Cerfolio et al. found that of patients with cN1 disease on PET-CT scan, up to 23.5 % had occult mediastinal disease on histologic sampling.  Therefore, current ACCP guidelines recommend invasive mediastinal staging in a patient with a radiographically normal mediastinum (no FDG-avid or enlarged nodes) and any of the following: a tumor > 3 cm in size, a central tumor, or cN1 disease.",
+          "references": [
+            "Cerfolio RJ et al. Routine mediastinoscopy and esophageal ultrasound fine-needle aspiration in patients with non-small cell lung cancer who are clinically N2 negative: a prospective study. Chest. 2006 Dec;130",
+            ":1791-5. https://www.ncbi.nlm.nih.gov/pubmed/17166998",
+            "Wang J et al. Negative predictive value of positron emission tomography and computed tomography for stageT1-2N0 non-small-cell lung cancer: a meta-analysis. Clin Lung Cancer. 2012 Mar;13",
+            ":81-9 https://www.ncbi.nlm.nih.gov/pubmed/?term=Negative+predictive+value+of+positron+emission+tomography+for+stage+T1-2N0+non-small-cell+lung+cancer%3A+a+meta-analysis%2C+Clin+Lung+Cancer+%2C+2012%2C https://www.ncbi.nlm.nih.gov/pubmed/?term=Negative+predictive+value+of+positron+emission+tomography+for+stage+T1-2N0+non-small-cell+lung+cancer%3A+a+meta-analysis%2C+Clin+Lung+Cancer+%2C+2012%2Chttps://www.ncbi.nlm.nih.gov/pmc/articles/PMC3346713/",
+            "De Leyn P et al. Revised ESTS guidelines for preoperative mediastinal lymph node staging for non-small-cell lung cancer. Eur J Cardiothorac Surg. 2014 May;45",
+            ":787-98. https://www.ncbi.nlm.nih.gov/pubmed/24578407",
+            "Ghosh S. et al.. Should all patients with nonsmall cell lung cancer who are surgical candidates have cervical mediastinoscopy preoperatively? Interact Cardiovasc Thorac Surg. 2006;5:20\u20134. https://academic.oup.com/icvts/article/5/1/20/803112",
+            "Silvestri GA et al. Methods for staging non-small cell lung cancer: Diagnosis and management of lung cancer, 3rd ed: ACCP evidence based clinical practice guidelines. Chest. 2013 May;143(5 Suppl):e211S-e250Shttps://pubmed.ncbi.nlm.nih.gov/23649440/"
+          ],
+          "imageURLs": []
+        },
+        {
+          "id": "miscellaneous-q42",
+          "number": 42,
+          "prompt": "A 58-year-old man with history of COPD and hypertension was found to have an opacity in right lung field on an X-ray that was done for the evaluation of right shoulder pain. CT scan of chest with contrast showed a 3.6 cm enhancing mass involving the bronchus intermedius and distal right mainstem bronchus with surrounding atelectasis in superior segment of right lower lobe.  There are also enlarged right hilar and subcarinal lymph nodes.  EBUS-TBNA of subcarinal lymph node was positive for adenocarcinoma of lung.  PET/CT and MRI of brain showed no distant metastasis. Based on the 8th edition of the TNM classification, what is the clinical staging?",
+          "options": [
+            {
+              "id": "a",
+              "text": "cT2aN2M0"
+            },
+            {
+              "id": "b",
+              "text": "cT2bN2M0"
+            },
+            {
+              "id": "c",
+              "text": "cT3N1M0"
+            },
+            {
+              "id": "d",
+              "text": "cT3N2M0 "
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation": "The American joint committee on cancer (AJCC) updated the tumor/node/metastasis (TNM) classification for non-small cell lung cancer in 2017. In the 8th edition, invasion of a main bronchus regardless of distance from the carina is considered T2a. Subcarinal lymph node (station 7) is an N2 node as with the 7th edition. Since there is no obvious distant metastasis found on PET/CT and MRI of brain, the M component is M0.",
+          "references": [
+            "Detterbeck FC., et al.  The Eighth Edition Lung Cancer Stage Classification. CHEST. 2017;151",
+            ": 193-203. https://pubmed.ncbi.nlm.nih.gov/27780786/"
+          ],
+          "imageURLs": []
+        },
+        {
+          "id": "miscellaneous-q43",
+          "number": 43,
+          "prompt": "A 66-year-old male, active smoker, presents to your clinic for evaluation of a detected right upper lobe nodule on low dose CT performed for lung cancer screening. He has known severe emphysema with known bronchiectasis under excellent medical control. He has never been intubated for COPD exacerbation, and his last hospital admission was 3 years ago (required continuous nebulizer treatments and BiPAP). You evaluate his CT chest and find an 18 mm nodule in the right upper lobe, with a positive bronchus sign. You set up for an EBUS and navigational bronchoscopy.  A week later, he is in your office to discuss results. His mediastinum is free of malignancy (EBUS-TBNA negative). Transbronchial needle aspiration, brushings and forceps biopsies are negative for malignancy. A RUL BAL culture grew > 100 000 CFU of Streptococcus pneumoniae. He recalls feeling sick prior to his CT chest. You suggest the following:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Repeat EBUS/navigational bronchoscopy"
+            },
+            {
+              "id": "b",
+              "text": "Referral to Thoracic Surgery for lobectomy"
+            },
+            {
+              "id": "c",
+              "text": "Repeat CT chest with contrast in 3 months"
+            },
+            {
+              "id": "d",
+              "text": "Empiric stereotactic radiation therapy"
+            },
+            {
+              "id": "e",
+              "text": "Treat Strep pneumoniae + CT chest in 4-6 weeks "
+            }
+          ],
+          "correctOptionId": "e",
+          "explanation": "Since the publication of the National Lung Screening Trial (NLST) in 20111, there has been a significant uptrend in the number of lung biopsies for lung nodules. However, 96.4% of the positive screening results in the low-dose CT group were false positives when followed through time. New data since implementation of the NLST recommendations confirm more patients undergo invasive procedures unnecessarily or unknowingly 2,3. In this particular patient, since this lung nodule could represent an infectious process, it is reasonable to treat with antibiotics and then repeat an imaging study, as opposed to repeat the bronchoscopy or even consider surgical resection without the \u2018therapeutic trial.\u2019",
+          "references": [
+            "Ebell MH and Lin KW. Accounting for the Harms of Lung Cancer Screening. JAMA Intern Med 2018. doi:10.1001/jamainternmed.2018.3061https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/2696727",
+            "Berg CD et al. Reduced Lung-Cancer Mortality with Low-dose Computed Tomographic Screening. The National Lung Screening Trial Research Team. N Engl J Med 2011;365:395-409.https://www.nejm.org/doi/full/10.1056/nejmoa1102873",
+            "Brenner AT et al. Evaluating Shared Decision Making for Lung Cancer Screening. JAMA Intern Med 2018. doi:10.1001/jamainternmed.2018.3054https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/2696731"
+          ],
+          "imageURLs": []
+        },
+        {
+          "id": "miscellaneous-q44",
+          "number": 44,
+          "prompt": "A 46 years-old male, non-smoker presents with cough, hoarseness and exertional dyspnea.  Representative image from flexible bronchoscopy are shown below. These lesions in the trachea are most likely due to what process.https://firebasestorage.googleapis.com/v0/b/aabip-app.appspot.com/o/image33.png?alt=media&token=5387b7a2-310c-406d-9b62-7b8a515ecd13",
+          "options": [
+            {
+              "id": "a",
+              "text": "Recurrent respiratory papillomatosis"
+            },
+            {
+              "id": "b",
+              "text": "Granulation tissue"
+            },
+            {
+              "id": "c",
+              "text": "Tracheobronchopathia osteochondroplastica"
+            },
+            {
+              "id": "d",
+              "text": "Mucus "
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Recurrent respiratory papillomatosis caused by HPV 6 and HPV 11 is the most common benign tracheal tumor and typically presents as polypoid, \u201ccauliflower like\u201d lesions. The visual findings however are not pathognomonic for this disorder and the differential diagnosis includes primary tracheal tumors or metastasis from renal cell carcinoma, melanoma, breast or colon cancer and biopsy is warranted to confirm the diagnosis. Additionally, 2-17% of laryngeal papillomas invade the trachea and malignant degeneration although rare is possible.",
+          "references": [
+            "Derkay CS. Recurrent respiratory papillomatosis. The Laryngoscope. 2001;111",
+            ":57-69.https://pubmed.ncbi.nlm.nih.gov/11192901/"
+          ],
+          "imageURLs": [
+            "https://firebasestorage.googleapis.com/v0/b/aabip-app.appspot.com/o/image33.png?alt=media&token=5387b7a2-310c-406d-9b62-7b8a515ecd13"
+          ]
+        },
+        {
+          "id": "miscellaneous-q45",
+          "number": 45,
+          "prompt": "The NAVIGATE trial included 1,215 consecutive patients of which 1,092 patients had electromagnetic navigational bronchoscopy completed with biopsy.  976 (80%) patients were followed up at one year.  Patients with non-malignant or indeterminate results were followed up according to practitioner\u2019s judgement. If subsequent diagnostic test were negative or there was no radiographic progression in the follow up, patients were considered true negative. 608 (55.7%) of patient\u2019s biopsy results were negative for malignancy at baseline. At the one year follow up, 284 patients were considered true negative and 220 were considered false negative. 104 patients\u2019 diagnosis was deferred.  What was the negative predictive value for malignancy at one year follow up?",
+          "options": [
+            {
+              "id": "a",
+              "text": "44%"
+            },
+            {
+              "id": "b",
+              "text": "56%"
+            },
+            {
+              "id": "c",
+              "text": "61%"
+            },
+            {
+              "id": "d",
+              "text": "69% "
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Based on this data, negative predictive value for malignancy of ENB in the NAVIGATE study was 56%. NPV = TN/(TN+FN).",
+          "references": [
+            "Folch EE, Pritchett MA, Nead MA, et al. Electromagnetic Navigation Bronchoscopy for Peripheral Pulmonary Lesions: One-Year Results of the Prospective, Multicenter NAVIGATE Study. J Thorac Oncol. 2019;14",
+            ":445\u2010458. https://www.sciencedirect.com/science/article/pii/S1556086418334567"
+          ],
+          "imageURLs": []
+        },
+        {
+          "id": "miscellaneous-q46",
+          "number": 46,
+          "prompt": "A 66 years-old woman is evaluated for dyspnea WHO class III. She has \u201cseal barking\u201d cough, worsened over the last week. Her past medical history is significant for obesity, asthma and her primary provider recently told her she has \u201cCOPD.\u201d  She is a lifetime non-smoker.  A computed tomography was performed and shown below. What should be done next?https://firebasestorage.googleapis.com/v0/b/aabip-app.appspot.com/o/image32.png?alt=media&token=5387b7a2-310c-406d-9b62-7b8a515ecd13",
+          "options": [
+            {
+              "id": "a",
+              "text": "Repeat inspiratory/expiratory computed tomography"
+            },
+            {
+              "id": "b",
+              "text": "Perform a dynamic/ functional bronchoscopy"
+            },
+            {
+              "id": "c",
+              "text": "Perform end inspiratory/expiratory fluoroscopy"
+            },
+            {
+              "id": "d",
+              "text": "Prescribe bronchodilators "
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "The CT scan shown is a dynamic (inspiratory-expiratory) study suggestive of tracheobronchomalacia.  This is consistent with the patient\u2019s clinical presentation.  Dynamic bronchoscopy is a complementary procedure to dynamic CT.  CT provides benefit by revealing adjacent parenchyma and vascular structures while bronchoscopy allows direct visualization of the airway mucosa and more specific details about extent of disease (choice B correct).  Real-time observation of airways dynamics can be accomplished with various maneuvers while the patient is under light-moderate sedation.  Additionally, CPAP titration can be performed during dynamic bronchoscopy to find the ideal pressure needed to prevent dynamic collapse.\n\n---",
+          "references": [],
+          "imageURLs": [
+            "https://firebasestorage.googleapis.com/v0/b/aabip-app.appspot.com/o/image32.png?alt=media&token=5387b7a2-310c-406d-9b62-7b8a515ecd13"
+          ]
+        },
+        {
+          "id": "miscellaneous-q47",
+          "number": 47,
+          "prompt": "A 45 years-old male undergoes a bilateral lung transplant for cystic fibrosis with an unremarkable post-operative course. He is discharged from the ICU of post-operative day 3 and home on post-operative day 9. At his routine 2-week follow-up he was clinically doing well with his exercise capacity slowly improving and surgical site healing appropriately. A chest radiograph performed at this visit shows small bilateral apical pneumothoraces. The patient is admitted and a left sided chest tube is placed with a small but continuous air leak. What is the next step in the management of this patient?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Follow clinically until resolution"
+            },
+            {
+              "id": "b",
+              "text": "Increase Immunosuppressive medications"
+            },
+            {
+              "id": "c",
+              "text": "Place a contralateral chest tube"
+            },
+            {
+              "id": "d",
+              "text": "Place another ipsilateral chest tube"
+            },
+            {
+              "id": "e",
+              "text": "Bronchoscopy for airway inspection "
+            }
+          ],
+          "correctOptionId": "e",
+          "explanation": "When patients have sequential lung transplant they will likely develop inter-pleural communication as the anterior pleural reflection is typically severed during the transplantation process. For this reason, a single chest tube is likely to be effective in double lung transplant patients with bilateral pneumothoraces. Although early pneumothoraces following transplantation are common, the development of new pneumothoraces two weeks after bilateral lung transplantation should alert the physician of the possibility of anastomotic dehiscence and airway inspection should be performed to localize and possibly treat any associated airway dehiscence (choice E correct).",
+          "references": [
+            "Couraud L, Nashef S, Nicolini P, Jougon J. Classification of airway anastomotic healing. European journal of cardio-thoracic surgery. 1992;6",
+            ":496-497.https://pubmed.ncbi.nlm.nih.gov/1389262/",
+            "Wittich GR, Kusnick CA, Starnes VA, Lucas DE. Communication between the two pleural cavities after major cardiothoracic surgery: relevance to percutaneous intervention. Radiology. 1992;184",
+            ":461-462.https://pubmed.ncbi.nlm.nih.gov/1620848/"
+          ],
+          "imageURLs": []
+        },
+        {
+          "id": "miscellaneous-q48",
+          "number": 48,
+          "prompt": "A 60 years-old female is found to have an irregular 1.4cm right lower lobe solid lung nodule on CT performed in the evaluation of atypical chest pain.  She has a 25 pack-year smoking history and the remainder of her clinical history is unremarkable. She has no personal history of cancer or family history of lung cancer.  Subsequent PET imaging is performed, showing no significant uptake in the RLL nodule. What is the next step?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Repeat CT scan in 12 months"
+            },
+            {
+              "id": "b",
+              "text": "Surgical excision"
+            },
+            {
+              "id": "c",
+              "text": "No further work-up"
+            },
+            {
+              "id": "d",
+              "text": "Repeat PET/CT in 3 months"
+            },
+            {
+              "id": "e",
+              "text": "CT-guided transthoracic or guided bronchoscopic lung biopsy "
+            }
+          ],
+          "correctOptionId": "e",
+          "explanation": "The patient described in the question continues to have a moderate probability of malignancy even in the absence of SUV avidity within the nodule.  Given the lack of SUV avidity surgical resection would likely not be an appropriate choice in the absence of confirmed malignancy as alternative diagnosis is a possibility.  However, the discordance between clinical suspicion and functional imaging mandates further evaluation.  Depending on patient\u2019s preference and the location of the lesion, either bronchoscopic or CT-guided transthoracic biopsy is appropriate of the choices listed.",
+          "references": [
+            "Gould MK, Donington J, Lynch WR, et al. Evaluation of individuals with pulmonary nodules: When is it lung cancer?: diagnosis and management of lung cancer, 3rd ed: american college of chest physicians evidence-based clinical practice guidelines. Chest. 2013;143(5_suppl):e93S-e120S.https://pubmed.ncbi.nlm.nih.gov/23649456/",
+            "MacMahon H, Austin JHM, Gamsu G, et al. Guidelines for Management of Small Pulmonary Nodules Detected on CT Scans: A Statement from the Fleischner Society. Radiology. 2005;237",
+            ":395-400.https://pubs.rsna.org/doi/abs/10.1148/radiol.2372041887?journalCode=radiology"
+          ],
+          "imageURLs": []
+        },
+        {
+          "id": "miscellaneous-q49",
+          "number": 49,
+          "prompt": "A 56-year-old man active smoker with rheumatoid arthritis on chronic prednisone and chronic kidney disease presents to the emergency department with cough, blood-tinged sputum and fever for one week. He reports unintentional 70 pounds weight loss in the last 6 months. CT chest performed without contrast reveals bilateral upper lobe masses (4 and 5 cm in right and left upper lobe respectively) and associated mediastinal lymphadenopathy. The radiologist is unable to identify the laterality of the source of bleeding due to the lack of contrast.  While you are interviewing him in the ED, he suddenly develops severe respiratory distress and expectorate approximately 500 ml of bright red blood. He is intubated in the emergency room with an endotracheal tube 8.0mm but hemoptysis continues. What is the best next step?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Perform rigid bronchoscopy at bedside"
+            },
+            {
+              "id": "b",
+              "text": "Place the patient in right lateral decubiti"
+            },
+            {
+              "id": "c",
+              "text": "Place the patient in left lateral decubiti"
+            },
+            {
+              "id": "d",
+              "text": "Perform flexible bronchoscopy at bedside and place an endobronchial blocker"
+            },
+            {
+              "id": "e",
+              "text": "Send the patient to interventional radiology (IR) suite for bronchial arterial embolization "
+            }
+          ],
+          "correctOptionId": "d",
+          "explanation": "Bronchoscopy is a safe and relatively inexpensive procedure, and is a key procedure in the multidisciplinary management of the vast majority of hemoptysis, allowing for rapid diagnosis, identification and control of the source of bleeding, and can help guide a more definitive treatment if necessary.1 Rigid bronchoscopy is a good alternative for the management of massive hemoptysis as it provides the ability to use certain therapeutic techniques that cannot be used with the flexible bronchoscope. However, performing rigid bronchoscopy in the emergency department would require time to set up and is typically done in a controlled setting with an experienced bronchoscopy team (choice A incorrect). The main goal of bronchoscopic management of massive hemoptysis is to protect the non-bleeding lung.1 In this case, the CT chest without contrast was not able to identify the laterality of the source of bleeding, thus placing the patient in either right or left decubitus position will carry the risk of spilling blood into the non-bleeding lung. (choices B and C incorrect).2,3 It is not advisable to transport an unstable and actively bleeding patient to the Interventional Radiology (IR) or CT scan suite unless a secure and controlled airway is in place (choice E incorrect). By performing a rapid bronchoscopy at bedside, the operator should be able to identify the laterality of the bleeding - thus indicating to the team what lateral position the patient should be placed-, cleaning the non-bleeding lung with the goal of improving oxygenation, and deploying an endobronchial blocker in the actively bleeding lung, in order to secure the airway and allow immediate safe transportation to the IR suite for bronchial arterial embolization (choice D correct).",
+          "references": [
+            "Daniels JMA. Flexible bronchoscopy. In: Herth FJF, Shah PL, Gompelmann D, eds. Interventional Pulmonology (ERS Monograph). Sheffield, European Respiratory Society, 2017; pp. 1\u201318. https://doi.org/10.1183/2312508X.10002317",
+            "Cheng GZ, Wahidi MM. Haemoptysis. In: Herth FJF, Shah PL, Gompelmann D, eds. Interventional Pulmonology (ERS Monograph). Sheffield, European Respiratory Society, 2017; pp. 191\u2013209. https://doi.org/10.1183/2312508X.10003517",
+            "Chalumeau-Lemoine L, Khalil A, Prigent H et al. Impact of multidetector CT-angiography on the emergency management of severe hemoptysis. Eur J Radiol. 2013 Nov;82",
+            ":e742-7. doi: 10.1016/j.ejrad.2013.07.009. Epub 2013 Aug 6. https://pubmed.ncbi.nlm.nih.gov/23932395/",
+            "Cardenas-Garcia J, Feller-Kopman D. POINT: Should All Initial Episodes of Hemoptysis Be Evaluated by Bronchoscopy? Yes.  Chest. 2018 Feb;153",
+            ":302-305. doi: 10.1016/j.chest.2017.09.036. Epub 2017 Oct 10. https://pubmed.ncbi.nlm.nih.gov/29029994/",
+            "Ittrich H, Klose H, Adam G. Radiologic management of haemoptysis: diagnostic and interventional bronchial arterial embolisation. Rofo. 2015 Apr;187",
+            ":248-59. doi: 10.1055/s-0034-1385457. Epub 2014 Nov 5. https://www.thieme-connect.com/products/ejournals/pdf/10.1055/s-0034-1385457.pdf"
+          ],
+          "imageURLs": []
+        },
+        {
+          "id": "miscellaneous-q50",
+          "number": 50,
+          "prompt": "Which of these statements about EGFR mutations is FALSE?",
+          "options": [
+            {
+              "id": "a",
+              "text": "More common in women"
+            },
+            {
+              "id": "b",
+              "text": "Highest prevalence is in patients of African decent"
+            },
+            {
+              "id": "c",
+              "text": "More common non-smokers"
+            },
+            {
+              "id": "d",
+              "text": "Drug resistance is common "
+            }
+          ],
+          "correctOptionId": "d",
+          "explanation": "EGRF mutations occur most commonly in non-smoking Asian females. Drug resistance develops frequently with EGFR mutated cancers resulting with the T790m mutation being the most common secondary mutation.",
+          "references": [
+            "Socinski MA, Evans T, Gettinger S, et al. Treatment of stage IV non-small cell lung cancer: Diagnosis and management of lung cancer, 3rd ed: American College of Chest Physicians evidence-based clinical practice guidelines. Chest. 2013;143(5 Suppl):e341S-368S. https://pubmed.ncbi.nlm.nih.gov/23649446/"
+          ],
+          "imageURLs": []
+        },
+        {
+          "id": "miscellaneous-q51",
+          "number": 51,
+          "prompt": "A 62 years-old male with right lower lobe squamous cell carcinoma and station 7 lymph node involvement diagnosed by cervical mediastinoscopy (T2aN2M0) undergoes induction chemotherapy with partial radiographic response. The patient is being discussed at the multidisciplinary tumor board for treatment. Which of the following is TRUE about restaging of the mediastinum following induction treatment?",
+          "options": [
+            {
+              "id": "a",
+              "text": "CT and PET/CT has similar sensitivity and false negative rates for restaging of the mediastinum"
+            },
+            {
+              "id": "b",
+              "text": "Repeat mediastinoscopy can be performed routinely, but with a lower sensitivity compared to initial mediastinoscopy"
+            },
+            {
+              "id": "c",
+              "text": "Restaging with EBUS-TBNA is a convenient option that offers a similar diagnostic accuracy compared to initial staging"
+            },
+            {
+              "id": "d",
+              "text": "First time cervical mediastinoscopy post-induction therapy for restaging after initial invasive staging with EBUS and/or EUS show similar results to initial staging with mediastinoscopy. "
+            }
+          ],
+          "correctOptionId": "d",
+          "explanation": "The role of mediastinal restaging after induction therapy is unclear. CT and PET scanning results have been variable in predicting tumor response.  CT/PET has been shown to be more accurate than CT in the restaging of lung cancer after induction chemotherapy in all stages of disease. In a 2006 prospective trial comparing PET/CT and CT in patients with biopsy proven N2 disease who underwent induction chemotherapy prior to mediastinoscopy the accuracy for assessment of pathologic stage by PET/CT and CT was 92% versus 39% (P = .03) for stage 0, 89% versus 36% (P = .04) for stage I, 85% versus 83% (P > .05) for stage II, 69% versus 67% (P > .05) for stage III, and 85% versus 80% (P > .05) for stage IV. Redo mediastinoscopy is technically challenging due to adhesions and fibrosis. In addition, following chemotherapy lymph nodes often become fibrotic and the sensitivity of EBUS/EUS is reduced.  First time cervical mediastinoscopy post induction therapy for restaging has been shown to have similar results to initial staging with mediastinoscopy arguing for the use of EBUS/EUS in the initial staging when patients will likely receive induction therapy so that mediastinoscopy can be reserved as a restaging procedure.",
+          "references": [
+            "Zielinski M, Hauer L, Hauer J, Nabialek T, Szlubowski A, Pankowski J. Non-small-cell lung cancer restaging with transcervical extended mediastinal lymphadenectomy. European journal of cardio-thoracic surgery : official journal of the European Association for Cardio-thoracic Surgery. 2010;37",
+            ":776-780. https://pubmed.ncbi.nlm.nih.gov/20044265/",
+            "Lardinois D, Schallberger A, Betticher D, Ris HB. Postinduction video-mediastinoscopy is as accurate and safe as video-mediastinoscopy in patients without pretreatment for potentially operable non-small cell lung cancer. Ann Thorac Surg. 2003;75",
+            ":1102-1106. https://pubmed.ncbi.nlm.nih.gov/12683545/",
+            "Cerfolio RJ, Bryant AS, Ojha B. Restaging patients with N2 (stage IIIa) non-small cell lung cancer after neoadjuvant chemoradiotherapy: a prospective study. J Thorac Cardiovasc Surg. 2006;131",
+            ":1229-1235. https://pubmed.ncbi.nlm.nih.gov/16733150/",
+            "De Waele M, Hendriks J, Lauwers P, et al. Restaging the mediastinum in non-small cell lung cancer after induction therapy: non-invasive versus invasive procedures. Acta chirurgica Belgica. 2011;111",
+            ":161-164. https://pubmed.ncbi.nlm.nih.gov/21780523/",
+            "Szlubowski A, Zielinski M, Soja J, et al. A combined approach of endobronchial and endoscopic ultrasound-guided needle aspiration in the radiologically normal mediastinum in non-small-cell lung cancer staging--a prospective trial. European journal of cardio-thoracic surgery : official journal of the European Association for Cardio-thoracic Surgery. 2010;37",
+            ":1175-1179. https://pubmed.ncbi.nlm.nih.gov/20022761/"
+          ],
+          "imageURLs": []
+        },
+        {
+          "id": "miscellaneous-q52",
+          "number": 52,
+          "prompt": "A 63 years-old male former smoker with severe heterogeneous upper lobe predominant emphysema has an FEV1 of 0.86 L (25%) and DLCO 29% predicted.  He has no other complicating medical problems, is still active with good exercise capacity.  His outpatient medical regimen includes tiotropium daily and budesonide/formoterol twice daily.  He continues with a maintenance pulmonary rehab program. Which of the following statements regarding lung volume reduction surgery (LVRS) in this patient is most correct?",
+          "options": [
+            {
+              "id": "a",
+              "text": "His DLCO precludes him from LVRS"
+            },
+            {
+              "id": "b",
+              "text": "Pulmonary rehab needs to be stopped at least 8 weeks prior to LVRS"
+            },
+            {
+              "id": "c",
+              "text": "With a high baseline exercise capacity, he is unlikely to have survival benefit"
+            },
+            {
+              "id": "d",
+              "text": "CT scan assessment of intact interlobar fissure is mandatory prior to LVRS "
+            }
+          ],
+          "correctOptionId": "c",
+          "explanation": "The National Emphysema Treatment Trial (NETT), was a large randomized trial prospectively evaluating the therapeutic role of lung volume reduction surgery (LVRS). Although patients with very severe emphysema, with an FEV1 < 20% predicted combined with either non-heterogeneous disease or diffusing capacity for carbon monoxide (DLCO) < 20% predicted, were initially included in the trial a very high 30-day mortality was seen early and these patients were excluded from further enrollment. When these patients were excluded the overall mortality was similar between surgical and medical control patients, however, in the subgroup of patients with a low baseline exercise capacity (< 25 W for women and 40 W for men) and predominantly upper-lobe emphysema, surgery was found to be superior to medical management while in patients with homogenous emphysema and high exercise capacity surgical patients did worse than medical controls. CT scan assessment of intact interlobar fissure is not necessary in surgical LVRS.",
+          "references": [
+            "Group NETTR. A Randomized Trial Comparing Lung-Volume\u2013Reduction Surgery with Medical Therapy for Severe Emphysema. New England Journal of Medicine. 2003;348",
+            ":2059-2073. https://pubmed.ncbi.nlm.nih.gov/25463157/",
+            "Miller RJ, Murgu SD. Interventional pulmonology for asthma and emphysema: bronchial thermoplasty and bronchoscopic lung volume reduction. Paper presented at: Seminars in respiratory and critical care medicine 2014. https://www.nejm.org/doi/full/10.1056/nejmoa030287"
+          ],
+          "imageURLs": []
+        },
+        {
+          "id": "miscellaneous-q53",
+          "number": 53,
+          "prompt": "You are asked to see a 76 years-old female never smoker for evaluation of a right hilar lung mass with associated adenopathy. The following CT scan and PET CT Scan are performed as part of the evaluation. Which of the following is true about the lymph node station highlighted in the images below?https://firebasestorage.googleapis.com/v0/b/aabip-app.appspot.com/o/image34.png?alt=media&token=5387b7a2-310c-406d-9b62-7b8a515ecd13https://firebasestorage.googleapis.com/v0/b/aabip-app.appspot.com/o/image35.png?alt=media&token=5387b7a2-310c-406d-9b62-7b8a515ecd13",
+          "options": [
+            {
+              "id": "a",
+              "text": "In the 7th version of the TNM staging system this lymph node station was classified as N2 whereas in the 8th version of the TNM staging system it is classified as N1."
+            },
+            {
+              "id": "b",
+              "text": "The inferior aspect of the azygous vein is the upper border of this lymph node station"
+            },
+            {
+              "id": "c",
+              "text": "This lymph node station extends to the left lateral border of the trachea"
+            },
+            {
+              "id": "d",
+              "text": "The superior vena cava is the lower border of this lymph node station "
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation": "The image in the question shows a FDG- avid lymph node in the 4R lymph node station. The inferior rim of the azygous vein forms the lower border of the 4R lymph node station while the left lateral wall of the trachea forms the boundary between stations 4R and 4L.1  There have been no changes in lymph node classification between the 7th and 8th versions of the TNM staging system.2",
+          "references": [
+            "Goldstraw P et al. J Thorac Oncol 2016; 11:39. https://pubmed.ncbi.nlm.nih.gov/26762738/",
+            "El-Sherief AH et al. Radiographics. 2014 Oct;34",
+            ":1680-91. https://pubmed.ncbi.nlm.nih.gov/25310423/"
+          ],
+          "imageURLs": [
+            "https://firebasestorage.googleapis.com/v0/b/aabip-app.appspot.com/o/image34.png?alt=media&token=5387b7a2-310c-406d-9b62-7b8a515ecd13https://firebasestorage.googleapis.com/v0/b/aabip-app.appspot.com/o/image35.png?alt=media&token=5387b7a2-310c-406d-9b62-7b8a515ecd13"
+          ]
+        },
+        {
+          "id": "miscellaneous-q54",
+          "number": 54,
+          "prompt": "Morphologic characteristics of lung nodules on CT chest that suggest malignancy include all of the following EXCEPT:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Ragged margins"
+            },
+            {
+              "id": "b",
+              "text": "Irregular shape"
+            },
+            {
+              "id": "c",
+              "text": "Vascular divergence"
+            },
+            {
+              "id": "d",
+              "text": "Pseudocavitation"
+            },
+            {
+              "id": "e",
+              "text": "Dilated bronchus leading into the nodule "
+            }
+          ],
+          "correctOptionId": "c",
+          "explanation": "Vascular \u201cconvergence\u201d not \u201cdivergence is associated with malignancy along with all of the other choices provided above.",
+          "references": [
+            "Gould MK, Donington J, Lynch WR, et al. Evaluation of individuals with pulmonary nodules: When is it lung cancer? Diagnosis and management of lung cancer, 3rd ed: American college of chest physicians evidence-based clinical practice guidelines. Chest. 2013;143(5_suppl):e93S-e120S. https://pubmed.ncbi.nlm.nih.gov/23649456/"
+          ],
+          "imageURLs": []
+        },
+        {
+          "id": "miscellaneous-q55",
+          "number": 55,
+          "prompt": "You are asked to see a patient with a history of a motor vehicle accident for progressive dyspnea and abnormal flow volume loops on spirometry.  During bronchoscopy you note the tracheal abnormality shown, approximately 15-20mm below the vocal cords.https://firebasestorage.googleapis.com/v0/b/aabip-app.appspot.com/o/image26.jpg?alt=media&token=5387b7a2-310c-406d-9b62-7b8a515ecd13Of the following choices, which is the most likely cause of this finding?",
+          "options": [
+            {
+              "id": "a",
+              "text": "An active tracheitis related to Staphylococcus aureus"
+            },
+            {
+              "id": "b",
+              "text": "Remote tuberculosis infection"
+            },
+            {
+              "id": "c",
+              "text": "A complication during previous tracheostomy procedure"
+            },
+            {
+              "id": "d",
+              "text": "Prolonged endotracheal intubation"
+            },
+            {
+              "id": "e",
+              "text": "A non-infectious granulomatous disease "
+            }
+          ],
+          "correctOptionId": "c",
+          "explanation": "The lesion shown is a benign \u2018A-shaped\u2019 (pseudoglottic) tracheal stenosis.  The cause of the lesion is focal anterior compromise of one or several tracheal cartilaginous rings, leading to a bilateral bowing in of the lumen and often an associated posterior malacia.  This type of benign airway stenosis is most commonly seen after ring fracture incurred during tracheostomy and is consistent with the location of this lesion as well as the patient\u2019s history (choice C correct).1 All of the other choices can ultimately result in tracheal stenosis, but are usually of the cicatricial (fibrotic) type.2,3",
+          "references": [
+            "Plojoux J, Laroumagne S, Vandemoortele T, Astoul PJ, Thomas PA, Dutau H. Management of benign dynamic 'A-shape' tracheal stenosis: a retrospective study of 60 patients. Ann Thorac Surg 2015;99:447-53. https://pubmed.ncbi.nlm.nih.gov/25497072/",
+            "Murgu SD, Egressy K, Laxmanan B, Doblare G, Ortiz-Comino R, Hogarth DK. Central Airway Obstruction: Benign Strictures, Tracheobronchomalacia, and Malignancy-related Obstruction. Chest 2016;150:426-41.https://pubmed.ncbi.nlm.nih.gov/26874192",
+            "Oberg CL, Holden VK, Channick CL. Benign Central Airway Obstruction. Semin Respir Crit Care Med 2018;39:731-46.https://pubmed.ncbi.nlm.nih.gov/30641591/"
+          ],
+          "imageURLs": [
+            "https://firebasestorage.googleapis.com/v0/b/aabip-app.appspot.com/o/image26.jpg?alt=media&token=5387b7a2-310c-406d-9b62-7b8a515ecd13Of"
+          ]
+        },
+        {
+          "id": "miscellaneous-q56",
+          "number": 56,
+          "prompt": "During a bronchoscopy targeting moderate sedation for evaluation of hemoptysis, you find no suspicious mucosal lesions, but incidentally notice the airway findings below.  End inspirationhttps://firebasestorage.googleapis.com/v0/b/aabip-app.appspot.com/o/image22.jpg?alt=media&token=5387b7a2-310c-406d-9b62-7b8a515ecd13With coughhttps://firebasestorage.googleapis.com/v0/b/aabip-app.appspot.com/o/image23.jpg?alt=media&token=5387b7a2-310c-406d-9b62-7b8a515ecd13There are no retained secretions in the distal airways and the patient at baseline is asymptomatic and fairly active.   Which of the following is a reasonable next step in managing these findings?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Conclude the procedure and monitor clinically without further intervention"
+            },
+            {
+              "id": "b",
+              "text": "Dynamic chest CT"
+            },
+            {
+              "id": "c",
+              "text": "Repeat bronchoscopy under lighter sedation"
+            },
+            {
+              "id": "d",
+              "text": "Discuss stent placement with the patient"
+            },
+            {
+              "id": "e",
+              "text": "Evaluation for tracheoplasty "
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation": "The case denotes an incidental finding of focal excessive dynamic airway collapse (EDAC) at the level of the distal trachea and proximal left mainstem bronchus.  Grading EDAC is challenging, as many factors can affect the reproducibility and interpretation of results.  In addition, a high proportion of the population has >50% dynamic airway collapse without symptoms (as in this case).  Comprehensive characterization of EDAC usually involves dynamic airway assessment by bronchoscopy at multiple levels under light sedation (tracheal and central bronchial), and by dynamic CT.  These studies are usually complementary, as each has advantages and limitations.   The most important step in managing EDAC is first establishing the severity of symptoms.  In cases of asymptomatic and clinically inconsequential EDAC, no further evaluation or intervention is necessary (choice A correct).  In cases of clinically significant confirmed EDAC, multiple approaches may be used depending on several factors including patient expectations, comorbidities, and surgical candidacy.  The cornerstone of therapy is aimed at addressing contributing factors such as obesity and uncontrolled coexistent obstructive airway disease.  CPAP, airway stents, and tracheoplasty are all possible therapeutic alternatives depending on the clinical circumstance and local expertise.",
+          "references": [
+            "Kheir F, Majid A. Tracheobronchomalacia and Excessive Dynamic Airway Collapse: Medical and Surgical Treatment. Semin Respir Crit Care Med 2018;39:667-73. https://pubmed.ncbi.nlm.nih.gov/30641584/"
+          ],
+          "imageURLs": [
+            "https://firebasestorage.googleapis.com/v0/b/aabip-app.appspot.com/o/image22.jpg?alt=media&token=5387b7a2-310c-406d-9b62-7b8a515ecd13With",
+            "https://firebasestorage.googleapis.com/v0/b/aabip-app.appspot.com/o/image23.jpg?alt=media&token=5387b7a2-310c-406d-9b62-7b8a515ecd13There"
+          ]
+        },
+        {
+          "id": "miscellaneous-q57",
+          "number": 57,
+          "prompt": "A 62-year-old male active smoker with a 55-pack year smoking history, HTN and COPD is referred for further evaluation of an abnormal chest CT. Chest imaging was obtained to evaluate a persistent dry cough and unintentional weight loss over the most recent 6 months. Review of the chest CT shows a 4.4cm x 4.1cm mass in the left upper lobe with a few smaller surrounding nodules and ipsilateral mediastinal and left hilar lymphadenopathy. PET/CT is obtained and shows FDG avidity in the LUL mass (SUV 7.4), nodules and lymph node stations 11L, 4L and 7, with no other evidence of metastatic disease. MRI of the brain is negative for significant abnormalities. What is the radiographic staging based on the available information?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Stage IIB"
+            },
+            {
+              "id": "b",
+              "text": "Stage IIIB"
+            },
+            {
+              "id": "c",
+              "text": "Stage IIIA"
+            },
+            {
+              "id": "d",
+              "text": "Stage IIIC "
+            }
+          ],
+          "correctOptionId": "c",
+          "explanation": "The stage is IIIB, T3N2M0, based on the 8th edition of the IASLC non-small cell lung cancer staging. The patient has a mass measuring greater than 4cm. A tumor measuring more than 4cm but less than 5cm in greatest dimension would typically be considered a T2b tumor per the 8th edition staging, making the stage IIIA (T2bN2M0), but the presence of satellite nodules changes it to a T3. There are FDG avid ipsilateral hilar and mediastinal lymph nodes, making it N2 stage. Knowing appropriate lymph node stations and lung cancer staging is critical for accurate evaluation and treatment of lung cancer patients.",
+          "references": [
+            "Lim W, Ridge CA, Nicholson AG, Mirsadraee S. The 8th lung cancer TNM classification and clinical staging system: review of the changes and clinical implications. Quant Imaging Med Surg. 2018 Aug;8",
+            ":709-718. doi: 10.21037/qims.2018.08.02. PMID: 30211037; PMCID: PMC6127520. https://pubmed.ncbi.nlm.nih.gov/30211037/"
+          ],
+          "imageURLs": []
+        },
+        {
+          "id": "miscellaneous-q58",
+          "number": 58,
+          "prompt": "Based on the most current United States Preventative Services Task Force (USPSTF) guidelines, which of the following patients would meet criteria for low dose CT scan for lung cancer screening?",
+          "options": [
+            {
+              "id": "a",
+              "text": "45 year old male with Gold Stage III COPD who is a current smoker and smokes 1 pack per day."
+            },
+            {
+              "id": "b",
+              "text": "60 year old female who is a current smoker and was recently diagnosed with Stage IV metastatic melanoma."
+            },
+            {
+              "id": "c",
+              "text": "75 year old male with Gold Stage II COPD with a 25 pack year smoking history who quit smoking 5 years ago."
+            },
+            {
+              "id": "d",
+              "text": "65 year old female with a 15 pack year smoking history and quit 20 years ago. "
+            }
+          ],
+          "correctOptionId": "c",
+          "explanation": "USPSTF updated their lung cancer screening guidelines in March 2021, which was the first change of the guidelines since the initial recommendations in 2013. Currently, the USPSTF lung cancer screening guidelines are as follows: Adults aged 50 to 80 years who have at least 20 pack year smoking history and currently smoke or have quit within the past 15 years. Screening should be stopped once a person has not smoked for 15 years or has a health problem that limits life expectancy or the ability to have lung surgery. Changes to these guidelines from 2013 include expansion of the age range to 50 to 80 years (previously 55 to 80 years) and reduction of the pack year history to 20 pack years of smoking (previously 30 pack years). Based on the updated 2021 USPSTF guidelines, choice C is the only answer that fits the criteria. Choices A and D do not fit the age range. Choice B has a health problem that limits life expectancy. Choice E quit smoking more than 15 years ago.",
+          "references": [
+            "Potter AL, Bajaj SS, Yang CJ. The 2021 USPSTF lung cancer screening guidelines: a new frontier. Lancet Respir Med. 2021 Jul;9",
+            ":689-691. doi: 10.1016/S2213-2600",
+            "00210-1. Epub 2021 May 6. PMID: 33965004. https://www.thelancet.com/journals/lanres/article/PIIS2213-2600",
+            "00210-1/fulltext"
+          ],
+          "imageURLs": []
+        },
+        {
+          "id": "miscellaneous-q59",
+          "number": 59,
+          "prompt": "A 73 year-old female who was diagnosed with stage IV EGFR-mutated adenocarcinoma of the lung 1 year ago and is currently receiving erlotinib monotherapy, is referred to a medical oncologist for biopsy due to evidence of progression after an initial excellent clinical and radiographic response.   Which of the following is true regarding the molecular oncobiology of lung adenocarcinoma?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Osimertinib is effective in T790M mutated adenocarcinoma of the lung."
+            },
+            {
+              "id": "b",
+              "text": "EGFR is the most common driver mutation identified during molecular profiling."
+            },
+            {
+              "id": "c",
+              "text": "Resistance to first- and second- generation tyrosine kinase inhibitors (TKIs) is mediated through acquired KRAS mutations."
+            },
+            {
+              "id": "d",
+              "text": "Tumors with the EMLA4-ALK fusion are equally responsive to all tyrosine kinase inhibitors. "
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Molecular profiling/testing, especially for stage III-IV non-small cell lung cancer (NSCLC), is a critical component of the diagnostic and treatment algorithm.  Patients with tumors harboring driver mutations, such as the tyrosine kinases EGFR or EML4-ALK, are candidates for therapies targeting these mutations.  Use of \u201ctyrosine kinase inhibitors\u201d (TKIs) in these patients results in improved survival compared to those who are not treated with targeted therapies.  Therefore, properly acquiring samples that allow for comprehensive characterization of tumor genetics is extremely important in managing these patients. The most commonly detected driver mutation overall is in the KRAS oncogene (choice B incorrect).  Up to 30% of NSCLCs harbor a KRAS mutation.  However, as of 2021, an efficacious therapy targeting a mutated KRAS is not clinically available. A mutated EGFR gene is the most commonly identified driver among those for which there is a targeted therapy available (about 15-20% of lung adenocarcinomas).  Multiple TKIs can be used to treat mutated EGFR, such as erlotinib, gefitinib, and afatinib.  However, over time, these tumors can acquire resistance to first- or second-line TKIs.  About 60% of these are due to a new mutation within the drug target, the T790M mutation (choice C incorrect). Osimertinib is a third-generation tyrosine kinase inhibitor (TKI) and is utilized in lung adenocarcinomas that progress on first/second generation TKIs due to a T790M mutation (choice A correct).  There is also promising data for first-line utilization of Osimertinib in patients found to have activating mutations in tyrosine kinase domain of EGFR (exon 19 deletion or exon 21 point mutation). The EMLA4-ALK fusion is found in approximately 5% of lung adenocarcinomas.  The TKI subclass of \u2018ALK-inhibitors,\u2019 such as crizotinib or the newer generation alectinib and brigatinib, inhibit ALK specifically.  Due to their superior efficacy over other TKIs for tumors with constitutive ALK activity, \u2018ALK inhibitors\u2019 are used as first line therapy in these patients (choice D incorrect).  Furthermore, second and third generation ALK inhibitors have been shown to have improved brain penetration compared to crizotinib, which is particularly important for those with brain metastases.",
+          "references": [
+            "Kris MG, Johnson BE, Berry LD, Kwiatkowski DJ, Iafrate AJ, Wistuba II, Varella-Garcia M, Franklin WA, Aronson SL, Su PF, Shyr Y, Camidge DR, Sequist LV, Glisson BS, Khuri FR, Garon EB, Pao W, Rudin C, Schiller J, Haura EB, Socinski M, Shirai K, Chen H, Giaccone G, Ladanyi M, Kugler K, Minna JD, Bunn PA. Using multiplexed assays of oncogenic drivers in lung cancers to select targeted drugs. JAMA. 2014 May 21;311",
+            ":1998-2006. doi: 10.1001/jama.2014.3741. PMID: 24846037; PMCID: PMC4163053. https://jamanetwork.com/journals/jama/fullarticle/1872815",
+            "Abdayem P, Planchard D. Update on molecular pathology and role of liquid biopsy in nonsmall cell lung cancer. Eur Respir Rev. 2021 Jul 20;30",
+            ":200294. doi: 10.1183/16000617.0294-2020. PMID: 34289984. https://pubmed.ncbi.nlm.nih.gov/34289984/",
+            "Chevallier M, Borgeaud M, Addeo A, Friedlaender A. Oncogenic driver mutations in non-small cell lung cancer: Past, present and future. World J Clin Oncol. 2021 Apr 24;12",
+            ":217-237. doi: 10.5306/wjco.v12.i4.217. PMID: 33959476; PMCID: PMC8085514. https://pubmed.ncbi.nlm.nih.gov/33959476/",
+            "Westover D, Zugazagoitia J, Cho BC, Lovly CM, Paz-Ares L. Mechanisms of acquired resistance to first- and second-generation EGFR tyrosine kinase inhibitors. Ann Oncol. 2018 Jan 1;29(suppl_1):i10-i19. doi: 10.1093/annonc/mdx703. PMID: 29462254; PMCID: PMC6454547. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6454547/",
+            "Ramalingam SS, Vansteenkiste J, Planchard D, Cho BC, Gray JE, Ohe Y, Zhou C, Reungwetwattana T, Cheng Y, Chewaskulyong B, Shah R, Cobo M, Lee KH, Cheema P, Tiseo M, John T, Lin MC, Imamura F, Kurata T, Todd A, Hodge R, Saggese M, Rukazenkov Y, Soria JC; FLAURA Investigators. Overall Survival with Osimertinib in Untreated, EGFR-Mutated Advanced NSCLC. N Engl J Med. 2020 Jan 2;382",
+            ":41-50. doi: 10.1056/NEJMoa1913662. Epub 2019 Nov 21. PMID: 31751012. https://pubmed.ncbi.nlm.nih.gov/31751012/"
+          ],
+          "imageURLs": []
+        },
+        {
+          "id": "miscellaneous-q60",
+          "number": 60,
+          "prompt": "https://firebasestorage.googleapis.com/v0/b/aabip-app.appspot.com/o/Question_31",
+          "options": [
+            {
+              "id": "a",
+              "text": "no indication to scan"
+            },
+            {
+              "id": "b",
+              "text": "6 months"
+            },
+            {
+              "id": "c",
+              "text": "12 months"
+            },
+            {
+              "id": "d",
+              "text": "18 months "
+            }
+          ],
+          "correctOptionId": "c",
+          "explanation": "Although the risk of cancer in nodules smaller than 6 mm is considerably less than 1%, even in patients at high risk, suspicious morphology, upper lobe location, or both can increase cancer risk into the 1%\u20135% range; therefore, follow-up at 12 months may be considered, depending on comorbidity and patient p",
+          "references": [
+            ". Such small nodules, if malignant, rarely advance in stage over 12 months, whereas a short-term follow-up examination showing no apparent change may provide false reassurance.\nReferences",
+            "MacMahon, Heber, et al. Guidelines for management of incidental pulmonary nodules detected on CT images: from the Fleischner Society 2017. Radiology 284.1",
+            ": 228-243. https://pubmed.ncbi.nlm.nih.gov/28240562/",
+            "Gould, Michael K., et al. Evaluation of individuals with pulmonary nodules: When is it lung cancer?: Diagnosis and management of lung cancer: American College of Chest Physicians evidence-based clinical practice guidelines. Chest143.5",
+            ": e93S-e120S. https://pubmed.ncbi.nlm.nih.gov/23649456/"
+          ],
+          "imageURLs": [
+            "https://firebasestorage.googleapis.com/v0/b/aabip-app.appspot.com/o/Question_31"
+          ]
+        },
+        {
+          "id": "miscellaneous-q61",
+          "number": 61,
+          "prompt": "A 63-year-old man, a former smoker with 20 pack-year history and no prior history of cancer, was found to have a 1.3 cm lower lobe nodule on CT. Which of the following patterns of calcification in a solitary pulmonary nodule is concerning for malignancy?",
+          "options": [
+            {
+              "id": "a",
+              "text": ".png?alt=media&token=a10f36a0-137a-42ba-af4c-3a7068e0c735"
+            },
+            {
+              "id": "b",
+              "text": ".png?alt=media&token=3ad0fe76-f1d4-462e-9f73-11a28e30ea09"
+            },
+            {
+              "id": "c",
+              "text": ".png?alt=media&token=694d3af4-99d2-4d3f-a0c2-e21be4bfeb73"
+            },
+            {
+              "id": "d",
+              "text": ".png?alt=media&token=694067b6-2fb9-44b4-8df4-05dec5c32092 "
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "The presence and pattern of calcification in a solitary pulmonary nodule can also help differentiate benign from malignant nodules. There are four benign patterns of calcification: central (choice A), diffuse solid (choice C), laminated, and \u201cpopcornlike\u201d (choice D). The first three patterns are typically seen with prior infections, particularly histoplasmosis or tuberculosis. Popcornlike calcification is characteristic of chondroid calcification in a hamartoma. When present, these patterns of calcification are reliable indicators of a benign cause. Unfortunately, 38%\u201363% of benign nodules are not calcified, and the reported prevalence of calcification in hamartomas at CT varies from 5% to 50%.  Eccentric calcification patterns (Choice B) are more likely to be malignant than the others.",
+          "references": [
+            "Zerhouni, Elias A., et al. CT of the pulmonary nodule: a cooperative study. Radiology 160.2",
+            ": 319-327. https://pubmed.ncbi.nlm.nih.gov/3726107/",
+            "Erasmus, Jeremy J., et al. Solitary pulmonary nodules: Part I. Morphologic evaluation for differentiation of benign and malignant lesions. Radiographics 20.1",
+            ": 43-58. https://pubmed.ncbi.nlm.nih.gov/10682770/"
+          ],
+          "imageURLs": []
+        }
+      ]
     },
     {
       "id": "pathology",

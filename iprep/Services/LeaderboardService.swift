@@ -9,13 +9,16 @@ struct LeaderboardSnapshot: Equatable {
     }
 
     let participantID: String
+    let alias: String
     let domains: [DomainScore]
 }
 
 protocol LeaderboardServiceType: AnyObject {
     var isOptedIn: Bool { get }
     var participantID: String { get }
+    var participantAlias: String { get }
     func setOptIn(_ newValue: Bool)
+    func setAlias(_ alias: String)
     func refreshSnapshot(questionBank: QuestionBankService, sessions: [CompletedQuizSession]) -> LeaderboardSnapshot?
 }
 
@@ -23,6 +26,7 @@ final class LeaderboardService: LeaderboardServiceType {
     private enum Constants {
         static let optInKey = "AABIPIPREP.leaderboard.optIn"
         static let idKey = "AABIPIPREP.leaderboard.participant"
+        static let aliasKey = "AABIPIPREP.leaderboard.alias"
     }
 
     private let defaults: UserDefaults
@@ -44,8 +48,26 @@ final class LeaderboardService: LeaderboardServiceType {
         return id
     }
 
+    var participantAlias: String {
+        if let stored = defaults.string(forKey: Constants.aliasKey), !stored.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+            return stored
+        }
+        let alias = defaultAlias()
+        defaults.set(alias, forKey: Constants.aliasKey)
+        return alias
+    }
+
     func setOptIn(_ newValue: Bool) {
         defaults.set(newValue, forKey: Constants.optInKey)
+    }
+
+    func setAlias(_ alias: String) {
+        let trimmed = alias.trimmingCharacters(in: .whitespacesAndNewlines)
+        if trimmed.isEmpty {
+            defaults.set(defaultAlias(), forKey: Constants.aliasKey)
+        } else {
+            defaults.set(String(trimmed.prefix(24)), forKey: Constants.aliasKey)
+        }
     }
 
     func refreshSnapshot(questionBank: QuestionBankService, sessions: [CompletedQuizSession]) -> LeaderboardSnapshot? {
@@ -76,6 +98,11 @@ final class LeaderboardService: LeaderboardServiceType {
         }
         .sorted { lhs, rhs in lhs.percentile > rhs.percentile }
 
-        return LeaderboardSnapshot(participantID: participantID, domains: domains)
+        return LeaderboardSnapshot(participantID: participantID, alias: participantAlias, domains: domains)
+    }
+
+    private func defaultAlias() -> String {
+        let suffix = participantID.replacingOccurrences(of: "-", with: "").prefix(6)
+        return "Learner-\(suffix.uppercased())"
     }
 }

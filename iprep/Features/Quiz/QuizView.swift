@@ -10,11 +10,6 @@ struct QuizView: View {
     @State private var didConfigure = false
     @State private var didPrepareInitialSession = false
     @State private var quickStartCount: Int = 10
-    @State private var searchQuery: String = ""
-    @State private var selectedFilter: QuestionFilter = .all
-    @State private var selectedDomainID: String?
-    @State private var selectedDifficulty: Module.Difficulty?
-    @State private var imagesOnly = false
     @State private var isNoteSheetPresented = false
     @State private var noteDraft: String = ""
     @State private var noteQuestionID: String?
@@ -102,19 +97,13 @@ struct QuizView: View {
             ToolbarItemGroup(placement: .topBarTrailing) {
                 if !viewModel.questions.isEmpty {
                     Menu {
-                        ForEach(filteredQuestionIndices, id: \.self) { index in
+                        ForEach(Array(viewModel.questions.indices), id: \.self) { index in
                             let question = viewModel.questions[index]
                             Button {
                                 viewModel.jumpToQuestion(at: index)
                             } label: {
                                 let status = viewModel.isAnswered(question) ? "✓" : ""
                                 Text("Question \(index + 1) \(status)")
-                            }
-                        }
-                        if filteredQuestionIndices.count != viewModel.questions.count {
-                            Divider()
-                            Button("Clear filters") {
-                                resetFilters()
                             }
                         }
                     } label: {
@@ -242,7 +231,6 @@ struct QuizView: View {
     private func quizQuestionView(_ sessionQuestion: QuizSessionQuestion) -> some View {
         VStack(spacing: 16) {
             sessionControls
-            filterControls
             ScrollView {
                 VStack(alignment: .leading, spacing: 24) {
                     header(for: sessionQuestion)
@@ -313,142 +301,6 @@ struct QuizView: View {
         .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
     }
 
-    private var filterControls: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            HStack(spacing: 8) {
-                Image(systemName: "magnifyingglass")
-                    .foregroundStyle(Color.secondary)
-                TextField("Search stem, answers or rationale", text: $searchQuery)
-                    .textInputAutocapitalization(.sentences)
-                if !searchQuery.isEmpty {
-                    Button {
-                        searchQuery = ""
-                    } label: {
-                        Image(systemName: "xmark.circle.fill")
-                            .foregroundStyle(Color.secondary)
-                    }
-                }
-            }
-            .padding(12)
-            .background(Color.ipSurface)
-            .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
-
-            ScrollView(.horizontal, showsIndicators: false) {
-                HStack(spacing: 12) {
-                    Picker("Filter", selection: $selectedFilter) {
-                        ForEach(QuestionFilter.allCases) { filter in
-                            Text(filter.title).tag(filter)
-                        }
-                    }
-                    .pickerStyle(.segmented)
-                    .frame(maxWidth: 280)
-
-                    Menu {
-                        Button("All domains") { selectedDomainID = nil }
-                        Divider()
-                        ForEach(domainOptions, id: \.self) { module in
-                            Button(module.summary.title) {
-                                selectedDomainID = module.id
-                            }
-                        }
-                    } label: {
-                        Label(selectedDomainLabel, systemImage: "square.grid.2x2")
-                    }
-
-                    Menu {
-                        Button("All difficulties") { selectedDifficulty = nil }
-                        Divider()
-                        ForEach(Module.Difficulty.allCases, id: \.self) { difficulty in
-                            Button(difficulty.rawValue.capitalized) {
-                                selectedDifficulty = difficulty
-                            }
-                        }
-                    } label: {
-                        Label(selectedDifficultyLabel, systemImage: "slider.horizontal.3")
-                    }
-
-                    Toggle(isOn: $imagesOnly) {
-                        Label("With images", systemImage: "photo.on.rectangle")
-                    }
-                    .toggleStyle(.button)
-                }
-            }
-        }
-    }
-
-    private var domainOptions: [QuizModule] {
-        var set: [String: QuizModule] = [:]
-        for question in viewModel.questions {
-            set[question.module.id] = question.module
-        }
-        return set.values.sorted { $0.summary.title < $1.summary.title }
-    }
-
-    private var selectedDomainLabel: String {
-        if let id = selectedDomainID, let module = domainOptions.first(where: { $0.id == id }) {
-            return module.summary.title
-        }
-        return "Domains"
-    }
-
-    private var selectedDifficultyLabel: String {
-        if let difficulty = selectedDifficulty {
-            return "Difficulty: \(difficulty.rawValue.capitalized)"
-        }
-        return "Difficulty"
-    }
-
-    private func resetFilters() {
-        selectedFilter = .all
-        selectedDomainID = nil
-        selectedDifficulty = nil
-        imagesOnly = false
-        searchQuery = ""
-    }
-
-    private var filteredQuestionIndices: [Int] {
-        viewModel.questions.enumerated().compactMap { index, question in
-            matchesFilters(question) ? index : nil
-        }
-    }
-
-    private func matchesFilters(_ sessionQuestion: QuizSessionQuestion) -> Bool {
-        if imagesOnly && sessionQuestion.question.imageURLs.isEmpty {
-            return false
-        }
-        if let domain = selectedDomainID, sessionQuestion.module.id != domain {
-            return false
-        }
-        if let difficulty = selectedDifficulty, sessionQuestion.module.summary.difficulty != difficulty {
-            return false
-        }
-        switch selectedFilter {
-        case .all:
-            break
-        case .unseen:
-            if viewModel.isAnswered(sessionQuestion) { return false }
-        case .incorrect:
-            if viewModel.isSelectionCorrect(for: sessionQuestion) != false { return false }
-        case .flagged:
-            if !viewModel.studyState(for: sessionQuestion).flagged { return false }
-        case .lowConfidence:
-            let confidence = viewModel.studyState(for: sessionQuestion).confidence
-            if confidence != .guess && confidence != .low { return false }
-        }
-
-        guard !searchQuery.isEmpty else { return true }
-        return matchesSearch(sessionQuestion, query: searchQuery)
-    }
-
-    private func matchesSearch(_ sessionQuestion: QuizSessionQuestion, query: String) -> Bool {
-        let lower = query.lowercased()
-        if sessionQuestion.question.prompt.lowercased().contains(lower) { return true }
-        if sessionQuestion.question.explanation.lowercased().contains(lower) { return true }
-        if sessionQuestion.question.references.contains(where: { $0.lowercased().contains(lower) }) { return true }
-        if sessionQuestion.question.options.contains(where: { $0.text.lowercased().contains(lower) }) { return true }
-        return false
-    }
-
     private func shouldShowExplanation(for sessionQuestion: QuizSessionQuestion) -> Bool {
         guard viewModel.isAnswered(sessionQuestion) else { return false }
         return viewModel.configuration.mode == .study || viewModel.state == .completed
@@ -469,26 +321,19 @@ struct QuizView: View {
 
     private func confidenceChips(for sessionQuestion: QuizSessionQuestion) -> some View {
         let current = viewModel.studyState(for: sessionQuestion).confidence
-        return VStack(alignment: .leading, spacing: 8) {
+        return VStack(alignment: .leading, spacing: 12) {
             Text("Confidence")
                 .font(.headline)
-            HStack(spacing: 8) {
+            LazyVGrid(columns: [GridItem(.adaptive(minimum: 110), spacing: 12)], spacing: 12) {
                 ForEach(QuestionStudyState.Confidence.allCases) { confidence in
-                    let isSelected = confidence == current
-                    Button {
-                        let newValue = isSelected ? nil : confidence
-                        viewModel.setConfidence(newValue, for: sessionQuestion)
-                    } label: {
-                        Label(confidence.title, systemImage: confidence.iconName)
-                            .font(.subheadline)
-                            .padding(.horizontal, 12)
-                            .padding(.vertical, 6)
-                            .background(
-                                Capsule()
-                                    .fill(isSelected ? Color.ipAccent.opacity(0.2) : Color.ipSurface)
-                            )
-                    }
-                    .buttonStyle(.plain)
+                    ConfidenceChip(
+                        confidence: confidence,
+                        isSelected: confidence == current,
+                        action: {
+                            let newValue = confidence == current ? nil : confidence
+                            viewModel.setConfidence(newValue, for: sessionQuestion)
+                        }
+                    )
                 }
             }
         }
@@ -506,15 +351,25 @@ struct QuizView: View {
                     noteDraft = note
                     isNoteSheetPresented = true
                 } label: {
-                    Label(note.isEmpty ? "Add" : "Edit", systemImage: "square.and.pencil")
+                    HStack(spacing: 6) {
+                        Image(systemName: "square.and.pencil")
+                        Text(note.isEmpty ? "Add" : "Edit")
+                    }
                 }
-                .buttonStyle(.bordered)
+                .buttonStyle(.borderedProminent)
+                .tint(Color.ipAccent)
             }
             if !note.isEmpty {
-                Text(note)
+               Text(note)
                     .font(.footnote)
                     .foregroundStyle(Color.secondary)
                     .lineLimit(4)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(12)
+                    .background(
+                        RoundedRectangle(cornerRadius: 12, style: .continuous)
+                            .fill(Color.ipSurface)
+                    )
             }
         }
     }
@@ -579,31 +434,6 @@ struct QuizView: View {
 
     private func formattedShortTime(_ seconds: TimeInterval) -> String {
         formattedTime(seconds)
-    }
-
-    private enum QuestionFilter: String, CaseIterable, Identifiable {
-        case all
-        case unseen
-        case incorrect
-        case flagged
-        case lowConfidence
-
-        var id: String { rawValue }
-
-        var title: String {
-            switch self {
-            case .all:
-                return "All"
-            case .unseen:
-                return "Unseen"
-            case .incorrect:
-                return "Incorrect"
-            case .flagged:
-                return "Flagged"
-            case .lowConfidence:
-                return "Low confidence"
-            }
-        }
     }
 
     private enum NotesExportFormat: String, CaseIterable, Identifiable {
@@ -1034,6 +864,16 @@ struct QuizView: View {
                             .font(.headline)
                         Spacer()
                     }
+                    HStack {
+                        VStack(alignment: .leading, spacing: 2) {
+                            Text(snapshot.alias)
+                                .font(.caption.weight(.semibold))
+                            Text("ID: \(snapshot.participantID.prefix(8))…")
+                                .font(.caption2.monospacedDigit())
+                                .foregroundStyle(Color.secondary)
+                        }
+                        Spacer()
+                    }
                     ForEach(snapshot.domains) { domain in
                         HStack {
                             VStack(alignment: .leading, spacing: 4) {
@@ -1065,5 +905,39 @@ struct QuizView: View {
         .padding()
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.ipBackground)
+    }
+}
+
+
+private struct ConfidenceChip: View {
+    let confidence: QuestionStudyState.Confidence
+    let isSelected: Bool
+    let action: () -> Void
+
+    private var selectedBackground: Color { Color.ipAccent.opacity(0.22) }
+    private var deselectedBackground: Color { Color.ipSurface }
+    private var borderColor: Color { isSelected ? Color.ipAccent.opacity(0.6) : Color.clear }
+
+    var body: some View {
+        Button(action: action) {
+            HStack(spacing: 8) {
+                Image(systemName: confidence.iconName)
+                Text(confidence.title)
+            }
+            .font(.subheadline.weight(.semibold))
+            .foregroundStyle(isSelected ? Color.ipAccent : Color.primary)
+            .padding(.horizontal, 16)
+            .padding(.vertical, 10)
+            .frame(maxWidth: .infinity)
+            .background(
+                RoundedRectangle(cornerRadius: 16, style: .continuous)
+                    .fill(isSelected ? selectedBackground : deselectedBackground)
+            )
+            .overlay(
+                RoundedRectangle(cornerRadius: 16, style: .continuous)
+                    .stroke(borderColor, lineWidth: isSelected ? 1.5 : 1.0)
+            )
+        }
+        .buttonStyle(.plain)
     }
 }

@@ -183,6 +183,12 @@ final class QuestionBankService {
         return Array(pool.prefix(max(1, min(limit, pool.count))))
     }
 
+    func allSessionQuestions() -> [QuizSessionQuestion] {
+        modules.flatMap { module in
+            module.questions.map { QuizSessionQuestion(module: module, question: $0) }
+        }
+    }
+
     func sessionQuestions(forModule id: String) -> [QuizSessionQuestion] {
         guard let module = modulesById[id] else { return [] }
         return module.questions.map { QuizSessionQuestion(module: module, question: $0) }

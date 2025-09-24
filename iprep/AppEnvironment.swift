@@ -144,6 +144,14 @@ public final class AppEnvironment: ObservableObject {
         leaderboardService.setOptIn(value)
     }
 
+    func leaderboardAlias() -> String {
+        leaderboardService.participantAlias
+    }
+
+    func setLeaderboardAlias(_ alias: String) {
+        leaderboardService.setAlias(alias)
+    }
+
     func resetPracticeProgress() {
         localStore.resetProgress()
     }
