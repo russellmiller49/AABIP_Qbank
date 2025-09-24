@@ -20,6 +20,11 @@ final class QuizViewModel: ObservableObject {
     @Published private(set) var questions: [QuizSessionQuestion] = []
     @Published private(set) var currentIndex: Int = 0
     @Published private(set) var selections: [String: String] = [:]
+    @Published private(set) var configuration: QuizSessionConfiguration = .default
+    @Published private(set) var questionStates: [String: QuestionStudyState] = [:]
+    @Published private(set) var elapsedSeconds: TimeInterval = 0
+    @Published private(set) var currentQuestionSeconds: TimeInterval = 0
+    @Published private(set) var isTimerPaused: Bool = false
 
     private var questionLookup: [String: QuizSessionQuestion] = [:]
     private var startDate: Date?
@@ -27,6 +32,11 @@ final class QuizViewModel: ObservableObject {
     private var questionBank: QuestionBankService?
     private var localStore: LocalStoreType?
     private var sessionState: QuizSessionState?
+    private var studyPlanner: StudyPlannerType?
+    private var timerCancellable: AnyCancellable?
+    private var lastTickDate: Date?
+    private var lastQuestionID: String?
+    private var lastPersistedElapsed: TimeInterval = 0
     private var isConfigured = false
 
     var currentQuestion: QuizSessionQuestion? {
@@ -53,10 +63,12 @@ final class QuizViewModel: ObservableObject {
         return (endDate ?? Date()).timeIntervalSince(startDate)
     }
 
-    func configure(questionBank: QuestionBankService, localStore: LocalStoreType) {
+    func configure(questionBank: QuestionBankService, localStore: LocalStoreType, studyPlanner: StudyPlannerType?) {
         guard !isConfigured else { return }
         self.questionBank = questionBank
         self.localStore = localStore
+        self.studyPlanner = studyPlanner
+        self.questionStates = localStore.allStudyStates()
         isConfigured = true
     }
 
@@ -142,12 +154,14 @@ final class QuizViewModel: ObservableObject {
     func select(optionId: String) {
         guard state == .ready, let question = currentQuestion else { return }
         guard !isAnswered(question) else { return }
+        synchronizeTimer()
         var updated = selections
         updated[question.id] = optionId
         selections = updated
         updateSession { session in
             session.selections = updated
         }
+        registerReviewMetadata(for: question, selectedOptionId: optionId)
     }
 
     func isOptionSelected(_ optionId: String, for question: QuizSessionQuestion) -> Bool {
@@ -168,27 +182,33 @@ final class QuizViewModel: ObservableObject {
 
     func goBack() {
         guard canGoBack else { return }
+        commitCurrentQuestionTiming()
         currentIndex -= 1
         updateSession { session in
             session.currentIndex = currentIndex
         }
+        restoreTimingForCurrentQuestion()
     }
 
     func jumpToQuestion(at index: Int) {
         guard index >= 0, index < questions.count else { return }
+        commitCurrentQuestionTiming()
         currentIndex = index
         updateSession { session in
             session.currentIndex = currentIndex
         }
+        restoreTimingForCurrentQuestion()
     }
 
     func advance() {
         guard state == .ready else { return }
         if currentIndex + 1 < questions.count {
+            commitCurrentQuestionTiming()
             currentIndex += 1
             updateSession { session in
                 session.currentIndex = currentIndex
             }
+            restoreTimingForCurrentQuestion()
         } else {
             finishSession()
         }
@@ -196,6 +216,86 @@ final class QuizViewModel: ObservableObject {
 
     func selection(for question: QuizSessionQuestion) -> String? {
         selections[question.id]
+    }
+
+    func isSelectionCorrect(for question: QuizSessionQuestion) -> Bool? {
+        guard let choice = selections[question.id] else { return nil }
+        return question.question.correctOptionId == choice
+    }
+
+    func toggleFlag(for question: QuizSessionQuestion) {
+        var state = studyState(for: question.id)
+        state.flagged.toggle()
+        questionStates[question.id] = state
+        localStore?.updateStudyState(state, for: question.id)
+    }
+
+    func setConfidence(_ confidence: QuestionStudyState.Confidence?, for question: QuizSessionQuestion) {
+        var state = studyState(for: question.id)
+        state.confidence = confidence
+        state.updateDueDate()
+        questionStates[question.id] = state
+        localStore?.updateStudyState(state, for: question.id)
+    }
+
+    func updateNote(_ markdown: String, for question: QuizSessionQuestion) {
+        var state = studyState(for: question.id)
+        state.noteMarkdown = markdown
+        questionStates[question.id] = state
+        localStore?.updateStudyState(state, for: question.id)
+    }
+
+    func studyState(for questionID: String) -> QuestionStudyState {
+        questionStates[questionID] ?? QuestionStudyState()
+    }
+
+    func studyState(for question: QuizSessionQuestion) -> QuestionStudyState {
+        studyState(for: question.id)
+    }
+
+    func updateConfiguration(_ configuration: QuizSessionConfiguration) {
+        self.configuration = configuration
+        updateSession { session in
+            session.configuration = configuration
+        }
+    }
+
+    func pauseTimer() {
+        isTimerPaused = true
+        lastTickDate = nil
+    }
+
+    func resumeTimer() {
+        guard state == .ready else { return }
+        isTimerPaused = false
+        lastTickDate = Date()
+    }
+
+    func synchronizeTimer() {
+        guard !isTimerPaused else { return }
+        handleTick()
+    }
+
+    func startReviewQueue(limit: Int) {
+        guard let studyPlanner else { return }
+        state = .loading
+        let queue = studyPlanner.reviewQueue(limit: limit)
+        guard !queue.isEmpty else {
+            state = .error("No questions are due for review yet.")
+            return
+        }
+        beginNewSession(with: queue, limit: nil)
+    }
+
+    func startAdaptiveDrill(limit: Int) {
+        guard let studyPlanner else { return }
+        state = .loading
+        let questions = studyPlanner.adaptiveDrill(limit: limit)
+        guard !questions.isEmpty else {
+            state = .error("Unable to build an adaptive drill right now.")
+            return
+        }
+        beginNewSession(with: questions, limit: nil)
     }
 
     private func beginNewSession(with sessionQuestions: [QuizSessionQuestion], limit: Int?, storeActiveSession: Bool = true) {
@@ -221,13 +321,22 @@ final class QuizViewModel: ObservableObject {
             lastUpdatedAt: now,
             currentIndex: 0,
             questionReferences: references,
-            selections: [:]
+            selections: [:],
+            elapsedSeconds: 0,
+            perQuestionSeconds: [:],
+            configuration: configuration
         )
         sessionState = session
         if storeActiveSession {
             localStore?.saveActiveQuizSession(session)
         }
         state = .ready
+        elapsedSeconds = 0
+        currentQuestionSeconds = 0
+        lastQuestionID = currentQuestion?.id
+        lastPersistedElapsed = 0
+        resumeTimer()
+        startTimer()
     }
 
     private func updateSession(_ block: (inout QuizSessionState) -> Void) {
@@ -252,15 +361,24 @@ final class QuizViewModel: ObservableObject {
         selections = stored.selections
         sessionState = stored
         startDate = stored.startedAt
+        configuration = stored.configuration
+        elapsedSeconds = stored.elapsedSeconds
+        lastPersistedElapsed = stored.elapsedSeconds
         if stored.isCompleted {
             endDate = stored.lastUpdatedAt
             currentIndex = max(restoredQuestions.count - 1, 0)
             state = .completed
+            currentQuestionSeconds = stored.perQuestionSeconds[currentQuestion?.id ?? ""] ?? 0
+            timerCancellable?.cancel()
         } else {
             endDate = nil
             let cappedIndex = max(0, min(stored.currentIndex, restoredQuestions.count - 1))
             currentIndex = cappedIndex
             state = .ready
+            currentQuestionSeconds = stored.perQuestionSeconds[currentQuestion?.id ?? ""] ?? 0
+            lastQuestionID = currentQuestion?.id
+            resumeTimer()
+            startTimer()
         }
         return true
     }
@@ -268,8 +386,11 @@ final class QuizViewModel: ObservableObject {
     private func finishSession() {
         guard let localStore else { return }
         let finishDate = Date()
+        timerCancellable?.cancel()
+        synchronizeTimer()
         updateSession { session in
             session.currentIndex = questions.count
+            session.elapsedSeconds = elapsedSeconds
         }
         endDate = finishDate
         state = .completed
@@ -291,6 +412,74 @@ final class QuizViewModel: ObservableObject {
                 selections: selections
             )
             localStore.addCompletedQuizSession(completed)
+        }
+    }
+
+    private func registerReviewMetadata(for question: QuizSessionQuestion, selectedOptionId: String) {
+        guard let localStore else { return }
+        let isCorrect = question.question.correctOptionId == selectedOptionId
+        var state = studyState(for: question.id)
+        state.registerReview(correct: isCorrect, secondsSpent: currentQuestionSeconds)
+        questionStates[question.id] = state
+        localStore.updateStudyState(state, for: question.id)
+        updateSession { session in
+            session.perQuestionSeconds[question.id] = currentQuestionSeconds
+        }
+    }
+
+    private func commitCurrentQuestionTiming() {
+        guard let question = currentQuestion else { return }
+        synchronizeTimer()
+        updateSession { session in
+            session.perQuestionSeconds[question.id] = currentQuestionSeconds
+            session.elapsedSeconds = elapsedSeconds
+        }
+        lastQuestionID = question.id
+        lastPersistedElapsed = elapsedSeconds
+    }
+
+    private func restoreTimingForCurrentQuestion() {
+        guard let session = sessionState, let question = currentQuestion else { return }
+        let stored = session.perQuestionSeconds[question.id] ?? 0
+        currentQuestionSeconds = stored
+        lastQuestionID = question.id
+        resumeTimer()
+    }
+
+    private func startTimer() {
+        timerCancellable?.cancel()
+        lastTickDate = Date()
+        isTimerPaused = false
+        timerCancellable = Timer.publish(every: 1, on: .main, in: .common)
+            .autoconnect()
+            .sink { [weak self] _ in
+                self?.handleTick()
+            }
+    }
+
+    private func handleTick() {
+        guard !isTimerPaused else { return }
+        let now = Date()
+        guard let last = lastTickDate else {
+            lastTickDate = now
+            return
+        }
+        let delta = now.timeIntervalSince(last)
+        lastTickDate = now
+        elapsedSeconds += delta
+        currentQuestionSeconds += delta
+        if let questionID = currentQuestion?.id {
+            sessionState?.perQuestionSeconds[questionID] = currentQuestionSeconds
+        }
+        sessionState?.elapsedSeconds = elapsedSeconds
+        if elapsedSeconds - lastPersistedElapsed >= 5 {
+            updateSession { session in
+                session.elapsedSeconds = elapsedSeconds
+                if let questionID = currentQuestion?.id {
+                    session.perQuestionSeconds[questionID] = currentQuestionSeconds
+                }
+            }
+            lastPersistedElapsed = elapsedSeconds
         }
     }
 }

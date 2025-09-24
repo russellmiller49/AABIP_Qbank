@@ -24,7 +24,7 @@ public struct Module: Identifiable, Hashable {
         self.difficulty = difficulty
     }
 
-    public enum Difficulty: String {
+    public enum Difficulty: String, CaseIterable {
         case easy
         case moderate
         case hard

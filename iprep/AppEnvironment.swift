@@ -14,12 +14,15 @@ public final class AppEnvironment: ObservableObject {
     let syncManager: SyncManagerType
     let localStore: LocalStoreType
     let questionBankService: QuestionBankService
+    let studyPlanner: StudyPlannerType
+    let leaderboardService: LeaderboardServiceType
 
     private var cancellables: Set<AnyCancellable> = []
 
     @Published public private(set) var downloadedModuleIDs: Set<String> = []
     @Published private(set) var activeQuizSession: QuizSessionState?
     @Published private(set) var completedQuizSessions: [CompletedQuizSession] = []
+    @Published private(set) var studyStates: [String: QuestionStudyState] = [:]
 
     private init() {
         let authService = AuthService()
@@ -30,6 +33,8 @@ public final class AppEnvironment: ObservableObject {
         let mediaCache = MediaCache()
         let localStore = LocalStore()
         let syncManager = SyncManager(localStore: localStore, firestore: firestoreService)
+        let studyPlanner = StudyPlanner(questionBank: questionBankService, localStore: localStore)
+        let leaderboardService = LeaderboardService()
 
         self.authService = authService
         self.firestoreService = firestoreService
@@ -40,6 +45,8 @@ public final class AppEnvironment: ObservableObject {
         self.syncManager = syncManager
         self.featureFlags = FeatureFlags(remoteConfig: remoteConfigService)
         self.questionBankService = questionBankService
+        self.studyPlanner = studyPlanner
+        self.leaderboardService = leaderboardService
 
         bindSyncTriggers()
         bindLocalStore()
@@ -74,6 +81,13 @@ public final class AppEnvironment: ObservableObject {
                 self?.completedQuizSessions = sessions
             }
             .store(in: &cancellables)
+
+        localStore.studyStatesPublisher
+            .receive(on: RunLoop.main)
+            .sink { [weak self] states in
+                self?.studyStates = states
+            }
+            .store(in: &cancellables)
     }
 
     func incorrectQuestionCount() -> Int {
@@ -100,6 +114,34 @@ public final class AppEnvironment: ObservableObject {
 
     func answeredQuestionIDs() -> Set<String> {
         localStore.answeredQuestionIDs()
+    }
+
+    func studyState(for questionID: String) -> QuestionStudyState? {
+        localStore.studyState(for: questionID)
+    }
+
+    func updateStudyState(_ state: QuestionStudyState, for questionID: String) {
+        localStore.updateStudyState(state, for: questionID)
+    }
+
+    func reviewQueue(limit: Int) -> [QuizSessionQuestion] {
+        studyPlanner.reviewQueue(limit: limit)
+    }
+
+    func adaptiveDrillQuestions(limit: Int) -> [QuizSessionQuestion] {
+        studyPlanner.adaptiveDrill(limit: limit)
+    }
+
+    func leaderboardSnapshot() -> LeaderboardSnapshot? {
+        leaderboardService.refreshSnapshot(questionBank: questionBankService, sessions: completedQuizSessions)
+    }
+
+    func leaderboardOptIn() -> Bool {
+        leaderboardService.isOptedIn
+    }
+
+    func setLeaderboardOptIn(_ value: Bool) {
+        leaderboardService.setOptIn(value)
     }
 
     func resetPracticeProgress() {

@@ -14,6 +14,11 @@ protocol LocalStoreType: AnyObject {
     func completedQuizSessions() -> [CompletedQuizSession]
     func addCompletedQuizSession(_ session: CompletedQuizSession)
     func answeredQuestionIDs() -> Set<String>
+    var studyStatesPublisher: AnyPublisher<[String: QuestionStudyState], Never> { get }
+    func studyState(for questionID: String) -> QuestionStudyState?
+    func updateStudyState(_ state: QuestionStudyState, for questionID: String)
+    func updateStudyStates(_ states: [String: QuestionStudyState])
+    func allStudyStates() -> [String: QuestionStudyState]
     func resetProgress()
 }
 
@@ -22,12 +27,14 @@ final class LocalStore: LocalStoreType {
         static let downloadedKey = "AABIPIPREP.downloadedModules"
         static let activeQuizKey = "AABIPIPREP.activeQuizSession"
         static let completedQuizKey = "AABIPIPREP.completedQuizSessions"
+        static let studyStatesKey = "AABIPIPREP.questionStudyStates"
     }
 
     private let defaults: UserDefaults
     private let subject: CurrentValueSubject<Set<String>, Never>
     private let activeSessionSubject: CurrentValueSubject<QuizSessionState?, Never>
     private let completedSessionsSubject: CurrentValueSubject<[CompletedQuizSession], Never>
+    private let studyStatesSubject: CurrentValueSubject<[String: QuestionStudyState], Never>
     private let decoder = JSONDecoder()
     private let encoder = JSONEncoder()
 
@@ -49,12 +56,20 @@ final class LocalStore: LocalStoreType {
         } else {
             self.completedSessionsSubject = CurrentValueSubject([])
         }
+
+        if let data = defaults.data(forKey: Constants.studyStatesKey),
+           let states = try? decoder.decode([String: QuestionStudyState].self, from: data) {
+            self.studyStatesSubject = CurrentValueSubject(states)
+        } else {
+            self.studyStatesSubject = CurrentValueSubject([:])
+        }
     }
 
     func warmStart() async {
         subject.send(subject.value)
         activeSessionSubject.send(activeSessionSubject.value)
         completedSessionsSubject.send(completedSessionsSubject.value)
+        studyStatesSubject.send(studyStatesSubject.value)
     }
 
     var downloadedModuleIDsPublisher: AnyPublisher<Set<String>, Never> {
@@ -119,10 +134,37 @@ final class LocalStore: LocalStoreType {
         return ids
     }
 
+    var studyStatesPublisher: AnyPublisher<[String: QuestionStudyState], Never> {
+        studyStatesSubject.eraseToAnyPublisher()
+    }
+
+    func studyState(for questionID: String) -> QuestionStudyState? {
+        studyStatesSubject.value[questionID]
+    }
+
+    func allStudyStates() -> [String: QuestionStudyState] {
+        studyStatesSubject.value
+    }
+
+    func updateStudyState(_ state: QuestionStudyState, for questionID: String) {
+        var states = studyStatesSubject.value
+        states[questionID] = state
+        updateStudyStates(states)
+    }
+
+    func updateStudyStates(_ states: [String: QuestionStudyState]) {
+        studyStatesSubject.send(states)
+        if let data = try? encoder.encode(states) {
+            defaults.set(data, forKey: Constants.studyStatesKey)
+        }
+    }
+
     func resetProgress() {
         completedSessionsSubject.send([])
         defaults.removeObject(forKey: Constants.completedQuizKey)
         saveActiveQuizSession(nil)
+        defaults.removeObject(forKey: Constants.studyStatesKey)
+        studyStatesSubject.send([:])
     }
 
     func addCompletedQuizSession(_ session: CompletedQuizSession) {
