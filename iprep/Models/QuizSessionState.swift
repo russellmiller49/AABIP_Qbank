@@ -80,6 +80,39 @@ extension QuizSessionState {
             configuration: configuration
         )
     }
+
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(id, forKey: .id)
+        try container.encode(startedAt, forKey: .startedAt)
+        try container.encode(lastUpdatedAt, forKey: .lastUpdatedAt)
+        try container.encode(currentIndex, forKey: .currentIndex)
+        try container.encode(questionReferences, forKey: .questionReferences)
+        try container.encode(selections, forKey: .selections)
+        if elapsedSeconds != 0 {
+            try container.encode(elapsedSeconds, forKey: .elapsedSeconds)
+        }
+        if !perQuestionSeconds.isEmpty {
+            try container.encode(perQuestionSeconds, forKey: .perQuestionSeconds)
+        }
+        if configuration != .default {
+            try container.encode(configuration, forKey: .configuration)
+        }
+    }
+}
+
+extension QuizSessionState {
+    static func == (lhs: QuizSessionState, rhs: QuizSessionState) -> Bool {
+        lhs.id == rhs.id &&
+            lhs.startedAt == rhs.startedAt &&
+            lhs.lastUpdatedAt == rhs.lastUpdatedAt &&
+            lhs.currentIndex == rhs.currentIndex &&
+            lhs.questionReferences == rhs.questionReferences &&
+            lhs.selections == rhs.selections &&
+            lhs.elapsedSeconds == rhs.elapsedSeconds &&
+            lhs.perQuestionSeconds == rhs.perQuestionSeconds &&
+            lhs.configuration == rhs.configuration
+    }
 }
 
 struct CompletedQuizSession: Codable, Identifiable, Equatable, Hashable {

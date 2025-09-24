@@ -41,27 +41,27 @@ final class LocalStore: LocalStoreType {
     init(defaults: UserDefaults = .standard) {
         self.defaults = defaults
         let initial = Set(defaults.stringArray(forKey: Constants.downloadedKey) ?? [])
-        self.subject = CurrentValueSubject(initial)
+        self.subject = CurrentValueSubject<Set<String>, Never>(initial)
 
         if let data = defaults.data(forKey: Constants.activeQuizKey),
            let session = try? decoder.decode(QuizSessionState.self, from: data) {
-            self.activeSessionSubject = CurrentValueSubject(session)
+            self.activeSessionSubject = CurrentValueSubject<QuizSessionState?, Never>(session)
         } else {
-            self.activeSessionSubject = CurrentValueSubject(nil)
+            self.activeSessionSubject = CurrentValueSubject<QuizSessionState?, Never>(nil)
         }
 
         if let data = defaults.data(forKey: Constants.completedQuizKey),
            let sessions = try? decoder.decode([CompletedQuizSession].self, from: data) {
-            self.completedSessionsSubject = CurrentValueSubject(sessions)
+            self.completedSessionsSubject = CurrentValueSubject<[CompletedQuizSession], Never>(sessions)
         } else {
-            self.completedSessionsSubject = CurrentValueSubject([])
+            self.completedSessionsSubject = CurrentValueSubject<[CompletedQuizSession], Never>([])
         }
 
         if let data = defaults.data(forKey: Constants.studyStatesKey),
            let states = try? decoder.decode([String: QuestionStudyState].self, from: data) {
-            self.studyStatesSubject = CurrentValueSubject(states)
+            self.studyStatesSubject = CurrentValueSubject<[String: QuestionStudyState], Never>(states)
         } else {
-            self.studyStatesSubject = CurrentValueSubject([:])
+            self.studyStatesSubject = CurrentValueSubject<[String: QuestionStudyState], Never>([:])
         }
     }
 

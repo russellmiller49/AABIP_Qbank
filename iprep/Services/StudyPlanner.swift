@@ -25,14 +25,16 @@ final class StudyPlanner: StudyPlannerType {
 
     func reviewQueue(limit: Int) -> [QuizSessionQuestion] {
         let states = localStore.allStudyStates()
-        let dueQuestions = states
-            .filter { $0.value.needsReview }
-            .sorted { lhs, rhs in
-                let leftDate = lhs.value.dueAt ?? Date.distantPast
-                let rightDate = rhs.value.dueAt ?? Date.distantPast
-                return leftDate < rightDate
-            }
-            .prefix(limit)
+        let dueQuestions = Array(
+            states
+                .filter { $0.value.needsReview }
+                .sorted(by: { (lhs: (key: String, value: QuestionStudyState), rhs: (key: String, value: QuestionStudyState)) -> Bool in
+                    let leftDate = lhs.value.dueAt ?? Date.distantPast
+                    let rightDate = rhs.value.dueAt ?? Date.distantPast
+                    return leftDate < rightDate
+                })
+                .prefix(limit)
+        )
         if dueQuestions.isEmpty {
             // Fall back to unseen questions to seed the queue.
             let answered = localStore.answeredQuestionIDs()

@@ -95,7 +95,71 @@ struct QuizView: View {
         }
         .navigationTitle(navigationTitle)
         .background(Color.ipBackground.ignoresSafeArea())
-        .toolbar { questionCountToolbar }
+        .toolbar {
+            ToolbarItem(placement: .topBarLeading) {
+                timerSummaryView
+            }
+            ToolbarItemGroup(placement: .topBarTrailing) {
+                if !viewModel.questions.isEmpty {
+                    Menu {
+                        ForEach(filteredQuestionIndices, id: \.self) { index in
+                            let question = viewModel.questions[index]
+                            Button {
+                                viewModel.jumpToQuestion(at: index)
+                            } label: {
+                                let status = viewModel.isAnswered(question) ? "✓" : ""
+                                Text("Question \(index + 1) \(status)")
+                            }
+                        }
+                        if filteredQuestionIndices.count != viewModel.questions.count {
+                            Divider()
+                            Button("Clear filters") {
+                                resetFilters()
+                            }
+                        }
+                    } label: {
+                        Image(systemName: "list.number")
+                    }
+                }
+                Menu {
+                    Picker("Number of Questions", selection: $quickStartCount) {
+                        ForEach(questionCountOptions, id: \.self) { count in
+                            Text("\(count) questions").tag(count)
+                        }
+                    }
+                    Divider()
+                    Button("Start Over", role: .none) {
+                        viewModel.restart(with: normalizedModeForRestart, limit: quickStartCount)
+                    }
+                    Button("Daily review queue") {
+                        viewModel.startReviewQueue(limit: quickStartCount)
+                    }
+                    Button("Fix my weak spots") {
+                        viewModel.startAdaptiveDrill(limit: max(15, quickStartCount))
+                    }
+                } label: {
+                    Image(systemName: "ellipsis.circle")
+                }
+                Menu {
+                    Picker("Study Mode", selection: modeBinding) {
+                        ForEach(QuizSessionMode.allCases) { mode in
+                            Text(mode.title).tag(mode)
+                        }
+                    }
+                    Toggle(isOn: perQuestionTimerBinding) {
+                        Label("Per-question timer", systemImage: "clock.arrow.circlepath")
+                    }
+                    Toggle(isOn: autoPauseBinding) {
+                        Label("Auto-pause on background", systemImage: "pause.circle")
+                    }
+                    Toggle(isOn: $leaderboardOptIn) {
+                        Label("Opt into leaderboards", systemImage: "trophy")
+                    }
+                } label: {
+                    Image(systemName: "gearshape")
+                }
+            }
+        }
         .task {
             if !didConfigure {
                 viewModel.configure(
@@ -112,7 +176,7 @@ struct QuizView: View {
                 didPrepareInitialSession = true
             }
         }
-        .onChange(of: scenePhase) { newPhase in
+        .onChange(of: scenePhase) { _, newPhase in
             guard viewModel.configuration.autoPauseOnBackground else { return }
             switch newPhase {
             case .background, .inactive:
@@ -123,7 +187,7 @@ struct QuizView: View {
                 break
             }
         }
-        .onChange(of: leaderboardOptIn) { newValue in
+        .onChange(of: leaderboardOptIn) { _, newValue in
             environment.setLeaderboardOptIn(newValue)
         }
         .sheet(isPresented: $isNoteSheetPresented) {
@@ -142,72 +206,6 @@ struct QuizView: View {
             } else {
                 Text("No question selected")
                     .presentationDetents([.medium])
-            }
-        }
-    }
-
-    private var questionCountToolbar: some ToolbarContent {
-        ToolbarItem(placement: .topBarLeading) {
-            timerSummaryView
-        }
-        ToolbarItemGroup(placement: .topBarTrailing) {
-            if !viewModel.questions.isEmpty {
-                Menu {
-                    ForEach(filteredQuestionIndices, id: \.self) { index in
-                        let question = viewModel.questions[index]
-                        Button {
-                            viewModel.jumpToQuestion(at: index)
-                        } label: {
-                            let status = viewModel.isAnswered(question) ? "✓" : ""
-                            Text("Question \(index + 1) \(status)")
-                        }
-                    }
-                    if filteredQuestionIndices.count != viewModel.questions.count {
-                        Divider()
-                        Button("Clear filters") {
-                            resetFilters()
-                        }
-                    }
-                } label: {
-                    Image(systemName: "list.number")
-                }
-            }
-            Menu {
-                Picker("Number of Questions", selection: $quickStartCount) {
-                    ForEach(questionCountOptions, id: \.self) { count in
-                        Text("\(count) questions").tag(count)
-                    }
-                }
-                Divider()
-                Button("Start Over", role: .none) {
-                    viewModel.restart(with: normalizedModeForRestart, limit: quickStartCount)
-                }
-                Button("Daily review queue") {
-                    viewModel.startReviewQueue(limit: quickStartCount)
-                }
-                Button("Fix my weak spots") {
-                    viewModel.startAdaptiveDrill(limit: max(15, quickStartCount))
-                }
-            } label: {
-                Image(systemName: "ellipsis.circle")
-            }
-            Menu {
-                Picker("Study Mode", selection: modeBinding) {
-                    ForEach(QuizSessionMode.allCases) { mode in
-                        Text(mode.title).tag(mode)
-                    }
-                }
-                Toggle(isOn: perQuestionTimerBinding) {
-                    Label("Per-question timer", systemImage: "clock.arrow.circlepath")
-                }
-                Toggle(isOn: autoPauseBinding) {
-                    Label("Auto-pause on background", systemImage: "pause.circle")
-                }
-                Toggle(isOn: $leaderboardOptIn) {
-                    Label("Opt into leaderboards", systemImage: "trophy")
-                }
-            } label: {
-                Image(systemName: "gearshape")
             }
         }
     }
