@@ -1,0 +1,72 @@
+{
+  "source": "/Users/russellmiller/Projects/iprep/iosApp/iprep/Components/ModuleCard.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Module %@ downloaded",
+        "location": {
+          "startingColumn": 53,
+          "startingLine": 40
+        }
+      },
+      {
+        "comment": "",
+        "key": "Download module %@",
+        "location": {
+          "startingColumn": 91,
+          "startingLine": 40
+        }
+      },
+      {
+        "comment": "",
+        "key": "Already available for offline study",
+        "location": {
+          "startingColumn": 52,
+          "startingLine": 41
+        }
+      },
+      {
+        "comment": "",
+        "key": "Downloads all offline content",
+        "location": {
+          "startingColumn": 92,
+          "startingLine": 41
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld questions",
+        "location": {
+          "startingColumn": 23,
+          "startingLine": 20
+        }
+      },
+      {
+        "comment": "",
+        "key": "~%lld min",
+        "location": {
+          "startingColumn": 23,
+          "startingLine": 23
+        }
+      },
+      {
+        "comment": "",
+        "key": "Downloaded",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 31
+        }
+      },
+      {
+        "comment": "",
+        "key": "Download",
+        "location": {
+          "startingColumn": 53,
+          "startingLine": 31
+        }
+      }
+    ]
+  },
+  "version": 1
+}

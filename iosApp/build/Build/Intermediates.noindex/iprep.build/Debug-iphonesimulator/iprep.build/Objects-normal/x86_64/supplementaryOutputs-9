@@ -1,0 +1,30 @@
+{
+  "/Users/russellmiller/Projects/iprep/iosApp/iprep/Features/Analytics/AnalyticsView.swift" : {
+    "const-values" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/AnalyticsView.swiftconstvalues",
+    "dependencies" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/AnalyticsView.d",
+    "diagnostics" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/AnalyticsView.dia",
+    "object" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/AnalyticsView.o",
+    "swift-dependencies" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/AnalyticsView.swiftdeps"
+  },
+  "/Users/russellmiller/Projects/iprep/iosApp/iprep/Models/AppRoute.swift" : {
+    "const-values" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/AppRoute.swiftconstvalues",
+    "dependencies" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/AppRoute.d",
+    "diagnostics" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/AppRoute.dia",
+    "object" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/AppRoute.o",
+    "swift-dependencies" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/AppRoute.swiftdeps"
+  },
+  "/Users/russellmiller/Projects/iprep/iosApp/iprep/Models/QuizSessionConfiguration.swift" : {
+    "const-values" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/QuizSessionConfiguration.swiftconstvalues",
+    "dependencies" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/QuizSessionConfiguration.d",
+    "diagnostics" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/QuizSessionConfiguration.dia",
+    "object" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/QuizSessionConfiguration.o",
+    "swift-dependencies" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/QuizSessionConfiguration.swiftdeps"
+  },
+  "/Users/russellmiller/Projects/iprep/iosApp/iprep/Models/QuizSessionState.swift" : {
+    "const-values" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/QuizSessionState.swiftconstvalues",
+    "dependencies" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/QuizSessionState.d",
+    "diagnostics" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/QuizSessionState.dia",
+    "object" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/QuizSessionState.o",
+    "swift-dependencies" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/QuizSessionState.swiftdeps"
+  }
+}

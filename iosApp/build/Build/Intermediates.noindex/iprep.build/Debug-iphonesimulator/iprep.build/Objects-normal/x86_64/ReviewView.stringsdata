@@ -1,0 +1,128 @@
+{
+  "source": "/Users/russellmiller/Projects/iprep/iosApp/iprep/Features/Review/ReviewView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Review",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 41
+        }
+      },
+      {
+        "comment": "",
+        "key": "Select a session to review details",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 79
+        }
+      },
+      {
+        "comment": "",
+        "key": "Review workspace",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 112
+        }
+      },
+      {
+        "comment": "",
+        "key": "Complete a practice session to unlock detailed answer explanations and reference notes here.",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 114
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld/%lld correct",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 147
+        }
+      },
+      {
+        "comment": "",
+        "key": "Session Review",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 200
+        }
+      },
+      {
+        "comment": "",
+        "key": "Completed on %@",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 205
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 209
+        }
+      },
+      {
+        "comment": "",
+        "key": "out of %lld correct",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 211
+        }
+      },
+      {
+        "comment": "",
+        "key": "Module Breakdown",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 232
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld/%lld correct",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 239
+        }
+      },
+      {
+        "comment": "",
+        "key": "Explanation",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 277
+        }
+      },
+      {
+        "comment": "",
+        "key": "References",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 284
+        }
+      },
+      {
+        "comment": "",
+        "key": "You selected • Correct",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 319
+        }
+      },
+      {
+        "comment": "",
+        "key": "You selected • Incorrect",
+        "location": {
+          "startingColumn": 67,
+          "startingLine": 319
+        }
+      }
+    ]
+  },
+  "version": 1
+}

@@ -1,0 +1,168 @@
+{
+  "source": "/Users/russellmiller/Projects/iprep/iosApp/iprep/Features/Dashboard/DashboardView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Dashboard",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 39
+        }
+      },
+      {
+        "comment": "",
+        "key": "Opens analytics overview",
+        "location": {
+          "startingColumn": 33,
+          "startingLine": 133
+        }
+      },
+      {
+        "comment": "",
+        "key": "Download Complete",
+        "location": {
+          "startingColumn": 29,
+          "startingLine": 49
+        }
+      },
+      {
+        "comment": "",
+        "key": "OK",
+        "location": {
+          "startingColumn": 46,
+          "startingLine": 51
+        }
+      },
+      {
+        "comment": "",
+        "key": "Ready to keep practicing?",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 73
+        }
+      },
+      {
+        "comment": "",
+        "key": "Start quick quiz",
+        "location": {
+          "startingColumn": 42,
+          "startingLine": 86
+        }
+      },
+      {
+        "comment": "",
+        "key": "Opens a new mixed-topic quiz",
+        "location": {
+          "startingColumn": 41,
+          "startingLine": 87
+        }
+      },
+      {
+        "comment": "",
+        "key": "Continue saved quiz",
+        "location": {
+          "startingColumn": 42,
+          "startingLine": 99
+        }
+      },
+      {
+        "comment": "",
+        "key": "Resume your in-progress quiz",
+        "location": {
+          "startingColumn": 57,
+          "startingLine": 100
+        }
+      },
+      {
+        "comment": "",
+        "key": "No quiz in progress",
+        "location": {
+          "startingColumn": 90,
+          "startingLine": 100
+        }
+      },
+      {
+        "comment": "",
+        "key": "Quick Start",
+        "location": {
+          "startingColumn": 27,
+          "startingLine": 79
+        }
+      },
+      {
+        "comment": "",
+        "key": "Continue Quiz",
+        "location": {
+          "startingColumn": 27,
+          "startingLine": 90
+        }
+      },
+      {
+        "comment": "",
+        "key": "Performance Snapshot",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 111
+        }
+      },
+      {
+        "comment": "",
+        "key": "Modules",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 138
+        }
+      },
+      {
+        "comment": "",
+        "key": "Question bank is warming up…",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 141
+        }
+      },
+      {
+        "comment": "",
+        "key": "More",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 164
+        }
+      },
+      {
+        "comment": "",
+        "key": "Review",
+        "location": {
+          "startingColumn": 27,
+          "startingLine": 170
+        }
+      },
+      {
+        "comment": "",
+        "key": "Analytics",
+        "location": {
+          "startingColumn": 27,
+          "startingLine": 176
+        }
+      },
+      {
+        "comment": "",
+        "key": "Settings",
+        "location": {
+          "startingColumn": 27,
+          "startingLine": 182
+        }
+      },
+      {
+        "comment": "",
+        "key": "%@ %@",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 252
+        }
+      }
+    ]
+  },
+  "version": 1
+}

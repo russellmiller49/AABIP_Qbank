@@ -1,0 +1,224 @@
+{
+  "source": "/Users/russellmiller/Projects/iprep/iosApp/iprep/Features/Analytics/ProgressReportView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Progress Report",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 57
+        }
+      },
+      {
+        "comment": "",
+        "key": "Copied",
+        "location": {
+          "startingColumn": 16,
+          "startingLine": 70
+        }
+      },
+      {
+        "comment": "",
+        "key": "Timeframe",
+        "location": {
+          "startingColumn": 17,
+          "startingLine": 78
+        }
+      },
+      {
+        "comment": "",
+        "key": "Categories",
+        "location": {
+          "startingColumn": 17,
+          "startingLine": 95
+        }
+      },
+      {
+        "comment": "",
+        "key": "Overview",
+        "location": {
+          "startingColumn": 17,
+          "startingLine": 134
+        }
+      },
+      {
+        "comment": "",
+        "key": "Scores by Category",
+        "location": {
+          "startingColumn": 17,
+          "startingLine": 164
+        }
+      },
+      {
+        "comment": "",
+        "key": "Report Preview",
+        "location": {
+          "startingColumn": 17,
+          "startingLine": 187
+        }
+      },
+      {
+        "comment": "",
+        "key": "No sessions found in the selected timeframe. Adjust your filters and try again.",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 51
+        }
+      },
+      {
+        "comment": "",
+        "key": "OK",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 71
+        }
+      },
+      {
+        "comment": "",
+        "key": "Report text copied to the clipboard.",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 73
+        }
+      },
+      {
+        "comment": "",
+        "key": "From",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 79
+        }
+      },
+      {
+        "comment": "",
+        "key": "To",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 80
+        }
+      },
+      {
+        "comment": "",
+        "key": "7 days",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 87
+        }
+      },
+      {
+        "comment": "",
+        "key": "30 days",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 88
+        }
+      },
+      {
+        "comment": "",
+        "key": "90 days",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 89
+        }
+      },
+      {
+        "comment": "",
+        "key": "Question bank is still loading modules.",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 97
+        }
+      },
+      {
+        "comment": "",
+        "key": "Select All",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 121
+        }
+      },
+      {
+        "comment": "",
+        "key": "Clear Selection",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 125
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld questions • %@",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 115
+        }
+      },
+      {
+        "comment": "",
+        "key": "Total Questions",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 137
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 140
+        }
+      },
+      {
+        "comment": "",
+        "key": "Overall Score",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 145
+        }
+      },
+      {
+        "comment": "",
+        "key": "Correct",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 153
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 156
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld/%lld correct",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 177
+        }
+      },
+      {
+        "comment": "",
+        "key": "Share Report",
+        "location": {
+          "startingColumn": 23,
+          "startingLine": 197
+        }
+      },
+      {
+        "comment": "",
+        "key": "Copy to Clipboard",
+        "location": {
+          "startingColumn": 23,
+          "startingLine": 204
+        }
+      }
+    ]
+  },
+  "version": 1
+}

@@ -1,0 +1,168 @@
+{
+  "source": "/Users/russellmiller/Projects/iprep/iosApp/iprep/Features/Search/QuestionExplorerView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Question Explorer",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 22
+        }
+      },
+      {
+        "comment": "",
+        "key": "Filters",
+        "location": {
+          "startingColumn": 17,
+          "startingLine": 33
+        }
+      },
+      {
+        "comment": "",
+        "key": "Reset",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 25
+        }
+      },
+      {
+        "comment": "",
+        "key": "Domain",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 34
+        }
+      },
+      {
+        "comment": "",
+        "key": "Difficulty",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 41
+        }
+      },
+      {
+        "comment": "",
+        "key": "Flagged only",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 48
+        }
+      },
+      {
+        "comment": "",
+        "key": "With notes only",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 49
+        }
+      },
+      {
+        "comment": "",
+        "key": "Due for review",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 50
+        }
+      },
+      {
+        "comment": "",
+        "key": "All domains",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 35
+        }
+      },
+      {
+        "comment": "",
+        "key": "All difficulty levels",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 42
+        }
+      },
+      {
+        "comment": "",
+        "key": "Confidence",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 53
+        }
+      },
+      {
+        "comment": "",
+        "key": "Adjust your filters to see questions here.",
+        "location": {
+          "startingColumn": 39,
+          "startingLine": 69
+        }
+      },
+      {
+        "comment": "",
+        "key": "No matches",
+        "location": {
+          "startingColumn": 21,
+          "startingLine": 67
+        }
+      },
+      {
+        "comment": "",
+        "key": "Results",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 90
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 92
+        }
+      },
+      {
+        "comment": "",
+        "key": "Question",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 273
+        }
+      },
+      {
+        "comment": "",
+        "key": "Explanation",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 241
+        }
+      },
+      {
+        "comment": "",
+        "key": "Your note",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 250
+        }
+      },
+      {
+        "comment": "",
+        "key": "References",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 259
+        }
+      },
+      {
+        "comment": "",
+        "key": "Options",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 307
+        }
+      }
+    ]
+  },
+  "version": 1
+}

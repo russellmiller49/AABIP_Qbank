@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.13.0" type="partial_results">
+    <map id="UnsafeIntentLaunch">
+            <map id="unprotected">
+                <entry
+                    name="com.russellmiller.iprep.MainActivity"
+                    boolean="true"/>
+            </map>
+    </map>
+    <map id="UnusedResources">
+        <location id="R.xml.backup_rules"
+            file="${:androidApp*debug*MAIN*sourceProvider*0*resDir*0}/xml/backup_rules.xml"
+            line="2"
+            column="1"
+            startOffset="39"
+            endLine="4"
+            endColumn="23"
+            endOffset="142"/>
+        <location id="R.xml.data_extraction_rules"
+            file="${:androidApp*debug*MAIN*sourceProvider*0*resDir*0}/xml/data_extraction_rules.xml"
+            line="2"
+            column="1"
+            startOffset="39"
+            endLine="11"
+            endColumn="25"
+            endOffset="381"/>
+        <entry
+            name="model"
+            string="string[app_name(U)],style[Theme_Iprep(U),Base_Theme_Iprep(U),Theme_MaterialComponents_DayNight(R)],xml[backup_rules(D),data_extraction_rules(D)];1^2,2^3;;;"/>
+    </map>
+
+</incidents>

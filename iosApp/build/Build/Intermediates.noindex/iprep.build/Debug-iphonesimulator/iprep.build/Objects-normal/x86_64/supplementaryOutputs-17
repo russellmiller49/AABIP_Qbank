@@ -1,0 +1,23 @@
+{
+  "/Users/russellmiller/Projects/iprep/iosApp/iprep/Services/LeaderboardService.swift" : {
+    "const-values" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/LeaderboardService.swiftconstvalues",
+    "dependencies" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/LeaderboardService.d",
+    "diagnostics" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/LeaderboardService.dia",
+    "object" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/LeaderboardService.o",
+    "swift-dependencies" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/LeaderboardService.swiftdeps"
+  },
+  "/Users/russellmiller/Projects/iprep/iosApp/iprep/Services/LocalStore.swift" : {
+    "const-values" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/LocalStore.swiftconstvalues",
+    "dependencies" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/LocalStore.d",
+    "diagnostics" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/LocalStore.dia",
+    "object" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/LocalStore.o",
+    "swift-dependencies" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/LocalStore.swiftdeps"
+  },
+  "/Users/russellmiller/Projects/iprep/iosApp/iprep/Services/MediaCache.swift" : {
+    "const-values" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/MediaCache.swiftconstvalues",
+    "dependencies" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/MediaCache.d",
+    "diagnostics" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/MediaCache.dia",
+    "object" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/MediaCache.o",
+    "swift-dependencies" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/MediaCache.swiftdeps"
+  }
+}

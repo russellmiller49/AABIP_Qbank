@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">IPREP</string>
+    <style name="Base.Theme.Iprep" parent="Theme.MaterialComponents.DayNight">
+        
+        
+    </style>
+    <style name="Theme.Iprep" parent="Base.Theme.Iprep"/>
+</resources>

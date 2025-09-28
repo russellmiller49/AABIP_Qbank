@@ -1,0 +1,368 @@
+{
+  "source": "/Users/russellmiller/Projects/iprep/iosApp/iprep/Features/Quiz/QuizView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Loading quiz…",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 60
+        }
+      },
+      {
+        "comment": "",
+        "key": "Try Again",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 71
+        }
+      },
+      {
+        "comment": "",
+        "key": "Question %lld %@",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 106
+        }
+      },
+      {
+        "comment": "",
+        "key": "Number of Questions",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 114
+        }
+      },
+      {
+        "comment": "",
+        "key": "Start Over",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 120
+        }
+      },
+      {
+        "comment": "",
+        "key": "Daily review queue",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 123
+        }
+      },
+      {
+        "comment": "",
+        "key": "Fix my weak spots",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 126
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld questions",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 116
+        }
+      },
+      {
+        "comment": "",
+        "key": "Study Mode",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 133
+        }
+      },
+      {
+        "comment": "",
+        "key": "Per-question timer",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 139
+        }
+      },
+      {
+        "comment": "",
+        "key": "Auto-pause on background",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 142
+        }
+      },
+      {
+        "comment": "",
+        "key": "Opt into leaderboards",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 145
+        }
+      },
+      {
+        "comment": "",
+        "key": "No question selected",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 196
+        }
+      },
+      {
+        "comment": "",
+        "key": "Question: %@",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 275
+        }
+      },
+      {
+        "comment": "",
+        "key": "Resume",
+        "location": {
+          "startingColumn": 53,
+          "startingLine": 289
+        }
+      },
+      {
+        "comment": "",
+        "key": "Pause",
+        "location": {
+          "startingColumn": 64,
+          "startingLine": 289
+        }
+      },
+      {
+        "comment": "",
+        "key": "Remove flag",
+        "location": {
+          "startingColumn": 41,
+          "startingLine": 319
+        }
+      },
+      {
+        "comment": "",
+        "key": "Flag question",
+        "location": {
+          "startingColumn": 57,
+          "startingLine": 319
+        }
+      },
+      {
+        "comment": "",
+        "key": "Confidence",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 325
+        }
+      },
+      {
+        "comment": "",
+        "key": "Notes",
+        "location": {
+          "startingColumn": 23,
+          "startingLine": 346
+        }
+      },
+      {
+        "comment": "",
+        "key": "Add",
+        "location": {
+          "startingColumn": 45,
+          "startingLine": 356
+        }
+      },
+      {
+        "comment": "",
+        "key": "Edit",
+        "location": {
+          "startingColumn": 53,
+          "startingLine": 356
+        }
+      },
+      {
+        "comment": "",
+        "key": "Notes",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 571
+        }
+      },
+      {
+        "comment": "",
+        "key": "Cancel",
+        "location": {
+          "startingColumn": 32,
+          "startingLine": 574
+        }
+      },
+      {
+        "comment": "",
+        "key": "Save",
+        "location": {
+          "startingColumn": 32,
+          "startingLine": 577
+        }
+      },
+      {
+        "comment": "",
+        "key": "Bold",
+        "location": {
+          "startingColumn": 27,
+          "startingLine": 592
+        }
+      },
+      {
+        "comment": "",
+        "key": "Italic",
+        "location": {
+          "startingColumn": 27,
+          "startingLine": 597
+        }
+      },
+      {
+        "comment": "",
+        "key": "Highlight",
+        "location": {
+          "startingColumn": 27,
+          "startingLine": 602
+        }
+      },
+      {
+        "comment": "",
+        "key": "Copy",
+        "location": {
+          "startingColumn": 27,
+          "startingLine": 608
+        }
+      },
+      {
+        "comment": "",
+        "key": "Export",
+        "location": {
+          "startingColumn": 23,
+          "startingLine": 626
+        }
+      },
+      {
+        "comment": "",
+        "key": "Question %lld",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 636
+        }
+      },
+      {
+        "comment": "",
+        "key": "Image unavailable",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 666
+        }
+      },
+      {
+        "comment": "",
+        "key": "Explanation",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 750
+        }
+      },
+      {
+        "comment": "",
+        "key": "References",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 783
+        }
+      },
+      {
+        "comment": "",
+        "key": "Previous",
+        "location": {
+          "startingColumn": 23,
+          "startingLine": 803
+        }
+      },
+      {
+        "comment": "",
+        "key": "Finish",
+        "location": {
+          "startingColumn": 81,
+          "startingLine": 812
+        }
+      },
+      {
+        "comment": "",
+        "key": "Next",
+        "location": {
+          "startingColumn": 92,
+          "startingLine": 812
+        }
+      },
+      {
+        "comment": "",
+        "key": "Great work!",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 849
+        }
+      },
+      {
+        "comment": "",
+        "key": "Start Over",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 896
+        }
+      },
+      {
+        "comment": "",
+        "key": "Review weak areas",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 900
+        }
+      },
+      {
+        "comment": "",
+        "key": "Score: %lld/%lld",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 853
+        }
+      },
+      {
+        "comment": "",
+        "key": "Time: %@",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 855
+        }
+      },
+      {
+        "comment": "",
+        "key": "Weekly leaderboard",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 863
+        }
+      },
+      {
+        "comment": "",
+        "key": "ID: %@…",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 871
+        }
+      },
+      {
+        "comment": "",
+        "key": "Accuracy: %lld%% • Percentile: %lldth",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 882
+        }
+      }
+    ]
+  },
+  "version": 1
+}

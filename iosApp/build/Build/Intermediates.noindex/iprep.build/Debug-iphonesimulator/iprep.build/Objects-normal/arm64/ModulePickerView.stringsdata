@@ -1,0 +1,32 @@
+{
+  "source": "/Users/russellmiller/Projects/iprep/iosApp/iprep/Features/Landing/ModulePickerView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Choose Category",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 25
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld questions • ~%lld min",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 18
+        }
+      },
+      {
+        "comment": "",
+        "key": "Close",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 28
+        }
+      }
+    ]
+  },
+  "version": 1
+}

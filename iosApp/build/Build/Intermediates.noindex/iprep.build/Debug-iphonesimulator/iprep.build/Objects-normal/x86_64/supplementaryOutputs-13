@@ -1,0 +1,30 @@
+{
+  "/Users/russellmiller/Projects/iprep/iosApp/iprep/Features/Leaderboard/LeaderboardView.swift" : {
+    "const-values" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/LeaderboardView.swiftconstvalues",
+    "dependencies" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/LeaderboardView.d",
+    "diagnostics" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/LeaderboardView.dia",
+    "object" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/LeaderboardView.o",
+    "swift-dependencies" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/LeaderboardView.swiftdeps"
+  },
+  "/Users/russellmiller/Projects/iprep/iosApp/iprep/Features/Search/QuestionExplorerView.swift" : {
+    "const-values" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/QuestionExplorerView.swiftconstvalues",
+    "dependencies" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/QuestionExplorerView.d",
+    "diagnostics" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/QuestionExplorerView.dia",
+    "object" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/QuestionExplorerView.o",
+    "swift-dependencies" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/QuestionExplorerView.swiftdeps"
+  },
+  "/Users/russellmiller/Projects/iprep/iosApp/iprep/Persistence/PersistencePlaceholder.swift" : {
+    "const-values" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/PersistencePlaceholder.swiftconstvalues",
+    "dependencies" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/PersistencePlaceholder.d",
+    "diagnostics" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/PersistencePlaceholder.dia",
+    "object" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/PersistencePlaceholder.o",
+    "swift-dependencies" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/PersistencePlaceholder.swiftdeps"
+  },
+  "/Users/russellmiller/Projects/iprep/iosApp/iprep/Services/SyncManager.swift" : {
+    "const-values" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/SyncManager.swiftconstvalues",
+    "dependencies" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/SyncManager.d",
+    "diagnostics" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/SyncManager.dia",
+    "object" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/SyncManager.o",
+    "swift-dependencies" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/SyncManager.swiftdeps"
+  }
+}

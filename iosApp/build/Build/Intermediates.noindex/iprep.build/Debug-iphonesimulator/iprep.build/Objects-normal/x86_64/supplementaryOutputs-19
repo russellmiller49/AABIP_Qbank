@@ -1,0 +1,23 @@
+{
+  "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "const-values" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/GeneratedAssetSymbols.swiftconstvalues",
+    "dependencies" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/GeneratedAssetSymbols.d",
+    "diagnostics" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/GeneratedAssetSymbols.dia",
+    "object" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/GeneratedAssetSymbols.o",
+    "swift-dependencies" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/GeneratedAssetSymbols.swiftdeps"
+  },
+  "/Users/russellmiller/Projects/iprep/iosApp/iprep/Services/FirestoreService.swift" : {
+    "const-values" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/FirestoreService.swiftconstvalues",
+    "dependencies" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/FirestoreService.d",
+    "diagnostics" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/FirestoreService.dia",
+    "object" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/FirestoreService.o",
+    "swift-dependencies" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/FirestoreService.swiftdeps"
+  },
+  "/Users/russellmiller/Projects/iprep/iosApp/iprep/Services/QuestionStudyState 2.swift" : {
+    "const-values" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/QuestionStudyState 2.swiftconstvalues",
+    "dependencies" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/QuestionStudyState 2.d",
+    "diagnostics" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/QuestionStudyState 2.dia",
+    "object" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/QuestionStudyState 2.o",
+    "swift-dependencies" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/QuestionStudyState 2.swiftdeps"
+  }
+}

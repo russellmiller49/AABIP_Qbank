@@ -1,0 +1,30 @@
+{
+  "/Users/russellmiller/Projects/iprep/iosApp/iprep/Models/FeatureFlagKey.swift" : {
+    "const-values" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/FeatureFlagKey.swiftconstvalues",
+    "dependencies" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/FeatureFlagKey.d",
+    "diagnostics" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/FeatureFlagKey.dia",
+    "object" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/FeatureFlagKey.o",
+    "swift-dependencies" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/FeatureFlagKey.swiftdeps"
+  },
+  "/Users/russellmiller/Projects/iprep/iosApp/iprep/Models/Module.swift" : {
+    "const-values" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/Module.swiftconstvalues",
+    "dependencies" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/Module.d",
+    "diagnostics" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/Module.dia",
+    "object" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/Module.o",
+    "swift-dependencies" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/Module.swiftdeps"
+  },
+  "/Users/russellmiller/Projects/iprep/iosApp/iprep/Models/QuizQuestion+Search.swift" : {
+    "const-values" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/QuizQuestion+Search.swiftconstvalues",
+    "dependencies" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/QuizQuestion+Search.d",
+    "diagnostics" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/QuizQuestion+Search.dia",
+    "object" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/QuizQuestion+Search.o",
+    "swift-dependencies" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/QuizQuestion+Search.swiftdeps"
+  },
+  "/Users/russellmiller/Projects/iprep/iosApp/iprep/Models/QuizQuestion.swift" : {
+    "const-values" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/QuizQuestion.swiftconstvalues",
+    "dependencies" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/QuizQuestion.d",
+    "diagnostics" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/QuizQuestion.dia",
+    "object" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/QuizQuestion.o",
+    "swift-dependencies" : "/Users/russellmiller/Projects/iprep/iosApp/build/Build/Intermediates.noindex/iprep.build/Debug-iphonesimulator/iprep.build/Objects-normal/x86_64/QuizQuestion.swiftdeps"
+  }
+}

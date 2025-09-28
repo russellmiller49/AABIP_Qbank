@@ -1,0 +1,12 @@
+com.russellmiller.iprep.shared-sqlite-framework-2.3.1-0 /Users/russellmiller/.gradle/caches/8.13/transforms/1787ab82a37993fe2aa5ede00190c39b/transformed/sqlite-framework-2.3.1/res
+com.russellmiller.iprep.shared-sqlite-2.3.1-1 /Users/russellmiller/.gradle/caches/8.13/transforms/e33b27234e1bc7fe1a1f639c710aa706/transformed/sqlite-2.3.1/res
+com.russellmiller.iprep.shared-pngs-2 /Users/russellmiller/Projects/iprep/shared/build/generated/res/pngs/release
+com.russellmiller.iprep.shared-resValues-3 /Users/russellmiller/Projects/iprep/shared/build/generated/res/resValues/release
+com.russellmiller.iprep.shared-updated_navigation_xml-4 /Users/russellmiller/Projects/iprep/shared/build/generated/updated_navigation_xml/release
+com.russellmiller.iprep.shared-mergeReleaseResources-5 /Users/russellmiller/Projects/iprep/shared/build/intermediates/incremental/release/mergeReleaseResources/merged.dir
+com.russellmiller.iprep.shared-mergeReleaseResources-6 /Users/russellmiller/Projects/iprep/shared/build/intermediates/incremental/release/mergeReleaseResources/stripped.dir
+com.russellmiller.iprep.shared-release-7 /Users/russellmiller/Projects/iprep/shared/build/intermediates/merged_res/release/mergeReleaseResources
+com.russellmiller.iprep.shared-androidMain-8 /Users/russellmiller/Projects/iprep/shared/src/androidMain/res
+com.russellmiller.iprep.shared-androidRelease-9 /Users/russellmiller/Projects/iprep/shared/src/androidRelease/res
+com.russellmiller.iprep.shared-main-10 /Users/russellmiller/Projects/iprep/shared/src/main/res
+com.russellmiller.iprep.shared-release-11 /Users/russellmiller/Projects/iprep/shared/src/release/res

@@ -1,0 +1,128 @@
+{
+  "source": "/Users/russellmiller/Projects/iprep/iosApp/iprep/Features/Analytics/AnalyticsView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Analytics",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 29
+        }
+      },
+      {
+        "comment": "",
+        "key": "Generate Progress Report",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 68
+        }
+      },
+      {
+        "comment": "",
+        "key": "Create a shareable summary for your program director.",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 71
+        }
+      },
+      {
+        "comment": "",
+        "key": "Accuracy Trend",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 91
+        }
+      },
+      {
+        "comment": "",
+        "key": "Latest: %@",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 95
+        }
+      },
+      {
+        "comment": "",
+        "key": "Date",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 102
+        }
+      },
+      {
+        "comment": "",
+        "key": "Accuracy",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 103
+        }
+      },
+      {
+        "comment": "",
+        "key": "Date",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 107
+        }
+      },
+      {
+        "comment": "",
+        "key": "Accuracy",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 108
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld%%",
+        "location": {
+          "startingColumn": 40,
+          "startingLine": 123
+        }
+      },
+      {
+        "comment": "",
+        "key": "Module Insights",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 136
+        }
+      },
+      {
+        "comment": "",
+        "key": "Answer more questions to unlock module insights.",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 139
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld/%lld correct • %lld sessions",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 156
+        }
+      },
+      {
+        "comment": "",
+        "key": "Analytics coming to life",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 173
+        }
+      },
+      {
+        "comment": "",
+        "key": "Complete at least one practice session to view trends, streaks, and module insights.",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 175
+        }
+      }
+    ]
+  },
+  "version": 1
+}

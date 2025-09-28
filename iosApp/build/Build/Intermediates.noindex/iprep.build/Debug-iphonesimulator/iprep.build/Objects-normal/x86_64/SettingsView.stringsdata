@@ -1,0 +1,120 @@
+{
+  "source": "/Users/russellmiller/Projects/iprep/iosApp/iprep/Features/Settings/SettingsView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Settings",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 31
+        }
+      },
+      {
+        "comment": "",
+        "key": "Reset practice history?",
+        "location": {
+          "startingColumn": 16,
+          "startingLine": 32
+        }
+      },
+      {
+        "comment": "",
+        "key": "Practice History",
+        "location": {
+          "startingColumn": 21,
+          "startingLine": 9
+        }
+      },
+      {
+        "comment": "",
+        "key": "Preferences",
+        "location": {
+          "startingColumn": 21,
+          "startingLine": 18
+        }
+      },
+      {
+        "comment": "",
+        "key": "About",
+        "location": {
+          "startingColumn": 21,
+          "startingLine": 26
+        }
+      },
+      {
+        "comment": "",
+        "key": "Clears saved sessions so questions can appear again.",
+        "location": {
+          "startingColumn": 41,
+          "startingLine": 15
+        }
+      },
+      {
+        "comment": "",
+        "key": "Reset completed questions",
+        "location": {
+          "startingColumn": 27,
+          "startingLine": 13
+        }
+      },
+      {
+        "comment": "",
+        "key": "Coming soon",
+        "location": {
+          "startingColumn": 41,
+          "startingLine": 23
+        }
+      },
+      {
+        "comment": "",
+        "key": "Enable reminders",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 20
+        }
+      },
+      {
+        "comment": "",
+        "key": "AABIP iPREP early build",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 27
+        }
+      },
+      {
+        "comment": "",
+        "key": "Version 0.1",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 28
+        }
+      },
+      {
+        "comment": "",
+        "key": "Cancel",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 33
+        }
+      },
+      {
+        "comment": "",
+        "key": "Reset",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 34
+        }
+      },
+      {
+        "comment": "",
+        "key": "This will clear completed quizzes and allow all questions to appear again. This cannot be undone.",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 38
+        }
+      }
+    ]
+  },
+  "version": 1
+}

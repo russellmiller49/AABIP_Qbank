@@ -1,0 +1,120 @@
+{
+  "source": "/Users/russellmiller/Projects/iprep/iosApp/iprep/Features/Leaderboard/LeaderboardView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Leaderboards",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 57
+        }
+      },
+      {
+        "comment": "",
+        "key": "Participation",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 14
+        }
+      },
+      {
+        "comment": "",
+        "key": "Opt into weekly leaderboards",
+        "location": {
+          "startingColumn": 27,
+          "startingLine": 16
+        }
+      },
+      {
+        "comment": "",
+        "key": "Choose the display name shown on the leaderboard.",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 21
+        }
+      },
+      {
+        "comment": "",
+        "key": "Display name",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 23
+        }
+      },
+      {
+        "comment": "",
+        "key": "We use a pseudonymous ID and aggregate data only. No personal identifiers are shared.",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 35
+        }
+      },
+      {
+        "comment": "",
+        "key": "Enable the toggle above to see your weekly percentile by domain.",
+        "location": {
+          "startingColumn": 43,
+          "startingLine": 49
+        }
+      },
+      {
+        "comment": "",
+        "key": "Leaderboards disabled",
+        "location": {
+          "startingColumn": 25,
+          "startingLine": 47
+        }
+      },
+      {
+        "comment": "",
+        "key": "Complete a quiz to start building your leaderboard stats.",
+        "location": {
+          "startingColumn": 39,
+          "startingLine": 89
+        }
+      },
+      {
+        "comment": "",
+        "key": "No data yet",
+        "location": {
+          "startingColumn": 21,
+          "startingLine": 87
+        }
+      },
+      {
+        "comment": "",
+        "key": "Weekly percentiles",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 98
+        }
+      },
+      {
+        "comment": "",
+        "key": "ID: %@…",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 104
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lldth",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 122
+        }
+      },
+      {
+        "comment": "",
+        "key": "Accuracy",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 129
+        }
+      }
+    ]
+  },
+  "version": 1
+}
