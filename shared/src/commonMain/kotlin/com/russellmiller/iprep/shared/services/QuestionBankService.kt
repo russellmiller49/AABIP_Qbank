@@ -46,41 +46,48 @@ class QuestionBankService {
     
     init {
         val (loadedModules, loadedModulesById, loadedTotalCount) = try {
-            // Load from resources
-            // For now, use placeholder data since resource loading is complex in KMP
-            val jsonString = """
-                {
-                    "modules": []
-                }
-            """.trimIndent()
-            
+            val jsonString = loadQuestionBankJson()
+                ?: error("QuestionBank.json not found in resources")
+
             val json = Json { ignoreUnknownKeys = true }
             val dto = json.decodeFromString<QuestionBankDTO>(jsonString)
-            
+
             val quizModules = dto.modules.map { moduleDTO ->
-                val difficulty = Module.Difficulty.values().find { it.value == moduleDTO.difficulty } ?: Module.Difficulty.MODERATE
+                val difficulty = Module.Difficulty.values().find { it.value == moduleDTO.difficulty }
+                    ?: Module.Difficulty.MODERATE
+
                 val summary = Module(
                     id = moduleDTO.id,
                     title = moduleDTO.title,
                     description = moduleDTO.description,
-                    questionCount = moduleDTO.questions.size,
+                    questionCount = moduleDTO.questionCount.takeIf { it > 0 } ?: moduleDTO.questions.size,
                     estimatedTimeMinutes = moduleDTO.estimatedTimeMinutes,
                     difficulty = difficulty
                 )
-                
+
                 val questions = moduleDTO.questions.map { questionDTO ->
-                    val options = questionDTO.options.map { optionDTO ->
+                    var promptText = questionDTO.prompt
+
+                    var options = questionDTO.options.map { optionDTO ->
                         QuizOption(
                             id = optionDTO.id.lowercase(),
                             text = optionDTO.text,
                             imageURL = null
                         )
                     }
-                    
+
+                    if (options.isEmpty()) {
+                        val parsed = parseEmbeddedOptions(promptText)
+                        if (parsed != null) {
+                            promptText = parsed.prompt
+                            options = parsed.options
+                        }
+                    }
+
                     QuizQuestion(
                         id = questionDTO.id,
                         number = questionDTO.number,
-                        prompt = questionDTO.prompt,
+                        prompt = promptText,
                         options = options,
                         correctOptionId = questionDTO.correctOptionId.lowercase(),
                         explanation = questionDTO.explanation,
@@ -89,26 +96,73 @@ class QuestionBankService {
                         explanationImageURLs = emptyList()
                     )
                 }
-                
+
                 QuizModule(summary = summary, questions = questions)
             }
-            
-            Triple(quizModules, quizModules.associateBy { it.id }, quizModules.sumOf { it.questions.size })
+
+            Triple(
+                quizModules,
+                quizModules.associateBy { it.id },
+                quizModules.sumOf { it.questions.size }
+            )
         } catch (e: Exception) {
-            // Fallback to placeholder data
+            // Fallback to placeholder data when parsing fails
             val placeholderModules = Module.placeholder.map { module ->
                 QuizModule(
                     summary = module,
                     questions = emptyList()
                 )
             }
-            
-            Triple(placeholderModules, placeholderModules.associateBy { it.id }, 0)
+
+            Triple(
+                placeholderModules,
+                placeholderModules.associateBy { it.id },
+                placeholderModules.sumOf { it.questions.size }
+            )
         }
-        
+
         this.modules = loadedModules
         this.modulesById = loadedModulesById
         this.totalQuestionCount = loadedTotalCount
+    }
+
+    private fun parseEmbeddedOptions(prompt: String): ParsedOptions? {
+        val regex = Regex(" ([a-zA-Z])\\)")
+        val matches = regex.findAll(prompt).toList()
+        if (matches.isEmpty()) return null
+
+        val options = mutableListOf<QuizOption>()
+        for ((index, match) in matches.withIndex()) {
+            val label = match.groupValues.getOrNull(1)?.lowercase() ?: continue
+            val start = match.range.last + 1
+            val end = if (index + 1 < matches.size) {
+                matches[index + 1].range.first
+            } else {
+                prompt.length
+            }
+            var optionText = prompt.substring(start, end).trim()
+            if (optionText.isEmpty()) {
+                optionText = "Option ${label.uppercase()}"
+            }
+            options.add(QuizOption(id = label, text = optionText, imageURL = null))
+        }
+
+        if (options.isEmpty()) return null
+        val questionText = prompt.substring(0, matches.first().range.first).trim()
+        if (questionText.isEmpty()) return null
+        return ParsedOptions(prompt = questionText, options = options)
+    }
+
+    private data class ParsedOptions(
+        val prompt: String,
+        val options: List<QuizOption>
+    )
+
+    private fun loadQuestionBankJson(): String? {
+        val registered = QuestionBankDataRegistry.load()
+        if (registered != null) return registered
+
+        return platformLoadQuestionBankJson()
     }
     
     fun moduleSummaries(): List<Module> {
@@ -171,3 +225,5 @@ class QuestionBankService {
         }
     }
 }
+
+internal expect fun platformLoadQuestionBankJson(): String?

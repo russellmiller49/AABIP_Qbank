@@ -6,9 +6,9 @@
 #import <Foundation/NSString.h>
 #import <Foundation/NSValue.h>
 
-@class SharedAppEnvironmentCompanion, SharedFeatureFlagsService, SharedQuestionBankService, SharedQuizSessionService, SharedStudyPlannerService, SharedAppEnvironment, SharedAppRouteCompanion, SharedAppRoute, SharedAppRouteAnalytics, SharedKotlinArray<T>, SharedAppRouteDashboard, SharedAppRouteLeaderboard, SharedAppRouteProgressReport, SharedAppRouteQuestionExplorer, SharedQuizMode, SharedAppRouteQuizCompanion, SharedAppRouteQuiz, SharedAppRouteReview, SharedAppRouteSettings, SharedFeatureFlagKey, SharedFeatureFlagCompanion, SharedFeatureFlag, SharedKotlinEnumCompanion, SharedKotlinEnum<E>, SharedFeatureFlagKeyCompanion, SharedModuleDifficulty, SharedModuleCompanion, SharedModule, SharedModuleDifficultyCompanion, SharedStudyDifficulty, SharedQuestionStudyStateCompanion, SharedQuestionStudyState, SharedQuizModeCompanion, SharedQuizModeIncorrectOnly, SharedQuizModeModuleCompanion, SharedQuizModeModule, SharedQuizModeQuickStartCompanion, SharedQuizModeQuickStart, SharedQuizQuestion, SharedQuizModuleCompanion, SharedQuizModule, SharedQuizOptionCompanion, SharedQuizOption, SharedQuizQuestionCompanion, SharedQuizSessionConfigurationCompanion, SharedQuizSessionConfiguration, SharedQuizSessionQuestionCompanion, SharedQuizSessionQuestion, SharedQuizSessionQuestionReferenceCompanion, SharedQuizSessionQuestionReference, SharedQuizSessionStateCompanion, SharedQuizSessionState, SharedStudyDifficultyCompanion, SharedStudyProgressCompanion, SharedStudyProgress, SharedQuestionDTO, SharedModuleDTOCompanion, SharedModuleDTO, SharedOptionDTOCompanion, SharedOptionDTO, SharedQuestionBankDTOCompanion, SharedQuestionBankDTO, SharedQuestionDTOCompanion, SharedQuizSessionResults, SharedKotlinThrowable, SharedKotlinException, SharedKotlinRuntimeException, SharedKotlinIllegalStateException, SharedKotlinx_serialization_coreSerializersModule, SharedKotlinx_serialization_coreSerialKind, SharedKotlinNothing;
+@class SharedAppEnvironmentCompanion, SharedFeatureFlagsService, SharedQuestionBankService, SharedQuizSessionService, SharedStudyPlannerService, SharedAppEnvironment, SharedAppRouteCompanion, SharedAppRoute, SharedAppRouteAnalytics, SharedKotlinArray<T>, SharedAppRouteDashboard, SharedAppRouteLeaderboard, SharedAppRouteProgressReport, SharedAppRouteQuestionExplorer, SharedQuizMode, SharedAppRouteQuizCompanion, SharedAppRouteQuiz, SharedAppRouteReview, SharedAppRouteSettings, SharedQuizSessionQuestionReference, SharedQuizSessionConfiguration, SharedCompletedQuizSessionCompanion, SharedCompletedQuizSession, SharedFeatureFlagKey, SharedFeatureFlagCompanion, SharedFeatureFlag, SharedKotlinEnumCompanion, SharedKotlinEnum<E>, SharedFeatureFlagKeyCompanion, SharedModuleDifficulty, SharedModuleCompanion, SharedModule, SharedModuleDifficultyCompanion, SharedStudyDifficulty, SharedQuestionStudyStateCompanion, SharedQuestionStudyState, SharedQuizModeCompanion, SharedQuizModeIncorrectOnly, SharedQuizModeModuleCompanion, SharedQuizModeModule, SharedQuizModeQuickStartCompanion, SharedQuizModeQuickStart, SharedQuizQuestion, SharedQuizModuleCompanion, SharedQuizModule, SharedQuizOptionCompanion, SharedQuizOption, SharedQuizQuestionCompanion, SharedQuizSessionConfigurationCompanion, SharedQuizSessionQuestionCompanion, SharedQuizSessionQuestion, SharedQuizSessionQuestionReferenceCompanion, SharedQuizSessionState, SharedQuizSessionResultsCompanion, SharedQuizSessionResults, SharedQuizSessionStateCompanion, SharedStudyDifficultyCompanion, SharedStudyProgressCompanion, SharedStudyProgress, SharedQuestionDTO, SharedModuleDTOCompanion, SharedModuleDTO, SharedOptionDTOCompanion, SharedOptionDTO, SharedQuestionBankDTOCompanion, SharedQuestionBankDTO, SharedQuestionBankDataRegistry, SharedQuestionDTOCompanion, SharedQuizSessionServiceCompanion, SharedKotlinThrowable, SharedKotlinException, SharedKotlinRuntimeException, SharedKotlinIllegalStateException, SharedKotlinx_serialization_coreSerializersModule, SharedKotlinx_serialization_coreSerialKind, SharedKotlinNothing;
 
-@protocol SharedKotlinx_serialization_coreKSerializer, SharedKotlinComparable, SharedKotlinx_coroutines_coreStateFlow, SharedKotlinx_serialization_coreEncoder, SharedKotlinx_serialization_coreSerialDescriptor, SharedKotlinx_serialization_coreSerializationStrategy, SharedKotlinx_serialization_coreDecoder, SharedKotlinx_serialization_coreDeserializationStrategy, SharedKotlinIterator, SharedKotlinx_coroutines_coreFlowCollector, SharedKotlinx_coroutines_coreFlow, SharedKotlinx_coroutines_coreSharedFlow, SharedKotlinx_serialization_coreCompositeEncoder, SharedKotlinAnnotation, SharedKotlinx_serialization_coreCompositeDecoder, SharedKotlinx_serialization_coreSerializersModuleCollector, SharedKotlinKClass, SharedKotlinKDeclarationContainer, SharedKotlinKAnnotatedElement, SharedKotlinKClassifier;
+@protocol SharedKotlinx_coroutines_coreStateFlow, SharedKotlinx_serialization_coreKSerializer, SharedKotlinComparable, SharedKotlinx_coroutines_coreFlowCollector, SharedKotlinx_coroutines_coreFlow, SharedKotlinx_coroutines_coreSharedFlow, SharedKotlinx_serialization_coreEncoder, SharedKotlinx_serialization_coreSerialDescriptor, SharedKotlinx_serialization_coreSerializationStrategy, SharedKotlinx_serialization_coreDecoder, SharedKotlinx_serialization_coreDeserializationStrategy, SharedKotlinIterator, SharedKotlinx_serialization_coreCompositeEncoder, SharedKotlinAnnotation, SharedKotlinx_serialization_coreCompositeDecoder, SharedKotlinx_serialization_coreSerializersModuleCollector, SharedKotlinKClass, SharedKotlinKDeclarationContainer, SharedKotlinKAnnotatedElement, SharedKotlinKClassifier;
 
 NS_ASSUME_NONNULL_BEGIN
 #pragma clang diagnostic push
@@ -150,6 +150,8 @@ __attribute__((swift_name("AppEnvironment")))
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
 + (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
 @property (class, readonly, getter=companion) SharedAppEnvironmentCompanion *companion __attribute__((swift_name("companion")));
+- (void)resetAllProgress __attribute__((swift_name("resetAllProgress()")));
+@property (readonly) id<SharedKotlinx_coroutines_coreStateFlow> completedSessions __attribute__((swift_name("completedSessions")));
 @property (readonly) SharedFeatureFlagsService *featureFlagsService __attribute__((swift_name("featureFlagsService")));
 @property (readonly) SharedQuestionBankService *questionBankService __attribute__((swift_name("questionBankService")));
 @property (readonly) SharedQuizSessionService *quizSessionService __attribute__((swift_name("quizSessionService")));
@@ -325,6 +327,42 @@ __attribute__((swift_name("AppRoute.Settings")))
 @property (class, readonly, getter=shared) SharedAppRouteSettings *shared __attribute__((swift_name("shared")));
 - (id<SharedKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
 - (id<SharedKotlinx_serialization_coreKSerializer>)serializerTypeParamsSerializers:(SharedKotlinArray<id<SharedKotlinx_serialization_coreKSerializer>> *)typeParamsSerializers __attribute__((swift_name("serializer(typeParamsSerializers:)")));
+@end
+
+
+/**
+ * @note annotations
+ *   kotlinx.serialization.Serializable
+*/
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("CompletedQuizSession")))
+@interface SharedCompletedQuizSession : SharedBase
+- (instancetype)initWithSessionId:(NSString *)sessionId startedAt:(int64_t)startedAt completedAt:(int64_t)completedAt totalQuestions:(int32_t)totalQuestions correctCount:(int32_t)correctCount questionReferences:(NSArray<SharedQuizSessionQuestionReference *> *)questionReferences selections:(NSDictionary<NSString *, NSString *> *)selections configuration:(SharedQuizSessionConfiguration *)configuration __attribute__((swift_name("init(sessionId:startedAt:completedAt:totalQuestions:correctCount:questionReferences:selections:configuration:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) SharedCompletedQuizSessionCompanion *companion __attribute__((swift_name("companion")));
+- (SharedCompletedQuizSession *)doCopySessionId:(NSString *)sessionId startedAt:(int64_t)startedAt completedAt:(int64_t)completedAt totalQuestions:(int32_t)totalQuestions correctCount:(int32_t)correctCount questionReferences:(NSArray<SharedQuizSessionQuestionReference *> *)questionReferences selections:(NSDictionary<NSString *, NSString *> *)selections configuration:(SharedQuizSessionConfiguration *)configuration __attribute__((swift_name("doCopy(sessionId:startedAt:completedAt:totalQuestions:correctCount:questionReferences:selections:configuration:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) float accuracy __attribute__((swift_name("accuracy")));
+@property (readonly) int64_t completedAt __attribute__((swift_name("completedAt")));
+@property (readonly) SharedQuizSessionConfiguration *configuration __attribute__((swift_name("configuration")));
+@property (readonly) int32_t correctCount __attribute__((swift_name("correctCount")));
+@property (readonly) int64_t durationMillis __attribute__((swift_name("durationMillis")));
+@property (readonly) NSArray<SharedQuizSessionQuestionReference *> *questionReferences __attribute__((swift_name("questionReferences")));
+@property (readonly) NSDictionary<NSString *, NSString *> *selections __attribute__((swift_name("selections")));
+@property (readonly) NSString *sessionId __attribute__((swift_name("sessionId")));
+@property (readonly) int64_t startedAt __attribute__((swift_name("startedAt")));
+@property (readonly) int32_t totalQuestions __attribute__((swift_name("totalQuestions")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("CompletedQuizSession.Companion")))
+@interface SharedCompletedQuizSessionCompanion : SharedBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) SharedCompletedQuizSessionCompanion *shared __attribute__((swift_name("shared")));
+- (id<SharedKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
 @end
 
 
@@ -792,24 +830,63 @@ __attribute__((swift_name("QuizSessionQuestionReference.Companion")))
  *   kotlinx.serialization.Serializable
 */
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("QuizSessionState")))
-@interface SharedQuizSessionState : SharedBase
-- (instancetype)initWithConfiguration:(SharedQuizSessionConfiguration *)configuration questions:(NSArray<SharedQuizSessionQuestion *> *)questions currentQuestionIndex:(int32_t)currentQuestionIndex answers:(NSDictionary<NSString *, NSString *> *)answers startTime:(int64_t)startTime isCompleted:(BOOL)isCompleted __attribute__((swift_name("init(configuration:questions:currentQuestionIndex:answers:startTime:isCompleted:)"))) __attribute__((objc_designated_initializer));
-@property (class, readonly, getter=companion) SharedQuizSessionStateCompanion *companion __attribute__((swift_name("companion")));
-- (SharedQuizSessionState *)doCopyConfiguration:(SharedQuizSessionConfiguration *)configuration questions:(NSArray<SharedQuizSessionQuestion *> *)questions currentQuestionIndex:(int32_t)currentQuestionIndex answers:(NSDictionary<NSString *, NSString *> *)answers startTime:(int64_t)startTime isCompleted:(BOOL)isCompleted __attribute__((swift_name("doCopy(configuration:questions:currentQuestionIndex:answers:startTime:isCompleted:)")));
+__attribute__((swift_name("QuizSessionResults")))
+@interface SharedQuizSessionResults : SharedBase
+- (instancetype)initWithSession:(SharedQuizSessionState *)session score:(int32_t)score totalQuestions:(int32_t)totalQuestions accuracy:(float)accuracy timeSpent:(int64_t)timeSpent questionsAnswered:(int32_t)questionsAnswered __attribute__((swift_name("init(session:score:totalQuestions:accuracy:timeSpent:questionsAnswered:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) SharedQuizSessionResultsCompanion *companion __attribute__((swift_name("companion")));
+- (SharedQuizSessionResults *)doCopySession:(SharedQuizSessionState *)session score:(int32_t)score totalQuestions:(int32_t)totalQuestions accuracy:(float)accuracy timeSpent:(int64_t)timeSpent questionsAnswered:(int32_t)questionsAnswered __attribute__((swift_name("doCopy(session:score:totalQuestions:accuracy:timeSpent:questionsAnswered:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) float accuracy __attribute__((swift_name("accuracy")));
+@property (readonly) int32_t questionsAnswered __attribute__((swift_name("questionsAnswered")));
+@property (readonly) int32_t score __attribute__((swift_name("score")));
+@property (readonly) SharedQuizSessionState *session __attribute__((swift_name("session")));
+@property (readonly) int64_t timeSpent __attribute__((swift_name("timeSpent")));
+@property (readonly) int32_t totalQuestions __attribute__((swift_name("totalQuestions")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("QuizSessionResults.Companion")))
+@interface SharedQuizSessionResultsCompanion : SharedBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) SharedQuizSessionResultsCompanion *shared __attribute__((swift_name("shared")));
+- (id<SharedKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end
+
+
+/**
+ * @note annotations
+ *   kotlinx.serialization.Serializable
+*/
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("QuizSessionState")))
+@interface SharedQuizSessionState : SharedBase
+- (instancetype)initWithConfiguration:(SharedQuizSessionConfiguration *)configuration questions:(NSArray<SharedQuizSessionQuestion *> *)questions sessionId:(NSString *)sessionId sessionStartedAt:(int64_t)sessionStartedAt currentQuestionIndex:(int32_t)currentQuestionIndex answers:(NSDictionary<NSString *, NSString *> *)answers completedAt:(SharedLong * _Nullable)completedAt isCompleted:(BOOL)isCompleted __attribute__((swift_name("init(configuration:questions:sessionId:sessionStartedAt:currentQuestionIndex:answers:completedAt:isCompleted:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) SharedQuizSessionStateCompanion *companion __attribute__((swift_name("companion")));
+- (SharedQuizSessionState *)completeAt:(int64_t)at __attribute__((swift_name("complete(at:)")));
+- (SharedQuizSessionState *)doCopyConfiguration:(SharedQuizSessionConfiguration *)configuration questions:(NSArray<SharedQuizSessionQuestion *> *)questions sessionId:(NSString *)sessionId sessionStartedAt:(int64_t)sessionStartedAt currentQuestionIndex:(int32_t)currentQuestionIndex answers:(NSDictionary<NSString *, NSString *> *)answers completedAt:(SharedLong * _Nullable)completedAt isCompleted:(BOOL)isCompleted __attribute__((swift_name("doCopy(configuration:questions:sessionId:sessionStartedAt:currentQuestionIndex:answers:completedAt:isCompleted:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSArray<SharedQuizSessionQuestionReference *> *)questionReferences __attribute__((swift_name("questionReferences()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) float accuracy __attribute__((swift_name("accuracy")));
+@property (readonly) int32_t answeredQuestionCount __attribute__((swift_name("answeredQuestionCount")));
 @property (readonly) NSDictionary<NSString *, NSString *> *answers __attribute__((swift_name("answers")));
+@property (readonly) SharedLong * _Nullable completedAt __attribute__((swift_name("completedAt")));
 @property (readonly) SharedQuizSessionConfiguration *configuration __attribute__((swift_name("configuration")));
 @property (readonly) SharedQuizSessionQuestion * _Nullable currentQuestion __attribute__((swift_name("currentQuestion")));
 @property (readonly) int32_t currentQuestionIndex __attribute__((swift_name("currentQuestionIndex")));
+@property (readonly) int64_t durationMillis __attribute__((swift_name("durationMillis")));
 @property (readonly) BOOL isCompleted __attribute__((swift_name("isCompleted")));
 @property (readonly) BOOL isLastQuestion __attribute__((swift_name("isLastQuestion")));
 @property (readonly) float progress __attribute__((swift_name("progress")));
 @property (readonly) NSArray<SharedQuizSessionQuestion *> *questions __attribute__((swift_name("questions")));
 @property (readonly) int32_t score __attribute__((swift_name("score")));
-@property (readonly) int64_t startTime __attribute__((swift_name("startTime")));
+@property (readonly) NSString *sessionId __attribute__((swift_name("sessionId")));
+@property (readonly) int64_t sessionStartedAt __attribute__((swift_name("sessionStartedAt")));
 @property (readonly) int32_t totalQuestions __attribute__((swift_name("totalQuestions")));
 @end
 
@@ -995,6 +1072,17 @@ __attribute__((swift_name("QuestionBankDTO.Companion")))
 @end
 
 __attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("QuestionBankDataRegistry")))
+@interface SharedQuestionBankDataRegistry : SharedBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)questionBankDataRegistry __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) SharedQuestionBankDataRegistry *shared __attribute__((swift_name("shared")));
+- (NSString * _Nullable)load __attribute__((swift_name("load()")));
+- (void)registerProvider:(NSString * _Nullable (^)(void))provider __attribute__((swift_name("register(provider:)")));
+@end
+
+__attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("QuestionBankService")))
 @interface SharedQuestionBankService : SharedBase
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
@@ -1047,41 +1135,37 @@ __attribute__((swift_name("QuestionDTO.Companion")))
 @end
 
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("QuizSessionResults")))
-@interface SharedQuizSessionResults : SharedBase
-- (instancetype)initWithSession:(SharedQuizSessionState *)session score:(int32_t)score totalQuestions:(int32_t)totalQuestions accuracy:(float)accuracy timeSpent:(int64_t)timeSpent questionsAnswered:(int32_t)questionsAnswered __attribute__((swift_name("init(session:score:totalQuestions:accuracy:timeSpent:questionsAnswered:)"))) __attribute__((objc_designated_initializer));
-- (SharedQuizSessionResults *)doCopySession:(SharedQuizSessionState *)session score:(int32_t)score totalQuestions:(int32_t)totalQuestions accuracy:(float)accuracy timeSpent:(int64_t)timeSpent questionsAnswered:(int32_t)questionsAnswered __attribute__((swift_name("doCopy(session:score:totalQuestions:accuracy:timeSpent:questionsAnswered:)")));
-- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-- (NSUInteger)hash __attribute__((swift_name("hash()")));
-- (NSString *)description __attribute__((swift_name("description()")));
-@property (readonly) float accuracy __attribute__((swift_name("accuracy")));
-@property (readonly) int32_t questionsAnswered __attribute__((swift_name("questionsAnswered")));
-@property (readonly) int32_t score __attribute__((swift_name("score")));
-@property (readonly) SharedQuizSessionState *session __attribute__((swift_name("session")));
-@property (readonly) int64_t timeSpent __attribute__((swift_name("timeSpent")));
-@property (readonly) int32_t totalQuestions __attribute__((swift_name("totalQuestions")));
-@end
-
-__attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("QuizSessionService")))
 @interface SharedQuizSessionService : SharedBase
 - (instancetype)initWithQuestionBankService:(SharedQuestionBankService *)questionBankService studyPlannerService:(SharedStudyPlannerService *)studyPlannerService __attribute__((swift_name("init(questionBankService:studyPlannerService:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) SharedQuizSessionServiceCompanion *companion __attribute__((swift_name("companion")));
 - (void)answerQuestionQuestionId:(NSString *)questionId answerId:(NSString *)answerId __attribute__((swift_name("answerQuestion(questionId:answerId:)")));
-- (void)completeSession __attribute__((swift_name("completeSession()")));
+- (void)clearHistory __attribute__((swift_name("clearHistory()")));
+- (SharedCompletedQuizSession * _Nullable)completeSession __attribute__((swift_name("completeSession()")));
 - (void)endSession __attribute__((swift_name("endSession()")));
+- (NSArray<SharedCompletedQuizSession *> *)getCompletedSessions __attribute__((swift_name("getCompletedSessions()")));
 - (SharedQuizSessionResults * _Nullable)getSessionResults __attribute__((swift_name("getSessionResults()")));
 - (BOOL)goToQuestionIndex:(int32_t)index __attribute__((swift_name("goToQuestion(index:)")));
 - (BOOL)nextQuestion __attribute__((swift_name("nextQuestion()")));
 - (BOOL)previousQuestion __attribute__((swift_name("previousQuestion()")));
 - (SharedQuizSessionState *)startSessionConfiguration:(SharedQuizSessionConfiguration *)configuration __attribute__((swift_name("startSession(configuration:)")));
+@property (readonly) id<SharedKotlinx_coroutines_coreStateFlow> completedSessions __attribute__((swift_name("completedSessions")));
 @property (readonly) id<SharedKotlinx_coroutines_coreStateFlow> currentSession __attribute__((swift_name("currentSession")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("QuizSessionService.Companion")))
+@interface SharedQuizSessionServiceCompanion : SharedBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) SharedQuizSessionServiceCompanion *shared __attribute__((swift_name("shared")));
 @end
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("StudyPlannerService")))
 @interface SharedStudyPlannerService : SharedBase
-- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
-+ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
+- (instancetype)initWithQuestionBankService:(SharedQuestionBankService *)questionBankService __attribute__((swift_name("init(questionBankService:)"))) __attribute__((objc_designated_initializer));
 - (SharedStudyProgress * _Nullable)getModuleProgressModuleId:(NSString *)moduleId __attribute__((swift_name("getModuleProgress(moduleId:)")));
 - (SharedStudyProgress *)getOverallProgress __attribute__((swift_name("getOverallProgress()")));
 - (SharedQuestionStudyState * _Nullable)getQuestionStateQuestionId:(NSString *)questionId __attribute__((swift_name("getQuestionState(questionId:)")));
@@ -1098,6 +1182,35 @@ __attribute__((swift_name("Greeter")))
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
 + (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
 - (NSString *)helloName:(NSString *)name __attribute__((swift_name("hello(name:)")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("TimeKt")))
+@interface SharedTimeKt : SharedBase
++ (int64_t)currentTimeMillis __attribute__((swift_name("currentTimeMillis()")));
+@end
+
+__attribute__((swift_name("Kotlinx_coroutines_coreFlow")))
+@protocol SharedKotlinx_coroutines_coreFlow
+@required
+
+/**
+ * @note This method converts instances of CancellationException to errors.
+ * Other uncaught Kotlin exceptions are fatal.
+*/
+- (void)collectCollector:(id<SharedKotlinx_coroutines_coreFlowCollector>)collector completionHandler:(void (^)(NSError * _Nullable))completionHandler __attribute__((swift_name("collect(collector:completionHandler:)")));
+@end
+
+__attribute__((swift_name("Kotlinx_coroutines_coreSharedFlow")))
+@protocol SharedKotlinx_coroutines_coreSharedFlow <SharedKotlinx_coroutines_coreFlow>
+@required
+@property (readonly) NSArray<id> *replayCache __attribute__((swift_name("replayCache")));
+@end
+
+__attribute__((swift_name("Kotlinx_coroutines_coreStateFlow")))
+@protocol SharedKotlinx_coroutines_coreStateFlow <SharedKotlinx_coroutines_coreSharedFlow>
+@required
+@property (readonly) id _Nullable value __attribute__((swift_name("value")));
 @end
 
 __attribute__((swift_name("Kotlinx_serialization_coreSerializationStrategy")))
@@ -1201,27 +1314,15 @@ __attribute__((swift_name("KotlinCancellationException")))
 - (instancetype)initWithMessage:(NSString * _Nullable)message cause:(SharedKotlinThrowable * _Nullable)cause __attribute__((swift_name("init(message:cause:)"))) __attribute__((objc_designated_initializer));
 @end
 
-__attribute__((swift_name("Kotlinx_coroutines_coreFlow")))
-@protocol SharedKotlinx_coroutines_coreFlow
+__attribute__((swift_name("Kotlinx_coroutines_coreFlowCollector")))
+@protocol SharedKotlinx_coroutines_coreFlowCollector
 @required
 
 /**
  * @note This method converts instances of CancellationException to errors.
  * Other uncaught Kotlin exceptions are fatal.
 */
-- (void)collectCollector:(id<SharedKotlinx_coroutines_coreFlowCollector>)collector completionHandler:(void (^)(NSError * _Nullable))completionHandler __attribute__((swift_name("collect(collector:completionHandler:)")));
-@end
-
-__attribute__((swift_name("Kotlinx_coroutines_coreSharedFlow")))
-@protocol SharedKotlinx_coroutines_coreSharedFlow <SharedKotlinx_coroutines_coreFlow>
-@required
-@property (readonly) NSArray<id> *replayCache __attribute__((swift_name("replayCache")));
-@end
-
-__attribute__((swift_name("Kotlinx_coroutines_coreStateFlow")))
-@protocol SharedKotlinx_coroutines_coreStateFlow <SharedKotlinx_coroutines_coreSharedFlow>
-@required
-@property (readonly) id _Nullable value __attribute__((swift_name("value")));
+- (void)emitValue:(id _Nullable)value completionHandler:(void (^)(NSError * _Nullable))completionHandler __attribute__((swift_name("emit(value:completionHandler:)")));
 @end
 
 __attribute__((swift_name("Kotlinx_serialization_coreEncoder")))
@@ -1370,17 +1471,6 @@ __attribute__((swift_name("KotlinIterator")))
 @required
 - (BOOL)hasNext __attribute__((swift_name("hasNext()")));
 - (id _Nullable)next __attribute__((swift_name("next()")));
-@end
-
-__attribute__((swift_name("Kotlinx_coroutines_coreFlowCollector")))
-@protocol SharedKotlinx_coroutines_coreFlowCollector
-@required
-
-/**
- * @note This method converts instances of CancellationException to errors.
- * Other uncaught Kotlin exceptions are fatal.
-*/
-- (void)emitValue:(id _Nullable)value completionHandler:(void (^)(NSError * _Nullable))completionHandler __attribute__((swift_name("emit(value:completionHandler:)")));
 @end
 
 __attribute__((swift_name("Kotlinx_serialization_coreCompositeEncoder")))
