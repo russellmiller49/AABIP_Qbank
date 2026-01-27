@@ -2,6 +2,7 @@ import SwiftUI
 #if canImport(UIKit)
 import UIKit
 #endif
+import Shared
 
 struct ProgressReportView: View {
     @EnvironmentObject private var environment: AppEnvironment

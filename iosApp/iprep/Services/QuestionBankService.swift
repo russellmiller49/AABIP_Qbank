@@ -7,7 +7,7 @@ final class QuestionBankService {
     private let logger: Logger
 
     init(
-        core: Shared.QuestionBankService = Shared.AppEnvironment.shared.questionBankService,
+        core: Shared.QuestionBankService,
         logger: Logger = Logger(
             subsystem: (Bundle.main.bundleIdentifier ?? "com.russellmiller.iprep"),
             category: "QuestionBankService"

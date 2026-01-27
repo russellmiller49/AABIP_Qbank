@@ -114,6 +114,7 @@ class QuestionBankService {
             
             Triple(quizModules, quizModules.associateBy { it.id }, quizModules.sumOf { it.questions.size })
         } catch (e: Exception) {
+            println("[Shared.QuestionBankService] load failed: ${e.message}")
             // Fallback to placeholder data
             val placeholderModules = Module.placeholder.map { module ->
                 QuizModule(
@@ -190,30 +191,68 @@ class QuestionBankService {
         }
     }
 
-    private val embeddedOptionRegex = Regex(" ([a-zA-Z])\\)")
-    private val optionIdentifierRegex = Regex("\\(([a-z])\\)")
-
     private fun parseEmbeddedOptions(prompt: String): Pair<String, List<QuizOption>>? {
-        val matches = embeddedOptionRegex.findAll(prompt).toList()
-        if (matches.isEmpty()) return null
+        val markers = embeddedOptionMarkers(prompt)
+        if (markers.isEmpty()) return null
 
-        val options = matches.mapIndexed { index, match ->
-            val label = match.groupValues[1].lowercase()
-            val start = match.range.last + 1
-            val end = if (index + 1 < matches.size) matches[index + 1].range.first else prompt.length
+        val options = markers.mapIndexed { index, marker ->
+            val start = marker.endInclusive + 1
+            val end = if (index + 1 < markers.size) markers[index + 1].start else prompt.length
             val optionText = prompt.substring(start, end).trim()
-            QuizOption(id = label, text = optionText, imageURL = null)
-        }
+            QuizOption(id = marker.label.toString(), text = optionText, imageURL = null)
+        }.filter { it.text.isNotEmpty() }
 
-        val questionText = prompt.substring(0, matches.first().range.first).trim()
-        return if (questionText.isNotEmpty() && options.isNotEmpty()) {
-            questionText to options
-        } else {
-            null
-        }
+        val questionText = prompt.substring(0, markers.first().start).trim()
+        return if (questionText.isNotEmpty() && options.isNotEmpty()) questionText to options else null
     }
 
     private fun optionIdentifier(filename: String): String? {
-        return optionIdentifierRegex.find(filename)?.groupValues?.getOrNull(1)
+        val length = filename.length
+        if (length < 3) return null
+
+        for (index in 0..(length - 3)) {
+            if (filename[index] != '(') continue
+            val candidate = filename[index + 1]
+            if (!isAsciiLetter(candidate)) continue
+            if (filename[index + 2] != ')') continue
+            return asciiLowercaseChar(candidate).toString()
+        }
+        return null
+    }
+
+    private data class EmbeddedOptionMarker(
+        val label: Char,
+        val start: Int,
+        val endInclusive: Int
+    )
+
+    private fun embeddedOptionMarkers(prompt: String): List<EmbeddedOptionMarker> {
+        if (prompt.length < 3) return emptyList()
+
+        val markers = mutableListOf<EmbeddedOptionMarker>()
+        for (index in 1..(prompt.length - 2)) {
+            val previous = prompt[index - 1]
+            val candidate = prompt[index]
+            val next = prompt[index + 1]
+
+            if (previous != ' ') continue
+            if (next != ')') continue
+            if (!isAsciiLetter(candidate)) continue
+
+            markers += EmbeddedOptionMarker(
+                label = asciiLowercaseChar(candidate),
+                start = index - 1,
+                endInclusive = index + 1
+            )
+        }
+        return markers
+    }
+
+    private fun isAsciiLetter(candidate: Char): Boolean {
+        return (candidate in 'a'..'z') || (candidate in 'A'..'Z')
+    }
+
+    private fun asciiLowercaseChar(candidate: Char): Char {
+        return if (candidate in 'A'..'Z') (candidate.code + 32).toChar() else candidate
     }
 }

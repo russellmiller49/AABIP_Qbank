@@ -8,7 +8,7 @@ import Shared
 #if canImport(Shared)
 /// Bridges a Kotlin `StateFlow` into a Combine publisher.
 final class FlowPublisher<Output> {
-    private let flow: SharedKotlinx_coroutines_coreStateFlow
+    private let flow: Kotlinx_coroutines_coreStateFlow
     private let transform: (Any?) -> Output
     private let logger: Logger
     private let subject = PassthroughSubject<Output, Never>()
@@ -16,7 +16,7 @@ final class FlowPublisher<Output> {
     private var started = false
 
     init(
-        flow: SharedKotlinx_coroutines_coreStateFlow,
+        flow: Kotlinx_coroutines_coreStateFlow,
         logger: Logger = Logger(
             subsystem: (Bundle.main.bundleIdentifier ?? "com.russellmiller.iprep"),
             category: "FlowPublisher"
@@ -46,18 +46,28 @@ final class FlowPublisher<Output> {
         }
         self.collector = collector
 
-        // Collect on a background queue to avoid blocking the main thread.
-        DispatchQueue.global(qos: .userInitiated).async { [flow, logger, collector] in
+        let logger = logger
+
+        // Kotlin suspend functions bridged to Swift must be invoked on the main thread.
+        if Thread.isMainThread {
             flow.collect(collector: collector) { error in
                 if let error {
                     logger.error("StateFlow collection finished with error: \(error.localizedDescription, privacy: .public)")
+                }
+            }
+        } else {
+            DispatchQueue.main.async { [flow, logger, collector] in
+                flow.collect(collector: collector) { error in
+                    if let error {
+                        logger.error("StateFlow collection finished with error: \(error.localizedDescription, privacy: .public)")
+                    }
                 }
             }
         }
     }
 }
 
-private final class FlowCollector: NSObject, SharedKotlinx_coroutines_coreFlowCollector {
+private final class FlowCollector: NSObject, Kotlinx_coroutines_coreFlowCollector {
     private let onEmit: (Any?) -> Void
 
     init(onEmit: @escaping (Any?) -> Void) {

@@ -1,4 +1,5 @@
 import SwiftUI
+import Shared
 
 public struct DashboardView: View {
     @EnvironmentObject private var environment: AppEnvironment

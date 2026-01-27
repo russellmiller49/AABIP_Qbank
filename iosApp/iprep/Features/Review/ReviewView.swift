@@ -1,4 +1,5 @@
 import SwiftUI
+import Shared
 
 struct ReviewView: View {
     @EnvironmentObject private var environment: AppEnvironment

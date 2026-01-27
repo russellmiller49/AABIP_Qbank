@@ -1,4 +1,5 @@
 import Foundation
+import Shared
 
 extension String {
     /// Case and diacritic insensitive substring search.

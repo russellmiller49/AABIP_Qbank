@@ -1,4 +1,5 @@
 import Foundation
+import Shared
 
 protocol FirestoreServiceType: AnyObject {
     func fetchModules() async throws -> [Module]

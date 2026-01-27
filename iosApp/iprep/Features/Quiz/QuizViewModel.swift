@@ -1,5 +1,6 @@
 import Foundation
 import Combine
+import Shared
 
 @MainActor
 final class QuizViewModel: ObservableObject {

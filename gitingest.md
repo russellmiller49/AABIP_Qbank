@@ -1,7 +1,7 @@
 # AABIP_Qbank — gitingest (curated)
 
-Generated: `2026-01-26T14:04:29-08:00`
-Git: `multiplatform` @ `6039302`
+Generated: `2026-01-27T12:14:24-08:00`
+Git: `unified` @ `a54124d`
 
 ## What this file is
 - A **token-budget friendly** snapshot of the repo **structure** + a curated set of **important files**.
@@ -13,7 +13,8 @@ Git: `multiplatform` @ `6039302`
 
 ## Repo tree (pruned)
 ```
-- AABIP_Qbank/
+- iprep/
+  - .claude/
   - androidApp/
     - androidApp/src/
       - androidApp/src/main/
@@ -21,6 +22,13 @@ Git: `multiplatform` @ `6039302`
           - androidApp/src/main/java/com/
             - androidApp/src/main/java/com/russellmiller/
         - androidApp/src/main/res/
+          - androidApp/src/main/res/drawable/
+          - androidApp/src/main/res/layout/
+          - androidApp/src/main/res/mipmap-hdpi/
+          - androidApp/src/main/res/mipmap-mdpi/
+          - androidApp/src/main/res/mipmap-xhdpi/
+          - androidApp/src/main/res/mipmap-xxhdpi/
+          - androidApp/src/main/res/mipmap-xxxhdpi/
           - androidApp/src/main/res/values/
           - androidApp/src/main/res/xml/
   - docs/
@@ -55,13 +63,21 @@ Git: `multiplatform` @ `6039302`
       - iosApp/iprep/Support/
     - iosApp/iprep.xcodeproj/
       - iosApp/iprep.xcodeproj/project.xcworkspace/
+        - iosApp/iprep.xcodeproj/project.xcworkspace/xcshareddata/
+          - iosApp/iprep.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/
+            - iosApp/iprep.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/configuration/
     - iosApp/iprepTests/
     - iosApp/iprepUITests/
   - iprep.xcodeproj/
     - iprep.xcodeproj/project.xcworkspace/
+  - New_question_bank/
   - scripts/
   - shared/
     - shared/src/
+      - shared/src/androidMain/
+        - shared/src/androidMain/kotlin/
+          - shared/src/androidMain/kotlin/com/
+            - shared/src/androidMain/kotlin/com/russellmiller/
       - shared/src/commonMain/
         - shared/src/commonMain/kotlin/
           - shared/src/commonMain/kotlin/com/
@@ -69,6 +85,12 @@ Git: `multiplatform` @ `6039302`
           - shared/src/commonMain/kotlin/qbank/
             - shared/src/commonMain/kotlin/qbank/bridge/
         - shared/src/commonMain/resources/
+      - shared/src/commonTest/
+        - shared/src/commonTest/kotlin/
+      - shared/src/iosMain/
+        - shared/src/iosMain/kotlin/
+          - shared/src/iosMain/kotlin/com/
+            - shared/src/iosMain/kotlin/com/russellmiller/
 ```
 
 ## Important directories (not inlined)
@@ -83,7 +105,7 @@ Git: `multiplatform` @ `6039302`
 
 ## Key data files (not inlined)
 
-- `shared/src/commonMain/resources/QuestionBank.json` (809.6KB)
+- `shared/src/commonMain/resources/QuestionBank.json` (534.0KB)
 - `iosApp/iprep/Resources/QuestionBank.json` (809.6KB)
 
 ## Important files (inlined)
@@ -523,7 +545,7 @@ sqldelight {
 
 ---
 ### `androidApp/build.gradle.kts`
-- Size: `2369` bytes
+- Size: `2493` bytes
 ```
 plugins {
     id("com.android.application")
@@ -588,6 +610,8 @@ dependencies {
     implementation("androidx.compose.ui:ui-graphics")
     implementation("androidx.compose.ui:ui-tooling-preview")
     implementation("androidx.compose.material3:material3")
+    implementation("androidx.compose.material:material-icons-extended")
+    implementation("io.coil-kt:coil-compose:2.4.0")
     implementation("com.google.android.material:material:1.11.0")
     
     implementation("androidx.navigation:navigation-compose:2.7.5")
@@ -606,7 +630,7 @@ dependencies {
 
 ---
 ### `gradle.properties`
-- Size: `1713` bytes
+- Size: `1849` bytes
 ```
 # Project-wide Gradle settings.
 # IDE (e.g. Android Studio) users:
@@ -640,7 +664,9 @@ org.gradle.configuration-cache=true
 kotlin.mpp.applyDefaultHierarchyTemplate=false
 
 # Java toolchain configuration
-org.gradle.java.home=/opt/homebrew/Cellar/openjdk@17/17.0.16/libexec/openjdk.jdk/Contents/Home
+# NOTE: Do NOT hardcode org.gradle.java.home here. It breaks cross-platform setups
+# (e.g., WSL/Linux vs macOS). Prefer setting JAVA_HOME per-machine or using Gradle's
+# toolchain configuration inside build scripts if/when needed.
 
 ```
 

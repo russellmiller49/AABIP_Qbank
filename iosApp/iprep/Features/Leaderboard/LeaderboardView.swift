@@ -1,4 +1,5 @@
 import SwiftUI
+import Shared
 
 struct LeaderboardView: View {
     @EnvironmentObject private var environment: AppEnvironment

@@ -1,4 +1,5 @@
 import SwiftUI
+import Shared
 
 struct ModuleCard: View {
     let module: Module

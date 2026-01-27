@@ -36,11 +36,19 @@ public final class AppEnvironment: ObservableObject {
     @Published private(set) var studyStates: [String: QuestionStudyState] = [:]
 
     private init() {
+        print("[AppEnvironment] Starting initialization...")
         let authService = AuthService()
+        print("[AppEnvironment] AuthService created")
 #if canImport(Shared)
-        let sharedCore = Shared.AppEnvironment.shared
+        print("[AppEnvironment] Creating new Shared.AppEnvironment directly...")
+        // Create Kotlin AppEnvironment directly instead of using companion singleton
+        // to avoid potential threading/timing issues
+        let sharedCore = Shared.AppEnvironment()
+        print("[AppEnvironment] sharedCore created: \(sharedCore)")
         self.sharedCore = sharedCore
+        print("[AppEnvironment] Creating QuestionBankService with core...")
         let questionBankService = QuestionBankService(core: sharedCore.questionBankService)
+        print("[AppEnvironment] QuestionBankService created")
 #else
         let questionBankService = QuestionBankService()
 #endif
@@ -65,8 +73,10 @@ public final class AppEnvironment: ObservableObject {
         self.studyPlanner = studyPlanner
         self.leaderboardService = leaderboardService
 
+        print("[AppEnvironment] All services assigned, binding triggers...")
         bindSyncTriggers()
         bindLocalStore()
+        print("[AppEnvironment] Initialization complete!")
     }
 
     private func bindSyncTriggers() {
@@ -185,16 +195,14 @@ public final class AppEnvironment: ObservableObject {
         var state = existing ?? QuestionStudyState()
         let timesAnswered = Int(shared.timesAnswered)
         let timesCorrect = Int(shared.timesCorrect)
-        let incorrect = max(0, timesAnswered - timesCorrect)
-        state.totalReviews = max(state.totalReviews, timesAnswered)
+        state.reviewCount = max(state.reviewCount, timesAnswered)
         state.correctCount = max(state.correctCount, timesCorrect)
-        state.incorrectCount = max(state.incorrectCount, incorrect)
 
         if state.lastReviewedAt == nil {
             state.lastReviewedAt = dateFromSharedMillis(shared.lastAnsweredAt)
         }
-        if state.dueAt == nil, let lastReviewedAt = state.lastReviewedAt {
-            state.dueAt = lastReviewedAt
+        if state.dueDate == nil, let lastReviewedAt = state.lastReviewedAt {
+            state.dueDate = lastReviewedAt
         }
         return state
     }
@@ -231,7 +239,7 @@ public final class AppEnvironment: ObservableObject {
         return result
     }
 
-    private func dateFromSharedMillis(_ millis: SharedLong?) -> Date? {
+    private func dateFromSharedMillis(_ millis: KotlinLong?) -> Date? {
         guard let millis else { return nil }
         let value = millis.int64Value
         guard value > 0 else { return nil }

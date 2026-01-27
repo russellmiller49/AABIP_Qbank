@@ -1,5 +1,6 @@
 import Combine
 import Foundation
+import Shared
 
 protocol LocalStoreType: AnyObject {
     func warmStart() async

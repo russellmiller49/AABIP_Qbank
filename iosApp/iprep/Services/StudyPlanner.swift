@@ -1,4 +1,5 @@
 import Foundation
+import Shared
 
 protocol StudyPlannerType: AnyObject {
     func reviewQueue(limit: Int) -> [QuizSessionQuestion]

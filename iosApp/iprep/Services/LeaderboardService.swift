@@ -1,4 +1,5 @@
 import Foundation
+import Shared
 
 struct LeaderboardSnapshot: Equatable {
     struct DomainScore: Identifiable, Equatable {

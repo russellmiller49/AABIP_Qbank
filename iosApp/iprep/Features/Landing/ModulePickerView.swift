@@ -1,4 +1,5 @@
 import SwiftUI
+import Shared
 
 struct ModulePickerView: View {
     let modules: [Module]
