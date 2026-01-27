@@ -49,7 +49,7 @@ extension QuizSessionQuestion {
 
         let moduleFields = [
             module.summary.title,
-            module.summary.description,
+            module.summary.description_,
             module.summary.difficulty.rawValue
         ]
 

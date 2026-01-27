@@ -1,61 +1,24 @@
 import Foundation
+import Shared
 
-public struct Module: Identifiable, Hashable {
-    public let id: String
-    public let title: String
-    public let description: String
-    public let questionCount: Int
-    public let estimatedTimeMinutes: Int
-    public let difficulty: Difficulty
+typealias Module = Shared.Module
 
-    public init(
-        id: String,
-        title: String,
-        description: String,
-        questionCount: Int,
-        estimatedTimeMinutes: Int,
-        difficulty: Difficulty
-    ) {
-        self.id = id
-        self.title = title
-        self.description = description
-        self.questionCount = questionCount
-        self.estimatedTimeMinutes = estimatedTimeMinutes
-        self.difficulty = difficulty
+extension Module: Identifiable {}
+
+extension Module.Difficulty {
+    static var allCases: [Module.Difficulty] {
+        entries
     }
 
-    public enum Difficulty: String, CaseIterable {
-        case easy
-        case moderate
-        case hard
+    var rawValue: String {
+        value
     }
-}
 
-public extension Module {
-    static let placeholder: [Module] = [
-        Module(
-            id: "advanced-bronchoscopy",
-            title: "Advanced Therapeutic Bronchoscopy",
-            description: "Latest interventional techniques and peri-procedural care.",
-            questionCount: 42,
-            estimatedTimeMinutes: 35,
-            difficulty: .hard
-        ),
-        Module(
-            id: "airway-disease",
-            title: "Airway Disease",
-            description: "Diagnosis and management pathways for airway disorders.",
-            questionCount: 38,
-            estimatedTimeMinutes: 30,
-            difficulty: .moderate
-        ),
-        Module(
-            id: "pleural-disease",
-            title: "Pleural Disease",
-            description: "Evidence-based approaches to pleural pathology.",
-            questionCount: 24,
-            estimatedTimeMinutes: 20,
-            difficulty: .moderate
-        )
-    ]
+    static func from(rawValue: String) -> Module.Difficulty? {
+        let normalized = rawValue.lowercased()
+        if normalized == Module.Difficulty.easy.value { return .easy }
+        if normalized == Module.Difficulty.moderate.value { return .moderate }
+        if normalized == Module.Difficulty.hard.value { return .hard }
+        return nil
+    }
 }

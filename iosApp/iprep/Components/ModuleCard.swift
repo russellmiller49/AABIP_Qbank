@@ -11,7 +11,7 @@ struct ModuleCard: View {
                 .font(Typography.heading())
                 .foregroundStyle(Color.primary)
 
-            Text(module.description)
+            Text(module.description_)
                 .font(.body)
                 .foregroundStyle(Color.secondary)
                 .lineLimit(3)

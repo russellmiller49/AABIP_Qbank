@@ -46,19 +46,15 @@ class QuestionBankService {
     
     init {
         val (loadedModules, loadedModulesById, loadedTotalCount) = try {
-            // Load from resources
-            // For now, use placeholder data since resource loading is complex in KMP
-            val jsonString = """
-                {
-                    "modules": []
-                }
-            """.trimIndent()
-            
+            val jsonString = loadQuestionBankJson()
+                ?: error("QuestionBank.json missing from bundle resources")
             val json = Json { ignoreUnknownKeys = true }
             val dto = json.decodeFromString<QuestionBankDTO>(jsonString)
             
             val quizModules = dto.modules.map { moduleDTO ->
-                val difficulty = Module.Difficulty.values().find { it.value == moduleDTO.difficulty } ?: Module.Difficulty.MODERATE
+                val difficulty = Module.Difficulty.values()
+                    .firstOrNull { it.value == moduleDTO.difficulty }
+                    ?: Module.Difficulty.MODERATE
                 val summary = Module(
                     id = moduleDTO.id,
                     title = moduleDTO.title,
@@ -69,24 +65,47 @@ class QuestionBankService {
                 )
                 
                 val questions = moduleDTO.questions.map { questionDTO ->
-                    val options = questionDTO.options.map { optionDTO ->
-                        QuizOption(
-                            id = optionDTO.id.lowercase(),
-                            text = optionDTO.text,
-                            imageURL = null
-                        )
+                    var promptText = questionDTO.prompt
+                    var options = questionDTO.options.map { optionDTO ->
+                        QuizOption(id = optionDTO.id.lowercase(), text = optionDTO.text, imageURL = null)
+                    }
+
+                    if (options.isEmpty()) {
+                        parseEmbeddedOptions(promptText)?.let { parsed ->
+                            promptText = parsed.first
+                            options = parsed.second
+                        }
+                    }
+
+                    val promptImages = mutableListOf<String>()
+                    val explanationImages = mutableListOf<String>()
+                    val optionImageMap = mutableMapOf<String, String>()
+
+                    for (urlString in questionDTO.imageURLs) {
+                        val lower = urlString.lowercase()
+                        val optionId = optionIdentifier(lower)
+                        when {
+                            optionId != null -> optionImageMap[optionId] = urlString
+                            lower.contains("diss") || lower.contains("discuss") || lower.contains("explanation") -> explanationImages += urlString
+                            else -> promptImages += urlString
+                        }
+                    }
+
+                    val normalizedOptions = options.map { option ->
+                        val optionId = option.id.lowercase()
+                        option.copy(id = optionId, imageURL = optionImageMap[optionId])
                     }
                     
                     QuizQuestion(
                         id = questionDTO.id,
                         number = questionDTO.number,
-                        prompt = questionDTO.prompt,
-                        options = options,
+                        prompt = promptText,
+                        options = normalizedOptions,
                         correctOptionId = questionDTO.correctOptionId.lowercase(),
                         explanation = questionDTO.explanation,
                         references = questionDTO.references,
-                        imageURLs = questionDTO.imageURLs,
-                        explanationImageURLs = emptyList()
+                        imageURLs = promptImages,
+                        explanationImageURLs = explanationImages
                     )
                 }
                 
@@ -169,5 +188,32 @@ class QuestionBankService {
         return from.mapNotNull { reference ->
             sessionQuestion(reference)
         }
+    }
+
+    private val embeddedOptionRegex = Regex(" ([a-zA-Z])\\)")
+    private val optionIdentifierRegex = Regex("\\(([a-z])\\)")
+
+    private fun parseEmbeddedOptions(prompt: String): Pair<String, List<QuizOption>>? {
+        val matches = embeddedOptionRegex.findAll(prompt).toList()
+        if (matches.isEmpty()) return null
+
+        val options = matches.mapIndexed { index, match ->
+            val label = match.groupValues[1].lowercase()
+            val start = match.range.last + 1
+            val end = if (index + 1 < matches.size) matches[index + 1].range.first else prompt.length
+            val optionText = prompt.substring(start, end).trim()
+            QuizOption(id = label, text = optionText, imageURL = null)
+        }
+
+        val questionText = prompt.substring(0, matches.first().range.first).trim()
+        return if (questionText.isNotEmpty() && options.isNotEmpty()) {
+            questionText to options
+        } else {
+            null
+        }
+    }
+
+    private fun optionIdentifier(filename: String): String? {
+        return optionIdentifierRegex.find(filename)?.groupValues?.getOrNull(1)
     }
 }

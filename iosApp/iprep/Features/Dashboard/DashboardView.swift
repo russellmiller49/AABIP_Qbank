@@ -58,7 +58,7 @@ public struct DashboardView: View {
             if snapshot.recentActivityDescription == "Loading..." {
                 let moduleCount = environment.questionBankService.moduleCount()
                 let questionCount = environment.questionBankService.totalQuestionCount
-                let estimatedMinutes = modules.reduce(0) { $0 + $1.estimatedTimeMinutes }
+                let estimatedMinutes = modules.reduce(0) { $0 + Int($1.estimatedTimeMinutes) }
                 snapshot = DashboardSnapshot(
                     streakCount: max(3, moduleCount + 1),
                     correctRate: 0.78,

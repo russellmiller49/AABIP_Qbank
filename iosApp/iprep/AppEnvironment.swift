@@ -1,5 +1,8 @@
 import Combine
 import Foundation
+#if canImport(Shared)
+import Shared
+#endif
 
 @MainActor
 public final class AppEnvironment: ObservableObject {
@@ -18,6 +21,14 @@ public final class AppEnvironment: ObservableObject {
     let leaderboardService: LeaderboardServiceType
 
     private var cancellables: Set<AnyCancellable> = []
+#if canImport(Shared)
+    private let sharedCore: Shared.AppEnvironment
+    private var sharedSessionFlow: FlowPublisher<Shared.QuizSessionState?>?
+    private var sharedStudyStatesFlow: FlowPublisher<[String: Shared.QuestionStudyState]>?
+    private var sharedSessionID: UUID?
+    private var sharedSessionStartedAt: Date?
+    private var sharedSessionSignature: String?
+#endif
 
     @Published public private(set) var downloadedModuleIDs: Set<String> = []
     @Published private(set) var activeQuizSession: QuizSessionState?
@@ -26,7 +37,13 @@ public final class AppEnvironment: ObservableObject {
 
     private init() {
         let authService = AuthService()
+#if canImport(Shared)
+        let sharedCore = Shared.AppEnvironment.shared
+        self.sharedCore = sharedCore
+        let questionBankService = QuestionBankService(core: sharedCore.questionBankService)
+#else
         let questionBankService = QuestionBankService()
+#endif
         let firestoreService = FirestoreService(questionBank: questionBankService)
         let storageService = StorageService()
         let remoteConfigService = RemoteConfigService()
@@ -88,7 +105,139 @@ public final class AppEnvironment: ObservableObject {
                 self?.studyStates = states
             }
             .store(in: &cancellables)
+
+#if canImport(Shared)
+        bindSharedFlows()
+#endif
     }
+
+#if canImport(Shared)
+    private func bindSharedFlows() {
+        let sessionFlow = FlowPublisher(flow: sharedCore.quizSessionService.currentSession) { value in
+            value as? Shared.QuizSessionState
+        }
+        self.sharedSessionFlow = sessionFlow
+        sessionFlow.publisher
+            .receive(on: RunLoop.main)
+            .sink { [weak self] sharedSession in
+                guard let self else { return }
+                let mapped = self.mapSharedSession(sharedSession)
+                self.localStore.saveActiveQuizSession(mapped)
+            }
+            .store(in: &cancellables)
+
+        let studyStatesFlow = FlowPublisher(flow: sharedCore.studyPlannerService.questionStudyStates) { [weak self] value in
+            self?.sharedStudyStateMap(from: value) ?? [:]
+        }
+        self.sharedStudyStatesFlow = studyStatesFlow
+        studyStatesFlow.publisher
+            .receive(on: RunLoop.main)
+            .sink { [weak self] sharedStates in
+                self?.mergeSharedStudyStates(sharedStates)
+            }
+            .store(in: &cancellables)
+    }
+
+    private func mapSharedSession(_ sharedSession: Shared.QuizSessionState?) -> QuizSessionState? {
+        guard let sharedSession else {
+            sharedSessionID = nil
+            sharedSessionStartedAt = nil
+            sharedSessionSignature = nil
+            return nil
+        }
+
+        let signature = sessionSignature(for: sharedSession)
+        if sharedSessionSignature != signature {
+            sharedSessionSignature = signature
+            sharedSessionID = UUID()
+            sharedSessionStartedAt = Date()
+        }
+
+        let references = sharedSession.questions.map {
+            QuizSessionQuestionReference(moduleID: $0.module.id, questionID: $0.question.id)
+        }
+        let selections = swiftStringMap(from: sharedSession.answers)
+        let existing = localStore.activeQuizSession()
+
+        return QuizSessionState(
+            id: sharedSessionID ?? existing?.id ?? UUID(),
+            startedAt: existing?.startedAt ?? sharedSessionStartedAt ?? Date(),
+            lastUpdatedAt: Date(),
+            currentIndex: Int(sharedSession.currentQuestionIndex),
+            questionReferences: references,
+            selections: selections,
+            elapsedSeconds: existing?.elapsedSeconds ?? 0,
+            perQuestionSeconds: existing?.perQuestionSeconds ?? [:],
+            configuration: existing?.configuration ?? .default
+        )
+    }
+
+    private func mergeSharedStudyStates(_ sharedStates: [String: Shared.QuestionStudyState]) {
+        guard !sharedStates.isEmpty else { return }
+        var merged = localStore.allStudyStates()
+        for (questionID, sharedState) in sharedStates {
+            merged[questionID] = mergedStudyState(existing: merged[questionID], shared: sharedState)
+        }
+        localStore.updateStudyStates(merged)
+    }
+
+    private func mergedStudyState(existing: QuestionStudyState?, shared: Shared.QuestionStudyState) -> QuestionStudyState {
+        var state = existing ?? QuestionStudyState()
+        let timesAnswered = Int(shared.timesAnswered)
+        let timesCorrect = Int(shared.timesCorrect)
+        let incorrect = max(0, timesAnswered - timesCorrect)
+        state.totalReviews = max(state.totalReviews, timesAnswered)
+        state.correctCount = max(state.correctCount, timesCorrect)
+        state.incorrectCount = max(state.incorrectCount, incorrect)
+
+        if state.lastReviewedAt == nil {
+            state.lastReviewedAt = dateFromSharedMillis(shared.lastAnsweredAt)
+        }
+        if state.dueAt == nil, let lastReviewedAt = state.lastReviewedAt {
+            state.dueAt = lastReviewedAt
+        }
+        return state
+    }
+
+    private func sessionSignature(for session: Shared.QuizSessionState) -> String {
+        session.questions
+            .map { "\($0.module.id):\($0.question.id)" }
+            .joined(separator: "|")
+    }
+
+    private func sharedStudyStateMap(from value: Any?) -> [String: Shared.QuestionStudyState] {
+        if let typed = value as? [String: Shared.QuestionStudyState] {
+            return typed
+        }
+        guard let dictionary = value as? NSDictionary else { return [:] }
+        var result: [String: Shared.QuestionStudyState] = [:]
+        for (key, raw) in dictionary {
+            guard let key = key as? String, let raw = raw as? Shared.QuestionStudyState else { continue }
+            result[key] = raw
+        }
+        return result
+    }
+
+    private func swiftStringMap(from value: Any?) -> [String: String] {
+        if let typed = value as? [String: String] {
+            return typed
+        }
+        guard let dictionary = value as? NSDictionary else { return [:] }
+        var result: [String: String] = [:]
+        for (key, raw) in dictionary {
+            guard let key = key as? String, let raw = raw as? String else { continue }
+            result[key] = raw
+        }
+        return result
+    }
+
+    private func dateFromSharedMillis(_ millis: SharedLong?) -> Date? {
+        guard let millis else { return nil }
+        let value = millis.int64Value
+        guard value > 0 else { return nil }
+        return Date(timeIntervalSince1970: TimeInterval(value) / 1000)
+    }
+#endif
 
     func incorrectQuestionCount() -> Int {
         let sessions = localStore.completedQuizSessions()

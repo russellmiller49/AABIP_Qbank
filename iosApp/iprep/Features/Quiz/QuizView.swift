@@ -235,7 +235,7 @@ struct QuizView: View {
                 VStack(alignment: .leading, spacing: 24) {
                     header(for: sessionQuestion)
                     prompt(for: sessionQuestion)
-                    if !sessionQuestion.question.imageURLs.isEmpty {
+                    if !sessionQuestion.question.imageURLValues.isEmpty {
                         imageCarousel(for: sessionQuestion)
                     }
                     optionsList(for: sessionQuestion)
@@ -646,7 +646,7 @@ struct QuizView: View {
 
     private func imageCarousel(for sessionQuestion: QuizSessionQuestion) -> some View {
         TabView {
-            ForEach(sessionQuestion.question.imageURLs, id: \.self) { url in
+            ForEach(sessionQuestion.question.imageURLValues, id: \.self) { url in
                 AsyncImage(url: url) { phase in
                     switch phase {
                     case .empty:
@@ -706,7 +706,7 @@ struct QuizView: View {
                             }
                             Spacer()
                         }
-                        if let imageURL = option.imageURL {
+                        if let imageURL = option.imageURLValue {
                             AsyncImage(url: imageURL) { phase in
                                 switch phase {
                                 case .empty:
@@ -752,9 +752,9 @@ struct QuizView: View {
             Text(sessionQuestion.question.explanation)
                 .font(.body)
                 .foregroundStyle(Color.secondary)
-            if !sessionQuestion.question.explanationImageURLs.isEmpty {
+            if !sessionQuestion.question.explanationImageURLValues.isEmpty {
                 VStack(alignment: .leading, spacing: 12) {
-                    ForEach(sessionQuestion.question.explanationImageURLs, id: \.self) { url in
+                    ForEach(sessionQuestion.question.explanationImageURLValues, id: \.self) { url in
                         AsyncImage(url: url) { phase in
                             switch phase {
                             case .empty:

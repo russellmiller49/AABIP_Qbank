@@ -1,37 +1,31 @@
 import Foundation
+import Shared
 
-struct QuizOption: Identifiable, Hashable {
-    let id: String
-    let text: String
-    let imageURL: URL?
-}
+typealias QuizOption = Shared.QuizOption
+typealias QuizQuestion = Shared.QuizQuestion
+typealias QuizModule = Shared.QuizModule
+typealias QuizSessionQuestion = Shared.QuizSessionQuestion
 
-struct QuizQuestion: Identifiable, Hashable {
-    let id: String
-    let number: Int
-    let prompt: String
-    let options: [QuizOption]
-    let correctOptionId: String
-    let explanation: String
-    let references: [String]
-    let imageURLs: [URL]
-    let explanationImageURLs: [URL]
+extension QuizOption: Identifiable {}
 
-    func option(withId id: String) -> QuizOption? {
-        options.first { $0.id == id }
+extension QuizQuestion: Identifiable {}
+
+extension QuizModule: Identifiable {}
+
+extension QuizSessionQuestion: Identifiable {}
+
+extension QuizOption {
+    var imageURLValue: URL? {
+        imageURL.flatMap(URL.init(string:))
     }
 }
 
-struct QuizModule: Identifiable, Hashable {
-    let summary: Module
-    let questions: [QuizQuestion]
+extension QuizQuestion {
+    var imageURLValues: [URL] {
+        imageURLs.compactMap(URL.init(string:))
+    }
 
-    var id: String { summary.id }
-}
-
-struct QuizSessionQuestion: Identifiable, Hashable {
-    let module: QuizModule
-    let question: QuizQuestion
-
-    var id: String { question.id }
+    var explanationImageURLValues: [URL] {
+        explanationImageURLs.compactMap(URL.init(string:))
+    }
 }

@@ -1,0 +1,9 @@
+# This repo is primarily Kotlin (KMM) + Swift + Android.
+# Python is only used for small helper scripts under `scripts/`.
+#
+# Current scripts use ONLY the Python standard library, so there are no required
+# third-party dependencies.
+#
+# Optional developer tools (uncomment if you want them):
+# pre-commit>=3.0
+# ruff>=0.5

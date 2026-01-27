@@ -27,7 +27,7 @@ final class FirestoreService: FirestoreServiceType {
         try await Task.sleep(nanoseconds: 25_000_000)
         let moduleCount = questionBank.moduleCount()
         let questionCount = questionBank.totalQuestionCount
-        let estimatedMinutes = questionBank.moduleSummaries().reduce(0) { $0 + $1.estimatedTimeMinutes }
+        let estimatedMinutes = questionBank.moduleSummaries().reduce(0) { $0 + Int($1.estimatedTimeMinutes) }
         let activity = "\(moduleCount) modules • \(questionCount) questions ready • ~\(estimatedMinutes) min of study"
         // Use a deterministic derived rate to avoid feeling random between launches.
         let baselineRate = min(0.92, max(0.55, Double(questionCount % 100) / 100.0 + 0.6))
