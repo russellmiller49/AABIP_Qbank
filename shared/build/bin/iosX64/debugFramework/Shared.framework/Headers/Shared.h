@@ -1100,6 +1100,12 @@ __attribute__((swift_name("Greeter")))
 - (NSString *)helloName:(NSString *)name __attribute__((swift_name("hello(name:)")));
 @end
 
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("TimeKt")))
+@interface SharedTimeKt : SharedBase
++ (int64_t)currentTimeMillis __attribute__((swift_name("currentTimeMillis()")));
+@end
+
 __attribute__((swift_name("Kotlinx_serialization_coreSerializationStrategy")))
 @protocol SharedKotlinx_serialization_coreSerializationStrategy
 @required
