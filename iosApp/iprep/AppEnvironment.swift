@@ -122,6 +122,13 @@ public final class AppEnvironment: ObservableObject {
     }
 
 #if canImport(Shared)
+    /// Expose the shared duel engine for SwiftUI screens.
+    var duelEngineCore: Shared.DuelEngineService {
+        sharedCore.duelEngineService
+    }
+#endif
+
+#if canImport(Shared)
     private func bindSharedFlows() {
         let sessionFlow = FlowPublisher(flow: sharedCore.quizSessionService.currentSession) { value in
             value as? Shared.QuizSessionState

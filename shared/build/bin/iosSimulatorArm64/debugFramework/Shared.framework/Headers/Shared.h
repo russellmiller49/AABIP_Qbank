@@ -6,7 +6,7 @@
 #import <Foundation/NSString.h>
 #import <Foundation/NSValue.h>
 
-@class SharedAppEnvironmentCompanion, SharedFeatureFlagsService, SharedQuestionBankService, SharedQuizSessionService, SharedStudyPlannerService, SharedAppEnvironment, SharedAppRouteCompanion, SharedAppRoute, SharedAppRouteAnalytics, SharedKotlinArray<T>, SharedAppRouteDashboard, SharedAppRouteLeaderboard, SharedAppRouteProgressReport, SharedAppRouteQuestionExplorer, SharedQuizMode, SharedAppRouteQuizCompanion, SharedAppRouteQuiz, SharedAppRouteReview, SharedAppRouteSettings, SharedFeatureFlagKey, SharedFeatureFlagCompanion, SharedFeatureFlag, SharedKotlinEnumCompanion, SharedKotlinEnum<E>, SharedFeatureFlagKeyCompanion, SharedModuleDifficulty, SharedModuleCompanion, SharedModule, SharedModuleDifficultyCompanion, SharedStudyDifficulty, SharedQuestionStudyStateCompanion, SharedQuestionStudyState, SharedQuizModeCompanion, SharedQuizModeIncorrectOnly, SharedQuizModeModuleCompanion, SharedQuizModeModule, SharedQuizModeQuickStartCompanion, SharedQuizModeQuickStart, SharedQuizQuestion, SharedQuizModuleCompanion, SharedQuizModule, SharedQuizOptionCompanion, SharedQuizOption, SharedQuizQuestionCompanion, SharedQuizSessionConfigurationCompanion, SharedQuizSessionConfiguration, SharedQuizSessionQuestionCompanion, SharedQuizSessionQuestion, SharedQuizSessionQuestionReferenceCompanion, SharedQuizSessionQuestionReference, SharedQuizSessionStateCompanion, SharedQuizSessionState, SharedStudyDifficultyCompanion, SharedStudyProgressCompanion, SharedStudyProgress, SharedQuestionDTO, SharedModuleDTOCompanion, SharedModuleDTO, SharedOptionDTOCompanion, SharedOptionDTO, SharedQuestionBankDTOCompanion, SharedQuestionBankDTO, SharedQuestionDTOCompanion, SharedQuizSessionResults, SharedKotlinThrowable, SharedKotlinException, SharedKotlinRuntimeException, SharedKotlinIllegalStateException, SharedKotlinx_serialization_coreSerializersModule, SharedKotlinx_serialization_coreSerialKind, SharedKotlinNothing;
+@class SharedAppEnvironmentCompanion, SharedDuelEngineService, SharedDuelQuestionBankService, SharedFeatureFlagsService, SharedQuestionBankService, SharedQuizSessionService, SharedStudyPlannerService, SharedAppEnvironment, SharedAssetEntryCompanion, SharedAssetEntry, SharedAssetsManifest, SharedAssetsManifestCompanion, SharedAnswerResultCompanion, SharedAnswerResult, SharedAppRouteCompanion, SharedAppRoute, SharedAppRouteAnalytics, SharedKotlinArray<T>, SharedAppRouteDashboard, SharedAppRouteLeaderboard, SharedAppRouteProgressReport, SharedAppRouteQuestionExplorer, SharedQuizMode, SharedAppRouteQuizCompanion, SharedAppRouteQuiz, SharedAppRouteReview, SharedAppRouteSettings, SharedCompletedDuelCompanion, SharedCompletedDuel, SharedPlayerProfile, SharedDuelPersistenceDataCompanion, SharedDuelPersistenceData, SharedKotlinEnumCompanion, SharedKotlinEnum<E>, SharedDuelPhaseCompanion, SharedDuelPhase, SharedDuelQuestionCompanion, SharedDuelQuestion, SharedLifelineState, SharedDuelStateCompanion, SharedDuelState, SharedEnemy, SharedEnemyDefinitions, SharedFeatureFlagKey, SharedFeatureFlagCompanion, SharedFeatureFlag, SharedFeatureFlagKeyCompanion, SharedLifelineCompanion, SharedLifeline, SharedLifelineStateCompanion, SharedModuleDifficulty, SharedModuleCompanion, SharedModule, SharedModuleDifficultyCompanion, SharedPlayerProfileCompanion, SharedStudyDifficulty, SharedQuestionStudyStateCompanion, SharedQuestionStudyState, SharedQuizModeCompanion, SharedQuizModeIncorrectOnly, SharedQuizModeModuleCompanion, SharedQuizModeModule, SharedQuizModeQuickStartCompanion, SharedQuizModeQuickStart, SharedQuizQuestion, SharedQuizModuleCompanion, SharedQuizModule, SharedQuizOptionCompanion, SharedQuizOption, SharedQuizQuestionCompanion, SharedQuizSessionConfigurationCompanion, SharedQuizSessionConfiguration, SharedQuizSessionQuestionCompanion, SharedQuizSessionQuestion, SharedQuizSessionQuestionReferenceCompanion, SharedQuizSessionQuestionReference, SharedQuizSessionStateCompanion, SharedQuizSessionState, SharedStudyDifficultyCompanion, SharedStudyProgressCompanion, SharedStudyProgress, SharedKotlinRandom, SharedDuelEngineServiceCompanion, SharedDuelQuestionBankServiceCompanion, SharedQuestionDTO, SharedModuleDTOCompanion, SharedModuleDTO, SharedOptionDTOCompanion, SharedOptionDTO, SharedQuestionBankDTOCompanion, SharedQuestionBankDTO, SharedQuestionDTOCompanion, SharedQuizSessionResults, SharedAssetRegistry, SharedKotlinRandomDefault, SharedKotlinByteArray, SharedKotlinThrowable, SharedKotlinException, SharedKotlinRuntimeException, SharedKotlinIllegalStateException, SharedKotlinx_serialization_coreSerializersModule, SharedKotlinx_serialization_coreSerialKind, SharedKotlinNothing, SharedKotlinByteIterator;
 
 @protocol SharedKotlinx_serialization_coreKSerializer, SharedKotlinComparable, SharedKotlinx_coroutines_coreStateFlow, SharedKotlinx_serialization_coreEncoder, SharedKotlinx_serialization_coreSerialDescriptor, SharedKotlinx_serialization_coreSerializationStrategy, SharedKotlinx_serialization_coreDecoder, SharedKotlinx_serialization_coreDeserializationStrategy, SharedKotlinIterator, SharedKotlinx_coroutines_coreFlowCollector, SharedKotlinx_coroutines_coreFlow, SharedKotlinx_coroutines_coreSharedFlow, SharedKotlinx_serialization_coreCompositeEncoder, SharedKotlinAnnotation, SharedKotlinx_serialization_coreCompositeDecoder, SharedKotlinx_serialization_coreSerializersModuleCollector, SharedKotlinKClass, SharedKotlinKDeclarationContainer, SharedKotlinKAnnotatedElement, SharedKotlinKClassifier;
 
@@ -150,6 +150,8 @@ __attribute__((swift_name("AppEnvironment")))
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
 + (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
 @property (class, readonly, getter=companion) SharedAppEnvironmentCompanion *companion __attribute__((swift_name("companion")));
+@property (readonly) SharedDuelEngineService *duelEngineService __attribute__((swift_name("duelEngineService")));
+@property (readonly) SharedDuelQuestionBankService *duelQuestionBankService __attribute__((swift_name("duelQuestionBankService")));
 @property (readonly) SharedFeatureFlagsService *featureFlagsService __attribute__((swift_name("featureFlagsService")));
 @property (readonly) SharedQuestionBankService *questionBankService __attribute__((swift_name("questionBankService")));
 @property (readonly) SharedQuizSessionService *quizSessionService __attribute__((swift_name("quizSessionService")));
@@ -165,6 +167,107 @@ __attribute__((swift_name("AppEnvironment.Companion")))
 @property (class, readonly, getter=shared) SharedAppEnvironmentCompanion *shared __attribute__((swift_name("shared")));
 - (SharedAppEnvironment *)getInstance __attribute__((swift_name("getInstance()")));
 @property (readonly) SharedAppEnvironment *shared __attribute__((swift_name("shared")));
+@end
+
+
+/**
+ * @note annotations
+ *   kotlinx.serialization.Serializable
+*/
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("AssetEntry")))
+@interface SharedAssetEntry : SharedBase
+- (instancetype)initWithId:(NSString *)id category:(NSString *)category path:(NSString *)path source_pack:(NSString * _Nullable)source_pack __attribute__((swift_name("init(id:category:path:source_pack:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) SharedAssetEntryCompanion *companion __attribute__((swift_name("companion")));
+- (SharedAssetEntry *)doCopyId:(NSString *)id category:(NSString *)category path:(NSString *)path source_pack:(NSString * _Nullable)source_pack __attribute__((swift_name("doCopy(id:category:path:source_pack:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) NSString *category __attribute__((swift_name("category")));
+@property (readonly) NSString *id __attribute__((swift_name("id")));
+@property (readonly) NSString *path __attribute__((swift_name("path")));
+@property (readonly) NSString * _Nullable source_pack __attribute__((swift_name("source_pack")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("AssetEntry.Companion")))
+@interface SharedAssetEntryCompanion : SharedBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) SharedAssetEntryCompanion *shared __attribute__((swift_name("shared")));
+- (id<SharedKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("AssetRegistry")))
+@interface SharedAssetRegistry : SharedBase
+- (instancetype)initWithManifest:(SharedAssetsManifest *)manifest __attribute__((swift_name("init(manifest:)"))) __attribute__((objc_designated_initializer));
+- (NSString *)pathId:(NSString *)id __attribute__((swift_name("path(id:)")));
+- (NSString * _Nullable)tryPathId:(NSString *)id __attribute__((swift_name("tryPath(id:)")));
+@end
+
+
+/**
+ * @note annotations
+ *   kotlinx.serialization.Serializable
+*/
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("AssetsManifest")))
+@interface SharedAssetsManifest : SharedBase
+- (instancetype)initWithVersion:(int32_t)version root:(NSString *)root assets:(NSArray<SharedAssetEntry *> *)assets __attribute__((swift_name("init(version:root:assets:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) SharedAssetsManifestCompanion *companion __attribute__((swift_name("companion")));
+- (SharedAssetsManifest *)doCopyVersion:(int32_t)version root:(NSString *)root assets:(NSArray<SharedAssetEntry *> *)assets __attribute__((swift_name("doCopy(version:root:assets:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) NSArray<SharedAssetEntry *> *assets __attribute__((swift_name("assets")));
+@property (readonly) NSString *root __attribute__((swift_name("root")));
+@property (readonly) int32_t version __attribute__((swift_name("version")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("AssetsManifest.Companion")))
+@interface SharedAssetsManifestCompanion : SharedBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) SharedAssetsManifestCompanion *shared __attribute__((swift_name("shared")));
+- (id<SharedKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end
+
+
+/**
+ * @note annotations
+ *   kotlinx.serialization.Serializable
+*/
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("AnswerResult")))
+@interface SharedAnswerResult : SharedBase
+- (instancetype)initWithQuestionId:(NSString *)questionId playerAnswer:(BOOL)playerAnswer correctAnswer:(BOOL)correctAnswer isCorrect:(BOOL)isCorrect damageDealt:(int32_t)damageDealt damageTaken:(int32_t)damageTaken wasCrit:(BOOL)wasCrit streakMultiplier:(float)streakMultiplier __attribute__((swift_name("init(questionId:playerAnswer:correctAnswer:isCorrect:damageDealt:damageTaken:wasCrit:streakMultiplier:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) SharedAnswerResultCompanion *companion __attribute__((swift_name("companion")));
+- (SharedAnswerResult *)doCopyQuestionId:(NSString *)questionId playerAnswer:(BOOL)playerAnswer correctAnswer:(BOOL)correctAnswer isCorrect:(BOOL)isCorrect damageDealt:(int32_t)damageDealt damageTaken:(int32_t)damageTaken wasCrit:(BOOL)wasCrit streakMultiplier:(float)streakMultiplier __attribute__((swift_name("doCopy(questionId:playerAnswer:correctAnswer:isCorrect:damageDealt:damageTaken:wasCrit:streakMultiplier:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) BOOL correctAnswer __attribute__((swift_name("correctAnswer")));
+@property (readonly) int32_t damageDealt __attribute__((swift_name("damageDealt")));
+@property (readonly) int32_t damageTaken __attribute__((swift_name("damageTaken")));
+@property (readonly) BOOL isCorrect __attribute__((swift_name("isCorrect")));
+@property (readonly) BOOL playerAnswer __attribute__((swift_name("playerAnswer")));
+@property (readonly) NSString *questionId __attribute__((swift_name("questionId")));
+@property (readonly) float streakMultiplier __attribute__((swift_name("streakMultiplier")));
+@property (readonly) BOOL wasCrit __attribute__((swift_name("wasCrit")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("AnswerResult.Companion")))
+@interface SharedAnswerResultCompanion : SharedBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) SharedAnswerResultCompanion *shared __attribute__((swift_name("shared")));
+- (id<SharedKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
 @end
 
 
@@ -333,6 +436,232 @@ __attribute__((swift_name("AppRoute.Settings")))
  *   kotlinx.serialization.Serializable
 */
 __attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("CompletedDuel")))
+@interface SharedCompletedDuel : SharedBase
+- (instancetype)initWithId:(NSString *)id enemyId:(NSString *)enemyId won:(BOOL)won xpEarned:(int64_t)xpEarned correctCount:(int32_t)correctCount totalQuestions:(int32_t)totalQuestions maxStreak:(int32_t)maxStreak completedAt:(int64_t)completedAt durationSeconds:(int64_t)durationSeconds __attribute__((swift_name("init(id:enemyId:won:xpEarned:correctCount:totalQuestions:maxStreak:completedAt:durationSeconds:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) SharedCompletedDuelCompanion *companion __attribute__((swift_name("companion")));
+- (SharedCompletedDuel *)doCopyId:(NSString *)id enemyId:(NSString *)enemyId won:(BOOL)won xpEarned:(int64_t)xpEarned correctCount:(int32_t)correctCount totalQuestions:(int32_t)totalQuestions maxStreak:(int32_t)maxStreak completedAt:(int64_t)completedAt durationSeconds:(int64_t)durationSeconds __attribute__((swift_name("doCopy(id:enemyId:won:xpEarned:correctCount:totalQuestions:maxStreak:completedAt:durationSeconds:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) int64_t completedAt __attribute__((swift_name("completedAt")));
+@property (readonly) int32_t correctCount __attribute__((swift_name("correctCount")));
+@property (readonly) int64_t durationSeconds __attribute__((swift_name("durationSeconds")));
+@property (readonly) NSString *enemyId __attribute__((swift_name("enemyId")));
+@property (readonly) NSString *id __attribute__((swift_name("id")));
+@property (readonly) int32_t maxStreak __attribute__((swift_name("maxStreak")));
+@property (readonly) int32_t totalQuestions __attribute__((swift_name("totalQuestions")));
+@property (readonly) BOOL won __attribute__((swift_name("won")));
+@property (readonly) int64_t xpEarned __attribute__((swift_name("xpEarned")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("CompletedDuel.Companion")))
+@interface SharedCompletedDuelCompanion : SharedBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) SharedCompletedDuelCompanion *shared __attribute__((swift_name("shared")));
+- (id<SharedKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end
+
+
+/**
+ * @note annotations
+ *   kotlinx.serialization.Serializable
+*/
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("DuelPersistenceData")))
+@interface SharedDuelPersistenceData : SharedBase
+- (instancetype)initWithPlayerProfile:(SharedPlayerProfile *)playerProfile recentDuels:(NSArray<SharedCompletedDuel *> *)recentDuels recentlySeenQuestionIds:(NSArray<NSString *> *)recentlySeenQuestionIds recentlyMissedQuestionIds:(NSArray<NSString *> *)recentlyMissedQuestionIds __attribute__((swift_name("init(playerProfile:recentDuels:recentlySeenQuestionIds:recentlyMissedQuestionIds:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) SharedDuelPersistenceDataCompanion *companion __attribute__((swift_name("companion")));
+- (SharedDuelPersistenceData *)doCopyPlayerProfile:(SharedPlayerProfile *)playerProfile recentDuels:(NSArray<SharedCompletedDuel *> *)recentDuels recentlySeenQuestionIds:(NSArray<NSString *> *)recentlySeenQuestionIds recentlyMissedQuestionIds:(NSArray<NSString *> *)recentlyMissedQuestionIds __attribute__((swift_name("doCopy(playerProfile:recentDuels:recentlySeenQuestionIds:recentlyMissedQuestionIds:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) SharedPlayerProfile *playerProfile __attribute__((swift_name("playerProfile")));
+@property (readonly) NSArray<SharedCompletedDuel *> *recentDuels __attribute__((swift_name("recentDuels")));
+@property (readonly) NSArray<NSString *> *recentlyMissedQuestionIds __attribute__((swift_name("recentlyMissedQuestionIds")));
+@property (readonly) NSArray<NSString *> *recentlySeenQuestionIds __attribute__((swift_name("recentlySeenQuestionIds")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("DuelPersistenceData.Companion")))
+@interface SharedDuelPersistenceDataCompanion : SharedBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) SharedDuelPersistenceDataCompanion *shared __attribute__((swift_name("shared")));
+- (SharedDuelPersistenceData *)decodeJsonString:(NSString *)jsonString __attribute__((swift_name("decode(jsonString:)")));
+- (NSString *)encodeData:(SharedDuelPersistenceData *)data __attribute__((swift_name("encode(data:)")));
+- (id<SharedKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@property (readonly) SharedDuelPersistenceData *empty __attribute__((swift_name("empty")));
+@end
+
+__attribute__((swift_name("KotlinComparable")))
+@protocol SharedKotlinComparable
+@required
+- (int32_t)compareToOther:(id _Nullable)other __attribute__((swift_name("compareTo(other:)")));
+@end
+
+__attribute__((swift_name("KotlinEnum")))
+@interface SharedKotlinEnum<E> : SharedBase <SharedKotlinComparable>
+- (instancetype)initWithName:(NSString *)name ordinal:(int32_t)ordinal __attribute__((swift_name("init(name:ordinal:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) SharedKotlinEnumCompanion *companion __attribute__((swift_name("companion")));
+- (int32_t)compareToOther:(E)other __attribute__((swift_name("compareTo(other:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) NSString *name __attribute__((swift_name("name")));
+@property (readonly) int32_t ordinal __attribute__((swift_name("ordinal")));
+@end
+
+
+/**
+ * @note annotations
+ *   kotlinx.serialization.Serializable
+*/
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("DuelPhase")))
+@interface SharedDuelPhase : SharedKotlinEnum<SharedDuelPhase *>
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
+- (instancetype)initWithName:(NSString *)name ordinal:(int32_t)ordinal __attribute__((swift_name("init(name:ordinal:)"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
+@property (class, readonly, getter=companion) SharedDuelPhaseCompanion *companion __attribute__((swift_name("companion")));
+@property (class, readonly) SharedDuelPhase *intro __attribute__((swift_name("intro")));
+@property (class, readonly) SharedDuelPhase *question __attribute__((swift_name("question")));
+@property (class, readonly) SharedDuelPhase *feedback __attribute__((swift_name("feedback")));
+@property (class, readonly) SharedDuelPhase *end __attribute__((swift_name("end")));
++ (SharedKotlinArray<SharedDuelPhase *> *)values __attribute__((swift_name("values()")));
+@property (class, readonly) NSArray<SharedDuelPhase *> *entries __attribute__((swift_name("entries")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("DuelPhase.Companion")))
+@interface SharedDuelPhaseCompanion : SharedBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) SharedDuelPhaseCompanion *shared __attribute__((swift_name("shared")));
+- (id<SharedKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+- (id<SharedKotlinx_serialization_coreKSerializer>)serializerTypeParamsSerializers:(SharedKotlinArray<id<SharedKotlinx_serialization_coreKSerializer>> *)typeParamsSerializers __attribute__((swift_name("serializer(typeParamsSerializers:)")));
+@end
+
+
+/**
+ * @note annotations
+ *   kotlinx.serialization.Serializable
+*/
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("DuelQuestion")))
+@interface SharedDuelQuestion : SharedBase
+- (instancetype)initWithId:(NSString *)id topic:(NSString *)topic statement:(NSString *)statement answer:(BOOL)answer explanation:(NSString *)explanation source:(NSString *)source hint:(NSString *)hint __attribute__((swift_name("init(id:topic:statement:answer:explanation:source:hint:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) SharedDuelQuestionCompanion *companion __attribute__((swift_name("companion")));
+- (SharedDuelQuestion *)doCopyId:(NSString *)id topic:(NSString *)topic statement:(NSString *)statement answer:(BOOL)answer explanation:(NSString *)explanation source:(NSString *)source hint:(NSString *)hint __attribute__((swift_name("doCopy(id:topic:statement:answer:explanation:source:hint:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) BOOL answer __attribute__((swift_name("answer")));
+@property (readonly) NSString *explanation __attribute__((swift_name("explanation")));
+@property (readonly) NSString *hint __attribute__((swift_name("hint")));
+@property (readonly) NSString *id __attribute__((swift_name("id")));
+@property (readonly) NSString *source __attribute__((swift_name("source")));
+@property (readonly) NSString *statement __attribute__((swift_name("statement")));
+@property (readonly) NSString *topic __attribute__((swift_name("topic")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("DuelQuestion.Companion")))
+@interface SharedDuelQuestionCompanion : SharedBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) SharedDuelQuestionCompanion *shared __attribute__((swift_name("shared")));
+- (id<SharedKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end
+
+
+/**
+ * @note annotations
+ *   kotlinx.serialization.Serializable
+*/
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("DuelState")))
+@interface SharedDuelState : SharedBase
+- (instancetype)initWithId:(NSString *)id enemyId:(NSString *)enemyId enemyMaxHP:(int32_t)enemyMaxHP playerHP:(int32_t)playerHP enemyHP:(int32_t)enemyHP currentStreak:(int32_t)currentStreak maxStreak:(int32_t)maxStreak questionsAsked:(NSArray<NSString *> *)questionsAsked currentQuestion:(SharedDuelQuestion * _Nullable)currentQuestion phase:(SharedDuelPhase *)phase lifelines:(SharedLifelineState *)lifelines lastAnswer:(SharedAnswerResult * _Nullable)lastAnswer showingHint:(BOOL)showingHint startTime:(int64_t)startTime xpEarned:(int64_t)xpEarned correctCount:(int32_t)correctCount incorrectCount:(int32_t)incorrectCount __attribute__((swift_name("init(id:enemyId:enemyMaxHP:playerHP:enemyHP:currentStreak:maxStreak:questionsAsked:currentQuestion:phase:lifelines:lastAnswer:showingHint:startTime:xpEarned:correctCount:incorrectCount:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) SharedDuelStateCompanion *companion __attribute__((swift_name("companion")));
+- (SharedDuelState *)doCopyId:(NSString *)id enemyId:(NSString *)enemyId enemyMaxHP:(int32_t)enemyMaxHP playerHP:(int32_t)playerHP enemyHP:(int32_t)enemyHP currentStreak:(int32_t)currentStreak maxStreak:(int32_t)maxStreak questionsAsked:(NSArray<NSString *> *)questionsAsked currentQuestion:(SharedDuelQuestion * _Nullable)currentQuestion phase:(SharedDuelPhase *)phase lifelines:(SharedLifelineState *)lifelines lastAnswer:(SharedAnswerResult * _Nullable)lastAnswer showingHint:(BOOL)showingHint startTime:(int64_t)startTime xpEarned:(int64_t)xpEarned correctCount:(int32_t)correctCount incorrectCount:(int32_t)incorrectCount __attribute__((swift_name("doCopy(id:enemyId:enemyMaxHP:playerHP:enemyHP:currentStreak:maxStreak:questionsAsked:currentQuestion:phase:lifelines:lastAnswer:showingHint:startTime:xpEarned:correctCount:incorrectCount:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) int32_t correctCount __attribute__((swift_name("correctCount")));
+@property (readonly) SharedDuelQuestion * _Nullable currentQuestion __attribute__((swift_name("currentQuestion")));
+@property (readonly) int32_t currentStreak __attribute__((swift_name("currentStreak")));
+@property (readonly) SharedEnemy * _Nullable enemy __attribute__((swift_name("enemy")));
+@property (readonly) int32_t enemyHP __attribute__((swift_name("enemyHP")));
+@property (readonly) NSString *enemyId __attribute__((swift_name("enemyId")));
+@property (readonly) int32_t enemyMaxHP __attribute__((swift_name("enemyMaxHP")));
+@property (readonly) NSString *id __attribute__((swift_name("id")));
+@property (readonly) int32_t incorrectCount __attribute__((swift_name("incorrectCount")));
+@property (readonly) BOOL isEnded __attribute__((swift_name("isEnded")));
+@property (readonly) BOOL isPlayerDefeated __attribute__((swift_name("isPlayerDefeated")));
+@property (readonly) BOOL isPlayerVictory __attribute__((swift_name("isPlayerVictory")));
+@property (readonly) SharedAnswerResult * _Nullable lastAnswer __attribute__((swift_name("lastAnswer")));
+@property (readonly) SharedLifelineState *lifelines __attribute__((swift_name("lifelines")));
+@property (readonly) int32_t maxStreak __attribute__((swift_name("maxStreak")));
+@property (readonly) SharedDuelPhase *phase __attribute__((swift_name("phase")));
+@property (readonly) int32_t playerHP __attribute__((swift_name("playerHP")));
+@property (readonly) NSArray<NSString *> *questionsAsked __attribute__((swift_name("questionsAsked")));
+@property (readonly) BOOL showingHint __attribute__((swift_name("showingHint")));
+@property (readonly) int64_t startTime __attribute__((swift_name("startTime")));
+@property (readonly) int32_t totalAnswered __attribute__((swift_name("totalAnswered")));
+@property (readonly) int64_t xpEarned __attribute__((swift_name("xpEarned")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("DuelState.Companion")))
+@interface SharedDuelStateCompanion : SharedBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) SharedDuelStateCompanion *shared __attribute__((swift_name("shared")));
+- (id<SharedKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("Enemy")))
+@interface SharedEnemy : SharedBase
+- (BOOL)isUnlockedProfile:(SharedPlayerProfile *)profile __attribute__((swift_name("isUnlocked(profile:)")));
+- (NSString * _Nullable)lockReasonProfile:(SharedPlayerProfile *)profile __attribute__((swift_name("lockReason(profile:)")));
+@property (readonly) NSString *description_ __attribute__((swift_name("description_")));
+@property (readonly) NSString *displayName __attribute__((swift_name("displayName")));
+@property (readonly) NSString *iconName __attribute__((swift_name("iconName")));
+@property (readonly) NSString *id __attribute__((swift_name("id")));
+@property (readonly) int32_t maxHP __attribute__((swift_name("maxHP")));
+@property (readonly) NSString *name __attribute__((swift_name("name")));
+@property (readonly) NSString *themeColor __attribute__((swift_name("themeColor")));
+@property (readonly) NSString *title __attribute__((swift_name("title")));
+@property (readonly) NSArray<NSString *> *topicBiases __attribute__((swift_name("topicBiases")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("EnemyDefinitions")))
+@interface SharedEnemyDefinitions : SharedBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)enemyDefinitions __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) SharedEnemyDefinitions *shared __attribute__((swift_name("shared")));
+- (SharedEnemy * _Nullable)enemyId:(NSString *)id __attribute__((swift_name("enemy(id:)")));
+- (NSArray<SharedEnemy *> *)unlockedEnemiesProfile:(SharedPlayerProfile *)profile __attribute__((swift_name("unlockedEnemies(profile:)")));
+@property (readonly) NSArray<SharedEnemy *> *allEnemies __attribute__((swift_name("allEnemies")));
+@end
+
+
+/**
+ * @note annotations
+ *   kotlinx.serialization.Serializable
+*/
+__attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("FeatureFlag")))
 @interface SharedFeatureFlag : SharedBase
 - (instancetype)initWithKey:(SharedFeatureFlagKey *)key enabled:(BOOL)enabled description:(NSString * _Nullable)description defaultValue:(BOOL)defaultValue __attribute__((swift_name("init(key:enabled:description:defaultValue:)"))) __attribute__((objc_designated_initializer));
@@ -355,24 +684,6 @@ __attribute__((swift_name("FeatureFlag.Companion")))
 + (instancetype)companion __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) SharedFeatureFlagCompanion *shared __attribute__((swift_name("shared")));
 - (id<SharedKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
-@end
-
-__attribute__((swift_name("KotlinComparable")))
-@protocol SharedKotlinComparable
-@required
-- (int32_t)compareToOther:(id _Nullable)other __attribute__((swift_name("compareTo(other:)")));
-@end
-
-__attribute__((swift_name("KotlinEnum")))
-@interface SharedKotlinEnum<E> : SharedBase <SharedKotlinComparable>
-- (instancetype)initWithName:(NSString *)name ordinal:(int32_t)ordinal __attribute__((swift_name("init(name:ordinal:)"))) __attribute__((objc_designated_initializer));
-@property (class, readonly, getter=companion) SharedKotlinEnumCompanion *companion __attribute__((swift_name("companion")));
-- (int32_t)compareToOther:(E)other __attribute__((swift_name("compareTo(other:)")));
-- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-- (NSUInteger)hash __attribute__((swift_name("hash()")));
-- (NSString *)description __attribute__((swift_name("description()")));
-@property (readonly) NSString *name __attribute__((swift_name("name")));
-@property (readonly) int32_t ordinal __attribute__((swift_name("ordinal")));
 @end
 
 
@@ -410,6 +721,68 @@ __attribute__((swift_name("FeatureFlagKey.Companion")))
 @property (class, readonly, getter=shared) SharedFeatureFlagKeyCompanion *shared __attribute__((swift_name("shared")));
 - (id<SharedKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
 - (id<SharedKotlinx_serialization_coreKSerializer>)serializerTypeParamsSerializers:(SharedKotlinArray<id<SharedKotlinx_serialization_coreKSerializer>> *)typeParamsSerializers __attribute__((swift_name("serializer(typeParamsSerializers:)")));
+@end
+
+
+/**
+ * @note annotations
+ *   kotlinx.serialization.Serializable
+*/
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("Lifeline")))
+@interface SharedLifeline : SharedKotlinEnum<SharedLifeline *>
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
+- (instancetype)initWithName:(NSString *)name ordinal:(int32_t)ordinal __attribute__((swift_name("init(name:ordinal:)"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
+@property (class, readonly, getter=companion) SharedLifelineCompanion *companion __attribute__((swift_name("companion")));
+@property (class, readonly) SharedLifeline *hint __attribute__((swift_name("hint")));
+@property (class, readonly) SharedLifeline *shield __attribute__((swift_name("shield")));
+@property (class, readonly) SharedLifeline *doubleTap __attribute__((swift_name("doubleTap")));
++ (SharedKotlinArray<SharedLifeline *> *)values __attribute__((swift_name("values()")));
+@property (class, readonly) NSArray<SharedLifeline *> *entries __attribute__((swift_name("entries")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("Lifeline.Companion")))
+@interface SharedLifelineCompanion : SharedBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) SharedLifelineCompanion *shared __attribute__((swift_name("shared")));
+- (id<SharedKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+- (id<SharedKotlinx_serialization_coreKSerializer>)serializerTypeParamsSerializers:(SharedKotlinArray<id<SharedKotlinx_serialization_coreKSerializer>> *)typeParamsSerializers __attribute__((swift_name("serializer(typeParamsSerializers:)")));
+@end
+
+
+/**
+ * @note annotations
+ *   kotlinx.serialization.Serializable
+*/
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("LifelineState")))
+@interface SharedLifelineState : SharedBase
+- (instancetype)initWithHintUsed:(BOOL)hintUsed shieldUsed:(BOOL)shieldUsed shieldActive:(BOOL)shieldActive doubleTapUsed:(BOOL)doubleTapUsed doubleTapActive:(BOOL)doubleTapActive __attribute__((swift_name("init(hintUsed:shieldUsed:shieldActive:doubleTapUsed:doubleTapActive:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) SharedLifelineStateCompanion *companion __attribute__((swift_name("companion")));
+- (SharedLifelineState *)doCopyHintUsed:(BOOL)hintUsed shieldUsed:(BOOL)shieldUsed shieldActive:(BOOL)shieldActive doubleTapUsed:(BOOL)doubleTapUsed doubleTapActive:(BOOL)doubleTapActive __attribute__((swift_name("doCopy(hintUsed:shieldUsed:shieldActive:doubleTapUsed:doubleTapActive:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) BOOL doubleTapActive __attribute__((swift_name("doubleTapActive")));
+@property (readonly) BOOL doubleTapUsed __attribute__((swift_name("doubleTapUsed")));
+@property (readonly) BOOL hintUsed __attribute__((swift_name("hintUsed")));
+@property (readonly) int32_t remainingCount __attribute__((swift_name("remainingCount")));
+@property (readonly) BOOL shieldActive __attribute__((swift_name("shieldActive")));
+@property (readonly) BOOL shieldUsed __attribute__((swift_name("shieldUsed")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("LifelineState.Companion")))
+@interface SharedLifelineStateCompanion : SharedBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) SharedLifelineStateCompanion *shared __attribute__((swift_name("shared")));
+- (id<SharedKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
 @end
 
 
@@ -474,6 +847,46 @@ __attribute__((swift_name("Module.DifficultyCompanion")))
 @property (class, readonly, getter=shared) SharedModuleDifficultyCompanion *shared __attribute__((swift_name("shared")));
 - (id<SharedKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
 - (id<SharedKotlinx_serialization_coreKSerializer>)serializerTypeParamsSerializers:(SharedKotlinArray<id<SharedKotlinx_serialization_coreKSerializer>> *)typeParamsSerializers __attribute__((swift_name("serializer(typeParamsSerializers:)")));
+@end
+
+
+/**
+ * @note annotations
+ *   kotlinx.serialization.Serializable
+*/
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("PlayerProfile")))
+@interface SharedPlayerProfile : SharedBase
+- (instancetype)initWithId:(NSString *)id xp:(int64_t)xp level:(int32_t)level duelsWon:(int32_t)duelsWon duelsLost:(int32_t)duelsLost totalCorrect:(int32_t)totalCorrect totalAnswered:(int32_t)totalAnswered longestStreak:(int32_t)longestStreak defeatedEnemies:(NSSet<NSString *> *)defeatedEnemies topicMastery:(NSDictionary<NSString *, SharedFloat *> *)topicMastery __attribute__((swift_name("init(id:xp:level:duelsWon:duelsLost:totalCorrect:totalAnswered:longestStreak:defeatedEnemies:topicMastery:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) SharedPlayerProfileCompanion *companion __attribute__((swift_name("companion")));
+- (SharedPlayerProfile *)doCopyId:(NSString *)id xp:(int64_t)xp level:(int32_t)level duelsWon:(int32_t)duelsWon duelsLost:(int32_t)duelsLost totalCorrect:(int32_t)totalCorrect totalAnswered:(int32_t)totalAnswered longestStreak:(int32_t)longestStreak defeatedEnemies:(NSSet<NSString *> *)defeatedEnemies topicMastery:(NSDictionary<NSString *, SharedFloat *> *)topicMastery __attribute__((swift_name("doCopy(id:xp:level:duelsWon:duelsLost:totalCorrect:totalAnswered:longestStreak:defeatedEnemies:topicMastery:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) NSSet<NSString *> *defeatedEnemies __attribute__((swift_name("defeatedEnemies")));
+@property (readonly) int32_t duelsLost __attribute__((swift_name("duelsLost")));
+@property (readonly) int32_t duelsWon __attribute__((swift_name("duelsWon")));
+@property (readonly) NSString *id __attribute__((swift_name("id")));
+@property (readonly) int32_t level __attribute__((swift_name("level")));
+@property (readonly) float levelProgress __attribute__((swift_name("levelProgress")));
+@property (readonly) int32_t longestStreak __attribute__((swift_name("longestStreak")));
+@property (readonly) NSDictionary<NSString *, SharedFloat *> *topicMastery __attribute__((swift_name("topicMastery")));
+@property (readonly) int32_t totalAnswered __attribute__((swift_name("totalAnswered")));
+@property (readonly) int32_t totalCorrect __attribute__((swift_name("totalCorrect")));
+@property (readonly) int64_t xp __attribute__((swift_name("xp")));
+@property (readonly) int64_t xpToNextLevel __attribute__((swift_name("xpToNextLevel")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("PlayerProfile.Companion")))
+@interface SharedPlayerProfileCompanion : SharedBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) SharedPlayerProfileCompanion *shared __attribute__((swift_name("shared")));
+- (int32_t)levelForXPXp:(int64_t)xp __attribute__((swift_name("levelForXP(xp:)")));
+- (id<SharedKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+- (int64_t)xpForLevelLevel:(int32_t)level __attribute__((swift_name("xpForLevel(level:)")));
 @end
 
 
@@ -889,6 +1302,72 @@ __attribute__((swift_name("StudyProgress.Companion")))
 @end
 
 __attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("DuelEngineService")))
+@interface SharedDuelEngineService : SharedBase
+- (instancetype)initWithQuestionBankService:(SharedDuelQuestionBankService *)questionBankService rng:(SharedKotlinRandom *)rng __attribute__((swift_name("init(questionBankService:rng:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) SharedDuelEngineServiceCompanion *companion __attribute__((swift_name("companion")));
+- (void)endDuel __attribute__((swift_name("endDuel()")));
+- (SharedCompletedDuel * _Nullable)getCompletedDuel __attribute__((swift_name("getCompletedDuel()")));
+- (void)proceedToNextQuestion __attribute__((swift_name("proceedToNextQuestion()")));
+- (void)proceedToQuestion __attribute__((swift_name("proceedToQuestion()")));
+- (NSArray<NSString *> *)recentlyMissedQuestionIds __attribute__((swift_name("recentlyMissedQuestionIds()")));
+- (NSArray<NSString *> *)recentlySeenQuestionIds __attribute__((swift_name("recentlySeenQuestionIds()")));
+- (void)setPlayerContextRecentSeen:(NSArray<NSString *> *)recentSeen recentMissed:(NSArray<NSString *> *)recentMissed weakTopics:(NSArray<NSString *> *)weakTopics __attribute__((swift_name("setPlayerContext(recentSeen:recentMissed:weakTopics:)")));
+- (void)showFeedback __attribute__((swift_name("showFeedback()")));
+- (SharedDuelState *)startDuelEnemy:(SharedEnemy *)enemy __attribute__((swift_name("startDuel(enemy:)")));
+- (SharedAnswerResult * _Nullable)submitAnswerPlayerAnswer:(BOOL)playerAnswer __attribute__((swift_name("submitAnswer(playerAnswer:)")));
+- (BOOL)useDoubleTap __attribute__((swift_name("useDoubleTap()")));
+- (NSString * _Nullable)useHint __attribute__((swift_name("useHint()")));
+- (BOOL)useShield __attribute__((swift_name("useShield()")));
+@property (readonly) id<SharedKotlinx_coroutines_coreStateFlow> currentDuel __attribute__((swift_name("currentDuel")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("DuelEngineService.Companion")))
+@interface SharedDuelEngineServiceCompanion : SharedBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) SharedDuelEngineServiceCompanion *shared __attribute__((swift_name("shared")));
+@property (readonly) float BASE_CRIT_CHANCE __attribute__((swift_name("BASE_CRIT_CHANCE")));
+@property (readonly) int32_t BASE_DAMAGE __attribute__((swift_name("BASE_DAMAGE")));
+@property (readonly) float CRIT_CHANCE_PER_STREAK __attribute__((swift_name("CRIT_CHANCE_PER_STREAK")));
+@property (readonly) float CRIT_MULTIPLIER __attribute__((swift_name("CRIT_MULTIPLIER")));
+@property (readonly) float DOUBLE_TAP_BONUS __attribute__((swift_name("DOUBLE_TAP_BONUS")));
+@property (readonly) float MAX_CRIT_CHANCE __attribute__((swift_name("MAX_CRIT_CHANCE")));
+@property (readonly) int32_t PLAYER_MAX_HP __attribute__((swift_name("PLAYER_MAX_HP")));
+@property (readonly) float SHIELD_REDUCTION __attribute__((swift_name("SHIELD_REDUCTION")));
+@property (readonly) int64_t XP_PER_CORRECT __attribute__((swift_name("XP_PER_CORRECT")));
+@property (readonly) int64_t XP_STREAK_BONUS __attribute__((swift_name("XP_STREAK_BONUS")));
+@property (readonly) int64_t XP_WIN_BONUS __attribute__((swift_name("XP_WIN_BONUS")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("DuelQuestionBankService")))
+@interface SharedDuelQuestionBankService : SharedBase
+- (instancetype)initWithRng:(SharedKotlinRandom *)rng __attribute__((swift_name("init(rng:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) SharedDuelQuestionBankServiceCompanion *companion __attribute__((swift_name("companion")));
+- (NSArray<SharedDuelQuestion *> *)allQuestions __attribute__((swift_name("allQuestions()")));
+- (void)loadQuestionsJsonString:(NSString *)jsonString __attribute__((swift_name("loadQuestions(jsonString:)")));
+- (SharedDuelQuestion * _Nullable)selectQuestionEnemy:(SharedEnemy *)enemy alreadySeen:(NSArray<NSString *> *)alreadySeen recentlySeen:(NSArray<NSString *> *)recentlySeen recentlyMissed:(NSArray<NSString *> *)recentlyMissed weakTopics:(NSArray<NSString *> *)weakTopics __attribute__((swift_name("selectQuestion(enemy:alreadySeen:recentlySeen:recentlyMissed:weakTopics:)")));
+- (NSSet<NSString *> *)topics __attribute__((swift_name("topics()")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("DuelQuestionBankService.Companion")))
+@interface SharedDuelQuestionBankServiceCompanion : SharedBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) SharedDuelQuestionBankServiceCompanion *shared __attribute__((swift_name("shared")));
+@property (readonly) float ENEMY_BIAS_WEIGHT __attribute__((swift_name("ENEMY_BIAS_WEIGHT")));
+@property (readonly) int32_t GLOBAL_RECENT_BAN __attribute__((swift_name("GLOBAL_RECENT_BAN")));
+@property (readonly) float MISSED_WEIGHT __attribute__((swift_name("MISSED_WEIGHT")));
+@property (readonly) int32_t RELAXED_BAN __attribute__((swift_name("RELAXED_BAN")));
+@property (readonly) float WEAKNESS_WEIGHT __attribute__((swift_name("WEAKNESS_WEIGHT")));
+@end
+
+__attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("FeatureFlagsService")))
 @interface SharedFeatureFlagsService : SharedBase
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
@@ -1101,6 +1580,19 @@ __attribute__((swift_name("Greeter")))
 @end
 
 __attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("AssetRegistryKt")))
+@interface SharedAssetRegistryKt : SharedBase
++ (SharedAssetRegistry *)loadAssetRegistry __attribute__((swift_name("loadAssetRegistry()")));
++ (SharedAssetRegistry * _Nullable)tryLoadAssetRegistry __attribute__((swift_name("tryLoadAssetRegistry()")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("DuelPersistenceKt")))
+@interface SharedDuelPersistenceKt : SharedBase
++ (SharedPlayerProfile *)updateMasteryProfile:(SharedPlayerProfile *)profile topic:(NSString *)topic isCorrect:(BOOL)isCorrect __attribute__((swift_name("updateMastery(profile:topic:isCorrect:)")));
+@end
+
+__attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("TimeKt")))
 @interface SharedTimeKt : SharedBase
 + (int64_t)currentTimeMillis __attribute__((swift_name("currentTimeMillis()")));
@@ -1144,6 +1636,56 @@ __attribute__((swift_name("KotlinEnumCompanion")))
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)companion __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) SharedKotlinEnumCompanion *shared __attribute__((swift_name("shared")));
+@end
+
+
+/**
+ * @note annotations
+ *   kotlin.SinceKotlin(version="1.3")
+*/
+__attribute__((swift_name("KotlinRandom")))
+@interface SharedKotlinRandom : SharedBase
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
++ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
+@property (class, readonly, getter=companion) SharedKotlinRandomDefault *companion __attribute__((swift_name("companion")));
+- (int32_t)nextBitsBitCount:(int32_t)bitCount __attribute__((swift_name("nextBits(bitCount:)")));
+- (BOOL)nextBoolean __attribute__((swift_name("nextBoolean()")));
+- (SharedKotlinByteArray *)nextBytesArray:(SharedKotlinByteArray *)array __attribute__((swift_name("nextBytes(array:)")));
+- (SharedKotlinByteArray *)nextBytesSize:(int32_t)size __attribute__((swift_name("nextBytes(size:)")));
+- (SharedKotlinByteArray *)nextBytesArray:(SharedKotlinByteArray *)array fromIndex:(int32_t)fromIndex toIndex:(int32_t)toIndex __attribute__((swift_name("nextBytes(array:fromIndex:toIndex:)")));
+- (double)nextDouble __attribute__((swift_name("nextDouble()")));
+- (double)nextDoubleUntil:(double)until __attribute__((swift_name("nextDouble(until:)")));
+- (double)nextDoubleFrom:(double)from until:(double)until __attribute__((swift_name("nextDouble(from:until:)")));
+- (float)nextFloat __attribute__((swift_name("nextFloat()")));
+- (int32_t)nextInt __attribute__((swift_name("nextInt()")));
+- (int32_t)nextIntUntil:(int32_t)until __attribute__((swift_name("nextInt(until:)")));
+- (int32_t)nextIntFrom:(int32_t)from until:(int32_t)until __attribute__((swift_name("nextInt(from:until:)")));
+- (int64_t)nextLong __attribute__((swift_name("nextLong()")));
+- (int64_t)nextLongUntil:(int64_t)until __attribute__((swift_name("nextLong(until:)")));
+- (int64_t)nextLongFrom:(int64_t)from until:(int64_t)until __attribute__((swift_name("nextLong(from:until:)")));
+@end
+
+__attribute__((swift_name("Kotlinx_coroutines_coreFlow")))
+@protocol SharedKotlinx_coroutines_coreFlow
+@required
+
+/**
+ * @note This method converts instances of CancellationException to errors.
+ * Other uncaught Kotlin exceptions are fatal.
+*/
+- (void)collectCollector:(id<SharedKotlinx_coroutines_coreFlowCollector>)collector completionHandler:(void (^)(NSError * _Nullable))completionHandler __attribute__((swift_name("collect(collector:completionHandler:)")));
+@end
+
+__attribute__((swift_name("Kotlinx_coroutines_coreSharedFlow")))
+@protocol SharedKotlinx_coroutines_coreSharedFlow <SharedKotlinx_coroutines_coreFlow>
+@required
+@property (readonly) NSArray<id> *replayCache __attribute__((swift_name("replayCache")));
+@end
+
+__attribute__((swift_name("Kotlinx_coroutines_coreStateFlow")))
+@protocol SharedKotlinx_coroutines_coreStateFlow <SharedKotlinx_coroutines_coreSharedFlow>
+@required
+@property (readonly) id _Nullable value __attribute__((swift_name("value")));
 @end
 
 __attribute__((swift_name("KotlinThrowable")))
@@ -1205,29 +1747,6 @@ __attribute__((swift_name("KotlinCancellationException")))
 - (instancetype)initWithMessage:(NSString * _Nullable)message __attribute__((swift_name("init(message:)"))) __attribute__((objc_designated_initializer));
 - (instancetype)initWithCause:(SharedKotlinThrowable * _Nullable)cause __attribute__((swift_name("init(cause:)"))) __attribute__((objc_designated_initializer));
 - (instancetype)initWithMessage:(NSString * _Nullable)message cause:(SharedKotlinThrowable * _Nullable)cause __attribute__((swift_name("init(message:cause:)"))) __attribute__((objc_designated_initializer));
-@end
-
-__attribute__((swift_name("Kotlinx_coroutines_coreFlow")))
-@protocol SharedKotlinx_coroutines_coreFlow
-@required
-
-/**
- * @note This method converts instances of CancellationException to errors.
- * Other uncaught Kotlin exceptions are fatal.
-*/
-- (void)collectCollector:(id<SharedKotlinx_coroutines_coreFlowCollector>)collector completionHandler:(void (^)(NSError * _Nullable))completionHandler __attribute__((swift_name("collect(collector:completionHandler:)")));
-@end
-
-__attribute__((swift_name("Kotlinx_coroutines_coreSharedFlow")))
-@protocol SharedKotlinx_coroutines_coreSharedFlow <SharedKotlinx_coroutines_coreFlow>
-@required
-@property (readonly) NSArray<id> *replayCache __attribute__((swift_name("replayCache")));
-@end
-
-__attribute__((swift_name("Kotlinx_coroutines_coreStateFlow")))
-@protocol SharedKotlinx_coroutines_coreStateFlow <SharedKotlinx_coroutines_coreSharedFlow>
-@required
-@property (readonly) id _Nullable value __attribute__((swift_name("value")));
 @end
 
 __attribute__((swift_name("Kotlinx_serialization_coreEncoder")))
@@ -1378,6 +1897,45 @@ __attribute__((swift_name("KotlinIterator")))
 - (id _Nullable)next __attribute__((swift_name("next()")));
 @end
 
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("KotlinRandom.Default")))
+@interface SharedKotlinRandomDefault : SharedKotlinRandom
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
++ (instancetype)new __attribute__((unavailable));
++ (instancetype)default_ __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) SharedKotlinRandomDefault *shared __attribute__((swift_name("shared")));
+- (int32_t)nextBitsBitCount:(int32_t)bitCount __attribute__((swift_name("nextBits(bitCount:)")));
+- (BOOL)nextBoolean __attribute__((swift_name("nextBoolean()")));
+- (SharedKotlinByteArray *)nextBytesArray:(SharedKotlinByteArray *)array __attribute__((swift_name("nextBytes(array:)")));
+- (SharedKotlinByteArray *)nextBytesSize:(int32_t)size __attribute__((swift_name("nextBytes(size:)")));
+- (SharedKotlinByteArray *)nextBytesArray:(SharedKotlinByteArray *)array fromIndex:(int32_t)fromIndex toIndex:(int32_t)toIndex __attribute__((swift_name("nextBytes(array:fromIndex:toIndex:)")));
+- (double)nextDouble __attribute__((swift_name("nextDouble()")));
+- (double)nextDoubleUntil:(double)until __attribute__((swift_name("nextDouble(until:)")));
+- (double)nextDoubleFrom:(double)from until:(double)until __attribute__((swift_name("nextDouble(from:until:)")));
+- (float)nextFloat __attribute__((swift_name("nextFloat()")));
+- (int32_t)nextInt __attribute__((swift_name("nextInt()")));
+- (int32_t)nextIntUntil:(int32_t)until __attribute__((swift_name("nextInt(until:)")));
+- (int32_t)nextIntFrom:(int32_t)from until:(int32_t)until __attribute__((swift_name("nextInt(from:until:)")));
+- (int64_t)nextLong __attribute__((swift_name("nextLong()")));
+- (int64_t)nextLongUntil:(int64_t)until __attribute__((swift_name("nextLong(until:)")));
+- (int64_t)nextLongFrom:(int64_t)from until:(int64_t)until __attribute__((swift_name("nextLong(from:until:)")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("KotlinByteArray")))
+@interface SharedKotlinByteArray : SharedBase
++ (instancetype)arrayWithSize:(int32_t)size __attribute__((swift_name("init(size:)")));
++ (instancetype)arrayWithSize:(int32_t)size init:(SharedByte *(^)(SharedInt *))init __attribute__((swift_name("init(size:init:)")));
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
+- (int8_t)getIndex:(int32_t)index __attribute__((swift_name("get(index:)")));
+- (SharedKotlinByteIterator *)iterator __attribute__((swift_name("iterator()")));
+- (void)setIndex:(int32_t)index value:(int8_t)value __attribute__((swift_name("set(index:value:)")));
+@property (readonly) int32_t size __attribute__((swift_name("size")));
+@end
+
 __attribute__((swift_name("Kotlinx_coroutines_coreFlowCollector")))
 @protocol SharedKotlinx_coroutines_coreFlowCollector
 @required
@@ -1498,6 +2056,14 @@ __attribute__((swift_name("Kotlinx_serialization_coreCompositeDecoder")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("KotlinNothing")))
 @interface SharedKotlinNothing : SharedBase
+@end
+
+__attribute__((swift_name("KotlinByteIterator")))
+@interface SharedKotlinByteIterator : SharedBase <SharedKotlinIterator>
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
++ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
+- (SharedByte *)next __attribute__((swift_name("next()")));
+- (int8_t)nextByte __attribute__((swift_name("nextByte()")));
 @end
 
 

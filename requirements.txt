@@ -3,6 +3,10 @@
 #
 # Current scripts use ONLY the Python standard library, so there are no required
 # third-party dependencies.
+
+# Asset pipeline (Kenney importer)
+pyyaml>=6.0
+pillow>=10.0
 #
 # Optional developer tools (uncomment if you want them):
 # pre-commit>=3.0

@@ -9,7 +9,8 @@
 /* Begin PBXBuildFile section */
 		00EE6F84EBAA4AC4B5721267616D2D47 /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AA16E272014F318F0E3ED919A6228B /* Module.swift */; };
 		04D5C50EE97C4D34AF2A59ADA78C4E63 /* FeatureFlags.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C2FAC8B27F4A6184234696398E8BC3 /* FeatureFlags.swift */; };
-		06FC1821039C4626BE7000E0C850A105 /* QuestionBank.json in Resources */ = {isa = PBXBuildFile; fileRef = C1883FB36F654D3B871D0A97245EFDA7 /* QuestionBank.json */; };
+		06FC1821039C4626BE7000E0C850A105 /* ../shared/src/commonMain/resources/QuestionBank.json in Resources */ = {isa = PBXBuildFile; fileRef = C1883FB36F654D3B871D0A97245EFDA7 /* ../shared/src/commonMain/resources/QuestionBank.json */; };
+		A7F1C2D3E4B5A6978877665544332211 /* ../shared/src/commonMain/resources/assets in Resources */ = {isa = PBXBuildFile; fileRef = B3A0D9F2C2B74F9E8E6B8F1C6A2D3E4F /* ../shared/src/commonMain/resources/assets */; };
 		088A2BD1CBEC45F8BA5740370111CAB7 /* AnalyticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6EB0CE9ACB4A3BB5971898D1472535 /* AnalyticsView.swift */; };
 		0F700BEE169142CE820DA16FA6135139 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FC45669166482E82BEFE55B1FE4ED3 /* SettingsView.swift */; };
 		1774F936AAED4DF890800778752C8097 /* RemoteConfigDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = B2AFDA42D2264F55B9BB51F9D440DDF6 /* RemoteConfigDefaults.plist */; };
@@ -28,6 +29,7 @@
 		708634392E8450E300C23EB9 /* QuestionStudyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708634382E8450E300C23EB9 /* QuestionStudyState.swift */; };
 		7086343B2E84510600C23EB9 /* QuestionStudyState 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7086343A2E84510600C23EB9 /* QuestionStudyState 2.swift */; };
 		71281BA6D6504160B51D9CE5C311BB32 /* Bundle+Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DDC5ACE4BF42CD8320257E93057C92 /* Bundle+Module.swift */; };
+		F1E2D3C4B5A697887766554433221100 /* KenneyAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B1E5F0A6C24D9B8C7A1E2F3B4C5D6E /* KenneyAssets.swift */; };
 		78FDA9F444CE417A90BBD511CF6027AA /* FeatureFlagKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5E6B7FE3E944A084667119DCB51437 /* FeatureFlagKey.swift */; };
 		7AF711252B62401D999358C3BA29AEC2 /* AppRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC83BFD1814D4A86FC79F9E9D875F1 /* AppRoute.swift */; };
 		7BA104C02DFE45829F6E0720170DD0D5 /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C6C133872F42DCB81D987D9A102357 /* FirestoreService.swift */; };
@@ -49,9 +51,20 @@
 		E5DA7482F16E4BEABB817AF3 /* QuizSessionConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07174C53C9C4E5990C2D77F /* QuizSessionConfiguration.swift */; };
 		E6670BB829D64B9DAAD4FCE683ACD745 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6A4C295EFF4018B94718796CD385B1 /* StorageService.swift */; };
 		EB6224622CD7487D8421BEA35B8543E2 /* QuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93A783C837A4F8F8EFB884E8E87E31A /* QuizViewModel.swift */; };
-		F6A0F744B0B04AEF8161F1F18A1A8619 /* ProgressReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A0F744B0B04AEF8161F1F18A1A8618 /* ProgressReportView.swift */; };
-		FECAA48C5DB04A9F8E8CB17D9965359C /* QuizSessionState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E878849A04C447B5BAE56C95F5A9A25F /* QuizSessionState.swift */; };
-		F7F0F1F32E89F0D6006A58BC /* FlowPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F0F1F22E89F0D6006A58BC /* FlowPublisher.swift */; };
+			F6A0F744B0B04AEF8161F1F18A1A8619 /* ProgressReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A0F744B0B04AEF8161F1F18A1A8618 /* ProgressReportView.swift */; };
+			F7F0F1F32E89F0D6006A58BC /* FlowPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F0F1F22E89F0D6006A58BC /* FlowPublisher.swift */; };
+			2E073E9285F8475C8315524D /* ../pearl_diver_cards.json in Resources */ = {isa = PBXBuildFile; fileRef = 75021B4F84E24A2199558AD7 /* ../pearl_diver_cards.json */; };
+			9AA2C545D8E30E373DEF3621 /* ../crossword/crossword1.html in Resources */ = {isa = PBXBuildFile; fileRef = 23D339EE431D82335292C6C9 /* ../crossword/crossword1.html */; };
+			2C291781611EC52C2A069954 /* ../crossword/crossword2.html in Resources */ = {isa = PBXBuildFile; fileRef = 72DAA63E543A3C162FBF0C98 /* ../crossword/crossword2.html */; };
+			5CA41313BDF682222E27B2D8 /* ../crossword/crossword3.html in Resources */ = {isa = PBXBuildFile; fileRef = AF8BAD83501F89854FB34F8C /* ../crossword/crossword3.html */; };
+			E81CFD6E72A8BACD354DDE83 /* CrosswordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27871B494811CADF1B617D5 /* CrosswordsView.swift */; };
+			6ABE2136E1EC6444A7BC7E8C /* CrosswordPuzzleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EED4D815A739AFDEB423BE /* CrosswordPuzzleView.swift */; };
+			435F77BA1E8A456590DCD411 /* DuelStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78366462EA56457B91197D7F /* DuelStore.swift */; };
+			AC5603287BA04EE58ABA076E /* DuelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01D3BF8A8164F02A98051F0 /* DuelView.swift */; };
+			BB7CB8A096E24AEBFED2D13E /* DuelArenaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C671BF698A233353AF98670A /* DuelArenaView.swift */; };
+			B23D05665FBA40E8B8EA0DCA /* EnemySelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713EEF2ED4154F7F8A016915 /* EnemySelectView.swift */; };
+			FA62919EB60143659DD59B12 /* DuelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFBDF8CFF314C35851B97EA /* DuelViewModel.swift */; };
+			FECAA48C5DB04A9F8E8CB17D9965359C /* QuizSessionState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E878849A04C447B5BAE56C95F5A9A25F /* QuizSessionState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -81,12 +94,11 @@
 		40FC45669166482E82BEFE55B1FE4ED3 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		4FC545C4D83B43A891470ACB43BE8D94 /* MediaCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaCache.swift; sourceTree = "<group>"; };
 		56AA673CAF064039AEE3E9D50C37DB2A /* LocalStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStore.swift; sourceTree = "<group>"; };
-		7002F7F92E89DA8300C8DDCD /* Shared.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Shared.framework; path = ../shared/build/bin/iosSimulatorUniversal/Shared.framework; sourceTree = "<group>"; };
+		7002F7F92E89DA8300C8DDCD /* Shared.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Shared.framework; path = ../shared/build/bin/xcode/Shared.framework; sourceTree = "<group>"; };
 		7023E4712E7F974B00502576 /* iprep.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iprep.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		708634382E8450E300C23EB9 /* QuestionStudyState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionStudyState.swift; sourceTree = "<group>"; };
 		7086343A2E84510600C23EB9 /* QuestionStudyState 2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuestionStudyState 2.swift"; sourceTree = "<group>"; };
 		74C6C133872F42DCB81D987D9A102357 /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
-		F7F0F1F22E89F0D6006A58BC /* FlowPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowPublisher.swift; sourceTree = "<group>"; };
 		80EF59ED330A46CC811F33119E569BBB /* ReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewView.swift; sourceTree = "<group>"; };
 		867EAA7E0857465EB85541EE6B6F6956 /* ModuleCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleCard.swift; sourceTree = "<group>"; };
 		9325A22A51C548D4918ED3CD24108945 /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
@@ -101,19 +113,33 @@
 		B5D2A0A40C3A4C2AB65E8B0F /* LeaderboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardView.swift; sourceTree = "<group>"; };
 		B5F76D2D0C3A4C2AB65E8B0F /* QuizQuestion+Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuizQuestion+Search.swift"; sourceTree = "<group>"; };
 		BE3DC45D12BC465E82770A7277022BD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C1883FB36F654D3B871D0A97245EFDA7 /* QuestionBank.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "../shared/src/commonMain/resources/QuestionBank.json"; sourceTree = SOURCE_ROOT; };
-		C2C2FAC8B27F4A6184234696398E8BC3 /* FeatureFlags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureFlags.swift; sourceTree = "<group>"; };
-		C46026CD14BC40359C763C160BA632DE /* iprepApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iprepApp.swift; sourceTree = "<group>"; };
-		C93A783C837A4F8F8EFB884E8E87E31A /* QuizViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewModel.swift; sourceTree = "<group>"; };
+			C1883FB36F654D3B871D0A97245EFDA7 /* ../shared/src/commonMain/resources/QuestionBank.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ../shared/src/commonMain/resources/QuestionBank.json; sourceTree = SOURCE_ROOT; };
+			B3A0D9F2C2B74F9E8E6B8F1C6A2D3E4F /* ../shared/src/commonMain/resources/assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ../shared/src/commonMain/resources/assets; sourceTree = SOURCE_ROOT; };
+			75021B4F84E24A2199558AD7 /* ../pearl_diver_cards.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ../pearl_diver_cards.json; sourceTree = SOURCE_ROOT; };
+			23D339EE431D82335292C6C9 /* ../crossword/crossword1.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ../crossword/crossword1.html; sourceTree = SOURCE_ROOT; };
+			72DAA63E543A3C162FBF0C98 /* ../crossword/crossword2.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ../crossword/crossword2.html; sourceTree = SOURCE_ROOT; };
+			AF8BAD83501F89854FB34F8C /* ../crossword/crossword3.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ../crossword/crossword3.html; sourceTree = SOURCE_ROOT; };
+			C27871B494811CADF1B617D5 /* CrosswordsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrosswordsView.swift; sourceTree = "<group>"; };
+			06EED4D815A739AFDEB423BE /* CrosswordPuzzleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrosswordPuzzleView.swift; sourceTree = "<group>"; };
+			C2C2FAC8B27F4A6184234696398E8BC3 /* FeatureFlags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureFlags.swift; sourceTree = "<group>"; };
+			713EEF2ED4154F7F8A016915 /* EnemySelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnemySelectView.swift; sourceTree = "<group>"; };
+			C671BF698A233353AF98670A /* DuelArenaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuelArenaView.swift; sourceTree = "<group>"; };
+			78366462EA56457B91197D7F /* DuelStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuelStore.swift; sourceTree = "<group>"; };
+			7BFBDF8CFF314C35851B97EA /* DuelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuelViewModel.swift; sourceTree = "<group>"; };
+			C46026CD14BC40359C763C160BA632DE /* iprepApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iprepApp.swift; sourceTree = "<group>"; };
+			D01D3BF8A8164F02A98051F0 /* DuelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuelView.swift; sourceTree = "<group>"; };
+			C93A783C837A4F8F8EFB884E8E87E31A /* QuizViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewModel.swift; sourceTree = "<group>"; };
 		CB6A4C295EFF4018B94718796CD385B1 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		CBAC83BFD1814D4A86FC79F9E9D875F1 /* AppRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRoute.swift; sourceTree = "<group>"; };
 		CF6D41F93E3E4ED89F89B4AF /* LeaderboardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardService.swift; sourceTree = "<group>"; };
 		D5A9A74B7E1C4F54B5BD3D1474D85E6C /* ModulePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModulePickerView.swift; sourceTree = "<group>"; };
 		D8DDC5ACE4BF42CD8320257E93057C92 /* Bundle+Module.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Module.swift"; sourceTree = "<group>"; };
+		D4B1E5F0A6C24D9B8C7A1E2F3B4C5D6E /* KenneyAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KenneyAssets.swift; sourceTree = "<group>"; };
 		DABB22DF1A5741F1B5370F60642C6BD0 /* PersistencePlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistencePlaceholder.swift; sourceTree = "<group>"; };
 		E878849A04C447B5BAE56C95F5A9A25F /* QuizSessionState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizSessionState.swift; sourceTree = "<group>"; };
 		EC62B4D842D145ADA7840F500EF7FADA /* SyncManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncManager.swift; sourceTree = "<group>"; };
 		F6A0F744B0B04AEF8161F1F18A1A8618 /* ProgressReportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressReportView.swift; sourceTree = "<group>"; };
+		F7F0F1F22E89F0D6006A58BC /* FlowPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowPublisher.swift; sourceTree = "<group>"; };
 		F82B26094B0241A2ACE038D5ADA22CFD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -146,10 +172,20 @@
 			path = Landing;
 			sourceTree = "<group>";
 		};
+		F05B7BB1AA05FCF9F3CD98D8 /* Crosswords */ = {
+			isa = PBXGroup;
+			children = (
+				C27871B494811CADF1B617D5 /* CrosswordsView.swift */,
+				06EED4D815A739AFDEB423BE /* CrosswordPuzzleView.swift */,
+			);
+			path = Crosswords;
+			sourceTree = "<group>";
+		};
 		3F4297B0710B4E238AFF7C08889F3867 /* Support */ = {
 			isa = PBXGroup;
 			children = (
 				D8DDC5ACE4BF42CD8320257E93057C92 /* Bundle+Module.swift */,
+				D4B1E5F0A6C24D9B8C7A1E2F3B4C5D6E /* KenneyAssets.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -238,25 +274,46 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		8A24FB93CABF436CAF01F89D73B74D5D /* Features */ = {
-			isa = PBXGroup;
-			children = (
-				F2E253672B034B3796B35B37548A7FFF /* Analytics */,
-				5CBFA699A2E8482CA47ECBB52463AC9D /* Dashboard */,
-				3B1D911481264BDFAAB1A58C8E089F6E /* Landing */,
-				AF893AE8C8C144029D796BF162583478 /* Quiz */,
-				440CEA0E133545B6B15F48B5AEE2F019 /* Review */,
-				0BCBC8BDEFC044D98313FD51918F98DD /* Settings */,
-				B5C9F4D30C3A4C2AB65E8B0F /* Search */,
-				B5D2A0A60C3A4C2AB65E8B0F /* Leaderboard */,
-			);
-			path = Features;
-			sourceTree = "<group>";
-		};
-		AF893AE8C8C144029D796BF162583478 /* Quiz */ = {
-			isa = PBXGroup;
-			children = (
-				C93A783C837A4F8F8EFB884E8E87E31A /* QuizViewModel.swift */,
+			8A24FB93CABF436CAF01F89D73B74D5D /* Features */ = {
+				isa = PBXGroup;
+				children = (
+					F2E253672B034B3796B35B37548A7FFF /* Analytics */,
+					5CBFA699A2E8482CA47ECBB52463AC9D /* Dashboard */,
+					FD3D7FC1A75C44108AC53828 /* Duel */,
+					3B1D911481264BDFAAB1A58C8E089F6E /* Landing */,
+					F05B7BB1AA05FCF9F3CD98D8 /* Crosswords */,
+					AF893AE8C8C144029D796BF162583478 /* Quiz */,
+					440CEA0E133545B6B15F48B5AEE2F019 /* Review */,
+					0BCBC8BDEFC044D98313FD51918F98DD /* Settings */,
+					B5C9F4D30C3A4C2AB65E8B0F /* Search */,
+					B5D2A0A60C3A4C2AB65E8B0F /* Leaderboard */,
+				);
+				path = Features;
+				sourceTree = "<group>";
+			};
+			FD3D7FC1A75C44108AC53828 /* Duel */ = {
+				isa = PBXGroup;
+				children = (
+					7BFBDF8CFF314C35851B97EA /* DuelViewModel.swift */,
+					713EEF2ED4154F7F8A016915 /* EnemySelectView.swift */,
+					D01D3BF8A8164F02A98051F0 /* DuelView.swift */,
+					9771235B39FD750CFC6F9CF5 /* Components */,
+				);
+				path = Duel;
+				sourceTree = "<group>";
+			};
+			9771235B39FD750CFC6F9CF5 /* Components */ = {
+				isa = PBXGroup;
+				children = (
+					C671BF698A233353AF98670A /* DuelArenaView.swift */,
+				);
+				path = Components;
+				sourceTree = "<group>";
+			};
+			AF893AE8C8C144029D796BF162583478 /* Quiz */ = {
+				isa = PBXGroup;
+				children = (
+					C93A783C837A4F8F8EFB884E8E87E31A /* QuizViewModel.swift */,
 				9325A22A51C548D4918ED3CD24108945 /* QuizView.swift */,
 			);
 			path = Quiz;
@@ -281,7 +338,12 @@
 		C255CC14A31C48D2AA64C2A9DEF3F06D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				C1883FB36F654D3B871D0A97245EFDA7 /* QuestionBank.json */,
+				C1883FB36F654D3B871D0A97245EFDA7 /* ../shared/src/commonMain/resources/QuestionBank.json */,
+				B3A0D9F2C2B74F9E8E6B8F1C6A2D3E4F /* ../shared/src/commonMain/resources/assets */,
+				75021B4F84E24A2199558AD7 /* ../pearl_diver_cards.json */,
+				23D339EE431D82335292C6C9 /* ../crossword/crossword1.html */,
+				72DAA63E543A3C162FBF0C98 /* ../crossword/crossword2.html */,
+				AF8BAD83501F89854FB34F8C /* ../crossword/crossword3.html */,
 				B2AFDA42D2264F55B9BB51F9D440DDF6 /* RemoteConfigDefaults.plist */,
 			);
 			path = Resources;
@@ -295,6 +357,7 @@
 				EC62B4D842D145ADA7840F500EF7FADA /* SyncManager.swift */,
 				CB6A4C295EFF4018B94718796CD385B1 /* StorageService.swift */,
 				AE70CAF56ECC4BFE8772461EC8A7F4F2 /* QuestionBankService.swift */,
+				78366462EA56457B91197D7F /* DuelStore.swift */,
 				4FC545C4D83B43A891470ACB43BE8D94 /* MediaCache.swift */,
 				56AA673CAF064039AEE3E9D50C37DB2A /* LocalStore.swift */,
 				04CB7CA82495475D97773CAE91E47A24 /* AuthService.swift */,
@@ -387,11 +450,16 @@
 		7023E46F2E7F974B00502576 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
-			files = (
-				1CD5903B8C6C444E94B8A3BC3C52206E /* Assets.xcassets in Resources */,
-				06FC1821039C4626BE7000E0C850A105 /* QuestionBank.json in Resources */,
-				1774F936AAED4DF890800778752C8097 /* RemoteConfigDefaults.plist in Resources */,
-			);
+				files = (
+					1CD5903B8C6C444E94B8A3BC3C52206E /* Assets.xcassets in Resources */,
+					06FC1821039C4626BE7000E0C850A105 /* ../shared/src/commonMain/resources/QuestionBank.json in Resources */,
+					A7F1C2D3E4B5A6978877665544332211 /* ../shared/src/commonMain/resources/assets in Resources */,
+					9AA2C545D8E30E373DEF3621 /* ../crossword/crossword1.html in Resources */,
+					2C291781611EC52C2A069954 /* ../crossword/crossword2.html in Resources */,
+					5CA41313BDF682222E27B2D8 /* ../crossword/crossword3.html in Resources */,
+					2E073E9285F8475C8315524D /* ../pearl_diver_cards.json in Resources */,
+					1774F936AAED4DF890800778752C8097 /* RemoteConfigDefaults.plist in Resources */,
+				);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
@@ -412,6 +480,12 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"$(DWARF_DSYM_FOLDER_PATH)/Shared.framework.dSYM",
+				"$(DWARF_DSYM_FOLDER_PATH)/Shared.framework.dSYM/Contents/Info.plist",
+				"$(DWARF_DSYM_FOLDER_PATH)/Shared.framework.dSYM/Contents/Resources/DWARF/Shared",
+				"$(SRCROOT)/../shared/build/bin/xcode/Shared.framework/Shared",
+				"$(SRCROOT)/../shared/build/bin/xcode/Shared.framework/Info.plist",
+				"$(SRCROOT)/../shared/build/bin/xcode/Shared.framework/Modules/module.modulemap",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -425,6 +499,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				71281BA6D6504160B51D9CE5C311BB32 /* Bundle+Module.swift in Sources */,
+				F1E2D3C4B5A697887766554433221100 /* KenneyAssets.swift in Sources */,
 				18B3488D447F45679C3A6858F13DAA67 /* ContentView.swift in Sources */,
 				28ED945C3CBB4A5FB828F54551CCA037 /* iprepApp.swift in Sources */,
 				44DF851586B848EC8E715DE2CC1D5CF9 /* AppEnvironment.swift in Sources */,
@@ -434,6 +509,8 @@
 				C56568C821054BCA8274349E3316B2B6 /* ModuleCard.swift in Sources */,
 				0F700BEE169142CE820DA16FA6135139 /* SettingsView.swift in Sources */,
 				4D0396234B6D45428DDD15956A4ABCB6 /* LandingView.swift in Sources */,
+				E81CFD6E72A8BACD354DDE83 /* CrosswordsView.swift in Sources */,
+				6ABE2136E1EC6444A7BC7E8C /* CrosswordPuzzleView.swift in Sources */,
 				8F4CB5807C8C42E79AE8F813B504E6C1 /* ModulePickerView.swift in Sources */,
 				EB6224622CD7487D8421BEA35B8543E2 /* QuizViewModel.swift in Sources */,
 				C2C573FC49FA40EFB3E9A11CE0FA95CE /* QuizView.swift in Sources */,
@@ -461,10 +538,15 @@
 				2BBCE414B7C9450E8986843E1E81E8CA /* AuthService.swift in Sources */,
 				04D5C50EE97C4D34AF2A59ADA78C4E63 /* FeatureFlags.swift in Sources */,
 				8CBDBEC7A2344BB99522C81F76516892 /* RemoteConfigService.swift in Sources */,
-				7BA104C02DFE45829F6E0720170DD0D5 /* FirestoreService.swift in Sources */,
-				7086343B2E84510600C23EB9 /* QuestionStudyState 2.swift in Sources */,
-				F7F0F1F32E89F0D6006A58BC /* FlowPublisher.swift in Sources */,
-			);
+					7BA104C02DFE45829F6E0720170DD0D5 /* FirestoreService.swift in Sources */,
+					7086343B2E84510600C23EB9 /* QuestionStudyState 2.swift in Sources */,
+					F7F0F1F32E89F0D6006A58BC /* FlowPublisher.swift in Sources */,
+					435F77BA1E8A456590DCD411 /* DuelStore.swift in Sources */,
+					FA62919EB60143659DD59B12 /* DuelViewModel.swift in Sources */,
+					B23D05665FBA40E8B8EA0DCA /* EnemySelectView.swift in Sources */,
+					AC5603287BA04EE58ABA076E /* DuelView.swift in Sources */,
+					BB7CB8A096E24AEBFED2D13E /* DuelArenaView.swift in Sources */,
+				);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
@@ -599,10 +681,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = 7GX83T5H9X;
 				ENABLE_PREVIEWS = YES;
-				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(SRCROOT)/../shared/build/bin/iosSimulatorUniversal";
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(SRCROOT)/../shared/build/bin/xcode";
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = iprep/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17;
@@ -628,9 +710,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = 7GX83T5H9X;
 				ENABLE_PREVIEWS = YES;
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(SRCROOT)/../shared/build/bin/xcode";
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = iprep/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17;

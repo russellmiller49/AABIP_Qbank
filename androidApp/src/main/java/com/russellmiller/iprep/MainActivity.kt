@@ -10,10 +10,12 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.compose.rememberNavController
 import com.russellmiller.iprep.ui.navigation.AppNavigation
 import com.russellmiller.iprep.ui.theme.IprepTheme
+import com.russellmiller.iprep.shared.services.SharedAndroidResources
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        SharedAndroidResources.initialize(applicationContext)
         setContent {
             IprepTheme {
                 Surface(

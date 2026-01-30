@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interventional & Pleural Board Review Crossword</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #ecf0f1;
+            --accent-color: #e74c3c;
+            --highlight-color: #3498db;
+            --cell-size: clamp(22px, calc((100vw - 64px) / 15), 34px);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f7;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            margin: 0;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 15px;
+            width: 100%;
+            max-width: 900px;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            margin: 0 0 5px 0;
+            font-size: 26px;
+        }
+
+        .subtitle {
+            font-style: italic;
+            color: #7f8c8d;
+            font-size: 15px;
+        }
+
+        .game-layout {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            justify-content: center;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        /* GRID STYLES */
+        .grid-wrapper {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .crossword-grid {
+            display: grid;
+            grid-template-columns: repeat(15, var(--cell-size));
+            grid-template-rows: repeat(15, var(--cell-size));
+            gap: 1px;
+            background-color: #2c3e50;
+            border: 2px solid #2c3e50;
+            width: max-content;
+        }
+
+        .cell {
+            background-color: #2c3e50;
+            position: relative;
+            width: var(--cell-size);
+            height: var(--cell-size);
+        }
+
+        .cell.active {
+            background-color: #ffffff;
+        }
+
+        .cell input {
+            width: 100%;
+            height: 100%;
+            border: none;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--primary-color);
+            outline: none;
+            background: transparent;
+            padding: 0;
+            margin: 0;
+            cursor: pointer;
+        }
+
+        .cell input:focus {
+            background-color: #d6eaf8;
+        }
+
+        .cell .number {
+            position: absolute;
+            top: 1px;
+            left: 2px;
+            font-size: 9px;
+            color: #666;
+            pointer-events: none;
+            font-weight: bold;
+            z-index: 5;
+        }
+
+        /* CLUES PANEL */
+        .clues-panel {
+            flex: 1;
+            min-width: 300px;
+            max-width: 450px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            max-height: 600px;
+            overflow-y: auto;
+            border-top: 4px solid var(--highlight-color);
+        }
+
+        h3 {
+            color: var(--highlight-color);
+            border-bottom: 1px solid #eee;
+            padding-bottom: 8px;
+            margin-top: 0;
+        }
+
+        .clue-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 20px 0;
+        }
+
+        .clue-item {
+            padding: 5px 8px;
+            margin-bottom: 4px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 13px;
+            line-height: 1.4;
+            transition: all 0.2s;
+        }
+
+        .clue-item:hover {
+            background-color: #ecf0f1;
+        }
+
+        .clue-item.highlighted {
+            background-color: #d4e6f1;
+            border-left: 3px solid var(--highlight-color);
+            font-weight: 600;
+        }
+
+        .clue-num {
+            font-weight: bold;
+            color: var(--accent-color);
+            margin-right: 6px;
+        }
+
+        .controls {
+            margin-top: 15px;
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        button {
+            padding: 8px 16px;
+            font-size: 13px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: opacity 0.2s;
+        }
+
+        button:hover { opacity: 0.9; }
+        .btn-check { background-color: var(--highlight-color); color: white; }
+        .btn-reveal { background-color: var(--accent-color); color: white; }
+        .btn-reset { background-color: #95a5a6; color: white; }
+
+        @media print {
+            body { background: white; padding: 0; }
+            .controls, header { display: none; }
+            .grid-wrapper, .clues-panel { box-shadow: none; border: 1px solid #ccc; }
+            .cell input { color: transparent; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>The "Interventional & Pleural" Crossword</h1>
+        <div class="subtitle">Advanced Concepts: Stents, Ablation, Pleural Disease & Tracheostomy</div>
+    </header>
+
+    <div class="game-layout">
+        <div class="grid-wrapper">
+            <div id="crossword" class="crossword-grid"></div>
+            <div class="controls">
+                <button class="btn-check" onclick="checkAnswers()">Check</button>
+                <button class="btn-reveal" onclick="revealAll()">Reveal</button>
+                <button class="btn-reset" onclick="resetBoard()">Reset</button>
+            </div>
+        </div>
+
+        <div class="clues-panel">
+            <h3>Across</h3>
+            <ul id="across-clues" class="clue-list"></ul>
+            
+            <h3>Down</h3>
+            <ul id="down-clues" class="clue-list"></ul>
+        </div>
+    </div>
+
+    <script>
+        // --- PUZZLE DATA ---
+        // 15x15 Grid (Indices 0-14).
+        
+        const puzzleData = [
+    {
+        number: 1,
+        word: "MIGRATION",
+        clue: "Common stent complication (~10%) often due to undersizing.",
+        row: 2, col: 1, dir: "across"
+    },
+    {
+        number: 2,
+        word: "IPC",
+        clue: "Preferred device for malignant pleural effusion with trapped lung (Abbr).",
+        row: 2, col: 2, dir: "down"
+    },
+    {
+        number: 3,
+        word: "RAPID",
+        clue: "Score predicting mortality in pleural infection (Renal, Age, Purulence...).",
+        row: 7, col: 4, dir: "down"
+    },
+    {
+        number: 4,
+        word: "APC",
+        clue: "Non-contact thermal modality for diffuse hemostasis.",
+        row: 4, col: 0, dir: "across"
+    },
+    {
+        number: 5,
+        word: "TPA",
+        clue: "Fibrinolytic agent used with DNase for pleural infection.",
+        row: 2, col: 6, dir: "down"
+    },
+    {
+        number: 6,
+        word: "CORING",
+        clue: "Rigid bronchoscopy maneuver using the beveled tip.",
+        row: 6, col: 5, dir: "down"
+    },
+    {
+        number: 6,
+        word: "CHARTIS",
+        clue: "Balloon catheter system to assess collateral ventilation before valve placement.",
+        row: 6, col: 5, dir: "across"
+    },
+    {
+        number: 8,
+        word: "CONCENTRIC",
+        clue: "rEBUS pattern predicting high diagnostic yield.",
+        row: 0, col: 9, dir: "down"
+    },
+    {
+        number: 9,
+        word: "DANGER",
+        clue: "Zone to avoid during thoracentesis (posterior 6 cm).",
+        row: 0, col: 14, dir: "down"
+    },
+    {
+        number: 10,
+        word: "MICRODEBRIDER",
+        clue: "Rotating blade tool for rapid central airway debulking.",
+        row: 7, col: 1, dir: "across"
+    },
+    {
+        number: 11,
+        word: "TIF",
+        clue: "Tracheo-innominate fistula (Abbr).",
+        row: 6, col: 2, dir: "down"
+    },
+    {
+        number: 12,
+        word: "FORTY",
+        clue: "FiO2 percentage limit (spelled out) commonly used to reduce airway fire risk.",
+        row: 14, col: 0, dir: "across"
+    },
+    {
+        number: 13,
+        word: "WEB",
+        clue: "Simple benign stenosis type treated with radial incisions.",
+        row: 10, col: 12, dir: "down"
+    },
+    {
+        number: 14,
+        word: "RIGID",
+        clue: "Preferred airway approach for therapeutic bronchoscopy.",
+        row: 13, col: 4, dir: "across"
+    },
+    {
+        number: 15,
+        word: "EDAC",
+        clue: "Dynamic airway collapse from posterior membrane bowing (Abbr).",
+        row: 0, col: 11, dir: "down"
+    }
+];
+
+        // --- INIT LOGIC ---
+        const rows = 15;
+        const cols = 15;
+        const gridEl = document.getElementById('crossword');
+        const acrossList = document.getElementById('across-clues');
+        const downList = document.getElementById('down-clues');
+        let cellAnswers = new Map();
+        let cellMeta = new Map();
+        let activeDir = 'across';
+        let activeWord = null;
+        let lastClickedCellId = null;
+
+
+function validatePuzzle(data) {
+    const answers = new Map();
+    const errors = [];
+
+    // 1) Letter placement + conflicts + bounds
+    data.forEach(item => {
+        const word = (item.word || "").toUpperCase();
+        const dir = item.dir;
+        const dr = dir === "down" ? 1 : 0;
+        const dc = dir === "across" ? 1 : 0;
+
+        const endR = item.row + dr * (word.length - 1);
+        const endC = item.col + dc * (word.length - 1);
+
+        if (
+            item.row < 0 || item.col < 0 ||
+            endR < 0 || endC < 0 ||
+            item.row >= rows || item.col >= cols ||
+            endR >= rows || endC >= cols
+        ) {
+            errors.push(`Out of bounds: #${item.number} ${word} (${dir}) at (${item.row},${item.col})`);
+            return;
+        }
+
+        for (let i = 0; i < word.length; i++) {
+            const r = item.row + dr * i;
+            const c = item.col + dc * i;
+            const key = `cell-${r}-${c}`;
+            const ch = word[i];
+
+            if (answers.has(key) && answers.get(key) !== ch) {
+                errors.push(`Conflict at ${key}: "${answers.get(key)}" vs "${ch}" (#${item.number} ${word})`);
+            } else {
+                answers.set(key, ch);
+            }
+        }
+    });
+
+    // 2) Boundary checks to prevent accidental word merging
+    data.forEach(item => {
+        const word = (item.word || "").toUpperCase();
+        const dir = item.dir;
+        const dr = dir === "down" ? 1 : 0;
+        const dc = dir === "across" ? 1 : 0;
+
+        const endR = item.row + dr * (word.length - 1);
+        const endC = item.col + dc * (word.length - 1);
+
+        const beforeR = item.row - dr;
+        const beforeC = item.col - dc;
+        const afterR = endR + dr;
+        const afterC = endC + dc;
+
+        const beforeKey = `cell-${beforeR}-${beforeC}`;
+        const afterKey = `cell-${afterR}-${afterC}`;
+
+        if (beforeR >= 0 && beforeR < rows && beforeC >= 0 && beforeC < cols && answers.has(beforeKey)) {
+            errors.push(`Missing black square BEFORE: #${item.number} ${word} (${dir})`);
+        }
+        if (afterR >= 0 && afterR < rows && afterC >= 0 && afterC < cols && answers.has(afterKey)) {
+            errors.push(`Missing black square AFTER: #${item.number} ${word} (${dir})`);
+        }
+    });
+
+    return { answers, errors };
+}
+
+        function initGame() {
+            // 1. Create Grid
+            gridEl.innerHTML = '';
+
+            // Reset clue panels
+            acrossList.innerHTML = '';
+            downList.innerHTML = '';
+
+            // Validate puzzle config and build the answer key
+            const validation = validatePuzzle(puzzleData);
+            cellAnswers = validation.answers;
+            if (validation.errors.length) {
+                console.error('Crossword configuration errors:', validation.errors);
+                alert('Crossword configuration error. Open the browser console for details.');
+            }
+            for (let r = 0; r < rows; r++) {
+                for (let c = 0; c < cols; c++) {
+                    let cell = document.createElement('div');
+                    cell.className = 'cell';
+                    cell.id = `cell-${r}-${c}`;
+                    gridEl.appendChild(cell);
+                }
+            }
+
+            // 2. Place Words
+            puzzleData.forEach(item => {
+                // List Clue
+                let li = document.createElement('li');
+                li.className = 'clue-item';
+                li.id = `clue-${item.number}-${item.dir}`;
+                li.innerHTML = `<span class="clue-num">${item.number}.</span> ${item.clue}`;
+                li.onclick = () => focusWord(item);
+                
+                if (item.dir === 'across') acrossList.appendChild(li);
+                else downList.appendChild(li);
+
+                // Fill Cells
+                for (let i = 0; i < item.word.length; i++) {
+                    let r = item.row + (item.dir === 'down' ? i : 0);
+                    let c = item.col + (item.dir === 'across' ? i : 0);
+                    
+                    if (r >= rows || c >= cols) continue;
+
+                    let cellId = `cell-${r}-${c}`;
+                    let cell = document.getElementById(cellId);
+
+                    // Make active if not already
+                    if (!cellMeta.has(cellId)) {
+                        cellMeta.set(cellId, { across: null, down: null });
+                    }
+                    const meta = cellMeta.get(cellId);
+                    if (item.dir === 'across') meta.across = item;
+                    if (item.dir === 'down') meta.down = item;
+
+                    if (!cell.classList.contains('active')) {
+                        cell.classList.add('active');
+                        let input = document.createElement('input');
+                        input.maxLength = 1;
+                        input.dataset.r = r;
+                        input.dataset.c = c;
+                        input.onfocus = () => onCellFocus(r, c);
+                        input.onclick = () => onCellClick(r, c);
+                        input.oninput = (e) => handleInput(e, r, c);
+                        input.onkeydown = (e) => handleKey(e, r, c);
+                        cell.appendChild(input);
+                    }
+
+                    // Add number if first letter
+                    if (i === 0) {
+                        if(!cell.querySelector('.number')) {
+                            let numSpan = document.createElement('span');
+                            numSpan.className = 'number';
+                            numSpan.innerText = item.number;
+                            cell.appendChild(numSpan);
+                        }
+                    }
+                    // cellAnswers is built by validatePuzzle(); do not overwrite here
+}
+            });
+        }
+
+        // --- INTERACTION ---
+
+        function focusWord(item) {
+            activeWord = item;
+            activeDir = item.dir;
+            let r = item.row;
+            let c = item.col;
+            let cell = document.getElementById(`cell-${r}-${c}`);
+            let input = cell.querySelector('input');
+            if (input) input.focus();
+            highlightClue(item);
+        }
+
+        function highlightClue(item) {
+            document.querySelectorAll('.clue-item').forEach(el => el.classList.remove('highlighted'));
+            let id = `clue-${item.number}-${item.dir}`;
+            let el = document.getElementById(id);
+            if (el) {
+                el.classList.add('highlighted');
+                el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+        }
+
+        function handleInput(e, r, c) {
+            let val = e.target.value.toUpperCase();
+            e.target.value = val;
+
+            if (val) {
+                const dr = activeDir === 'down' ? 1 : 0;
+                const dc = activeDir === 'across' ? 1 : 0;
+                let nextR = r + dr;
+                let nextC = c + dc;
+                let nextCell = document.getElementById(`cell-${nextR}-${nextC}`);
+                
+                if (nextCell && nextCell.classList.contains('active')) {
+                    nextCell.querySelector('input').focus();
+                }
+            }
+        }
+
+        function handleKey(e, r, c) {
+            if (e.key === 'Backspace' && e.target.value === '') {
+                const dr = activeDir === 'down' ? 1 : 0;
+                const dc = activeDir === 'across' ? 1 : 0;
+                let prevR = r - dr;
+                let prevC = c - dc;
+                let prevCell = document.getElementById(`cell-${prevR}-${prevC}`);
+                
+                if (prevCell && prevCell.classList.contains('active')) {
+                    prevCell.querySelector('input').focus();
+                }
+            }
+        }
+
+        function chooseActiveWordForCell(r, c, allowToggle) {
+            const cellId = `cell-${r}-${c}`;
+            const meta = cellMeta.get(cellId);
+            if (!meta) return;
+
+            const hasAcross = !!meta.across;
+            const hasDown = !!meta.down;
+
+            if (!allowToggle && activeWord && cellInWord(activeWord, r, c)) {
+                activeDir = activeWord.dir;
+                highlightClue(activeWord);
+                return;
+            }
+
+            if (allowToggle && hasAcross && hasDown) {
+                if (lastClickedCellId === cellId) {
+                    activeDir = (activeDir === 'across') ? 'down' : 'across';
+                } else {
+                    if (activeDir === 'across' && !hasAcross) activeDir = 'down';
+                    if (activeDir === 'down' && !hasDown) activeDir = 'across';
+                }
+                lastClickedCellId = cellId;
+            }
+
+            if (activeWord) {
+                const inAcross = (activeWord.dir === 'across' && meta.across && meta.across.number === activeWord.number);
+                const inDown = (activeWord.dir === 'down' && meta.down && meta.down.number === activeWord.number);
+                if (inAcross || inDown) {
+                    highlightClue(activeWord);
+                    return;
+                }
+            }
+
+            let next = null;
+            if (activeDir === 'across' && meta.across) next = meta.across;
+            if (activeDir === 'down' && meta.down) next = meta.down;
+
+            if (!next) {
+                if (meta.across) {
+                    activeDir = 'across';
+                    next = meta.across;
+                } else if (meta.down) {
+                    activeDir = 'down';
+                    next = meta.down;
+                }
+            }
+
+            if (next) {
+                activeWord = next;
+                highlightClue(next);
+            }
+        }
+
+        function cellInWord(word, r, c) {
+            if (!word) return false;
+            const len = word.word.length;
+            if (word.dir === 'across') {
+                return r === word.row && c >= word.col && c < word.col + len;
+            }
+            return c === word.col && r >= word.row && r < word.row + len;
+        }
+
+        function onCellFocus(r, c) {
+            chooseActiveWordForCell(r, c, false);
+        }
+
+        function onCellClick(r, c) {
+            chooseActiveWordForCell(r, c, true);
+        }
+
+        // --- GAME CONTROLS ---
+
+        function checkAnswers() {
+            let correctCount = 0;
+            let totalActive = cellAnswers.size;
+
+            cellAnswers.forEach((ans, id) => {
+                let cell = document.getElementById(id);
+                let input = cell.querySelector('input');
+                if (input.value === ans) {
+                    input.style.backgroundColor = '#d4efdf';
+                    input.style.color = '#145a32';
+                    correctCount++;
+                } else if (input.value !== '') {
+                    input.style.backgroundColor = '#fadbd8';
+                    input.style.color = '#78281f';
+                } else {
+                    input.style.backgroundColor = 'transparent';
+                }
+            });
+
+            if (correctCount === totalActive) {
+                setTimeout(() => alert("Perfect Score! You've mastered these IP concepts."), 100);
+            }
+        }
+
+        function revealAll() {
+            cellAnswers.forEach((ans, id) => {
+                let cell = document.getElementById(id);
+                let input = cell.querySelector('input');
+                input.value = ans;
+                input.style.backgroundColor = '#d4efdf';
+                input.style.color = '#145a32';
+            });
+        }
+
+        function resetBoard() {
+            cellAnswers.forEach((ans, id) => {
+                let cell = document.getElementById(id);
+                let input = cell.querySelector('input');
+                input.value = '';
+                input.style.backgroundColor = 'transparent';
+                input.style.color = 'var(--primary-color)';
+            });
+        }
+
+        initGame();
+
+    </script>
+</body>
+</html>

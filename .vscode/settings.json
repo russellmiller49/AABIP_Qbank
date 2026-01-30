@@ -1,0 +1,10 @@
+{
+  "java.configuration.runtimes": [
+    {
+      "name": "JavaSE-17",
+      "path": "/opt/homebrew/Cellar/openjdk@17/17.0.16",
+      "default": true
+    }
+  ],
+  "gradle.java.home": "/opt/homebrew/Cellar/openjdk@17/17.0.16"
+}

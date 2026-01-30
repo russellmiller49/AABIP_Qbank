@@ -7,12 +7,20 @@ class AppEnvironment {
     val featureFlagsService: FeatureFlagsService
     val studyPlannerService: StudyPlannerService
     val quizSessionService: QuizSessionService
+    val duelQuestionBankService: DuelQuestionBankService
+    val duelEngineService: DuelEngineService
     
     init {
         questionBankService = QuestionBankService()
         featureFlagsService = FeatureFlagsService()
         studyPlannerService = StudyPlannerService()
         quizSessionService = QuizSessionService(questionBankService, studyPlannerService)
+
+        duelQuestionBankService = DuelQuestionBankService()
+        loadPearlDiverJson()?.let { jsonString ->
+            duelQuestionBankService.loadQuestions(jsonString)
+        }
+        duelEngineService = DuelEngineService(duelQuestionBankService)
     }
     
     companion object {

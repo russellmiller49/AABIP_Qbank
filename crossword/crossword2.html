@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP Board Review Crossword</title>
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --secondary-color: #f0f4f8;
+            --accent-color: #e74c3c;
+            --text-color: #2c3e50;
+            --cell-size: clamp(24px, calc((100vw - 64px) / 15), 38px);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            margin: 0;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
+            font-style: italic;
+            color: #666;
+        }
+
+        .main-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: center;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        /* GRID STYLES */
+        .grid-container {
+            background: #2c3e50;
+            padding: 5px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .crossword-grid {
+            display: grid;
+            grid-template-columns: repeat(15, var(--cell-size));
+            grid-template-rows: repeat(15, var(--cell-size));
+            gap: 1px;
+            background-color: #2c3e50;
+            width: max-content;
+        }
+
+        .cell {
+            background-color: #2c3e50; /* Black/Empty */
+            position: relative;
+            width: var(--cell-size);
+            height: var(--cell-size);
+        }
+
+        .cell.active {
+            background-color: #ffffff;
+        }
+
+        .cell input {
+            width: 100%;
+            height: 100%;
+            border: none;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: var(--text-color);
+            outline: none;
+            background: transparent;
+            padding: 0;
+            margin: 0;
+            cursor: pointer;
+        }
+
+        .cell input:focus {
+            background-color: #e8f4fc;
+        }
+
+        .cell .number {
+            position: absolute;
+            top: 2px;
+            left: 3px;
+            font-size: 10px;
+            color: #666;
+            pointer-events: none;
+            font-weight: bold;
+            z-index: 5;
+        }
+
+        /* CLUES STYLES */
+        .clues-panel {
+            flex: 1;
+            min-width: 300px;
+            max-width: 450px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            max-height: 650px;
+            overflow-y: auto;
+        }
+
+        h3 {
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 5px;
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+
+        .clue-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .clue-item {
+            margin-bottom: 12px;
+            font-size: 14px;
+            line-height: 1.4;
+            cursor: pointer;
+            padding: 5px;
+            border-radius: 4px;
+            transition: background 0.2s;
+        }
+
+        .clue-item:hover {
+            background-color: #e8f4fc;
+        }
+
+        .clue-item.highlighted {
+            background-color: #d6eaf8;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .clue-num {
+            font-weight: bold;
+            color: var(--accent-color);
+            margin-right: 5px;
+        }
+
+        /* BUTTONS */
+        .controls {
+            margin-top: 20px;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        .btn-check { background-color: var(--primary-color); color: white; }
+        .btn-check:hover { background-color: #004494; }
+
+        .btn-reveal { background-color: var(--accent-color); color: white; }
+        .btn-reveal:hover { background-color: #c0392b; }
+
+        .btn-reset { background-color: #95a5a6; color: white; }
+        .btn-reset:hover { background-color: #7f8c8d; }
+
+        /* PRINT */
+        @media print {
+            body { background: white; }
+            .controls, header { display: none; }
+            .main-container { gap: 20px; }
+            .grid-container { box-shadow: none; border: 1px solid #000; }
+            .cell input { color: transparent; text-shadow: none; } /* Hide answers */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>IP Board Review Crossword</h1>
+        <div class="subtitle">High-Yield Concepts from Study Material</div>
+    </header>
+
+    <div class="main-container">
+        <div class="grid-wrapper">
+            <div class="grid-container">
+                <div id="crossword" class="crossword-grid">
+                    </div>
+            </div>
+            <div class="controls">
+                <button class="btn-check" onclick="checkAnswers()">Check Answers</button>
+                <button class="btn-reveal" onclick="revealAll()">Reveal All</button>
+                <button class="btn-reset" onclick="resetBoard()">Reset</button>
+            </div>
+        </div>
+
+        <div class="clues-panel">
+            <h3>Across</h3>
+            <ul id="across-clues" class="clue-list"></ul>
+            
+            <h3>Down</h3>
+            <ul id="down-clues" class="clue-list"></ul>
+        </div>
+    </div>
+
+    <script>
+        // Puzzle Configuration
+        const rows = 15;
+        const cols = 15;
+        
+        // Corrected coordinates to ensure no overlaps or bounds errors
+        const words = [
+            {
+                number: 1,
+                word: "MICRODEBRIDER",
+                direction: "across",
+                row: 5, col: 1,
+                clue: "Powered instrument with a rotating blade and suction used for rapid central airway debulking."
+            },
+            {
+                number: 2,
+                word: "LUNG",
+                direction: "across",
+                row: 10, col: 4,
+                clue: "Target organ for volume reduction (BLVR) and transplant; expands after successful drainage."
+            },
+            {
+                number: 3,
+                word: "MALACIA",
+                direction: "down",
+                row: 1, col: 3,
+                clue: "Weakness of airway cartilage causing expiratory collapse; treated with stents or surgery."
+            },
+            {
+                number: 4,
+                word: "CHARTIS",
+                direction: "down",
+                row: 2, col: 4,
+                clue: "Balloon catheter system used to measure collateral ventilation before valve placement."
+            },
+            {
+                number: 5,
+                word: "SELDINGER",
+                direction: "down",
+                row: 4, col: 7,
+                clue: "Guidewire technique preferred for placing small-bore chest tubes and percutaneous tracheostomies."
+            },
+            {
+                number: 6,
+                word: "EBUS",
+                direction: "down",
+                row: 4, col: 8,
+                clue: "Ultrasound bronchoscope used for staging mediastinal nodes and sampling central masses."
+            },
+            {
+                number: 7,
+                word: "FIBROSIS",
+                direction: "down",
+                row: 2, col: 9,
+                clue: "Pathologic scarring; in ILD, its pattern (e.g., UIP) guides cryobiopsy vs. surgical biopsy decisions."
+            },
+            {
+                number: 8,
+                word: "SEPTATIONS",
+                direction: "down",
+                row: 4, col: 12,
+                clue: "Fibrinous strands seen on ultrasound in complicated parapneumonic effusions."
+            }
+        ];
+
+        const gridElement = document.getElementById('crossword');
+        const acrossList = document.getElementById('across-clues');
+        const downList = document.getElementById('down-clues');
+        let cellMap = new Map(); // Store correct letters
+        let cellMeta = new Map(); // cellId -> { across: word|null, down: word|null }
+        let activeDir = 'across';
+        let activeWord = null;
+        let lastClickedCellId = null;
+
+        function init() {
+            // 1. Render empty grid
+            for(let r=0; r<rows; r++) {
+                for(let c=0; c<cols; c++) {
+                    const div = document.createElement('div');
+                    div.className = 'cell';
+                    div.id = `cell-${r}-${c}`;
+                    gridElement.appendChild(div);
+                }
+            }
+
+            // 2. Place words
+            words.forEach(w => {
+                // Add clue
+                const li = document.createElement('li');
+                li.className = 'clue-item';
+                li.id = `clue-${w.number}-${w.direction}`;
+                li.innerHTML = `<span class="clue-num">${w.number}.</span> ${w.clue}`;
+                li.onclick = () => highlightWord(w);
+                
+                if(w.direction === 'across') acrossList.appendChild(li);
+                else downList.appendChild(li);
+
+                // Add cells
+                for(let i=0; i<w.word.length; i++) {
+                    let r = w.row + (w.direction === 'down' ? i : 0);
+                    let c = w.col + (w.direction === 'across' ? i : 0);
+                    
+                    const cellId = `cell-${r}-${c}`;
+                    const cell = document.getElementById(cellId);
+                    
+                    if(cell) {
+                        if (!cellMeta.has(cellId)) {
+                            cellMeta.set(cellId, { across: null, down: null });
+                        }
+                        const meta = cellMeta.get(cellId);
+                        if (w.direction === 'across') meta.across = w;
+                        if (w.direction === 'down') meta.down = w;
+
+                        // Activate cell if not already
+                        if(!cell.classList.contains('active')) {
+                            cell.classList.add('active');
+                            const input = document.createElement('input');
+                            input.maxLength = 1;
+                            input.dataset.r = r;
+                            input.dataset.c = c;
+                            input.onfocus = () => onCellFocus(r, c);
+                            input.onclick = () => onCellClick(r, c);
+                            input.oninput = (e) => handleInput(e, r, c);
+                            input.onkeydown = (e) => handleKey(e, r, c);
+                            cell.appendChild(input);
+                        }
+
+                        // Add number if start
+                        if(i === 0) {
+                            if(!cell.querySelector('.number')) {
+                                const num = document.createElement('span');
+                                num.className = 'number';
+                                num.innerText = w.number;
+                                cell.appendChild(num);
+                            }
+                        }
+
+                        // Store correct answer
+                        // Store correct answer (detect conflicts)
+const key = `cell-${r}-${c}`;
+const existing = cellMap.get(key);
+if(existing && existing !== w.word[i]) {
+    console.error(`Crossword config conflict at ${key}: "${existing}" vs "${w.word[i]}" (word ${w.word})`);
+} else {
+    cellMap.set(key, w.word[i]);
+}
+                    }
+                }
+            });
+        }
+
+        // --- Interaction Logic ---
+
+        function handleInput(e, r, c) {
+            const val = e.target.value.toUpperCase();
+            e.target.value = val; // Force upper
+            
+            if(val) {
+                const dr = activeDir === 'down' ? 1 : 0;
+                const dc = activeDir === 'across' ? 1 : 0;
+                let nextR = r + dr;
+                let nextC = c + dc;
+                
+                let nextCell = document.getElementById(`cell-${nextR}-${nextC}`);
+                
+                if(nextCell && nextCell.classList.contains('active')) {
+                    nextCell.querySelector('input').focus();
+                }
+            }
+        }
+
+        function handleKey(e, r, c) {
+            if(e.key === 'Backspace' && e.target.value === '') {
+                const dr = activeDir === 'down' ? 1 : 0;
+                const dc = activeDir === 'across' ? 1 : 0;
+                let prevR = r - dr;
+                let prevC = c - dc;
+                
+                let prevCell = document.getElementById(`cell-${prevR}-${prevC}`);
+                if(prevCell && prevCell.classList.contains('active')) {
+                    const input = prevCell.querySelector('input');
+                    input.focus();
+                }
+            }
+        }
+
+        function highlightWord(w) {
+            activeWord = w;
+            activeDir = w.direction;
+            // Focus first cell
+            const cell = document.getElementById(`cell-${w.row}-${w.col}`);
+            if(cell) {
+                const input = cell.querySelector('input');
+                if(input) input.focus();
+            }
+            highlightClue(w);
+        }
+
+        function highlightClue(activeWord) {
+            // Remove old highlights
+            document.querySelectorAll('.clue-item').forEach(el => el.classList.remove('highlighted'));
+            
+            // Highlight specific clue
+            const clueId = `clue-${activeWord.number}-${activeWord.direction}`;
+            const el = document.getElementById(clueId);
+            if(el) {
+                el.classList.add('highlighted');
+                el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+        }
+
+        function chooseActiveWordForCell(r, c, allowToggle) {
+            const cellId = `cell-${r}-${c}`;
+            const meta = cellMeta.get(cellId);
+            if (!meta) return;
+
+            const hasAcross = !!meta.across;
+            const hasDown = !!meta.down;
+
+            if (!allowToggle && activeWord && cellInWord(activeWord, r, c)) {
+                activeDir = activeWord.direction;
+                highlightClue(activeWord);
+                return;
+            }
+
+            if (allowToggle && hasAcross && hasDown) {
+                if (lastClickedCellId === cellId) {
+                    activeDir = (activeDir === 'across') ? 'down' : 'across';
+                } else {
+                    if (activeDir === 'across' && !hasAcross) activeDir = 'down';
+                    if (activeDir === 'down' && !hasDown) activeDir = 'across';
+                }
+                lastClickedCellId = cellId;
+            }
+
+            if (activeWord) {
+                const inAcross = (activeWord.direction === 'across' && meta.across && meta.across.number === activeWord.number);
+                const inDown = (activeWord.direction === 'down' && meta.down && meta.down.number === activeWord.number);
+                if (inAcross || inDown) {
+                    highlightClue(activeWord);
+                    return;
+                }
+            }
+
+            let next = null;
+            if (activeDir === 'across' && meta.across) next = meta.across;
+            if (activeDir === 'down' && meta.down) next = meta.down;
+
+            if (!next) {
+                if (meta.across) {
+                    activeDir = 'across';
+                    next = meta.across;
+                } else if (meta.down) {
+                    activeDir = 'down';
+                    next = meta.down;
+                }
+            }
+
+            if (next) {
+                activeWord = next;
+                highlightClue(next);
+            }
+        }
+
+        function cellInWord(word, r, c) {
+            if (!word) return false;
+            const len = word.word.length;
+            if (word.direction === 'across') {
+                return r === word.row && c >= word.col && c < word.col + len;
+            }
+            return c === word.col && r >= word.row && r < word.row + len;
+        }
+
+        function onCellFocus(r, c) {
+            chooseActiveWordForCell(r, c, false);
+        }
+
+        function onCellClick(r, c) {
+            chooseActiveWordForCell(r, c, true);
+        }
+
+        // --- Game Logic ---
+
+        function checkAnswers() {
+            let correctCount = 0;
+            let total = 0;
+
+            cellMap.forEach((val, id) => {
+                total++;
+                const cell = document.getElementById(id);
+                const input = cell.querySelector('input');
+                if(input.value === val) {
+                    input.style.backgroundColor = '#d4efdf'; // Green
+                    input.style.color = '#145a32';
+                    correctCount++;
+                } else if (input.value !== '') {
+                    input.style.backgroundColor = '#fadbd8'; // Red
+                    input.style.color = '#78281f';
+                } else {
+                    input.style.backgroundColor = 'transparent';
+                }
+            });
+
+            if(correctCount === total && total > 0) {
+                setTimeout(() => alert("Excellent work! You are ready for the Boards."), 100);
+            }
+        }
+
+        function revealAll() {
+            cellMap.forEach((val, id) => {
+                const input = document.getElementById(id).querySelector('input');
+                input.value = val;
+                input.style.backgroundColor = '#d4efdf';
+                input.style.color = '#145a32';
+            });
+        }
+
+        function resetBoard() {
+            cellMap.forEach((val, id) => {
+                const input = document.getElementById(id).querySelector('input');
+                input.value = '';
+                input.style.backgroundColor = 'transparent';
+                input.style.color = 'var(--text-color)';
+            });
+        }
+
+        // Run
+        init();
+
+    </script>
+</body>
+</html>

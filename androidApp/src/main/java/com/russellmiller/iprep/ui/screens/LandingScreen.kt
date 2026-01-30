@@ -20,7 +20,9 @@ fun LandingScreen(
     onNavigateToQuiz: () -> Unit,
     onNavigateToDashboard: () -> Unit,
     onNavigateToAnalytics: () -> Unit,
-    onNavigateToLeaderboard: () -> Unit
+    onNavigateToLeaderboard: () -> Unit,
+    onNavigateToDuel: () -> Unit,
+    onNavigateToCrosswords: () -> Unit
 ) {
     val appEnvironment = AppEnvironment.shared
     val modules by remember { mutableStateOf(appEnvironment.questionBankService.moduleSummaries()) }
@@ -86,7 +88,55 @@ fun LandingScreen(
                     }
                 }
             }
-            
+
+            item {
+                Card(
+                    modifier = Modifier.fillMaxWidth()
+                ) {
+                    Column(
+                        modifier = Modifier.padding(16.dp),
+                        horizontalAlignment = Alignment.CenterHorizontally
+                    ) {
+                        Text(
+                            text = "Clinical Duel",
+                            fontSize = 20.sp,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Text(
+                            text = "Battle themed enemies by answering True/False questions",
+                            textAlign = TextAlign.Center
+                        )
+                        Button(onClick = onNavigateToDuel) {
+                            Text("Start Duel")
+                        }
+                    }
+                }
+            }
+
+            item {
+                Card(
+                    modifier = Modifier.fillMaxWidth()
+                ) {
+                    Column(
+                        modifier = Modifier.padding(16.dp),
+                        horizontalAlignment = Alignment.CenterHorizontally
+                    ) {
+                        Text(
+                            text = "Crossword Puzzles",
+                            fontSize = 20.sp,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Text(
+                            text = "Practice high-yield IP concepts with interactive crosswords",
+                            textAlign = TextAlign.Center
+                        )
+                        Button(onClick = onNavigateToCrosswords) {
+                            Text("Open Crosswords")
+                        }
+                    }
+                }
+            }
+
             item {
                 Text(
                     text = "Study Modules",

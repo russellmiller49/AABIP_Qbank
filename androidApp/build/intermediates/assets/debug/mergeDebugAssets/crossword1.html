@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interventional Pulmonology Board Review Puzzle</title>
+    <style>
+        :root {
+            --grid-cols: 15;
+            --cell-size-max: 35px;
+            --cell-size: clamp(16px, calc((100vw - 72px) / var(--grid-cols)), var(--cell-size-max));
+            --bg-color: #f4f6f7;
+            --grid-bg: #2c3e50;
+            --highlight: #e8f6f3;
+            --focus: #a9dfbf;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background-color: var(--bg-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 { color: #2c3e50; margin-bottom: 5px; }
+        .subtitle { color: #7f8c8d; margin-bottom: 30px; }
+
+        .game-container {
+            display: flex;
+            gap: 40px;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            max-width: 1000px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        #grid-wrapper {
+            min-width: 0;
+            max-width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        /* CROSSWORD GRID STYLES */
+        .crossword-grid {
+            display: grid;
+            grid-template-columns: repeat(15, var(--cell-size));
+            grid-template-rows: repeat(14, var(--cell-size));
+            gap: 1px;
+            background-color: var(--grid-bg);
+            border: 2px solid var(--grid-bg);
+        }
+
+        .cell {
+            background-color: #000; /* Black for empty */
+            position: relative;
+        }
+
+        .cell.active {
+            background-color: #fff;
+        }
+
+        .cell input {
+            width: 100%;
+            height: 100%;
+            border: none;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #2c3e50;
+            outline: none;
+            background: transparent;
+            -webkit-appearance: none;
+            appearance: none;
+            cursor: pointer;
+            padding: 0;
+            margin: 0;
+        }
+
+        .cell input:focus {
+            background-color: var(--focus);
+        }
+
+        .cell .number {
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            font-size: 9px;
+            color: #7f8c8d;
+            pointer-events: none;
+            font-weight: bold;
+            z-index: 5;
+        }
+
+        /* CLUES STYLES */
+        .clues-section {
+            width: 350px;
+            max-height: 550px;
+            overflow-y: auto;
+        }
+
+        h3 {
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+            color: #2980b9;
+        }
+
+        .clue-list {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+
+        .clue-item {
+            margin-bottom: 12px;
+            font-size: 14px;
+            cursor: pointer;
+            padding: 5px;
+            border-radius: 4px;
+            transition: background 0.2s;
+        }
+
+        .clue-item:hover {
+            background-color: var(--highlight);
+        }
+
+        .clue-number {
+            font-weight: bold;
+            color: #e74c3c;
+            margin-right: 5px;
+        }
+
+        /* CONTROLS */
+        .controls {
+            margin-top: 20px;
+            display: flex;
+            gap: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: transform 0.1s;
+        }
+
+        .btn-check { background-color: #3498db; color: white; }
+        .btn-reveal { background-color: #e74c3c; color: white; }
+        .btn-print { background-color: #95a5a6; color: white; }
+
+        button:active { transform: scale(0.98); }
+
+        /* PRINT STYLES */
+        @media print {
+            .controls, .subtitle { display: none; }
+            .game-container { box-shadow: none; }
+            body { background: white; }
+            .cell input { color: transparent; text-shadow: 0 0 0 #ccc; } /* Hide answers for print */
+        }
+
+        @media (max-width: 600px) {
+            body { padding: 12px; }
+            .subtitle { margin-bottom: 16px; }
+            .game-container { padding: 12px; gap: 18px; }
+            .clues-section { width: 100%; max-width: 520px; }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Interventional Pulmonology Board Review</h1>
+    <div class="subtitle">Interactive Crossword • High-Yield Concepts</div>
+
+    <div class="game-container">
+        <div id="grid-wrapper">
+            <div class="crossword-grid" id="grid">
+                </div>
+            
+            <div class="controls">
+                <button class="btn-check" onclick="checkAnswers()">Check Answers</button>
+                <button class="btn-reveal" onclick="revealAnswers()">Reveal All</button>
+                <button class="btn-print" onclick="window.print()">Print Blank</button>
+            </div>
+        </div>
+
+        <div class="clues-section">
+            <h3>ACROSS</h3>
+            <ul class="clue-list" id="across-clues">
+                </ul>
+
+            <h3>DOWN</h3>
+            <ul class="clue-list" id="down-clues">
+               </ul>
+        </div>
+    </div>
+
+    <script>
+        // --- PUZZLE DATA STRUCTURE ---
+        // Layout designed for tight intersection of 8 high-yield words.
+        // Grid: 15 cols x 13 rows.
+        
+        const puzzleData = [
+            {
+                word: "TPA",
+                clue: "Fibrinolytic agent used with DNase for loculated pleural infection.",
+                start: [0, 6], // Row, Col
+                direction: "down",
+                number: 1
+            },
+            {
+                word: "AZYGOS",
+                clue: "Vascular landmark; its lower rim marks the inferior border of station 4R.",
+                start: [2, 6],
+                direction: "down",
+                number: 2
+            },
+            {
+                word: "MIGRATION",
+                clue: "Common stent complication; reduced by hourglass or Y-stent designs.",
+                start: [3, 10],
+                direction: "down",
+                number: 3
+            },
+            {
+                word: "LUNGRADS",
+                clue: "Standardized reporting for lung screening; 4B requires tissue sampling.",
+                start: [4, 2],
+                direction: "down",
+                number: 4
+            },
+            {
+                word: "PNEUMOTHORAX",
+                clue: "Dominant early complication of BLVR; high risk with complete fissures.",
+                start: [6, 1],
+                direction: "across",
+                number: 5
+            },
+            {
+                word: "VESPA",
+                clue: "Ventilation strategy (acronym) to prevent atelectasis under GA.",
+                start: [7, 9],
+                direction: "down",
+                number: 6
+            },
+            {
+                word: "SILICONE",
+                clue: "Preferred stent material for benign disease; removable.",
+                start: [9, 9],
+                direction: "across",
+                number: 7
+            },
+            {
+                word: "ADDON",
+                clue: "Coding term for procedures (+31654) not subject to multiple endoscopy reduction.",
+                start: [10, 0],
+                direction: "across",
+                number: 8
+            }
+        ];
+
+        const rows = 14;
+        const cols = 15;
+        const gridElement = document.getElementById('grid');
+        const acrossList = document.getElementById('across-clues');
+        const downList = document.getElementById('down-clues');
+
+        // State map to track correct answers
+        let cellMap = new Map();
+
+        function initGrid() {
+            // 1. Create empty grid cells
+            for (let r = 0; r < rows; r++) {
+                for (let c = 0; c < cols; c++) {
+                    const cell = document.createElement('div');
+                    cell.className = 'cell';
+                    cell.id = `cell-${r}-${c}`;
+                    gridElement.appendChild(cell);
+                }
+            }
+
+            // 2. Place words
+            puzzleData.forEach(item => {
+                // Add clue to list
+                const li = document.createElement('li');
+                li.className = 'clue-item';
+                li.innerHTML = `<span class="clue-number">${item.number}.</span> ${item.clue}`;
+                
+                if (item.direction === 'across') {
+                    acrossList.appendChild(li);
+                } else {
+                    downList.appendChild(li);
+                }
+
+                // Fill grid cells
+                let [r, c] = item.start;
+                for (let i = 0; i < item.word.length; i++) {
+                    const cellId = `cell-${r}-${c}`;
+                    const cell = document.getElementById(cellId);
+                    
+                    if (!cell.classList.contains('active')) {
+                        cell.classList.add('active');
+                        // Add input
+                        const input = document.createElement('input');
+                        input.maxLength = 1;
+                        input.dataset.row = r;
+                        input.dataset.col = c;
+                        input.oninput = (e) => handleInput(e, item.direction);
+                        cell.appendChild(input);
+                    }
+
+                    // Add number if start of word
+                    if (i === 0) {
+                        const numSpan = document.createElement('span');
+                        numSpan.className = 'number';
+                        numSpan.innerText = item.number;
+                        // Avoid duplicates if two words start at same cell (rare here)
+                        if(!cell.querySelector('.number')) cell.appendChild(numSpan);
+                    }
+
+                    // Store correct answer
+                    cellMap.set(cellId, item.word[i]);
+
+                    // Move to next cell
+                    if (item.direction === 'across') c++;
+                    else r++;
+                }
+            });
+        }
+
+        // Auto-navigation for typing
+        function handleInput(e, direction) {
+            const input = e.target;
+            if (input.value.length === 1) {
+                let r = parseInt(input.dataset.row);
+                let c = parseInt(input.dataset.col);
+                
+                // Try moving in direction of word
+                if (direction === 'across') c++;
+                else r++;
+                
+                const nextCell = document.getElementById(`cell-${r}-${c}`);
+                if (nextCell && nextCell.classList.contains('active')) {
+                    const nextInput = nextCell.querySelector('input');
+                    if (nextInput) nextInput.focus();
+                }
+            }
+        }
+
+        function checkAnswers() {
+            let correct = 0;
+            let total = 0;
+            
+            cellMap.forEach((letter, id) => {
+                total++;
+                const cell = document.getElementById(id);
+                const input = cell.querySelector('input');
+                if (input.value.toUpperCase() === letter) {
+                    input.style.backgroundColor = '#d4efdf'; // Greenish
+                    correct++;
+                } else if (input.value !== '') {
+                    input.style.backgroundColor = '#fadbd8'; // Reddish
+                } else {
+                    input.style.backgroundColor = 'white';
+                }
+            });
+            
+            if(correct === total) alert("Perfect Score! You are ready for the Boards.");
+        }
+
+        function revealAnswers() {
+            if(!confirm("Reveal the entire puzzle?")) return;
+            cellMap.forEach((letter, id) => {
+                const cell = document.getElementById(id);
+                const input = cell.querySelector('input');
+                input.value = letter;
+                input.style.backgroundColor = 'white';
+            });
+        }
+
+        // Initialize on load
+        initGrid();
+
+    </script>
+</body>
+</html>

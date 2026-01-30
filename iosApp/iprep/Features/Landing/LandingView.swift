@@ -12,7 +12,9 @@ struct LandingView: View {
     let onSelectModule: (Module) -> Void
     let onRetryIncorrect: () -> Void
     let onExploreQuestions: () -> Void
+    let onShowCrosswords: () -> Void
     let onShowLeaderboard: () -> Void
+    let onShowDuel: () -> Void
 
     @State private var showModulePicker = false
     @State private var showNoIncorrectAlert = false
@@ -134,8 +136,18 @@ struct LandingView: View {
                 }
                 .buttonStyle(LandingButtonStyle(variant: .secondary))
 
+                Button(action: onShowCrosswords) {
+                    Text("Crossword Puzzles")
+                }
+                .buttonStyle(LandingButtonStyle(variant: .secondary))
+
                 Button(action: onShowLeaderboard) {
                     Text("Leaderboards")
+                }
+                .buttonStyle(LandingButtonStyle(variant: .secondary))
+
+                Button(action: onShowDuel) {
+                    Text("Clinical Duel")
                 }
                 .buttonStyle(LandingButtonStyle(variant: .secondary))
 

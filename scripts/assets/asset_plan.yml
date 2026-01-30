@@ -1,0 +1,134 @@
+version: 1
+inputs:
+  zips_dir: "kenny_assets"
+  work_dir: "assets_work/extracted"
+
+output:
+  root: "shared/src/commonMain/resources/assets"
+
+manifest:
+  path: "shared/src/commonMain/resources/assets/manifest/assets_manifest.json"
+
+# Simple rules:
+# - Each item produces exactly one output file OR multiple variants if you define variants.
+# - "pick" chooses the first match if multiple match.
+# - Use forward slashes in patterns.
+
+assets:
+
+  # ---------------- UI (UI Pack Adventure) ----------------
+  - id: "ui.panel.dialog"
+    category: "ui"
+    source_zip_hint: "ui-pack-adventure"
+    pattern: "**/*panel*.png"
+    pick: "largest"
+
+  - id: "ui.button.primary"
+    category: "ui"
+    source_zip_hint: "ui-pack-adventure"
+    pattern: "**/button_brown.png"
+    pick: "largest"
+
+  - id: "ui.button.secondary"
+    category: "ui"
+    source_zip_hint: "ui-pack-adventure"
+    pattern: "**/button_grey.png"
+    pick: "largest"
+
+  - id: "ui.hp.frame"
+    category: "ui"
+    source_zip_hint: "ui-pack-adventure"
+    pattern: "**/progress_green_border.png"
+    pick: "largest"
+
+  - id: "ui.hp.fill"
+    category: "ui"
+    source_zip_hint: "ui-pack-adventure"
+    pattern: "**/progress_green.png"
+    pick: "largest"
+
+  # ---------------- Icons (Game Icons / Board Game Icons) ----------------
+  - id: "icon.status.correct"
+    category: "icons"
+    source_zip_hint: "game-icons"
+    pattern: "**/PNG/White/2x/checkmark.png"
+    pick: "first"
+
+  - id: "icon.status.wrong"
+    category: "icons"
+    source_zip_hint: "game-icons"
+    pattern: "**/PNG/White/2x/cross.png"
+    pick: "first"
+
+  - id: "icon.status.streak"
+    category: "icons"
+    source_zip_hint: "board-game-icons"
+    pattern: "**/campfire.png"
+    pick: "largest"
+
+  - id: "icon.buff.shield"
+    category: "icons"
+    source_zip_hint: "board-game-icons"
+    pattern: "**/shield.png"
+    pick: "largest"
+
+  - id: "icon.buff.heal"
+    category: "icons"
+    source_zip_hint: "board-game-icons"
+    pattern: "**/suit_hearts.png"
+    pick: "largest"
+
+  # ---------------- Characters (Shape Characters) ----------------
+  - id: "char.hero.medic"
+    category: "chars"
+    source_zip_hint: "shape-characters"
+    pattern: "**/green_body_circle.png"
+    pick: "first"
+    note: "Replace pattern with a specific sprite once you inspect extraction results."
+
+  - id: "char.enemy.virus_01"
+    category: "chars"
+    source_zip_hint: "shape-characters"
+    pattern: "**/red_body_circle.png"
+    pick: "first"
+    note: "Replace after inspection."
+
+  # ---------------- Backgrounds (Top-down Shooter) ----------------
+  - id: "bg.arena.clinic_01"
+    category: "bg"
+    source_zip_hint: "top-down-shooter"
+    pattern: "**/*tiles*/*.png"
+    pick: "first"
+    note: "Start with a single tile background; later compose full scenes."
+
+  # ---------------- VFX (Particle Pack) ----------------
+  - id: "vfx.hit.small"
+    category: "vfx"
+    source_zip_hint: "particle-pack"
+    pattern: "**/PNG (Transparent)/spark_01.png"
+    pick: "first"
+
+  - id: "vfx.heal.burst"
+    category: "vfx"
+    source_zip_hint: "particle-pack"
+    pattern: "**/PNG (Transparent)/magic_01.png"
+    pick: "first"
+
+  # ---------------- SFX (Interface Sounds) ----------------
+  - id: "sfx.ui.tap"
+    category: "sfx"
+    source_zip_hint: "interface-sounds"
+    pattern: "**/*click*.*"
+    pick: "first"
+
+  - id: "sfx.ui.correct"
+    category: "sfx"
+    source_zip_hint: "interface-sounds"
+    pattern: "**/*confirm*.*"
+    pick: "first"
+
+  - id: "sfx.ui.wrong"
+    category: "sfx"
+    source_zip_hint: "interface-sounds"
+    pattern: "**/*error*.*"
+    pick: "first"

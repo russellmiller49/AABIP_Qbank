@@ -2,22 +2,35 @@ package com.russellmiller.iprep.shared.services
 
 import kotlinx.cinterop.ExperimentalForeignApi
 import kotlinx.cinterop.addressOf
+import kotlinx.cinterop.convert
 import kotlinx.cinterop.usePinned
 import platform.Foundation.NSBundle
-import platform.Foundation.NSFileManager
-import platform.posix.memcpy
+import platform.posix.SEEK_END
+import platform.posix.fclose
+import platform.posix.fopen
+import platform.posix.fread
+import platform.posix.fseek
+import platform.posix.ftell
+import platform.posix.rewind
 
 @OptIn(ExperimentalForeignApi::class)
 internal actual fun loadQuestionBankJson(): String? {
     val path = NSBundle.mainBundle.pathForResource("QuestionBank", "json") ?: return null
-    val data = NSFileManager.defaultManager.contentsAtPath(path) ?: return null
-    val length = data.length.toInt()
-    if (length == 0) return ""
-    val bytes = data.bytes ?: return null
-    val byteArray = ByteArray(length).apply {
-        usePinned {
-            memcpy(it.addressOf(0), bytes, data.length)
+    val filePointer = fopen(path, "rb") ?: return null
+    return try {
+        if (fseek(filePointer, 0, SEEK_END) != 0) return null
+        val fileSize = ftell(filePointer)
+        if (fileSize <= 0L) return ""
+        if (fileSize > Int.MAX_VALUE.toLong()) return null
+        rewind(filePointer)
+        val byteCount = fileSize.toInt()
+        val buffer = ByteArray(byteCount)
+        val bytesRead = buffer.usePinned { pinned ->
+            fread(pinned.addressOf(0), 1u, byteCount.convert(), filePointer)
         }
+        if (bytesRead.toLong() != fileSize) return null
+        buffer.decodeToString()
+    } finally {
+        fclose(filePointer)
     }
-    return byteArray.decodeToString()
 }

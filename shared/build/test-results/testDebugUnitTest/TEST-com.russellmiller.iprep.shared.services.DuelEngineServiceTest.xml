@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.russellmiller.iprep.shared.services.DuelEngineServiceTest" tests="13" skipped="0" failures="0" errors="0" timestamp="2026-01-28T21:52:22.693Z" hostname="Mac" time="0.037">
+  <properties/>
+  <testcase name="startDuelInitializesEnemyHpFromMaxHp" classname="com.russellmiller.iprep.shared.services.DuelEngineServiceTest" time="0.023"/>
+  <testcase name="levelCurveMatchesSpec" classname="com.russellmiller.iprep.shared.services.DuelEngineServiceTest" time="0.001"/>
+  <testcase name="streakMultiplierUsesNewStreak" classname="com.russellmiller.iprep.shared.services.DuelEngineServiceTest" time="0.006"/>
+  <testcase name="enemyUnlockLogicWorks" classname="com.russellmiller.iprep.shared.services.DuelEngineServiceTest" time="0.0"/>
+  <testcase name="shieldReducesDamageByHalf" classname="com.russellmiller.iprep.shared.services.DuelEngineServiceTest" time="0.0"/>
+  <testcase name="lifelineActiveClearedAfterAnswer" classname="com.russellmiller.iprep.shared.services.DuelEngineServiceTest" time="0.0"/>
+  <testcase name="lifelineOneUseEnforced" classname="com.russellmiller.iprep.shared.services.DuelEngineServiceTest" time="0.0"/>
+  <testcase name="questionSoftBanAvoidsRecentWhenPoolLargeEnough" classname="com.russellmiller.iprep.shared.services.DuelEngineServiceTest" time="0.0"/>
+  <testcase name="critChanceDeterministicWithSeededRng" classname="com.russellmiller.iprep.shared.services.DuelEngineServiceTest" time="0.001"/>
+  <testcase name="persistenceRoundTrip" classname="com.russellmiller.iprep.shared.services.DuelEngineServiceTest" time="0.003"/>
+  <testcase name="doubleTapBoostsDamage" classname="com.russellmiller.iprep.shared.services.DuelEngineServiceTest" time="0.001"/>
+  <testcase name="masteryUpdateRuleAppliesAndClamps" classname="com.russellmiller.iprep.shared.services.DuelEngineServiceTest" time="0.0"/>
+  <testcase name="questionHardBanNoRepeatsInSingleDuel" classname="com.russellmiller.iprep.shared.services.DuelEngineServiceTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

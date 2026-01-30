@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interventional & Pleural Board Review Crossword</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #ecf0f1;
+            --accent-color: #e74c3c;
+            --highlight-color: #3498db;
+            --grid-cols: 15;
+            --cell-size-max: 36px;
+            --cell-size: clamp(16px, calc((100vw - 64px) / var(--grid-cols)), var(--cell-size-max));
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f7;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 25px;
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 15px;
+            width: 100%;
+            max-width: 900px;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            margin: 0 0 5px 0;
+            font-size: 28px;
+        }
+
+        .subtitle {
+            font-style: italic;
+            color: #7f8c8d;
+            font-size: 16px;
+        }
+
+        .game-layout {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        /* GRID STYLES */
+        .grid-wrapper {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            min-width: 0;
+            max-width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .crossword-grid {
+            display: grid;
+            grid-template-columns: repeat(15, var(--cell-size));
+            grid-template-rows: repeat(15, var(--cell-size));
+            gap: 1px;
+            background-color: #2c3e50; /* Border color */
+            border: 2px solid #2c3e50;
+        }
+
+        .cell {
+            background-color: #2c3e50; /* Empty cell color */
+            position: relative;
+            width: var(--cell-size);
+            height: var(--cell-size);
+        }
+
+        .cell.active {
+            background-color: #ffffff;
+        }
+
+        .cell input {
+            width: 100%;
+            height: 100%;
+            border: none;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--primary-color);
+            outline: none;
+            background: transparent;
+            padding: 0;
+            margin: 0;
+            cursor: pointer;
+        }
+
+        .cell input:focus {
+            background-color: #d6eaf8;
+        }
+
+        .cell .number {
+            position: absolute;
+            top: 1px;
+            left: 2px;
+            font-size: 9px;
+            color: #666;
+            pointer-events: none;
+            font-weight: bold;
+            z-index: 5;
+        }
+
+        @media (max-width: 600px) {
+            body { padding: 12px; }
+            header { margin-bottom: 16px; }
+            .game-layout { gap: 18px; }
+            .grid-wrapper { padding: 10px; }
+            .clues-panel { min-width: 0; max-width: 100%; }
+        }
+
+        /* CLUES PANEL */
+        .clues-panel {
+            flex: 1;
+            min-width: 320px;
+            max-width: 450px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            max-height: 650px;
+            overflow-y: auto;
+            border-top: 4px solid var(--highlight-color);
+        }
+
+        h3 {
+            color: var(--highlight-color);
+            border-bottom: 1px solid #eee;
+            padding-bottom: 8px;
+            margin-top: 0;
+        }
+
+        .clue-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 20px 0;
+        }
+
+        .clue-item {
+            padding: 6px 8px;
+            margin-bottom: 6px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            line-height: 1.4;
+            transition: all 0.2s;
+        }
+
+        .clue-item:hover {
+            background-color: #ecf0f1;
+        }
+
+        .clue-item.highlighted {
+            background-color: #d4e6f1;
+            border-left: 3px solid var(--highlight-color);
+            font-weight: 600;
+        }
+
+        .clue-num {
+            font-weight: bold;
+            color: var(--accent-color);
+            margin-right: 6px;
+        }
+
+        /* CONTROLS */
+        .controls {
+            margin-top: 20px;
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        button {
+            padding: 10px 18px;
+            font-size: 14px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: opacity 0.2s;
+        }
+
+        button:hover { opacity: 0.9; }
+
+        .btn-check { background-color: var(--highlight-color); color: white; }
+        .btn-reveal { background-color: var(--accent-color); color: white; }
+        .btn-reset { background-color: #95a5a6; color: white; }
+
+        /* PRINT MEDIA QUERY */
+        @media print {
+            body { background: white; padding: 0; }
+            .controls, header { display: none; }
+            .grid-wrapper, .clues-panel { box-shadow: none; border: 1px solid #ccc; }
+            .cell input { color: transparent; } /* Hide answers for printing */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>The "Interventional & Pleural" Crossword</h1>
+        <div class="subtitle">Advanced Concepts: Stents, Ablation, Pleural Disease & Tracheostomy</div>
+    </header>
+
+    <div class="game-layout">
+        <div class="grid-wrapper">
+            <div id="crossword" class="crossword-grid">
+                </div>
+            <div class="controls">
+                <button class="btn-check" onclick="checkAnswers()">Check Answers</button>
+                <button class="btn-reveal" onclick="revealAll()">Reveal All</button>
+                <button class="btn-reset" onclick="resetBoard()">Reset</button>
+            </div>
+        </div>
+
+        <div class="clues-panel">
+            <h3>Across</h3>
+            <ul id="across-clues" class="clue-list"></ul>
+            
+            <h3>Down</h3>
+            <ul id="down-clues" class="clue-list"></ul>
+        </div>
+    </div>
+
+    <script>
+        // --- PUZZLE DATA ---
+        // 15x15 Grid. Indices are 0-based.
+        
+        const puzzleData = [
+            {
+                number: 1,
+                word: "MIGRATION",
+                clue: "Common stent complication (~10%) often due to undersizing.",
+                row: 1, col: 1, dir: "across"
+            },
+            {
+                number: 2,
+                word: "RAPID",
+                clue: "Score predicting mortality in pleural infection (Renal, Age, Purulence...).",
+                row: 1, col: 4, dir: "down" // Intersects MIG[R]ATION
+            },
+            {
+                number: 3,
+                word: "IPC",
+                clue: "Preferred device for MPE with trapped lung (Abbr).",
+                row: 1, col: 2, dir: "down" // Intersects M[I]GRATION
+            },
+            {
+                number: 4,
+                word: "APC",
+                clue: "Non-contact thermal modality for diffuse hemostasis.",
+                row: 2, col: 1, dir: "across" // Intersects I[P]C
+            },
+            {
+                number: 5,
+                word: "CORING",
+                clue: "Rigid bronch maneuver using the beveled tip.",
+                row: 1, col: 7, dir: "down" // Intersects MIGRAT[I]ON
+            },
+            {
+                number: 6,
+                word: "WEB",
+                clue: "Simple benign stenosis type treated with radial incisions.",
+                row: 6, col: 1, dir: "across"
+            },
+            {
+                number: 7,
+                word: "FORTY",
+                clue: "FiO2 percentage limit (spelled out) to prevent airway fires.",
+                row: 5, col: 9, dir: "down"
+            },
+            {
+                number: 8,
+                word: "CHARTIS",
+                clue: "Balloon catheter system to assess collateral ventilation.",
+                row: 8, col: 1, dir: "across"
+            },
+            {
+                number: 9,
+                word: "TPA",
+                clue: "Fibrinolytic agent used with DNase for empyema.",
+                row: 8, col: 5, dir: "down" // Intersects CHAR[T]IS
+            },
+            {
+                number: 10,
+                word: "TIF",
+                clue: "Tracheo-Innominate Fistula (Abbr).",
+                row: 10, col: 1, dir: "down"
+            },
+            {
+                number: 11,
+                word: "EDAC",
+                clue: "Dynamic collapse from posterior membrane bowing.",
+                row: 12, col: 4, dir: "across"
+            },
+            {
+                number: 12,
+                word: "CONCENTRIC",
+                clue: "rEBUS pattern predicting high diagnostic yield.",
+                row: 1, col: 11, dir: "down"
+            },
+            {
+                number: 13,
+                word: "RIGID",
+                clue: "Preferred airway for therapeutic bronchoscopy.",
+                row: 4, col: 10, dir: "across"
+            },
+            {
+                number: 14,
+                word: "DANGER",
+                clue: "Zone to avoid during thoracentesis (posterior 6cm).",
+                row: 8, col: 13, dir: "down"
+            },
+            {
+                number: 15,
+                word: "MICRODEBRIDER",
+                clue: "Rotating blade tool for rapid central debulking.",
+                row: 14, col: 1, dir: "across"
+            }
+        ];
+
+        // --- INIT LOGIC ---
+        const rows = 15;
+        const cols = 15;
+        const gridEl = document.getElementById('crossword');
+        const acrossList = document.getElementById('across-clues');
+        const downList = document.getElementById('down-clues');
+        let cellAnswers = new Map(); // Store correct answer for each cell ID
+
+        function initGame() {
+            // 1. Create Grid
+            for (let r = 0; r < rows; r++) {
+                for (let c = 0; c < cols; c++) {
+                    let cell = document.createElement('div');
+                    cell.className = 'cell';
+                    cell.id = `cell-${r}-${c}`;
+                    gridEl.appendChild(cell);
+                }
+            }
+
+            // 2. Place Words
+            puzzleData.forEach(item => {
+                // List Clue
+                let li = document.createElement('li');
+                li.className = 'clue-item';
+                li.id = `clue-${item.number}-${item.dir}`;
+                li.innerHTML = `<span class="clue-num">${item.number}.</span> ${item.clue}`;
+                li.onclick = () => focusWord(item);
+                
+                if (item.dir === 'across') acrossList.appendChild(li);
+                else downList.appendChild(li);
+
+                // Fill Cells
+                for (let i = 0; i < item.word.length; i++) {
+                    let r = item.row + (item.dir === 'down' ? i : 0);
+                    let c = item.col + (item.dir === 'across' ? i : 0);
+                    let cell = document.getElementById(`cell-${r}-${c}`);
+
+                    // Make active if not already
+                    if (!cell.classList.contains('active')) {
+                        cell.classList.add('active');
+                        let input = document.createElement('input');
+                        input.maxLength = 1;
+                        input.dataset.r = r;
+                        input.dataset.c = c;
+                        input.onfocus = () => highlightClue(item);
+                        input.oninput = (e) => handleInput(e, r, c, item.dir);
+                        input.onkeydown = (e) => handleKey(e, r, c, item.dir);
+                        cell.appendChild(input);
+                    }
+
+                    // Add number if first letter
+                    if (i === 0) {
+                        // Check if a number span already exists (intersection)
+                        if(!cell.querySelector('.number')) {
+                            let numSpan = document.createElement('span');
+                            numSpan.className = 'number';
+                            numSpan.innerText = item.number;
+                            cell.appendChild(numSpan);
+                        }
+                    }
+
+                    // Store answer for validation
+                    cellAnswers.set(`cell-${r}-${c}`, item.word[i]);
+                }
+            });
+        }
+
+        // --- INTERACTION ---
+
+        function focusWord(item) {
+            let r = item.row;
+            let c = item.col;
+            let cell = document.getElementById(`cell-${r}-${c}`);
+            let input = cell.querySelector('input');
+            if (input) input.focus();
+            highlightClue(item);
+        }
+
+        function highlightClue(item) {
+            // Clear previous
+            document.querySelectorAll('.clue-item').forEach(el => el.classList.remove('highlighted'));
+            // Highlight current
+            let id = `clue-${item.number}-${item.dir}`;
+            let el = document.getElementById(id);
+            if (el) {
+                el.classList.add('highlighted');
+                el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+        }
+
+        function handleInput(e, r, c, dir) {
+            let val = e.target.value.toUpperCase();
+            e.target.value = val;
+
+            if (val) {
+                // Determine next cell
+                let nextR = r + (dir === 'down' ? 1 : 0);
+                let nextC = c + (dir === 'across' ? 1 : 0);
+                let nextCell = document.getElementById(`cell-${nextR}-${nextC}`);
+                
+                if (nextCell && nextCell.classList.contains('active')) {
+                    nextCell.querySelector('input').focus();
+                }
+            }
+        }
+
+        function handleKey(e, r, c, dir) {
+            if (e.key === 'Backspace' && e.target.value === '') {
+                // Move back
+                let prevR = r - (dir === 'down' ? 1 : 0);
+                let prevC = c - (dir === 'across' ? 1 : 0);
+                let prevCell = document.getElementById(`cell-${prevR}-${prevC}`);
+                
+                if (prevCell && prevCell.classList.contains('active')) {
+                    prevCell.querySelector('input').focus();
+                }
+            }
+        }
+
+        // --- GAME CONTROLS ---
+
+        function checkAnswers() {
+            let correctCount = 0;
+            let totalActive = cellAnswers.size;
+
+            cellAnswers.forEach((ans, id) => {
+                let cell = document.getElementById(id);
+                let input = cell.querySelector('input');
+                if (input.value === ans) {
+                    input.style.backgroundColor = '#d4efdf'; // Green
+                    input.style.color = '#145a32';
+                    correctCount++;
+                } else if (input.value !== '') {
+                    input.style.backgroundColor = '#fadbd8'; // Red
+                    input.style.color = '#78281f';
+                } else {
+                    input.style.backgroundColor = 'transparent';
+                }
+            });
+
+            if (correctCount === totalActive) {
+                setTimeout(() => alert("Perfect Score! You've mastered these IP concepts."), 100);
+            }
+        }
+
+        function revealAll() {
+            if (!confirm("Reveal all answers?")) return;
+            cellAnswers.forEach((ans, id) => {
+                let cell = document.getElementById(id);
+                let input = cell.querySelector('input');
+                input.value = ans;
+                input.style.backgroundColor = '#d4efdf';
+                input.style.color = '#145a32';
+            });
+        }
+
+        function resetBoard() {
+            if (!confirm("Clear board?")) return;
+            cellAnswers.forEach((ans, id) => {
+                let cell = document.getElementById(id);
+                let input = cell.querySelector('input');
+                input.value = '';
+                input.style.backgroundColor = 'transparent';
+                input.style.color = 'var(--primary-color)';
+            });
+        }
+
+        // Start
+        initGame();
+
+    </script>
+</body>
+</html>

@@ -15,4 +15,8 @@ public enum AppRoute: Hashable {
     case settings
     case questionExplorer
     case leaderboard
+    case crosswords
+    case crossword(puzzleId: String, title: String)
+    case duelEnemySelect
+    case duel(enemyId: String)
 }

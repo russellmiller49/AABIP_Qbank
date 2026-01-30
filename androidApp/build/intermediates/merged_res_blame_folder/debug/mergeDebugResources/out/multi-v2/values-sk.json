@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.russellmiller.iprep.androidApp-mergeDebugResources-64:/values-sk/values-sk.xml",
+            "outputFile": "com.russellmiller.iprep.androidApp-mergeDebugResources-66:/values-sk/values-sk.xml",
             "map": [
                 {
                     "source": "/Users/russellmiller/.gradle/caches/8.13/transforms/73220e6d8705d4884113bf5c98c7d4f0/transformed/material3-1.1.2/res/values-sk/values-sk.xml",

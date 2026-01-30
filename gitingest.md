@@ -1,7 +1,7 @@
 # AABIP_Qbank — gitingest (curated)
 
-Generated: `2026-01-27T12:14:24-08:00`
-Git: `unified` @ `a54124d`
+Generated: `2026-01-29T09:11:19-08:00`
+Git: `unified` @ `7af7a7b`
 
 ## What this file is
 - A **token-budget friendly** snapshot of the repo **structure** + a curated set of **important files**.
@@ -18,6 +18,7 @@ Git: `unified` @ `a54124d`
   - androidApp/
     - androidApp/src/
       - androidApp/src/main/
+        - androidApp/src/main/assets/
         - androidApp/src/main/java/
           - androidApp/src/main/java/com/
             - androidApp/src/main/java/com/russellmiller/
@@ -31,6 +32,70 @@ Git: `unified` @ `a54124d`
           - androidApp/src/main/res/mipmap-xxxhdpi/
           - androidApp/src/main/res/values/
           - androidApp/src/main/res/xml/
+  - assets_work/
+    - assets_work/extracted/
+      - assets_work/extracted/kenney_board-game-icons/
+        - assets_work/extracted/kenney_board-game-icons/PNG/
+          - assets_work/extracted/kenney_board-game-icons/PNG/Default (64px)/
+          - assets_work/extracted/kenney_board-game-icons/PNG/Double (128px)/
+        - assets_work/extracted/kenney_board-game-icons/Tilesheet/
+        - assets_work/extracted/kenney_board-game-icons/Vector/
+          - assets_work/extracted/kenney_board-game-icons/Vector/Icons/
+      - assets_work/extracted/kenney_game-icons/
+        - assets_work/extracted/kenney_game-icons/PNG/
+          - assets_work/extracted/kenney_game-icons/PNG/Black/
+            - assets_work/extracted/kenney_game-icons/PNG/Black/1x/
+            - assets_work/extracted/kenney_game-icons/PNG/Black/2x/
+          - assets_work/extracted/kenney_game-icons/PNG/White/
+            - assets_work/extracted/kenney_game-icons/PNG/White/1x/
+            - assets_work/extracted/kenney_game-icons/PNG/White/2x/
+        - assets_work/extracted/kenney_game-icons/Spritesheet/
+        - assets_work/extracted/kenney_game-icons/Vector/
+      - assets_work/extracted/kenney_impact-sounds/
+        - assets_work/extracted/kenney_impact-sounds/Audio/
+      - assets_work/extracted/kenney_interface-sounds/
+        - assets_work/extracted/kenney_interface-sounds/Audio/
+      - assets_work/extracted/kenney_music-jingles/
+        - assets_work/extracted/kenney_music-jingles/Audio/
+          - assets_work/extracted/kenney_music-jingles/Audio/8-Bit jingles/
+          - assets_work/extracted/kenney_music-jingles/Audio/Hit jingles/
+          - assets_work/extracted/kenney_music-jingles/Audio/Pizzicato jingles/
+          - assets_work/extracted/kenney_music-jingles/Audio/Sax jingles/
+          - assets_work/extracted/kenney_music-jingles/Audio/Steel jingles/
+      - assets_work/extracted/kenney_particle-pack/
+        - assets_work/extracted/kenney_particle-pack/PNG (Black background)/
+          - assets_work/extracted/kenney_particle-pack/PNG (Black background)/Rotated/
+        - assets_work/extracted/kenney_particle-pack/PNG (Transparent)/
+          - assets_work/extracted/kenney_particle-pack/PNG (Transparent)/Rotated/
+        - assets_work/extracted/kenney_particle-pack/Unity samples/
+      - assets_work/extracted/kenney_shape-characters/
+        - assets_work/extracted/kenney_shape-characters/PNG/
+          - assets_work/extracted/kenney_shape-characters/PNG/Default/
+          - assets_work/extracted/kenney_shape-characters/PNG/Double/
+        - assets_work/extracted/kenney_shape-characters/Spritesheet/
+        - assets_work/extracted/kenney_shape-characters/Vector/
+      - assets_work/extracted/kenney_top-down-shooter/
+        - assets_work/extracted/kenney_top-down-shooter/PNG/
+          - assets_work/extracted/kenney_top-down-shooter/PNG/Hitman 1/
+          - assets_work/extracted/kenney_top-down-shooter/PNG/Man Blue/
+          - assets_work/extracted/kenney_top-down-shooter/PNG/Man Brown/
+          - assets_work/extracted/kenney_top-down-shooter/PNG/Man Old/
+          - assets_work/extracted/kenney_top-down-shooter/PNG/Robot 1/
+          - assets_work/extracted/kenney_top-down-shooter/PNG/Soldier 1/
+          - assets_work/extracted/kenney_top-down-shooter/PNG/Survivor 1/
+          - assets_work/extracted/kenney_top-down-shooter/PNG/Tiles/
+          - assets_work/extracted/kenney_top-down-shooter/PNG/Woman Green/
+          - assets_work/extracted/kenney_top-down-shooter/PNG/Zombie 1/
+        - assets_work/extracted/kenney_top-down-shooter/Spritesheet/
+        - assets_work/extracted/kenney_top-down-shooter/Tilesheet/
+        - assets_work/extracted/kenney_top-down-shooter/Vector/
+      - assets_work/extracted/kenney_ui-pack-adventure/
+        - assets_work/extracted/kenney_ui-pack-adventure/PNG/
+          - assets_work/extracted/kenney_ui-pack-adventure/PNG/Default/
+          - assets_work/extracted/kenney_ui-pack-adventure/PNG/Double/
+        - assets_work/extracted/kenney_ui-pack-adventure/Spritesheet/
+        - assets_work/extracted/kenney_ui-pack-adventure/Vector/
+  - crossword/
   - docs/
   - gradle/
     - gradle/wrapper/
@@ -49,7 +114,10 @@ Git: `unified` @ `a54124d`
       - iosApp/iprep/Components/
       - iosApp/iprep/Features/
         - iosApp/iprep/Features/Analytics/
+        - iosApp/iprep/Features/Crosswords/
         - iosApp/iprep/Features/Dashboard/
+        - iosApp/iprep/Features/Duel/
+          - iosApp/iprep/Features/Duel/Components/
         - iosApp/iprep/Features/Landing/
         - iosApp/iprep/Features/Leaderboard/
         - iosApp/iprep/Features/Quiz/
@@ -70,8 +138,16 @@ Git: `unified` @ `a54124d`
     - iosApp/iprepUITests/
   - iprep.xcodeproj/
     - iprep.xcodeproj/project.xcworkspace/
+  - kenny_assets/
+    - kenny_assets/kenney_shape-characters/
+      - kenny_assets/kenney_shape-characters/PNG/
+        - kenny_assets/kenney_shape-characters/PNG/Default/
+        - kenny_assets/kenney_shape-characters/PNG/Double/
+      - kenny_assets/kenney_shape-characters/Spritesheet/
+      - kenny_assets/kenney_shape-characters/Vector/
   - New_question_bank/
   - scripts/
+    - scripts/assets/
   - shared/
     - shared/src/
       - shared/src/androidMain/
@@ -85,8 +161,18 @@ Git: `unified` @ `a54124d`
           - shared/src/commonMain/kotlin/qbank/
             - shared/src/commonMain/kotlin/qbank/bridge/
         - shared/src/commonMain/resources/
+          - shared/src/commonMain/resources/assets/
+            - shared/src/commonMain/resources/assets/bg/
+            - shared/src/commonMain/resources/assets/chars/
+            - shared/src/commonMain/resources/assets/icons/
+            - shared/src/commonMain/resources/assets/manifest/
+            - shared/src/commonMain/resources/assets/sfx/
+            - shared/src/commonMain/resources/assets/ui/
+            - shared/src/commonMain/resources/assets/vfx/
       - shared/src/commonTest/
         - shared/src/commonTest/kotlin/
+          - shared/src/commonTest/kotlin/com/
+            - shared/src/commonTest/kotlin/com/russellmiller/
       - shared/src/iosMain/
         - shared/src/iosMain/kotlin/
           - shared/src/iosMain/kotlin/com/
@@ -105,8 +191,7 @@ Git: `unified` @ `a54124d`
 
 ## Key data files (not inlined)
 
-- `shared/src/commonMain/resources/QuestionBank.json` (534.0KB)
-- `iosApp/iprep/Resources/QuestionBank.json` (809.6KB)
+- `shared/src/commonMain/resources/QuestionBank.json` (538.2KB)
 
 ## Important files (inlined)
 
@@ -545,7 +630,7 @@ sqldelight {
 
 ---
 ### `androidApp/build.gradle.kts`
-- Size: `2493` bytes
+- Size: `2655` bytes
 ```
 plugins {
     id("com.android.application")
@@ -597,6 +682,12 @@ android {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
     }
+
+    sourceSets {
+        getByName("main") {
+            assets.srcDirs("src/main/assets", "../crossword", "../shared/src/commonMain/resources")
+        }
+    }
 }
 
 dependencies {
@@ -630,7 +721,7 @@ dependencies {
 
 ---
 ### `gradle.properties`
-- Size: `1849` bytes
+- Size: `1800` bytes
 ```
 # Project-wide Gradle settings.
 # IDE (e.g. Android Studio) users:
@@ -664,9 +755,9 @@ org.gradle.configuration-cache=true
 kotlin.mpp.applyDefaultHierarchyTemplate=false
 
 # Java toolchain configuration
-# NOTE: Do NOT hardcode org.gradle.java.home here. It breaks cross-platform setups
-# (e.g., WSL/Linux vs macOS). Prefer setting JAVA_HOME per-machine or using Gradle's
-# toolchain configuration inside build scripts if/when needed.
+# Force Gradle to use Java 17 (LTS) for compatibility with Kotlin 1.9.20
+# Java 25 is not yet supported by Kotlin 1.9.20
+org.gradle.java.home=/opt/homebrew/Cellar/openjdk@17/17.0.16
 
 ```
 
@@ -736,7 +827,7 @@ echo "KMM Framework built successfully!"
 
 ---
 ### `iosApp/xcode_build_phase.sh`
-- Size: `1615` bytes
+- Size: `3160` bytes
 ```
 #!/bin/bash
 
@@ -754,35 +845,73 @@ export JAVA_HOME=/opt/homebrew/opt/openjdk@17
 PROJECT_ROOT="$SRCROOT/.."
 cd "$PROJECT_ROOT"
 
-# Determine which framework to build based on platform
+# Determine which framework to build based on platform/configuration
+BUILD_TYPE="Debug"
+if [ "$CONFIGURATION" = "Release" ]; then
+    BUILD_TYPE="Release"
+fi
+FRAMEWORK_VARIANT="$(echo "$BUILD_TYPE" | tr '[:upper:]' '[:lower:]')Framework"
+
+DEST_ROOT="$PROJECT_ROOT/shared/build/bin/xcode"
+DEST_FRAMEWORK="$DEST_ROOT/Shared.framework"
+
+rm -rf "$DEST_FRAMEWORK"
+mkdir -p "$DEST_ROOT"
+
 if [ "$PLATFORM_NAME" = "iphonesimulator" ]; then
     echo "Building for iOS Simulator..."
 
     # Build both architectures for simulator
-    ./gradlew :shared:linkDebugFrameworkIosSimulatorArm64
-    ./gradlew :shared:linkDebugFrameworkIosX64
+    ./gradlew ":shared:link${BUILD_TYPE}FrameworkIosSimulatorArm64"
+    ./gradlew ":shared:link${BUILD_TYPE}FrameworkIosX64"
 
-    # Create universal framework for simulator
-    mkdir -p shared/build/bin/iosSimulatorUniversal
-    cp -R shared/build/bin/iosSimulatorArm64/debugFramework/Shared.framework shared/build/bin/iosSimulatorUniversal/
+    # Create universal framework for simulator at a stable path
+    cp -R "shared/build/bin/iosSimulatorArm64/${FRAMEWORK_VARIANT}/Shared.framework" "$DEST_FRAMEWORK"
     lipo -create \
-        shared/build/bin/iosX64/debugFramework/Shared.framework/Shared \
-        shared/build/bin/iosSimulatorArm64/debugFramework/Shared.framework/Shared \
-        -output shared/build/bin/iosSimulatorUniversal/Shared.framework/Shared
+        "shared/build/bin/iosX64/${FRAMEWORK_VARIANT}/Shared.framework/Shared" \
+        "shared/build/bin/iosSimulatorArm64/${FRAMEWORK_VARIANT}/Shared.framework/Shared" \
+        -output "$DEST_FRAMEWORK/Shared"
 
-    FRAMEWORK_PATH="$SRCROOT/../shared/build/bin/iosSimulatorUniversal/Shared.framework"
+    DSYM_SOURCE="shared/build/bin/iosSimulatorArm64/${FRAMEWORK_VARIANT}/Shared.framework.dSYM"
 else
     echo "Building for iOS Device..."
-    ./gradlew :shared:linkDebugFrameworkIosArm64
-    FRAMEWORK_PATH="$SRCROOT/../shared/build/bin/iosArm64/debugFramework/Shared.framework"
+    ./gradlew ":shared:link${BUILD_TYPE}FrameworkIosArm64"
+    cp -R "shared/build/bin/iosArm64/${FRAMEWORK_VARIANT}/Shared.framework" "$DEST_FRAMEWORK"
+    DSYM_SOURCE="shared/build/bin/iosArm64/${FRAMEWORK_VARIANT}/Shared.framework.dSYM"
 fi
 
+FRAMEWORK_PATH="$DEST_FRAMEWORK"
 echo "Framework built at: $FRAMEWORK_PATH"
+
+# Copy dSYM into the build output so Archive validation can find it.
+# Temporarily disable exit-on-error for this section since sandbox may prevent deletion
+set +e
+if [ -d "$DSYM_SOURCE" ] && [ -n "$DWARF_DSYM_FOLDER_PATH" ]; then
+    mkdir -p "$DWARF_DSYM_FOLDER_PATH"
+    DSYM_DEST="$DWARF_DSYM_FOLDER_PATH/Shared.framework.dSYM"
+    # Try to remove existing dSYM, but don't fail if sandbox prevents it
+    rm -rf "$DSYM_DEST" 2>/dev/null || true
+    # Use ditto (macOS tool) which handles sandbox restrictions better than cp
+    # ditto will overwrite existing files and handles permissions gracefully
+    if ditto "$DSYM_SOURCE" "$DSYM_DEST" 2>/dev/null; then
+        echo "Copied dSYM to: $DSYM_DEST"
+    else
+        # Fallback to cp if ditto fails
+        cp -R "$DSYM_SOURCE" "$DWARF_DSYM_FOLDER_PATH/" 2>/dev/null && \
+            echo "Copied dSYM to: $DSYM_DEST" || \
+            echo "Warning: Could not copy dSYM (sandbox restriction), but build will continue"
+    fi
+else
+    echo "No dSYM found at: $DSYM_SOURCE (or DWARF_DSYM_FOLDER_PATH not set)"
+fi
+# Re-enable exit-on-error for the rest of the script
+set -e
 
 # Do NOT copy or codesign into ${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}.
 # Xcode's Embed Frameworks phase handles embedding/signing automatically.
 
 echo "Framework build complete! Xcode will handle embedding."
+
 ```
 
 ---

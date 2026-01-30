@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.russellmiller.iprep.androidApp-mergeDebugResources-64:/values-ru/values-ru.xml",
+            "outputFile": "com.russellmiller.iprep.androidApp-mergeDebugResources-66:/values-ru/values-ru.xml",
             "map": [
                 {
                     "source": "/Users/russellmiller/.gradle/caches/8.13/transforms/bcf5bed4b1c5228178eb114470817de3/transformed/ui-release/res/values-ru/values-ru.xml",

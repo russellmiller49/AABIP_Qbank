@@ -1,0 +1,1723 @@
+[
+  {
+    "id": "pearl-diver-001",
+    "topic": "Percutaneous tracheostomy & cricothyroidotomy",
+    "statement": "Percutaneous tracheostomy generally has similar overall complication rates to surgical tracheostomy, with lower wound infection and lower cost.",
+    "answer": true,
+    "explanation": "In meta-analyses overall complication rates are similar, while PT tends to have less wound infection, shorter procedure time, and lower cost.",
+    "source": "turn0file0",
+    "hint": "Studies show PT offers advantages in terms of wound infection rates and procedural costs."
+  },
+  {
+    "id": "pearl-diver-002",
+    "topic": "Percutaneous tracheostomy & cricothyroidotomy",
+    "statement": "An INR of 1.6 is an absolute contraindication to percutaneous tracheostomy, regardless of operator experience or ability to correct coagulopathy.",
+    "answer": false,
+    "explanation": "Most contraindications are contextual; a pragmatic target is INR <1.5, but many 'relative' risks can be managed with preparation and correction when appropriate.",
+    "source": "turn0file0",
+    "hint": "Most coagulopathy thresholds are relative guidelines rather than absolute barriers to procedure performance."
+  },
+  {
+    "id": "pearl-diver-003",
+    "topic": "Percutaneous tracheostomy & cricothyroidotomy",
+    "statement": "A common target puncture site for percutaneous tracheostomy is midline between the 1st–2nd or 2nd–3rd tracheal rings, with the ETT positioned just below the cricoid during puncture.",
+    "answer": true,
+    "explanation": "This positioning helps keep the airway secured while allowing safe, midline anterior tracheal access under bronchoscopic confirmation.",
+    "source": "turn0file0",
+    "hint": "Proper spacing and midline entry between the upper tracheal rings are critical for safe cannula placement."
+  },
+  {
+    "id": "pearl-diver-004",
+    "topic": "Percutaneous tracheostomy & cricothyroidotomy",
+    "statement": "In adults with a ‘can’t intubate, can’t oxygenate’ scenario, needle cricothyroidotomy is usually the preferred definitive rescue airway.",
+    "answer": false,
+    "explanation": "For adults, surgical or percutaneous cricothyroidotomy is generally the default rescue; needle cricothyroidotomy is preferred in smaller children.",
+    "source": "turn0file0",
+    "hint": "Adult airways are generally large enough to support surgical or percutaneous cricothyroidotomy as the primary rescue."
+  },
+  {
+    "id": "pearl-diver-005",
+    "topic": "Percutaneous tracheostomy & cricothyroidotomy",
+    "statement": "A small ‘sentinel’ bleed from a tracheostomy stoma days to weeks later should be treated as tracheo‑innominate fistula until proven otherwise.",
+    "answer": true,
+    "explanation": "Temporizing steps include cuff hyperinflation and digital anterior wall pressure while mobilizing emergent surgical control.",
+    "source": "turn0file0",
+    "hint": "Delayed bleeding is a classic warning sign of a potentially life-threatening vascular erosion."
+  },
+  {
+    "id": "pearl-diver-006",
+    "topic": "Percutaneous tracheostomy & cricothyroidotomy",
+    "statement": "Immediately after tracheostomy, cuff inflation reliably prevents micro‑aspiration and eliminates aspiration risk.",
+    "answer": false,
+    "explanation": "Aspiration risk does not drop immediately after tracheostomy, and cuff inflation does not prevent micro‑aspiration.",
+    "source": "turn0file0",
+    "hint": "Tracheal cuffs are designed to facilitate ventilation, not to form a liquid-tight seal against secretions."
+  },
+  {
+    "id": "pearl-diver-155",
+    "topic": "Percutaneous tracheostomy & cricothyroidotomy",
+    "statement": "High PEEP dependence is an absolute contraindication to percutaneous dilational tracheostomy.",
+    "answer": false,
+    "explanation": "Most ‘contraindications’ are contextual/relative. High PEEP can often be managed with planning (minimize circuit breaks and coordinate ETT manipulation) when an experienced operator and appropriate setup are available.",
+    "source": "turn0file0",
+    "hint": "Experienced operators can safely manage high PEEP by minimizing circuit disconnections during the procedure."
+  },
+  {
+    "id": "pearl-diver-156",
+    "topic": "Percutaneous tracheostomy & cricothyroidotomy",
+    "statement": "For percutaneous tracheostomy on a continuous heparin infusion, a typical approach is to hold the infusion for about 3 hours before the procedure and resume about 2 hours after.",
+    "answer": true,
+    "explanation": "A pragmatic peri-procedure strategy is a brief heparin infusion hold (≈3 h pre, ≈2 h post) when clinically feasible.",
+    "source": "turn0file0",
+    "hint": "Heparin's short half-life allows for brief peri-procedural pauses rather than prolonged holds."
+  },
+  {
+    "id": "pearl-diver-157",
+    "topic": "Percutaneous tracheostomy & cricothyroidotomy",
+    "statement": "For percutaneous tracheostomy, targeting an INR < 1.5 and platelets > 50,000/µL is a commonly cited goal when correction is possible.",
+    "answer": true,
+    "explanation": "Peri-procedure targets emphasize optimizing coagulation when feasible, aiming around INR <1.5 and platelets >50×10⁹/L.",
+    "source": "turn0file0",
+    "hint": "These thresholds provide a reasonable safety margin for bedside percutaneous procedures."
+  },
+  {
+    "id": "pearl-diver-158",
+    "topic": "Percutaneous tracheostomy & cricothyroidotomy",
+    "statement": "If tracheo-innominate fistula is suspected after a sentinel bleed, the first step is to remove the tracheostomy tube to inspect the stoma directly.",
+    "answer": false,
+    "explanation": "Temporize hemorrhage first: hyperinflate the cuff and apply digital anterior wall pressure while mobilizing emergent surgical control.",
+    "source": "turn0file0",
+    "hint": "Removing the tube during active hemorrhage can lead to loss of the airway and inability to apply tamponade."
+  },
+  {
+    "id": "pearl-diver-159",
+    "topic": "Percutaneous tracheostomy & cricothyroidotomy",
+    "statement": "In a ‘can’t intubate, can’t oxygenate’ scenario, surgical cricothyroidotomy is preferred in children under about 10 years old.",
+    "answer": false,
+    "explanation": "In children <~10–12 years, needle cricothyroidotomy with transtracheal ventilation is preferred; surgical techniques are avoided due to small membrane size and laryngeal injury risk.",
+    "source": "turn0file0",
+    "hint": "The cricothyroid membrane is too small in young children to safely accommodate surgical techniques."
+  },
+  {
+    "id": "pearl-diver-007",
+    "topic": "Peripheral biopsy techniques & transbronchial cryobiopsy",
+    "statement": "For a visible central endobronchial tumor, forceps biopsy is typically the highest‑yield single tool (about 88% sensitivity).",
+    "answer": true,
+    "explanation": "Forceps biopsy as the best single modality for visible central lesions, with brushing adding only modest incremental yield.",
+    "source": "turn0file1",
+    "hint": "Check the sensitivity statistics for central airway lesions in the High-Yield One-Pager."
+  },
+  {
+    "id": "pearl-diver-008",
+    "topic": "Peripheral biopsy techniques & transbronchial cryobiopsy",
+    "statement": "For central endobronchial lesions, brushing is often diagnostic by itself and can replace forceps biopsy.",
+    "answer": false,
+    "explanation": "Brushing is mainly an adjunct; it adds modest incremental yield but is rarely diagnostic alone compared with forceps biopsy.",
+    "source": "turn0file1",
+    "hint": "Consider whether brushing is primarily a standalone diagnostic tool or an adjunct technique."
+  },
+  {
+    "id": "pearl-diver-009",
+    "topic": "Peripheral biopsy techniques & transbronchial cryobiopsy",
+    "statement": "TBNA is particularly useful for submucosal/peribronchial disease or necrotic targets where forceps biopsies may be non‑diagnostic.",
+    "answer": true,
+    "explanation": "TBNA can reach deeper layers and can be uniquely diagnostic in a subset of submucosal/peribronchial cases.",
+    "source": "turn0file1",
+    "hint": "Consider which tool is best suited for reaching tissue beneath the surface mucosa or inside necrotic lesions."
+  },
+  {
+    "id": "pearl-diver-010",
+    "topic": "Peripheral biopsy techniques & transbronchial cryobiopsy",
+    "statement": "Low‑dose aspirin must be stopped for 7 days before routine bronchoscopic forceps biopsy.",
+    "answer": false,
+    "explanation": "Aspirin can usually be continued; clopidogrel is typically held longer, and severe thrombocytopenia is a bigger limiter.",
+    "source": "turn0file1",
+    "hint": "Review the specific discontinuation guidelines for aspirin versus clopidogrel in the anticoagulation section."
+  },
+  {
+    "id": "pearl-diver-011",
+    "topic": "Peripheral biopsy techniques & transbronchial cryobiopsy",
+    "statement": "For a peripheral pulmonary lesion with a bronchus sign, a common high‑yield sequence is TBNA first (to minimize bleeding effects), then forceps, targeting at least 6 total specimens.",
+    "answer": true,
+    "explanation": "Ordering TBNA first preserves cytology/histology quality, and higher specimen counts improve the odds of diagnosis.",
+    "source": "turn0file1",
+    "hint": "Recall the recommended tool order to minimize blood contamination and the target number of specimens."
+  },
+  {
+    "id": "pearl-diver-012",
+    "topic": "Peripheral biopsy techniques & transbronchial cryobiopsy",
+    "statement": "Routine bronchial blocker use during transbronchial lung cryobiopsy increases major bleeding and should be avoided.",
+    "answer": false,
+    "explanation": "Prophylactic blockers are recommended because they reduce major bleeding risk during TBLC.",
+    "source": "turn0file1",
+    "hint": "Think about the mechanism used to mechanically control bleeding during the procedure."
+  },
+  {
+    "id": "pearl-diver-160",
+    "topic": "Peripheral biopsy techniques & transbronchial cryobiopsy",
+    "statement": "For significant endobronchial bleeding control, a common epinephrine approach is 1:10,000 concentration given in 2–3 mL aliquots, repeated up to three doses.",
+    "answer": true,
+    "explanation": "A practical bronchoscopy bleeding measure is 1:10,000 epinephrine in 2–3 mL aliquots (up to three doses), alongside wedging and balloon tamponade.",
+    "source": "turn0file1",
+    "hint": "Review the specific concentration and volume aliquots listed for epinephrine in the bleeding prevention protocol."
+  },
+  {
+    "id": "pearl-diver-161",
+    "topic": "Peripheral biopsy techniques & transbronchial cryobiopsy",
+    "statement": "For conventional forceps biopsy, warfarin should be held ~5 days or reversed to an INR < 2.5 before proceeding.",
+    "answer": true,
+    "explanation": "A typical approach is holding warfarin about 5 days or reversing to INR <2.5 for biopsy, while also considering platelet and antiplatelet guidance.",
+    "source": "turn0file1",
+    "hint": "Check the required INR threshold and days to hold warfarin in the antithrombotic management section."
+  },
+  {
+    "id": "pearl-diver-162",
+    "topic": "Peripheral biopsy techniques & transbronchial cryobiopsy",
+    "statement": "During transbronchial lung cryobiopsy, typical freeze times are longer with a 2.4 mm probe than with a 1.7 mm probe.",
+    "answer": false,
+    "explanation": "Typical freeze times are ~6 seconds for a 2.4 mm probe and ~8 seconds for a 1.7 mm probe (the smaller probe often uses a longer freeze time).",
+    "source": "turn0file1",
+    "hint": "Compare the typical freeze times listed for 2.4 mm versus 1.7 mm probes in the TBLC basics section."
+  },
+  {
+    "id": "pearl-diver-163",
+    "topic": "Peripheral biopsy techniques & transbronchial cryobiopsy",
+    "statement": "A key safety step for transbronchial lung cryobiopsy is to pre-deploy a bronchial blocker/balloon to enable rapid tamponade if bleeding occurs.",
+    "answer": true,
+    "explanation": "Preventive balloon blocker placement is emphasized as part of standard TBLC setup to manage bleeding risk.",
+    "source": "turn0file1",
+    "hint": "Consider the standard preventive measure used to manage bleeding risk during cryobiopsy."
+  },
+  {
+    "id": "pearl-diver-013",
+    "topic": "Pleural effusions & pleural interventions",
+    "statement": "Real‑time ultrasound guidance is standard of care for thoracentesis and tube placement and reduces pneumothorax and ‘dry taps.’",
+    "answer": true,
+    "explanation": "Ultrasound-first technique improves procedural success and safety compared with landmark-based approaches.",
+    "source": "turn0file2",
+    "hint": "Visualizing the fluid directly is safer than relying on static marks."
+  },
+  {
+    "id": "pearl-diver-014",
+    "topic": "Pleural effusions & pleural interventions",
+    "statement": "A post‑thoracentesis chest radiograph should be obtained routinely after every uncomplicated tap.",
+    "answer": false,
+    "explanation": "Routine CXR is not recommended; imaging is reserved for clinical concern (e.g., air aspiration, difficult procedure, symptoms).",
+    "source": "turn0file2",
+    "hint": "Imaging is usually reserved for cases involving symptoms or procedural difficulty."
+  },
+  {
+    "id": "pearl-diver-015",
+    "topic": "Pleural effusions & pleural interventions",
+    "statement": "During large‑volume thoracentesis, it is reasonable to stop if pleural pressure falls to around −20 cm H₂O or if the patient develops chest pain or relentless cough.",
+    "answer": true,
+    "explanation": "Symptom- and pressure-guided stopping rules help reduce risk of re-expansion pulmonary edema and patient harm.",
+    "source": "turn0file2",
+    "hint": "Excessive negative pressure is a key driver of re-expansion pulmonary edema."
+  },
+  {
+    "id": "pearl-diver-016",
+    "topic": "Pleural effusions & pleural interventions",
+    "statement": "Small‑bore (≤14F) chest tubes are adequate for most pleural effusions and many pneumothoraces and are generally better tolerated.",
+    "answer": true,
+    "explanation": "Small-bore Seldinger drains are appropriate for most indications, reserving large-bore tubes for select scenarios.",
+    "source": "turn0file2",
+    "hint": "Outcomes are similar to large tubes, but patient comfort is superior."
+  },
+  {
+    "id": "pearl-diver-017",
+    "topic": "Pleural effusions & pleural interventions",
+    "statement": "For pneumothorax, routine suction is preferred over water seal because it speeds healing and reduces air-leak duration.",
+    "answer": false,
+    "explanation": "Water seal is often sufficient and routine suction is discouraged; excessive suction may propagate fistulas in some contexts.",
+    "source": "turn0file2",
+    "hint": "Continuous negative pressure can actively perpetuate an air leak."
+  },
+  {
+    "id": "pearl-diver-018",
+    "topic": "Pleural effusions & pleural interventions",
+    "statement": "In malignant pleural effusion with non‑expandable (trapped) lung, an indwelling pleural catheter is generally preferred over talc pleurodesis.",
+    "answer": true,
+    "explanation": "Pleurodesis depends on pleural apposition; IPC is effective palliation when the lung cannot fully re-expand.",
+    "source": "turn0file2",
+    "hint": "Pleurodesis fails if the lung cannot expand to touch the chest wall."
+  },
+  {
+    "id": "pearl-diver-019",
+    "topic": "Pleural infections",
+    "statement": "A pleural fluid pH ≤7.20 (measured correctly) is a high‑risk feature that generally warrants chest tube drainage if safe.",
+    "answer": true,
+    "explanation": "Low pH indicates complicated infection physiology; prompt drainage is emphasized to avoid deterioration.",
+    "source": "turn0file3",
+    "hint": "Significant acidosis usually indicates complicated bacterial metabolism requiring drainage."
+  },
+  {
+    "id": "pearl-diver-020",
+    "topic": "Pleural infections",
+    "statement": "In pleural infection, fibrinolytic monotherapy (tPA alone) is recommended when drainage is inadequate.",
+    "answer": false,
+    "explanation": "Combination tPA + DNase is the evidence-based regimen.",
+    "source": "turn0file3",
+    "hint": "Current evidence supports dual therapy to target both fibrin and DNA."
+  },
+  {
+    "id": "pearl-diver-021",
+    "topic": "Pleural infections",
+    "statement": "A standard intrapleural enzyme therapy regimen is tPA 10 mg plus DNase 5 mg twice daily for up to 3 days, with about a 1‑hour clamp after dosing.",
+    "answer": true,
+    "explanation": "This dosing/administration pattern is presented as the typical evidence-based approach.",
+    "source": "turn0file3",
+    "hint": "This specific combination and frequency reflects the standard MIST-2 protocol."
+  },
+  {
+    "id": "pearl-diver-022",
+    "topic": "Pleural infections",
+    "statement": "Small‑bore (≤14F) image‑guided drains are preferred for pleural infection and should be flushed regularly to maintain patency.",
+    "answer": true,
+    "explanation": "Small-bore tubes have similar efficacy with less pain; regular flushing helps prevent blockage.",
+    "source": "turn0file3",
+    "hint": "Regular flushing is required to keep smaller lumens from clogging."
+  },
+  {
+    "id": "pearl-diver-023",
+    "topic": "Pleural infections",
+    "statement": "After chest tube placement, a practical reassessment checkpoint is about 48 hours; persistent collection plus systemic inflammation should trigger escalation (CT, IET/irrigation, or surgery).",
+    "answer": true,
+    "explanation": "Time-bounded reassessment prevents prolonged ineffective drainage and delays to source control.",
+    "source": "turn0file3",
+    "hint": "Two days of non-improvement is the standard trigger for escalation."
+  },
+  {
+    "id": "pearl-diver-024",
+    "topic": "Pleural infections",
+    "statement": "If therapeutic anticoagulation cannot be held, reduced‑dose tPA (e.g., 5 mg) with DNase—or saline irrigation when lytics are contraindicated—can be considered.",
+    "answer": true,
+    "explanation": "Reduced-dose strategies and irrigation as options in higher bleeding risk settings.",
+    "source": "turn0file3",
+    "hint": "Lowering the dose or using saline alone can mitigate hemorrhage risk."
+  },
+  {
+    "id": "pearl-diver-025",
+    "topic": "Pneumothorax & persistent air leak (PAL)/BPF",
+    "statement": "On lung ultrasound, the lung point is diagnostic of pneumothorax.",
+    "answer": true,
+    "explanation": "The lung point identifies the boundary between sliding and no-sliding pleura, confirming pneumothorax at that location.",
+    "source": "turn0file4",
+    "hint": "This specific sign identifies the exact transition between normal and collapsed lung."
+  },
+  {
+    "id": "pearl-diver-026",
+    "topic": "Pneumothorax & persistent air leak (PAL)/BPF",
+    "statement": "If B‑lines are present at a given probe position, pneumothorax is effectively excluded at that location.",
+    "answer": true,
+    "explanation": "B-lines require pleural apposition; their presence (like lung sliding) argues strongly against pneumothorax at that spot.",
+    "source": "turn0file4",
+    "hint": "These artifacts cannot be generated if air separates the pleural layers."
+  },
+  {
+    "id": "pearl-diver-027",
+    "topic": "Pneumothorax & persistent air leak (PAL)/BPF",
+    "statement": "Ambulatory small‑bore catheters with one‑way valves are recommended for secondary spontaneous pneumothorax to shorten hospitalization.",
+    "answer": false,
+    "explanation": "Ambulatory pathways are described for selected primary spontaneous pneumothorax; they are not recommended for SSP.",
+    "source": "turn0file4",
+    "hint": "Underlying lung disease generally makes outpatient management too risky."
+  },
+  {
+    "id": "pearl-diver-028",
+    "topic": "Pneumothorax & persistent air leak (PAL)/BPF",
+    "statement": "In a stable, minimally symptomatic primary spontaneous pneumothorax, conservative management can be a reasonable initial strategy—even if the pneumothorax is large by size criteria.",
+    "answer": true,
+    "explanation": "Size alone does not define instability, and conservative care can be appropriate in selected PSP patients.",
+    "source": "turn0file4",
+    "hint": "Clinical stability is often a more important driver than radiographic size."
+  },
+  {
+    "id": "pearl-diver-029",
+    "topic": "Pneumothorax & persistent air leak (PAL)/BPF",
+    "statement": "For a persistent air leak, routine wall suction is preferred because it consistently shortens the time to closure.",
+    "answer": false,
+    "explanation": "Water seal is generally favored over routine suction; suction can sometimes splint the fistula open or worsen flow.",
+    "source": "turn0file4",
+    "hint": "Active suction can counteract the natural healing of the fistula."
+  },
+  {
+    "id": "pearl-diver-030",
+    "topic": "Pneumothorax & persistent air leak (PAL)/BPF",
+    "statement": "After a PAL resolves with endobronchial valve placement, a common plan is to reassess and remove valves around 6 weeks later.",
+    "answer": true,
+    "explanation": "Timely removal after healing helps reduce infection, granulation, and mucus plugging risks.",
+    "source": "turn0file4",
+    "hint": "Leaving these devices in too long increases the risk of granulation and infection."
+  },
+  {
+    "id": "pearl-diver-031",
+    "topic": "Real-time peripheral imaging (DTS/CBCT)",
+    "statement": "CT‑to‑body divergence is a major reason peripheral bronchoscopy misses targets, and real‑time imaging can re‑register the target before sampling.",
+    "answer": true,
+    "explanation": "DTS/CBCT provide intraprocedural updates that correct mismatches between the planning CT and the current lung position.",
+    "source": "turn0file5",
+    "hint": "The lung anatomy shifts significantly between the planning scan and the procedure."
+  },
+  {
+    "id": "pearl-diver-032",
+    "topic": "Real-time peripheral imaging (DTS/CBCT)",
+    "statement": "Digital tomosynthesis typically delivers a higher radiation dose than cone‑beam CT for peripheral bronchoscopy workflows.",
+    "answer": false,
+    "explanation": "DTS delivers a lower dose (about 0.1–0.2 mSv) while CBCT acquisitions are typically higher (about 2–2.5 mSv).",
+    "source": "turn0file5",
+    "hint": "Consider that a limited-angle sweep requires significantly less radiation than a full 3D rotational volume."
+  },
+  {
+    "id": "pearl-diver-033",
+    "topic": "Real-time peripheral imaging (DTS/CBCT)",
+    "statement": "A typical effective dose for a chest digital tomosynthesis acquisition is about 0.1–0.2 mSv.",
+    "answer": true,
+    "explanation": "It is a low-dose modality with a typical effective dose of 0.1–0.2 mSv. This is only slightly higher than a standard chest X-ray (~0.1 mSv) and significantly lower than a diagnostic chest CT, which typically ranges from 3 to 8 mSv.",
+    "source": "turn0file5",
+    "hint": "Recall that this modality's dose is comparable to a lateral chest X-ray rather than a full CT scan."
+  },
+  {
+    "id": "pearl-diver-034",
+    "topic": "Real-time peripheral imaging (DTS/CBCT)",
+    "statement": "For CBCT, starting the scan about 5–7 seconds after initiating an inspiratory breath‑hold helps reduce motion artifact.",
+    "answer": true,
+    "explanation": "Waiting a few seconds helps the initial lung motion settle before image acquisition.",
+    "source": "turn0file5",
+    "hint": "Allowing a brief pause ensures the lung tissue has fully stabilized after the ventilator hold is applied."
+  },
+  {
+    "id": "pearl-diver-035",
+    "topic": "Real-time peripheral imaging (DTS/CBCT)",
+    "statement": "Using PEEP ≥10 cm H₂O during general anesthesia can reduce atelectasis and improve real‑time imaging quality for peripheral targets.",
+    "answer": true,
+    "explanation": "Atelectasis is a key driver of divergence; ventilation strategies (including PEEP) help keep the lung open.",
+    "source": "turn0file5",
+    "hint": "Higher positive pressure is essential to prevent airway collapse and target obscuration in dependent lung zones."
+  },
+  {
+    "id": "pearl-diver-036",
+    "topic": "Real-time peripheral imaging (DTS/CBCT)",
+    "statement": "To avoid CT‑to‑body divergence, it is best to do CBCT imaging before advancing instruments near the target airway, since instruments do not change lung anatomy.",
+    "answer": false,
+    "explanation": "A common pitfall is imaging too early; instrument positioning can deform the airway and shift targets, so imaging is most useful once tools are near the lesion.",
+    "source": "turn0file5",
+    "hint": "Navigation plans must be updated to account for the anatomical distortion caused by the stiff catheter itself."
+  },
+  {
+    "id": "pearl-diver-037",
+    "topic": "Malignant central airway obstruction (MCAO)",
+    "statement": "Malignant central airway obstruction is commonly defined as at least 50% narrowing of the trachea, main bronchi, bronchus intermedius, or lobar bronchi.",
+    "answer": true,
+    "explanation": "≥50% luminal compromise is a defining threshold for MCAO.",
+    "source": "turn0file6",
+    "hint": "Recall the threshold percentage typically cited for clinically significant obstruction."
+  },
+  {
+    "id": "pearl-diver-038",
+    "topic": "Malignant central airway obstruction (MCAO)",
+    "statement": "Pure extrinsic airway compression is best managed initially with thermal ablation (laser/APC) because it removes the compressed tissue.",
+    "answer": false,
+    "explanation": "Extrinsic compression has no endoluminal target; stenting (often after assessing patency) is the primary bronchoscopic solution.",
+    "source": "turn0file6",
+    "hint": "Consider whether thermal energy can address a mass located outside the airway lumen."
+  },
+  {
+    "id": "pearl-diver-039",
+    "topic": "Malignant central airway obstruction (MCAO)",
+    "statement": "When using thermal tools in the airway (laser/APC/electrocautery), keeping FiO₂ at or below about 0.40 reduces airway fire risk.",
+    "answer": true,
+    "explanation": "FiO₂ discipline is emphasized as a key safety step during thermal ablation.",
+    "source": "turn0file6",
+    "hint": "Recall the specific oxygen concentration threshold recommended to prevent airway fires."
+  },
+  {
+    "id": "pearl-diver-040",
+    "topic": "Malignant central airway obstruction (MCAO)",
+    "statement": "Rigid bronchoscopy under general anesthesia is preferred for most therapeutic MCAO cases because it provides airway control, suction, and instrument throughput.",
+    "answer": true,
+    "explanation": "Rigid bronchoscopy is presented as the best initial platform for most therapeutic interventions in MCAO.",
+    "source": "turn0file6",
+    "hint": "Consider which platform offers superior airway control and instrument throughput for complex cases."
+  },
+  {
+    "id": "pearl-diver-041",
+    "topic": "Malignant central airway obstruction (MCAO)",
+    "statement": "In a tenuous proximal tracheal obstruction during airway establishment, it may be safer to avoid paralytics until the airway is secured.",
+    "answer": true,
+    "explanation": "Paralysis can precipitate collapse during airway establishment in critically narrowed proximal obstruction.",
+    "source": "turn0file6",
+    "hint": "Think about the physiological consequence of abolishing spontaneous respiration in a critically narrowed trachea."
+  },
+  {
+    "id": "pearl-diver-042",
+    "topic": "Malignant central airway obstruction (MCAO)",
+    "statement": "Airway stents are never indicated in mixed MCAO because debulking alone restores durable patency.",
+    "answer": false,
+    "explanation": "Mixed disease often needs debulking plus stenting when residual narrowing from extrinsic compression persists after resection.",
+    "source": "turn0file6",
+    "hint": "Determine if mechanical debulking alone can resolve the extrinsic component of a mixed obstruction."
+  },
+  {
+    "id": "pearl-diver-043",
+    "topic": "Mechanical debridement & balloon dilation for CAO",
+    "statement": "Mechanical debulking tools can be used even when FiO₂ is high, making them useful when thermal modalities are unsafe due to fire risk.",
+    "answer": true,
+    "explanation": "Mechanical approaches are specifically highlighted for high-FiO₂ situations where thermal tools are contraindicated.",
+    "source": "turn0file7",
+    "hint": "Evaluate the fire risk associated with non-thermal tools in a high-oxygen environment."
+  },
+  {
+    "id": "pearl-diver-044",
+    "topic": "Mechanical debridement & balloon dilation for CAO",
+    "statement": "Balloon dilation preserves ventilation throughout inflation, which is generally why it is preferred over rigid dilation in low-reserve patients.",
+    "answer": false,
+    "explanation": "Balloon inflation transiently occludes the airway; rigid dilation can preserve ventilation and offers tactile feedback in low-reserve patients.",
+    "source": "turn0file7",
+    "hint": "Consider the immediate impact on airflow when a balloon is fully inflated within the airway."
+  },
+  {
+    "id": "pearl-diver-045",
+    "topic": "Mechanical debridement & balloon dilation for CAO",
+    "statement": "For a simple benign web stenosis, a favored sequence is radial incisions (often at 12‑4‑8 o’clock) followed by incremental balloon dilation.",
+    "answer": true,
+    "explanation": "Radial incisions create controlled tear points and reduce uncontrolled shearing during dilation.",
+    "source": "turn0file7",
+    "hint": "Think about techniques used to control the direction of mucosal tearing before dilating."
+  },
+  {
+    "id": "pearl-diver-046",
+    "topic": "Mechanical debridement & balloon dilation for CAO",
+    "statement": "During balloon inflation, gently applying suction to a fluid‑filled balloon can provide a 360° endoscopic view to detect developing mucosal tears.",
+    "answer": true,
+    "explanation": "This ‘look through the balloon’ technique is emphasized as a safety maneuver.",
+    "source": "turn0file7",
+    "hint": "Recall the specific maneuver that makes a fluid-filled balloon transparent for inspection."
+  },
+  {
+    "id": "pearl-diver-047",
+    "topic": "Mechanical debridement & balloon dilation for CAO",
+    "statement": "Closed‑loop communication is important in balloon bronchoplasty because confusing diameter targets (mm) with inflation pressure (atm) can cause serious injury.",
+    "answer": true,
+    "explanation": "Confusing target diameter (mm) with inflation pressure (atm) is a critical safety risk in balloon bronchoplasty. Closed-loop communication ensures clarity between these parameters, preventing inadvertent over-inflation and potential airway rupture.",
+    "source": "turn0file7",
+    "hint": "Differentiate between the units used for target diameter versus inflation pressure."
+  },
+  {
+    "id": "pearl-diver-048",
+    "topic": "Mechanical debridement & balloon dilation for CAO",
+    "statement": "Cryorecanalization is strongly hemostatic, making it ideal for hypervascular tumors.",
+    "answer": false,
+    "explanation": "Cryorecanalization is not hemostatic; bleeding control needs adjunct measures, and vascular invasion is a caution area.",
+    "source": "turn0file7",
+    "hint": "Assess whether cryotherapy provides a cauterization effect similar to thermal energy."
+  },
+  {
+    "id": "pearl-diver-049",
+    "topic": "Non-malignant CAO & ECAC",
+    "statement": "Clinically significant benign central airway obstruction is roughly a >50% reduction in cross‑sectional area of the trachea or main bronchi.",
+    "answer": true,
+    "explanation": ">50% CSA reduction is a practical threshold for clinically meaningful CAO.",
+    "source": "turn0file8",
+    "hint": "Review the standard threshold for \"clinically significant\" airway narrowing."
+  },
+  {
+    "id": "pearl-diver-050",
+    "topic": "Non-malignant CAO & ECAC",
+    "statement": "When an endotracheal tube won’t pass a tight stenosis, the recommended approach is to force the tube through to avoid losing the airway.",
+    "answer": false,
+    "explanation": "Forcing an ETT can worsen injury/bleeding; experts recommend parking the ETT proximal to the lesion or using an LMA and moving to rigid bronchoscopy.",
+    "source": "turn0file8",
+    "hint": "Consider the risks of trauma and complete occlusion when pushing a tube through a stricture."
+  },
+  {
+    "id": "pearl-diver-051",
+    "topic": "Non-malignant CAO & ECAC",
+    "statement": "A simple benign stricture is typically concentric and <10 mm long without malacia; it is often treated with mucosa‑sparing radial cuts followed by gentle balloon dilation.",
+    "answer": true,
+    "explanation": "Simple vs complex classification guides therapy and predicts need for stenting or surgery.",
+    "source": "turn0file8",
+    "hint": "Recall the morphological criteria, such as length and shape, that define a \"simple\" stenosis."
+  },
+  {
+    "id": "pearl-diver-052",
+    "topic": "Non-malignant CAO & ECAC",
+    "statement": "Uncovered self‑expanding metallic stents are generally avoided in benign airway disease because late complications and difficult removal are common.",
+    "answer": true,
+    "explanation": "Silicone stents are preferred in benign disease due to removability and adjustability; uncovered metallic stents are discouraged.",
+    "source": "turn0file8",
+    "hint": "Think about the long-term difficulties of removing tissue-embedded metal mesh."
+  },
+  {
+    "id": "pearl-diver-053",
+    "topic": "Non-malignant CAO & ECAC",
+    "statement": "For airway fire prevention, keep FiO₂ ≤40% when using laser and about ≤30% when using electrocautery/APC.",
+    "answer": true,
+    "explanation": "Different energy devices have different FiO₂ safety ceilings, and strict control is emphasized.",
+    "source": "turn0file8",
+    "hint": "Compare the recommended oxygen limits for laser versus electrocautery."
+  },
+  {
+    "id": "pearl-diver-054",
+    "topic": "Non-malignant CAO & ECAC",
+    "statement": "For EDAC/TBM, long‑term airway stenting is considered first‑line therapy to splint the airway open.",
+    "answer": false,
+    "explanation": "First-line therapy is typically CPAP/BiPAP as a pneumatic splint; a short stent trial may be used to select surgical candidates (tracheobronchoplasty), not as routine long-term therapy.",
+    "source": "turn0file8",
+    "hint": "Distinguish between the role of stenting as a diagnostic trial versus a permanent solution."
+  },
+  {
+    "id": "pearl-diver-055",
+    "topic": "Rigid Bronchoscopy",
+    "statement": "Cervical spine instability is considered a relative contraindication to rigid bronchoscopy.",
+    "answer": false,
+    "explanation": "Cervical spine instability is an absolute contraindication due to the neck extension required for intubation.",
+    "source": "rigid-bronchoscopy-indications-technique.md",
+    "hint": "Consider the neck extension required to insert a straight rigid bronchoscope."
+  },
+  {
+    "id": "pearl-diver-056",
+    "topic": "Rigid Bronchoscopy",
+    "statement": "When debulking an intrinsic tumor, the recommended sequence is to mechanically core the lesion first, then coagulate the base.",
+    "answer": false,
+    "explanation": "The correct sequence is to devascularize/coagulate first to minimize bleeding, then mechanically core with the bevel, and finally coagulate the base.",
+    "source": "rigid-bronchoscopy-indications-technique.md",
+    "hint": "Think about the importance of preventing bleeding before cutting into a vascular tumor."
+  },
+  {
+    "id": "pearl-diver-057",
+    "topic": "Rigid Bronchoscopy",
+    "statement": "Total Intravenous Anesthesia (TIVA) is preferred over inhalational agents for rigid bronchoscopy because it is an open system.",
+    "answer": true,
+    "explanation": "RB is an open system where inhalational agents cause significant room pollution and leak; TIVA allows for stable anesthesia without this issue.",
+    "source": "rigid-bronchoscopy-indications-technique.md",
+    "hint": "Analyze the impact of an \"open\" airway system on the delivery of inhalational gases."
+  },
+  {
+    "id": "pearl-diver-058",
+    "topic": "Rigid Bronchoscopy",
+    "statement": "Jet ventilation allows for precise monitoring of airway pressures and end-tidal CO2.",
+    "answer": false,
+    "explanation": "Jet ventilation frees the lumen but lacks the ability to monitor airway pressures or minute ventilation, increasing the risk of barotrauma.",
+    "source": "rigid-bronchoscopy-indications-technique.md",
+    "hint": "Determine if an open-system ventilation technique allows for accurate pressure measurement."
+  },
+  {
+    "id": "pearl-diver-059",
+    "topic": "Rigid Bronchoscopy",
+    "statement": "The 'En Bloc' technique for foreign body removal involves removing the scope, forceps, and object together as a single unit.",
+    "answer": true,
+    "explanation": "Removing the rigid scope, forceps, and foreign body together prevents the object from being sheared off at the tip of the scope during extraction.",
+    "source": "rigid-bronchoscopy-indications-technique.md",
+    "hint": "Consider whether a large foreign body can typically fit inside the lumen of the rigid scope."
+  },
+  {
+    "id": "pearl-diver-060",
+    "topic": "Thermal Ablative Therapies",
+    "statement": "To prevent airway fires during thermal therapy, the fraction of inspired oxygen (FiO₂) should be maintained at or below 0.40.",
+    "answer": true,
+    "explanation": "Strict safety protocols require maintaining FiO₂ and FeO₂ ≤ 0.40 before firing any thermal device to prevent airway fires.",
+    "source": "Thermal Ablatitive Therapies.md",
+    "hint": "Consider the safety thresholds commonly used in laser airway surgery to minimize combustion risk."
+  },
+  {
+    "id": "pearl-diver-061",
+    "topic": "Thermal Ablative Therapies",
+    "statement": "Argon Plasma Coagulation (APC) is a contact modality that penetrates deeply (5–10 mm) into tissue.",
+    "answer": false,
+    "explanation": "APC is a non-contact modality with shallow penetration (~1–3 mm), making it the 'workhorse' for diffuse mucosal oozing rather than deep debulking.",
+    "source": "Thermal Ablatitive Therapies.md",
+    "hint": "Think about whether ionized gas (plasma) requires physical contact and if it is used for deep cutting or surface coagulation."
+  },
+  {
+    "id": "pearl-diver-062",
+    "topic": "Thermal Ablative Therapies",
+    "statement": "The Nd:YAG laser has deeper tissue penetration (~5–15 mm) compared to KTP or Holmium lasers.",
+    "answer": true,
+    "explanation": "Nd:YAG penetrates deeply for coagulation and vaporization, whereas KTP and Holmium are precision tools with very shallow penetration (<1 mm).",
+    "source": "Thermal Ablatitive Therapies.md",
+    "hint": "Recall which laser wavelength is traditionally associated with deep coagulation versus superficial precision cutting."
+  },
+  {
+    "id": "pearl-diver-063",
+    "topic": "Thermal Ablative Therapies",
+    "statement": "When treating a benign tracheal web with an electrocautery needle knife, incisions should be maximized at the 6 o'clock position.",
+    "answer": false,
+    "explanation": "The 6 o'clock position (posterior membranous wall) must be avoided to prevent esophageal injury; radial incisions at 12, 3, and 9 o'clock are preferred.",
+    "source": "Thermal Ablatitive Therapies.md",
+    "hint": "Consider the anatomical structure located directly posterior to the trachea."
+  },
+  {
+    "id": "pearl-diver-064",
+    "topic": "Thermal Ablative Therapies",
+    "statement": "To reduce the risk of gas embolism during APC, gas flow should be set to ≥ 2.0 L/min.",
+    "answer": false,
+    "explanation": "High flow increases embolism risk; gas flow should be kept ≤ 1.0 L/min, and the operator should never fire while advancing the catheter.",
+    "source": "Thermal Ablatitive Therapies.md",
+    "hint": "Think about the relationship between high gas pressure/flow and the risk of forcing gas into the vasculature."
+  },
+  {
+    "id": "pearl-diver-065",
+    "topic": "Early-Stage Lung Cancer",
+    "statement": "Postoperative Radiation Therapy (PORT) is standard of care for patients with resected Stage I NSCLC to prevent local recurrence.",
+    "answer": false,
+    "explanation": "PORT is not indicated for R0 (complete) resections in Stage I–II; it is generally reserved for R1 (positive margin) resections.",
+    "source": "Treatment Options for Early‑Stage Lung Cancer.md",
+    "hint": "Review the indications for PORT and whether it applies to completely resected early-stage tumors."
+  },
+  {
+    "id": "pearl-diver-066",
+    "topic": "Early-Stage Lung Cancer",
+    "statement": "Segmentectomy is oncologically equivalent to lobectomy for peripheral cT1N0 tumors ≤ 2 cm, provided nodal sampling is thorough.",
+    "answer": true,
+    "explanation": "Contemporary RCTs confirm that for peripheral lesions ≤ 2 cm, segmentectomy preserves lung function with comparable overall survival to lobectomy.",
+    "source": "Treatment Options for Early‑Stage Lung Cancer.md",
+    "hint": "Recall recent major trials (like JCOG0802) comparing lobar vs. sublobar resection for small peripheral cancers."
+  },
+  {
+    "id": "pearl-diver-067",
+    "topic": "Early-Stage Lung Cancer",
+    "statement": "If a patient has a predicted postoperative (ppo) FEV1 < 40%, they are automatically ineligible for surgical resection.",
+    "answer": false,
+    "explanation": "A ppoFEV1 < 40% is a trigger for Cardiopulmonary Exercise Testing (CPET), not an automatic exclusion; VO2peak helps determine final candidacy.",
+    "source": "Treatment Options for Early‑Stage Lung Cancer.md",
+    "hint": "Think about the next step in the physiologic assessment algorithm when initial values are borderline."
+  },
+  {
+    "id": "pearl-diver-068",
+    "topic": "Early-Stage Lung Cancer",
+    "statement": "For a tumor located near the bronchus intermedius, cryoablation is generally favored over microwave ablation (MWA).",
+    "answer": true,
+    "explanation": "Cryoablation preserves collagen/cartilage architecture, reducing the risk of bronchopleural fistula compared to heat-based therapies like MWA or RFA in central locations.",
+    "source": "Treatment Options for Early‑Stage Lung Cancer.md",
+    "hint": "Compare the risks of heat-based thermal damage versus cold-based ablation on cartilaginous airway structures."
+  },
+  {
+    "id": "pearl-diver-069",
+    "topic": "Early-Stage Lung Cancer",
+    "statement": "Radiation pneumonitis following SBRT typically presents within the first 48 hours of treatment.",
+    "answer": false,
+    "explanation": "Radiation pneumonitis is subacute, typically appearing 2–12 weeks post-therapy; symptoms include dry cough and low-grade fever.",
+    "source": "Treatment Options for Early‑Stage Lung Cancer.md",
+    "hint": "Consider the typical time course for inflammatory lung reactions after radiation therapy."
+  },
+  {
+    "id": "pearl-diver-070",
+    "topic": "Early-Stage Lung Cancer",
+    "statement": "Adjuvant Osimertinib is indicated for resected Stage IB–IIIA NSCLC regardless of EGFR mutation status.",
+    "answer": false,
+    "explanation": "Efficacy is specific to tumors harboring EGFR 19del or L858R mutations; it is not indicated for wild-type EGFR.",
+    "source": "Treatment Options for Early‑Stage Lung Cancer.md",
+    "hint": "Remember that targeted therapies require the presence of a specific molecular target to be effective."
+  },
+  {
+    "id": "pearl-diver-071",
+    "topic": "BLVR (COPD)",
+    "statement": "Typical BLVR selection includes FEV1 about 20–50% predicted and RV ≥175% predicted (≥207% if homogeneous).",
+    "answer": true,
+    "explanation": "A common eligibility window is moderate-to-severe obstruction with marked hyperinflation; thresholds tighten for homogeneous disease.",
+    "source": "Bronchoscopic and Surgical Treatment for COPD and Chronic Bronchitis.md",
+    "hint": "Focus on the physiologic criteria that define the 'sweet spot' for lung volume reduction candidates."
+  },
+  {
+    "id": "pearl-diver-072",
+    "topic": "BLVR (COPD)",
+    "statement": "Pneumothorax after endobronchial valve placement most commonly occurs more than 1 week after the procedure.",
+    "answer": false,
+    "explanation": "Most pneumothoraces occur early—typically within ~72 hours after valve placement.",
+    "source": "Bronchoscopic and Surgical Treatment for COPD and Chronic Bronchitis.md",
+    "hint": "Think about the immediate mechanical changes (lobar collapse) that happen shortly after valve insertion."
+  },
+  {
+    "id": "pearl-diver-073",
+    "topic": "BLVR (COPD)",
+    "statement": "A stable post-valve pneumothorax is generally managed first with chest tube drainage to water seal (no suction initially).",
+    "answer": true,
+    "explanation": "Initial stepwise management in stable patients is tube thoracostomy without suction; escalate if persistent leak/instability.",
+    "source": "Bronchoscopic and Surgical Treatment for COPD and Chronic Bronchitis.md",
+    "hint": "Recall the guideline to avoid aggressive suction initially to allow the lung to heal without keeping the leak open."
+  },
+  {
+    "id": "pearl-diver-074",
+    "topic": "BLVR (COPD)",
+    "statement": "Using the lowest feasible FiO2 (targeting SpO2 ≥89%) and waiting for end-tidal O2 equilibration is associated with lower pneumothorax rates after valve placement.",
+    "answer": true,
+    "explanation": "A low-FiO2 deployment strategy is linked with reduced pneumothorax risk.",
+    "source": "Bronchoscopic and Surgical Treatment for COPD and Chronic Bronchitis.md",
+    "hint": "Consider how nitrogen washout and rapid absorption atelectasis might contribute to lung volume loss."
+  },
+  {
+    "id": "pearl-diver-075",
+    "topic": "BLVR (COPD)",
+    "statement": "A chronic bronchitis–predominant COPD phenotype with frequent exacerbations is an ideal phenotype for valve-based BLVR.",
+    "answer": false,
+    "explanation": "Chronic bronchitis–predominant disease is often not ideal for valve BLVR; emphysema with hyperinflation and absent collateral ventilation is the typical target.",
+    "source": "Bronchoscopic and Surgical Treatment for COPD and Chronic Bronchitis.md",
+    "hint": "Think about the primary mechanism of valves (volume reduction) and whether it addresses mucus hypersecretion."
+  },
+  {
+    "id": "pearl-diver-076",
+    "topic": "BLVR (COPD)",
+    "statement": "Collateral ventilation can be assessed by CT fissure analysis and/or Chartis; neither is perfect, so they are often used in a complementary way.",
+    "answer": true,
+    "explanation": "Anatomic (CT fissures) and functional (Chartis) assessments are commonly combined when uncertainty remains.",
+    "source": "Bronchoscopic and Surgical Treatment for COPD and Chronic Bronchitis.md",
+    "hint": "Reflect on whether visual completeness of fissures on CT always guarantees functional absence of airflow."
+  },
+  {
+    "id": "pearl-diver-077",
+    "topic": "Bronchoscopy complications",
+    "statement": "Across large cohorts, overall bronchoscopy complication rate is about 1% and mortality is about 0.02%.",
+    "answer": true,
+    "explanation": "These are key board-level “numbers to know” for counseling and risk framing.",
+    "hint": "Recall the \"1 in 100\" rule of thumb for general complications.",
+    "source": "Bronchoscopy in High-Risk Patients and Complications in Bronchoscopy.md"
+  },
+  {
+    "id": "pearl-diver-078",
+    "topic": "Bronchoscopy complications",
+    "statement": "Bleeding severity during bronchoscopy should be classified by estimated blood volume.",
+    "answer": false,
+    "explanation": "Severity is best classified by the intervention required (e.g., suction only vs balloon blockade/ICU-level care).",
+    "hint": "Think about clinical action (e.g., needing a balloon) rather than subjective mL estimations.",
+    "source": "Bronchoscopy in High-Risk Patients and Complications in Bronchoscopy.md"
+  },
+  {
+    "id": "pearl-diver-079",
+    "topic": "Bronchoscopy complications",
+    "statement": "BAL is typically acceptable with platelets ≥20k/µL, while endobronchial biopsy/TBLB is generally acceptable with platelets ≥50k/µL.",
+    "answer": true,
+    "explanation": "These pragmatic thresholds are commonly taught for procedure planning.",
+    "hint": "Biopsy requires a higher platelet threshold than simple lavage.",
+    "source": "Bronchoscopy in High-Risk Patients and Complications in Bronchoscopy.md"
+  },
+  {
+    "id": "pearl-diver-080",
+    "topic": "Bronchoscopy complications",
+    "statement": "High-flow nasal cannula can reduce desaturation events during sedated bronchoscopy.",
+    "answer": true,
+    "explanation": "HFNC is a practical mitigation strategy for desaturation-prone patients.",
+    "hint": "Providing apneic oxygenation and PEEP helps stabilize high-risk patients.",
+    "source": "Bronchoscopy in High-Risk Patients and Complications in Bronchoscopy.md"
+  },
+  {
+    "id": "pearl-diver-081",
+    "topic": "Bronchoscopy complications",
+    "statement": "Maximum recommended topical lidocaine dose during bronchoscopy is 4 mg/kg.",
+    "answer": true,
+    "explanation": "A commonly tested safety ceiling for topical lidocaine exposure.",
+    "hint": "Exceeding this dose increases the risk of seizures and cardiac toxicity.",
+    "source": "Bronchoscopy in High-Risk Patients and Complications in Bronchoscopy.md"
+  },
+  {
+    "id": "pearl-diver-082",
+    "topic": "Bronchoscopy complications",
+    "statement": "Prophylactic antibiotics reduce post-bronchoscopy fever after BAL and should be routinely used.",
+    "answer": false,
+    "explanation": "They do not reduce post-bronchoscopy fever and are not routinely recommended.",
+    "hint": "Most post-BAL fevers are cytokine-mediated, not bacterial.",
+    "source": "Bronchoscopy in High-Risk Patients and Complications in Bronchoscopy.md"
+  },
+  {
+    "id": "pearl-diver-083",
+    "topic": "Coding & Billing",
+    "statement": "Under the Multiple Endoscopy Rule (MER), the highest-valued base bronchoscopy code is paid at 100%; other non-add-ons are reduced by subtracting the 31622 value; add-on codes are paid in full.",
+    "answer": true,
+    "explanation": "MER: one base at full value; other non-add-ons get partial credit; add-ons are not reduced.",
+    "hint": "Remember that add-on codes (like navigation) are immune to the base code reduction.",
+    "source": "Coding and Billing.md"
+  },
+  {
+    "id": "pearl-diver-084",
+    "topic": "Coding & Billing",
+    "statement": "You can bill +31627 (navigation) even if navigation was never initiated.",
+    "answer": false,
+    "explanation": "Do not bill navigation if it was not started.",
+    "hint": "Billing requires the service to have actually begun.",
+    "source": "Coding and Billing.md"
+  },
+  {
+    "id": "pearl-diver-085",
+    "topic": "Coding & Billing",
+    "statement": "Excision (31640) and ablation (31641) at the same airway site can both be billed if performed sequentially.",
+    "answer": false,
+    "explanation": "They bundle at the same site—choose the single code that best describes the dominant therapy.",
+    "hint": "Treating one spot with two modalities usually bundles into a single code.",
+    "source": "Coding and Billing.md"
+  },
+  {
+    "id": "pearl-diver-086",
+    "topic": "Coding & Billing",
+    "statement": "Balloon dilation (31630) is bundled when performed as part of stent placement in the same airway segment; use -59 only for a different airway.",
+    "answer": true,
+    "explanation": "Dilation-with-stent bundling is a classic denial/appeal scenario; site clarity is essential.",
+    "hint": "You cannot unbundle dilation if it facilitates the stent in the same bronchus.",
+    "source": "Coding and Billing.md"
+  },
+  {
+    "id": "pearl-diver-087",
+    "topic": "Coding & Billing",
+    "statement": "Therapeutic aspiration is 31645 for the initial episode, and 31646 for repeat aspiration during the same hospitalization by the same provider/group.",
+    "answer": true,
+    "explanation": "31646 is specifically for repeat aspiration during the same hospital stay.",
+    "hint": "Look for the specific code for 'subsequent' aspiration.",
+    "source": "Coding and Billing.md"
+  },
+  {
+    "id": "pearl-diver-088",
+    "topic": "Coding & Billing",
+    "statement": "Modifier -50 is used for bilateral pleural procedures such as bilateral thoracenteses.",
+    "answer": true,
+    "explanation": "-50 applies to bilateral pleural work (not a bronchoscopy modifier).",
+    "hint": "Think '50 for 50/50' split (bilateral) on pleural cases.",
+    "source": "Coding and Billing.md"
+  },
+  {
+    "id": "pearl-diver-089",
+    "topic": "Pulmonary nodules",
+    "statement": "ACCP risk thresholds are: low <5%, intermediate 5–65%, high >65%.",
+    "answer": true,
+    "explanation": "These cut points drive surveillance vs biopsy vs surgery decisions.",
+    "hint": "These percentages dictate whether you watch, biopsy, or resect.",
+    "source": "Diagnostic Approach to Pulmonary Nodules.md"
+  },
+  {
+    "id": "pearl-diver-090",
+    "topic": "Pulmonary nodules",
+    "statement": "For an incidental solid nodule 6–8 mm, Fleischner recommends CT at 6–12 months (with possible second scan at 18–24 months if high risk).",
+    "answer": true,
+    "explanation": "This is a common guideline pathway for incidentally detected solid nodules.",
+    "hint": "Nodules in this 'gray zone' size range usually start with surveillance.",
+    "source": "Diagnostic Approach to Pulmonary Nodules.md"
+  },
+  {
+    "id": "pearl-diver-091",
+    "topic": "Pulmonary nodules",
+    "statement": "For an incidental solid nodule >8 mm, options include short-interval CT (~3 months), PET/CT, or tissue sampling.",
+    "answer": true,
+    "explanation": ">8 mm triggers escalation beyond routine surveillance.",
+    "hint": "Once a nodule exceeds 8 mm, more aggressive characterization is warranted.",
+    "source": "Diagnostic Approach to Pulmonary Nodules.md"
+  },
+  {
+    "id": "pearl-diver-092",
+    "topic": "Pulmonary nodules",
+    "statement": "Typical cancer volume-doubling time is about 100–400 days; about a 26% diameter increase corresponds to volume doubling.",
+    "answer": true,
+    "explanation": "Growth kinetics are a high-yield malignancy clue.",
+    "hint": "Very fast (<30 days) or very slow (>400 days) growth usually suggests benign etiology.",
+    "source": "Diagnostic Approach to Pulmonary Nodules.md"
+  },
+  {
+    "id": "pearl-diver-093",
+    "topic": "Pulmonary nodules",
+    "statement": "PET/CT is reliable for part-solid nodules even when the solid component is <8 mm.",
+    "answer": false,
+    "explanation": "PET becomes unreliable when the solid component is <8 mm.",
+    "hint": "FDG avidity requires a sufficient mass of solid tissue to be detectable.",
+    "source": "Diagnostic Approach to Pulmonary Nodules.md"
+  },
+  {
+    "id": "pearl-diver-094",
+    "topic": "Pulmonary nodules",
+    "statement": "CT-guided transthoracic biopsy has a pneumothorax rate on the order of 15–25% in representative data.",
+    "answer": true,
+    "explanation": "TTNB yield is high but pneumothorax risk is a major tradeoff versus bronchoscopic approaches.",
+    "hint": "The transthoracic route is more invasive to the pleura than the bronchoscopic route.",
+    "source": "Diagnostic Approach to Pulmonary Nodules.md"
+  },
+  {
+    "id": "pearl-diver-095",
+    "topic": "Pleural (IPC / Pleurodesis)",
+    "statement": "In malignant pleural effusion, IPC and talc pleurodesis provide similar early dyspnea relief, but IPC pathways reduce hospital days and reinterventions.",
+    "answer": true,
+    "explanation": "A key tradeoff is outpatient control and fewer inpatient days with IPC pathways.",
+    "hint": "Consider the primary goal of each intervention regarding hospital length of stay.",
+    "source": "Indwelling Pleural Catheters and Pleurodesis.md"
+  },
+  {
+    "id": "pearl-diver-096",
+    "topic": "Pleural (IPC / Pleurodesis)",
+    "statement": "Thoracoscopic talc poudrage has clearly lower pleurodesis failure than talc slurry at 90 days.",
+    "answer": false,
+    "explanation": "Contemporary randomized data show similar failure and adverse event rates between poudrage and slurry.",
+    "hint": "Think about the results of recent major trials like TAPPS comparing these two methods.",
+    "source": "Indwelling Pleural Catheters and Pleurodesis.md"
+  },
+  {
+    "id": "pearl-diver-097",
+    "topic": "Pleural (IPC / Pleurodesis)",
+    "statement": "Daily IPC drainage increases and accelerates autopleurodesis compared with alternate-day drainage.",
+    "answer": true,
+    "explanation": "Aggressive daily drainage is associated with higher and faster autopleurodesis.",
+    "hint": "Recall the findings of the ASAP trial regarding drainage frequency.",
+    "source": "Indwelling Pleural Catheters and Pleurodesis.md"
+  },
+  {
+    "id": "pearl-diver-098",
+    "topic": "Pleural (IPC / Pleurodesis)",
+    "statement": "Overall IPC infection risk is about 5–6%; Staphylococcus aureus predominates in deep infection while coagulase-negative staphylococci often indicate colonization.",
+    "answer": true,
+    "explanation": "Treat infection clinically; don’t treat colonization based on culture alone.",
+    "hint": "Differentiate between pathogens causing deep empyema versus skin commensals often found in surveillance cultures.",
+    "source": "Indwelling Pleural Catheters and Pleurodesis.md"
+  },
+  {
+    "id": "pearl-diver-099",
+    "topic": "Pleural (IPC / Pleurodesis)",
+    "statement": "Deep IPC infection usually requires routine catheter removal.",
+    "answer": false,
+    "explanation": "Avoid routine removal if the IPC is draining and the patient is improving; treat with antibiotics and drainage (± IET if loculated).",
+    "hint": "Consider whether the catheter can still serve as a drainage device during infection treatment.",
+    "source": "Indwelling Pleural Catheters and Pleurodesis.md"
+  },
+  {
+    "id": "pearl-diver-100",
+    "topic": "Pleural (IPC / Pleurodesis)",
+    "statement": "Graded/large-particle talc is preferred to reduce systemic talc complications such as ARDS risk.",
+    "answer": true,
+    "explanation": "Talc particle size matters; graded talc reduces systemic absorption-related complications.",
+    "hint": "Small particles are more likely to migrate systemically.",
+    "source": "Indwelling Pleural Catheters and Pleurodesis.md"
+  },
+  {
+    "id": "pearl-diver-101",
+    "topic": "Lung cancer screening (LDCT)",
+    "statement": "In Lung-RADS v2022, growth is defined as >1.5 mm increase in mean diameter over 12 months.",
+    "answer": true,
+    "explanation": "This definition is a common testing point and affects category upgrades.",
+    "hint": "Precision in measurement thresholds is critical for Lung-RADS classification.",
+    "source": "Lung Cancer Screening.md"
+  },
+  {
+    "id": "pearl-diver-102",
+    "topic": "Lung cancer screening (LDCT)",
+    "statement": "A new solid 6–<8 mm nodule on screening LDCT is categorized as Lung-RADS 4A.",
+    "answer": true,
+    "explanation": "New solid 6–<8 mm is managed as 4A with short-interval follow-up.",
+    "hint": "Recall the size thresholds for new solid nodules in the suspicious category.",
+    "source": "Lung Cancer Screening.md"
+  },
+  {
+    "id": "pearl-diver-103",
+    "topic": "Lung cancer screening (LDCT)",
+    "statement": "A segmental (or more proximal) airway nodule that persists at 3-month follow-up should be upgraded to 4B and referred for bronchoscopy.",
+    "answer": true,
+    "explanation": "Persistent proximal/segmental airway nodules are a key Lung-RADS upgrade rule.",
+    "hint": "Think about the risk of endobronchial malignancy if an airway lesion does not resolve.",
+    "source": "Lung Cancer Screening.md"
+  },
+  {
+    "id": "pearl-diver-104",
+    "topic": "Lung cancer screening (LDCT)",
+    "statement": "Typical effective dose for LDCT screening is about 1–1.5 mSv per exam.",
+    "answer": true,
+    "explanation": "Radiation benchmarks are part of high-quality program knowledge.",
+    "hint": "Compare this to the much higher dose of a standard diagnostic CT.",
+    "source": "Lung Cancer Screening.md"
+  },
+  {
+    "id": "pearl-diver-105",
+    "topic": "Lung cancer screening (LDCT)",
+    "statement": "PET/CT is recommended for any non-solid screening nodule ≥20 mm.",
+    "answer": false,
+    "explanation": "PET/CT use is keyed to a solid nodule/solid component ≥8 mm; pure ground-glass lesions are a classic false-negative scenario.",
+    "hint": "Consider the metabolic activity of pure ground-glass nodules compared to solid components.",
+    "source": "Lung Cancer Screening.md"
+  },
+  {
+    "id": "pearl-diver-106",
+    "topic": "Lung cancer screening (LDCT)",
+    "statement": "Thin-walled unilocular cysts are managed as Lung-RADS atypical cystic lesions by default.",
+    "answer": false,
+    "explanation": "Thin-walled unilocular cysts are considered benign and are not classified as atypical cystic lesions.",
+    "hint": "Distinguish between simple cysts and complex or thick-walled cystic lesions.",
+    "source": "Lung Cancer Screening.md"
+  },
+  {
+    "id": "pearl-diver-107",
+    "topic": "Lung cancer staging / Linear EBUS",
+    "statement": "During EBUS staging, sampling order should be N3 → N2 → N1 to minimize contamination risk.",
+    "answer": true,
+    "explanation": "This is a classic exam favorite for procedure sequencing.",
+    "hint": "Think about the direction of potential upstaging if tumor cells are dragged from one station to another.",
+    "source": "Lung Cancer Staging and Linear EBUS.md"
+  },
+  {
+    "id": "pearl-diver-108",
+    "topic": "Lung cancer staging / Linear EBUS",
+    "statement": "Stations 5–6 are routinely reachable by linear EBUS.",
+    "answer": false,
+    "explanation": "Stations 5–6 are rarely accessible by EBUS and often need EUS-B or surgical approaches when critical.",
+    "hint": "Recall the anatomical location of the aortopulmonary window relative to the airways.",
+    "source": "Lung Cancer Staging and Linear EBUS.md"
+  },
+  {
+    "id": "pearl-diver-109",
+    "topic": "Lung cancer staging / Linear EBUS",
+    "statement": "The lower rim of the azygos vein defines the inferior border of station 4R and helps distinguish 4R from 10R.",
+    "answer": true,
+    "explanation": "Station boundary landmarks prevent mislabeling that can upstage/downstage disease.",
+    "hint": "Visualizing the azygos arch is crucial for separating mediastinal from hilar nodes on the right.",
+    "source": "Lung Cancer Staging and Linear EBUS.md"
+  },
+  {
+    "id": "pearl-diver-110",
+    "topic": "Lung cancer staging / Linear EBUS",
+    "statement": "In TNM 9th edition, N2 is subdivided into N2a (single station) and N2b (multistation).",
+    "answer": true,
+    "explanation": "TNM-9 formalizes prognostic separation within N2 disease.",
+    "hint": "Consider how the extent of mediastinal involvement impacts prognosis.",
+    "source": "Lung Cancer Staging and Linear EBUS.md"
+  },
+  {
+    "id": "pearl-diver-111",
+    "topic": "Lung cancer staging / Linear EBUS",
+    "statement": "A common adequacy benchmark is at least 3 passes per node (more if molecular testing is needed or ROSE is unavailable).",
+    "answer": true,
+    "explanation": "Pass count targets help ensure diagnostic and molecular adequacy.",
+    "hint": "Think about the volume of tissue required for modern ancillary testing.",
+    "source": "Lung Cancer Staging and Linear EBUS.md"
+  },
+  {
+    "id": "pearl-diver-112",
+    "topic": "Lung cancer staging / Linear EBUS",
+    "statement": "When determining T size for lung cancer staging, the lepidic/ground-glass component is included in the measurement.",
+    "answer": false,
+    "explanation": "Measure the solid/invasive component; lepidic/ground-glass does not count toward T size.",
+    "hint": "Focus on which part of the lesion represents the invasive tumor burden.",
+    "source": "Lung Cancer Staging and Linear EBUS.md"
+  },
+  {
+    "id": "pearl-diver-113",
+    "topic": "Advanced peripheral bronchoscopy",
+    "statement": "Thin-slice CT planning at near-TLC and identifying a bronchus sign (or vessel sign when absent) are key pre-procedure steps for peripheral lesion bronchoscopy.",
+    "answer": true,
+    "explanation": "Planning and airway mapping are core determinants of success.",
+    "hint": "High-quality imaging inputs are essential for accurate virtual pathway generation.",
+    "source": "Advanced Peripheral Bronchoscopy Radial Probe, Electromagnetic Navigation, and Robotic Bronchoscopy.md"
+  },
+  {
+    "id": "pearl-diver-114",
+    "topic": "Advanced peripheral bronchoscopy",
+    "statement": "A concentric rEBUS view suggests the probe is centered within the lesion and predicts the highest yield.",
+    "answer": true,
+    "explanation": "Concentric pattern is the best-case confirmation signal for sampling.",
+    "hint": "Visualize the ultrasound probe surrounded by target tissue versus merely touching it.",
+    "source": "Advanced Peripheral Bronchoscopy Radial Probe, Electromagnetic Navigation, and Robotic Bronchoscopy.md"
+  },
+  {
+    "id": "pearl-diver-115",
+    "topic": "Advanced peripheral bronchoscopy",
+    "statement": "A homogeneous rEBUS pattern with hyperechoic dots (air bronchograms) can represent atelectasis mimic, and should prompt recruitment/PEEP adjustment and re-imaging.",
+    "answer": true,
+    "explanation": "Don’t mistake atelectasis for tumor—optimize ventilation and reconfirm tool-in-lesion.",
+    "hint": "Consider what collapsed lung tissue looks like on ultrasound compared to a solid tumor.",
+    "source": "Advanced Peripheral Bronchoscopy Radial Probe, Electromagnetic Navigation, and Robotic Bronchoscopy.md"
+  },
+  {
+    "id": "pearl-diver-116",
+    "topic": "Advanced peripheral bronchoscopy",
+    "statement": "When CT-to-body divergence is suspected, keep ventilator settings consistent and use augmented imaging (tomosynthesis/CBCT) to reconfirm tool-in-lesion.",
+    "answer": true,
+    "explanation": "Divergence is a major failure mode; re-recruit, re-image, and reconfirm before sampling.",
+    "hint": "Changing lung volume parameters mid-procedure can worsen the mismatch between virtual and real anatomy.",
+    "source": "Advanced Peripheral Bronchoscopy Radial Probe, Electromagnetic Navigation, and Robotic Bronchoscopy.md"
+  },
+  {
+    "id": "pearl-diver-117",
+    "topic": "Advanced peripheral bronchoscopy",
+    "statement": "If there is no bronchus sign, the preferred initial sampling tool is forceps biopsy rather than a needle.",
+    "answer": false,
+    "explanation": "Needle-first can create a tract when no bronchus sign is present; then add forceps/brush (± cryobiopsy).",
+    "hint": "Think about which tool is best suited to puncture the airway wall to access an adjacent lesion.",
+    "source": "Advanced Peripheral Bronchoscopy Radial Probe, Electromagnetic Navigation, and Robotic Bronchoscopy.md"
+  },
+  {
+    "id": "pearl-diver-118",
+    "topic": "Advanced peripheral bronchoscopy",
+    "statement": "Radiation dose to operators can be reduced with ALARA principles such as pulsed fluoroscopy, collimation, maximizing distance, and shielding.",
+    "answer": true,
+    "explanation": "Radiation discipline is part of the procedure, especially with augmented imaging.",
+    "hint": "Recall standard safety measures for minimizing X-ray exposure.",
+    "source": "Advanced Peripheral Bronchoscopy Radial Probe, Electromagnetic Navigation, and Robotic Bronchoscopy.md"
+  },
+  {
+    "id": "pearl-diver-119",
+    "topic": "Airway stents",
+    "statement": "For benign airway disease, removable silicone stents are generally preferred; uncovered or partially covered metallic stents should be avoided.",
+    "answer": true,
+    "explanation": "Long-term removability and lower ingrowth risk make silicone the default in benign disease.",
+    "source": "Airway Stents.md",
+    "hint": "Consider the long-term risk of tissue ingrowth making removal difficult in non-malignant conditions."
+  },
+  {
+    "id": "pearl-diver-120",
+    "topic": "Airway stents",
+    "statement": "A common sizing rule is to extend a silicone stent about 5 mm beyond both ends of the lesion.",
+    "answer": true,
+    "explanation": "Margin planning prevents edge restenosis and helps reduce complications.",
+    "source": "Airway Stents.md",
+    "hint": "Think about the necessary overlap to secure the device and cover disease margins without excessive length."
+  },
+  {
+    "id": "pearl-diver-121",
+    "topic": "Airway stents",
+    "statement": "Typical silicone stent diameters are roughly: trachea 14–16 mm, mainstem 12–13 mm, bronchus intermedius 10–11 mm.",
+    "answer": true,
+    "explanation": "These numbers are repeatedly tested for rapid device selection.",
+    "source": "Airway Stents.md",
+    "hint": "Recall the descending order of airway caliber from trachea to bronchus intermedius."
+  },
+  {
+    "id": "pearl-diver-122",
+    "topic": "Airway stents",
+    "statement": "When double stenting is needed for TEF/BEF, esophageal stent placement should generally be done before airway stent placement.",
+    "answer": false,
+    "explanation": "Airway is secured first; airway stent before esophageal when double stenting is needed.",
+    "source": "Airway Stents.md",
+    "hint": "Consider which structure is more vulnerable to compression compromise if the other is stented first."
+  },
+  {
+    "id": "pearl-diver-123",
+    "topic": "Airway stents",
+    "statement": "Humidification and saline nebulization are key measures to prevent mucus impaction after airway stenting.",
+    "answer": true,
+    "explanation": "Mucus plugging is a major preventable hazard; airway clearance planning is critical.",
+    "source": "Airway Stents.md",
+    "hint": "Think about the loss of natural mucociliary clearance on the surface of the prosthetic material."
+  },
+  {
+    "id": "pearl-diver-124",
+    "topic": "Airway stents",
+    "statement": "Silicone stents are typically deployed via flexible bronchoscopy with moderate sedation.",
+    "answer": false,
+    "explanation": "Silicone stent deployment is typically performed with rigid bronchoscopy under general anesthesia.",
+    "source": "Airway Stents.md",
+    "hint": "Consider the specialized hardware and large applicator system required to load and place these devices."
+  },
+  {
+    "id": "pearl-diver-125",
+    "topic": "Anesthesia for IP",
+    "statement": "Sedation depth is defined by patient responsiveness (e.g., MOAA/S or RASS), not by which drugs are used.",
+    "answer": true,
+    "explanation": "Drug choice does not define sedation level; responsiveness does.",
+    "source": "Anesthesia for IP.md",
+    "hint": "Focus on the physiological state of the patient rather than the pharmacological agent administered."
+  },
+  {
+    "id": "pearl-diver-126",
+    "topic": "Anesthesia for IP",
+    "statement": "Benzocaine and tetracaine are avoided for bronchoscopy topical anesthesia because of methemoglobinemia risk.",
+    "answer": true,
+    "explanation": "Topical anesthetic choice matters for safety; lidocaine is standard.",
+    "source": "Anesthesia for IP.md",
+    "hint": "Recall the specific adverse effect associated with certain ester anesthetics that affects oxygen carrying capacity."
+  },
+  {
+    "id": "pearl-diver-127",
+    "topic": "Anesthesia for IP",
+    "statement": "During thermal airway modalities (laser/electrocautery/APC), FiO2 should be kept below 0.40 to reduce airway fire risk.",
+    "answer": true,
+    "explanation": "Low FiO2 during thermal energy delivery is a core airway-fire prevention rule.",
+    "source": "Anesthesia for IP.md",
+    "hint": "Remember the three components of the fire triad: fuel, heat, and oxidizer."
+  },
+  {
+    "id": "pearl-diver-128",
+    "topic": "Anesthesia for IP",
+    "statement": "Atelectasis under GA can be reduced during peripheral bronchoscopy with recruitment maneuvers, PEEP (e.g., 8–10 cmH2O in VESPA), and FiO2 titration below 100%.",
+    "answer": true,
+    "explanation": "Ventilation strategy is a major modifiable factor for peripheral diagnostic performance.",
+    "source": "Anesthesia for IP.md",
+    "hint": "Think about the mechanisms that collapse alveoli during general anesthesia and how positive pressure counteracts them."
+  },
+  {
+    "id": "pearl-diver-129",
+    "topic": "Anesthesia for IP",
+    "statement": "When performing EBUS through an endotracheal tube, using at least an 8.0–8.5 mm ID tube helps preserve ventilation.",
+    "answer": true,
+    "explanation": "Larger ETTs provide more margin when the EBUS scope occupies the lumen.",
+    "source": "Anesthesia for IP.md",
+    "hint": "Visualize the cross-sectional area available for airflow when a large ultrasound scope is inserted inside the tube."
+  },
+  {
+    "id": "pearl-diver-130",
+    "topic": "Anesthesia for IP",
+    "statement": "Routine anticholinergics (atropine/glycopyrrolate) are helpful for secretions and lung function during bronchoscopy and are recommended routinely.",
+    "answer": false,
+    "explanation": "Routine anticholinergics are not generally helpful for secretions or lung function in bronchoscopy.",
+    "source": "Anesthesia for IP.md",
+    "hint": "Consider current guidelines regarding the routine use of drying agents versus their specific indication for bradycardia."
+  },
+  {
+    "id": "pearl-diver-131",
+    "topic": "Lung cancer staging / Linear EBUS",
+    "statement": "For station 4L, the superior left pulmonary artery defines the inferior border of 4L.",
+    "answer": true,
+    "explanation": "Station 4L landmarks are tested often; the superior LPA is used as the inferior boundary for 4L in common nodal maps.",
+    "source": "Lung Cancer Staging and Linear EBUS.md",
+    "hint": "Remember 'L' for Left Pulmonary Artery as the key lower boundary."
+  },
+  {
+    "id": "pearl-diver-132",
+    "topic": "Lung cancer staging / Linear EBUS",
+    "statement": "Stations 8 and 9 are routinely accessible by EBUS and do not require EUS-B.",
+    "answer": false,
+    "explanation": "Stations 8–9 are considered EUS-B territory (paraesophageal/pulmonary ligament) and are not accessible by EBUS.",
+    "source": "Lung Cancer Staging and Linear EBUS.md",
+    "hint": "Think about where the airway wall provides access versus the esophageal wall."
+  },
+  {
+    "id": "pearl-diver-133",
+    "topic": "Lung cancer staging / Linear EBUS",
+    "statement": "Station 2L is defined as being above the aortic arch; on ultrasound, borders are challenging and the aortic arch level is used as a practical reference.",
+    "answer": true,
+    "explanation": "2L is a classic boundary/landmark trap; practical orientation uses the aortic arch level and careful rotation.",
+    "source": "Lung Cancer Staging and Linear EBUS.md",
+    "hint": "Visualizing the top of the arch is the standard surrogate for this difficult boundary."
+  },
+  {
+    "id": "pearl-diver-134",
+    "topic": "Lung cancer staging / Linear EBUS",
+    "statement": "A systematic EBUS strategy (sampling at least 3 stations, commonly 4R, 4L, and 7) finds additional N2/N3 disease compared with targeted “hit-and-run” sampling.",
+    "answer": true,
+    "explanation": "Systematic staging improves detection of otherwise-missed mediastinal disease and is an exam favorite.",
+    "source": "Lung Cancer Staging and Linear EBUS.md",
+    "hint": "More sampling generally yields more accurate staging than 'cherry-picking'."
+  },
+  {
+    "id": "pearl-diver-135",
+    "topic": "Lung cancer staging / Linear EBUS",
+    "statement": "A 25G EBUS needle is avoided when angles are tight because it is harder to manipulate than larger needles.",
+    "answer": false,
+    "explanation": "A 25G needle can be advantageous for tight angles; stiffer needles may help calcified nodes, but 25G has a role.",
+    "source": "Lung Cancer Staging and Linear EBUS.md",
+    "hint": "Smaller gauge needles are generally more flexible, not less."
+  },
+  {
+    "id": "pearl-diver-136",
+    "topic": "Lung cancer screening (LDCT)",
+    "statement": "Lung-RADS 0 can be used when the scan is incomplete or when acute infection/inflammation is suspected, with repeat LDCT in 1–3 months and then re-categorization.",
+    "answer": true,
+    "explanation": "Lung-RADS 0 isn’t just motion/coverage—suspected acute infection/inflammation can also trigger a 0 with short-interval repeat.",
+    "source": "Lung Cancer Screening.md",
+    "hint": "'Incomplete' can also mean the picture is temporarily obscured by acute illness."
+  },
+  {
+    "id": "pearl-diver-137",
+    "topic": "Lung cancer screening (LDCT)",
+    "statement": "Subsegmental or multifocal tubular airway opacities on screening CT usually represent secretions and are typically benign (often Lung-RADS 0–2).",
+    "answer": true,
+    "explanation": "Airway “tubular” opacities are a common misread; location/pattern matters—subsegmental/multifocal favors secretions.",
+    "source": "Lung Cancer Screening.md",
+    "hint": "Mucus plugs often look like branching tubes."
+  },
+  {
+    "id": "pearl-diver-138",
+    "topic": "Lung cancer screening (LDCT)",
+    "statement": "Thick-walled or multilocular cysts are considered benign and are not classified as atypical cystic lesions in Lung-RADS v2022.",
+    "answer": false,
+    "explanation": "Thick-walled/multilocular cysts (and cyst + solid nodules) are suspicious and fall under atypical cystic lesions pathways.",
+    "source": "Lung Cancer Screening.md",
+    "hint": "Complex or thick walls move a cyst out of the 'benign simple cyst' category."
+  },
+  {
+    "id": "pearl-diver-139",
+    "topic": "Lung cancer screening (LDCT)",
+    "statement": "Slow-growing solid or part-solid nodules can be managed as suspicious (consider Lung-RADS 4B) even if 12-month growth is ≤1.5 mm, and PET can be falsely negative.",
+    "answer": true,
+    "explanation": "This is a high-yield trap: slow growth over multiple screens still matters; PET may miss indolent disease.",
+    "source": "Lung Cancer Screening.md",
+    "hint": "Indolence does not always equal benignity, especially over years."
+  },
+  {
+    "id": "pearl-diver-140",
+    "topic": "Pulmonary nodules",
+    "statement": "For incidental pure ground-glass nodules >5 mm, annual CT surveillance for at least 3 years is recommended in common algorithms (often extended to 5 years).",
+    "answer": true,
+    "explanation": "Subsolid follow-up is longer than many expect; stability over time is key before de-escalation.",
+    "source": "Diagnostic Approach to Pulmonary Nodules.md",
+    "hint": "These lesions grow very slowly, requiring patience beyond the standard 2 years."
+  },
+  {
+    "id": "pearl-diver-141",
+    "topic": "Pulmonary nodules",
+    "statement": "For incidental part-solid nodules <8 mm, a common pathway is CT at 3, 12, and 24 months, then annual surveillance.",
+    "answer": true,
+    "explanation": "Part-solid nodules are higher-risk than pure GGNs and follow a more intensive surveillance schedule.",
+    "source": "Diagnostic Approach to Pulmonary Nodules.md",
+    "hint": "The presence of a solid component necessitates closer initial monitoring than pure GGNs."
+  },
+  {
+    "id": "pearl-diver-142",
+    "topic": "Pulmonary nodules",
+    "statement": "In pulmonary nodule PET/CT interpretation, infection and inflammation are classic causes of false-negative PET results.",
+    "answer": false,
+    "explanation": "Infection/inflammation are classic false positives; false negatives include small lesions, subsolids, carcinoid, and mucinous/indolent adenocarcinoma.",
+    "source": "Diagnostic Approach to Pulmonary Nodules.md",
+    "hint": "Metabolic activity is high in inflammation, mimicking cancer."
+  },
+  {
+    "id": "pearl-diver-143",
+    "topic": "Advanced peripheral bronchoscopy",
+    "statement": "When there is no bronchus sign, the preferred initial sampling step is forceps biopsy to avoid creating a false tract.",
+    "answer": false,
+    "explanation": "A common strategy is needle-first to create a tract when there is no bronchus sign, then add forceps/brush (± cryobiopsy).",
+    "source": "Advanced Peripheral Bronchoscopy Radial Probe, Electromagnetic Navigation, and Robotic Bronchoscopy.md",
+    "hint": "You often need to make your own path into the lesion before using blunt tools."
+  },
+  {
+    "id": "pearl-diver-144",
+    "topic": "Advanced peripheral bronchoscopy",
+    "statement": "Ultrathin bronchoscopes (about 3.0 mm outer diameter with a ~1.7 mm channel) can reach ~5th-generation bronchi and accommodate rEBUS and mini-tools.",
+    "answer": true,
+    "explanation": "This is a practical equipment pearl that impacts reach and tool choices for small peripheral targets.",
+    "source": "Advanced Peripheral Bronchoscopy Radial Probe, Electromagnetic Navigation, and Robotic Bronchoscopy.md",
+    "hint": "These dimensions allow access far beyond standard therapeutic scopes."
+  },
+  {
+    "id": "pearl-diver-145",
+    "topic": "Advanced peripheral bronchoscopy",
+    "statement": "The Ion robotic platform is EMN-based and maintains continuous vision during sampling the same way EMN-based robotic systems do.",
+    "answer": false,
+    "explanation": "Ion is shape-sensing; the vision probe is typically removed during sampling (contrast with EMN-based systems that may maintain continuous visualization).",
+    "source": "Advanced Peripheral Bronchoscopy Radial Probe, Electromagnetic Navigation, and Robotic Bronchoscopy.md",
+    "hint": "Shape-sensing technology differs from optical recognition systems regarding the vision probe."
+  },
+  {
+    "id": "pearl-diver-146",
+    "topic": "Anesthesia for IP",
+    "statement": "The LNVP atelectasis-reduction strategy may use tidal volumes around 10–12 mL/kg ideal body weight and higher PEEP targets (up to ~15–20 cm H2O by lobe), with brief breath-holds for imaging.",
+    "answer": true,
+    "explanation": "LNVP is counterintuitive for many learners because it may use larger tidal volumes and higher PEEP targets as part of the protocol.",
+    "hint": "Unlike ARDS protective ventilation, this strategy prioritizes airway splinting and recruitment to maintain target visibility.",
+    "source": "Anesthesia for IP.md"
+  },
+  {
+    "id": "pearl-diver-147",
+    "topic": "Anesthesia for IP",
+    "statement": "During spray cryotherapy, keeping the ventilator circuit connected prevents hypoxemia and is recommended to avoid desaturation during the spray.",
+    "answer": false,
+    "explanation": "Spray cryotherapy requires disconnecting to allow gas egress; preoxygenate before each spray and monitor for barotrauma/gas embolism risk.",
+    "hint": "Nitrogen gas expands rapidly, creating a high risk of barotrauma if there is no route for immediate egress.",
+    "source": "Anesthesia for IP.md"
+  },
+  {
+    "id": "pearl-diver-148",
+    "topic": "Airway stents",
+    "statement": "When double stenting is needed for TEF/BEF, airway stenting is generally performed first, and clinicians should watch for pressure necrosis when both airway and esophageal stents are present.",
+    "answer": true,
+    "explanation": "Securing the airway is the priority; dual stents can increase pressure injury risk.",
+    "hint": "Stabilizing the trachea first prevents it from being compressed by the subsequent esophageal device.",
+    "source": "Airway Stents.md"
+  },
+  {
+    "id": "pearl-diver-149",
+    "topic": "Coding & Billing",
+    "statement": "If a bronchoscopy is started but must be stopped for patient safety, modifier -52 (reduced services) is the correct modifier.",
+    "answer": false,
+    "explanation": "Use -53 when a procedure is discontinued for patient safety after beginning; -52 is for reduced scope of a completed service.",
+    "hint": "Modifier -53 specifically denotes discontinuation due to patient risk or well-being.",
+    "source": "Coding and Billing.md"
+  },
+  {
+    "id": "pearl-diver-150",
+    "topic": "Coding & Billing",
+    "statement": "BLVR coding: Chartis collateral ventilation assessment is 31634; valve placement is 31647 for the first lobe with +31651 for each additional lobe; valve removal is 31648 with +31649 for each additional lobe removed.",
+    "answer": true,
+    "explanation": "These BLVR codes are commonly tested and easy to mix up—especially the add-on structure for additional lobes.",
+    "hint": "Recall that both placement and removal follow a base code plus add-on code structure.",
+    "source": "Coding and Billing.md"
+  },
+  {
+    "id": "pearl-diver-151",
+    "topic": "Pleural infections",
+    "statement": "Intrapleural enzyme therapy can be given as tPA 10 mg + DNase 5 mg twice daily for up to 3 days (maximum 6 doses), with about a 1-hour clamp each dose; fibrinolytic monotherapy should be avoided.",
+    "answer": true,
+    "explanation": "Standard IET dosing is tPA 10 mg + DNase 5 mg BID up to 3 days with ~1 hour dwell/clamp; avoid tPA-only or DNase-only regimens.",
+    "hint": "The MIST-2 trial protocol established this specific combination and dosing frequency.",
+    "source": "Pleural Infections.md"
+  },
+  {
+    "id": "pearl-diver-152",
+    "topic": "Pleural infections",
+    "statement": "If intrapleural enzyme therapy is contraindicated or bleeding risk is very high, saline irrigation (e.g., 250 mL three times daily for 3 days) can be used as a non-surgical source control adjunct.",
+    "answer": true,
+    "explanation": "Saline irrigation is an alternative escalation pathway when IET cannot be used, with an example regimen of 250 mL TID × 3 days.",
+    "hint": "Mechanical reduction of bacterial burden via lavage is a valid option when chemical fibrinolysis is unsafe.",
+    "source": "Pleural Infections.md"
+  },
+  {
+    "id": "pearl-diver-153",
+    "topic": "Pneumothorax / PAL / BPF",
+    "statement": "A prolonged air leak (PAL) is typically defined as an air leak persisting for more than 5 days after drainage.",
+    "answer": true,
+    "explanation": "PAL is defined as an air leak persisting >5 days after drainage.",
+    "hint": "This duration generally exceeds the standard expected length of stay for routine lung resection.",
+    "source": "Pneumothorax, Prolonged Air Leaks, and Bronchopleural Fistula.md"
+  },
+  {
+    "id": "pearl-diver-154",
+    "topic": "Pneumothorax / PAL / BPF",
+    "statement": "For chest tube management in pneumothorax with an air leak, routine suction is preferred over water seal because suction speeds closure and reduces fistula propagation.",
+    "answer": false,
+    "explanation": "Water seal is generally favored over routine suction; suction is not automatically beneficial and can perpetuate leaks in some scenarios.",
+    "hint": "Applying continuous negative pressure may actually keep the fistula tract open rather than allowing it to seal.",
+    "source": "Pneumothorax, Prolonged Air Leaks, and Bronchopleural Fistula.md"
+  },
+  {
+    "id": "pearl-diver-164",
+    "topic": "Real-time peripheral imaging",
+    "statement": "With cone-beam CT guidance, starting the scan 5–7 seconds after initiating an inspiratory breath-hold helps outlast the initial motion and improves image quality.",
+    "answer": true,
+    "explanation": "Delaying the CBCT spin by ~5–7 seconds after breath-hold onset reduces motion artifact from early lung movement.",
+    "source": "turn0file5",
+    "hint": "Think about the brief period of lung motion that occurs immediately after a breath-hold begins."
+  },
+  {
+    "id": "pearl-diver-165",
+    "topic": "Pleural effusions & pleural interventions",
+    "statement": "During large-volume thoracentesis with manometry, a pragmatic stopping point is pleural pressure falling below about −20 cm H₂O or the patient developing chest pain/relentless cough.",
+    "answer": true,
+    "explanation": "Drainage is symptom- and pressure-guided; −20 cm H₂O (or symptoms) is a common ‘stop’ threshold to reduce risk and discomfort.",
+    "source": "turn0file2",
+    "hint": "Recall the specific pressure threshold associated with re-expansion pulmonary edema risk."
+  },
+  {
+    "id": "pearl-diver-166",
+    "topic": "Pleural effusions & pleural interventions",
+    "statement": "A post-thoracentesis chest X-ray should be obtained routinely after every procedure, regardless of symptoms or procedural course.",
+    "answer": false,
+    "explanation": "Post-tap CXR is not routine; obtain imaging when there’s clinical concern (e.g., symptoms, difficult procedure, air aspiration).",
+    "source": "turn0file2",
+    "hint": "Consider whether imaging adds value in an uncomplicated, symptom-free patient."
+  },
+  {
+    "id": "pearl-diver-167",
+    "topic": "Pleural effusions & pleural interventions",
+    "statement": "In pleural effusions, Light’s criteria are no longer recommended as a first-line method to classify exudates vs transudates because ultrasound has replaced biochemical testing.",
+    "answer": false,
+    "explanation": "Light’s criteria remain first-line for exudate/transudate classification; ultrasound complements procedures and pattern recognition but does not replace pleural fluid chemistry.",
+    "source": "turn0file2",
+    "hint": "Does ultrasound analyze chemical composition like protein or LDH?"
+  },
+  {
+    "id": "pearl-diver-168",
+    "topic": "Pleural effusions & pleural interventions",
+    "statement": "Ultrasound guidance is considered standard of care for thoracentesis and chest tube placement because it reduces pneumothorax risk and ‘dry taps’.",
+    "answer": true,
+    "explanation": "Ultrasound-guided access reduces pneumothorax rates and failed/dry attempts.",
+    "source": "turn0file2",
+    "hint": "Think about the current standard for preventing complications like pneumothorax."
+  },
+  {
+    "id": "pearl-diver-169",
+    "topic": "Pleural infections",
+    "statement": "In parapneumonic effusions, pleural fluid pH ≤ 7.20 (when obtained correctly) strongly supports chest tube drainage if it can be done safely.",
+    "answer": true,
+    "explanation": "pH ≤7.20 is a key decision point favoring tube placement, along with purulence/positive cultures and supportive chemistries/imaging.",
+    "source": "turn0file3",
+    "hint": "Recall the pH cutoff that typically separates a simple effusion from one requiring drainage."
+  },
+  {
+    "id": "pearl-diver-170",
+    "topic": "Malignant CAO",
+    "statement": "When using thermal modalities (laser/APC/electrocautery) for malignant central airway obstruction, a common safety target is FiO₂ ≤ 0.40 to reduce airway fire risk.",
+    "hint": "Think about the 'Fire Triad' and the concentration of oxidizer generally considered safe during airway surgery.",
+    "answer": true,
+    "explanation": "Thermal tools require FiO₂ discipline; a common safety target is ≤0.40 to reduce airway fire risk.",
+    "source": "turn0file6"
+  },
+  {
+    "id": "pearl-diver-171",
+    "topic": "Rigid Bronchoscopy",
+    "statement": "In registry data, purely lobar airway obstruction is an independent predictor of increased 30-day mortality following therapeutic bronchoscopy.",
+    "hint": "Consider whether obstruction limited to a lobe implies a higher or lower systemic disease burden compared to mainstem or tracheal involvement.",
+    "answer": false,
+    "explanation": "Lobar-only disease benefits *less* regarding dyspnea scores but is *not* a high-risk mortality driver. High-risk drivers include ASA >3, ECOG >1, and intrinsic or mixed obstruction (reflecting higher disease burden).",
+    "source": "rigid-bronchoscopy-indications-technique.md"
+  },
+  {
+    "id": "pearl-diver-172",
+    "topic": "Rigid Bronchoscopy",
+    "statement": "Jet ventilation is superior to spontaneous-assisted ventilation for therapeutic bronchoscopy because it allows for continuous monitoring of airway pressures and minute ventilation.",
+    "hint": "Recall the trade-offs of using an open system like jet ventilation versus a closed system.",
+    "answer": false,
+    "explanation": "Jet ventilation specifically *lacks* airway pressure and minute ventilation monitoring, which increases the risk of iatrogenic pneumothorax compared to spontaneous-assisted closed systems.",
+    "source": "rigid-bronchoscopy-indications-technique.md"
+  },
+  {
+    "id": "pearl-diver-173",
+    "topic": "Rigid Bronchoscopy",
+    "statement": "When performing rigid bronchoscopy for massive hemoptysis, the scope should be used to tamponade the bleeding bronchus while ventilating the ipsilateral (bleeding) lung.",
+    "hint": "In a bleeding crisis, think about which lung needs to be kept clear for gas exchange.",
+    "answer": false,
+    "explanation": "The priority is to ventilate and protect the *contralateral* (non-bleeding) lung. You tamponade the bleeding side with the scope but ventilate the 'good' lung.",
+    "source": "rigid-bronchoscopy-indications-technique.md"
+  },
+  {
+    "id": "pearl-diver-174",
+    "topic": "Rigid Bronchoscopy",
+    "statement": "For benign post-intubation stenosis with cartilage involvement (complex stenosis), radial incisions and dilation alone are usually sufficient for long-term patency.",
+    "hint": "Consider the structural integrity of the airway; does cutting mucosa fix collapsed cartilage?",
+    "answer": false,
+    "explanation": "Simple (mucosal) stenosis may resolve with incisions/dilation, but complex stenosis (cartilage damage) typically requires stenting to stabilize the airway structure.",
+    "source": "rigid-bronchoscopy-indications-technique.md"
+  },
+  {
+    "id": "pearl-diver-175",
+    "topic": "Thermal Ablative Therapies",
+    "statement": "The KTP laser (532 nm) is an optimal choice for rapid debulking of large endoluminal tumors due to its deep tissue penetration (~5–10 mm).",
+    "hint": "Relate the wavelength to tissue interaction: KTP is often called a 'vascular' or superficial laser.",
+    "answer": false,
+    "explanation": "The KTP laser creates *superficial* cutting (<1 mm depth) and hemostasis. Deep coagulation and rapid debulking are characteristics of the Nd:YAG laser (~1064 nm).",
+    "source": "Thermal Ablatitive Therapies.md"
+  },
+  {
+    "id": "pearl-diver-176",
+    "topic": "Thermal Ablative Therapies",
+    "statement": "When using Argon Plasma Coagulation (APC), the catheter tip should be placed in light contact with the target tissue to ensure proper plasma arc formation.",
+    "hint": "Think about how the argon gas conducts the energy; does it need a gap to ionize?",
+    "answer": false,
+    "explanation": "APC is a *non-contact* modality. The tip must be kept 1–3 mm *away* from the tissue. Contact can occlude the tip or cause deep mechanical injury.",
+    "source": "Thermal Ablatitive Therapies.md"
+  },
+  {
+    "id": "pearl-diver-177",
+    "topic": "Thermal Ablative Therapies",
+    "statement": "The 'popcorn effect' during laser therapy is caused by setting the power density too low, resulting in slow boiling rather than vaporization.",
+    "hint": "Picture the sound of popping corn; does that suggest low energy boiling or a sudden, high-pressure explosion?",
+    "answer": false,
+    "explanation": "The 'popcorn effect' (subsurface steam explosion) results from excessive dwell time or power, causing deep heating that ruptures tissue; it is prevented by using short pulses and keeping the beam moving.",
+    "source": "Thermal Ablatitive Therapies.md"
+  },
+  {
+    "id": "pearl-diver-178",
+    "topic": "Thermal Ablative Therapies",
+    "statement": "Patients with cardiac pacemakers (CIEDs) usually require magnet application or asynchronous mode reprogramming for laser bronchoscopy.",
+    "hint": "Differentiate between electromagnetic interference (EMI) risks from electrical tools versus light-based tools.",
+    "answer": false,
+    "explanation": "Lasers use light energy, not electrical current, and generally do *not* interfere with CIEDs. Reprogramming/magnets are required for electrosurgical devices like APC and Electrocautery.",
+    "source": "Thermal Ablatitive Therapies.md"
+  },
+  {
+    "id": "pearl-diver-179",
+    "topic": "Thermal Ablative Therapies",
+    "statement": "Electrocautery works best in a 'wet' field because the blood helps conduct the electrical current into the tissue.",
+    "hint": "Think about the path of least resistance for electricity and whether blood disperses or focuses the energy.",
+    "answer": false,
+    "explanation": "A wet field (blood/mucus) blunts the effect of electrocautery (and APC). The field must be suctioned dry for effective coagulation or cutting.",
+    "source": "Thermal Ablatitive Therapies.md"
+  },
+  {
+    "id": "pearl-diver-180",
+    "topic": "Thermal Ablative Therapies",
+    "statement": "When treating a subglottic web with an electrocautery needle knife, incisions at the 6 o'clock position should be avoided to prevent injury to the posterior membranous wall.",
+    "hint": "Visualize the cross-section of the trachea and what structure lies immediately posterior to the membranous wall.",
+    "answer": true,
+    "explanation": "Radial incisions should be made at 12, 3, and 9 o'clock. The 6 o'clock position corresponds to the posterior membranous wall and esophagus, which must be avoided.",
+    "source": "Thermal Ablatitive Therapies.md"
+  },
+  {
+    "id": "pearl-diver-181",
+    "topic": "Early-Stage Lung Cancer",
+    "statement": "Modern randomized trials suggest that for peripheral cT1N0 tumors ≤2 cm, segmentectomy provides equivalent overall survival to lobectomy but with a lower rate of locoregional recurrence.",
+    "hint": "Consider the trade-off of removing less tissue: does it make local recurrence more or less likely?",
+    "answer": false,
+    "explanation": "While Overall Survival (OS) is equivalent (or superior in some trials), segmentectomy is associated with a slightly *higher* rate of locoregional relapse compared to lobectomy.",
+    "source": "Treatment Options for Early‑Stage Lung Cancer.md"
+  },
+  {
+    "id": "pearl-diver-182",
+    "topic": "Early-Stage Lung Cancer",
+    "statement": "Neoadjuvant chemo-immunotherapy (e.g., CheckMate 816) significantly improves pathologic complete response (pCR) rates without increasing surgical complications or mortality.",
+    "hint": "Review the outcomes of major trials like CheckMate 816 regarding surgical safety signals.",
+    "answer": true,
+    "explanation": "Data indicates pCR increases (~24% vs ~2%) and Event-Free Survival improves, *without* a documented excess in surgical morbidity or mortality.",
+    "source": "Treatment Options for Early‑Stage Lung Cancer.md"
+  },
+  {
+    "id": "pearl-diver-183",
+    "topic": "Early-Stage Lung Cancer",
+    "statement": "Microwave ablation (MWA) is generally preferred over Radiofrequency Ablation (RFA) for lesions near large blood vessels because it is less susceptible to the 'heat-sink' effect.",
+    "hint": "Think about which modality generates higher temperatures faster, potentially overcoming the cooling effect of blood flow.",
+    "answer": true,
+    "explanation": "RFA efficacy can be limited by blood flow cooling the tissue (heat-sink), whereas MWA uses higher temperatures and faster heating, making it less susceptible to this phenomenon.",
+    "source": "Treatment Options for Early‑Stage Lung Cancer.md"
+  },
+  {
+    "id": "pearl-diver-184",
+    "topic": "Early-Stage Lung Cancer",
+    "statement": "Symptomatic radiation pneumonitis following SBRT is an acute reaction that typically manifests within 48 to 72 hours of the final fraction.",
+    "hint": "Consider the biological timeline of inflammatory fibrosis versus immediate cellular damage.",
+    "answer": false,
+    "explanation": "Radiation pneumonitis is a subacute complication, typically presenting 2–12 weeks after therapy completion, not immediately.",
+    "source": "Treatment Options for Early‑Stage Lung Cancer.md"
+  },
+  {
+    "id": "pearl-diver-185",
+    "topic": "Early-Stage Lung Cancer",
+    "statement": "Cryoablation is preferred over heat-based ablation for tumors abutting the bronchus intermedius due to a reduced risk of bronchopleural fistula.",
+    "hint": "Compare how extreme cold versus extreme heat affects collagen architecture and cartilage.",
+    "answer": true,
+    "explanation": "Cryoablation preserves the collagen matrix and cartilage architecture better than heat-based therapies (MWA/RFA), lowering the risk of fistula formation in central airways.",
+    "source": "Treatment Options for Early‑Stage Lung Cancer.md"
+  },
+  {
+    "id": "pearl-diver-186",
+    "topic": "Early-Stage Lung Cancer",
+    "statement": "Postoperative Radiation Therapy (PORT) is recommended for resected Stage II NSCLC even if the margins are negative (R0), to sterilize the mediastinum.",
+    "hint": "Recall the guidelines for PORT: is it for all node-positive disease or primarily for incomplete resections?",
+    "answer": false,
+    "explanation": "PORT is *not* indicated for routine R0 resections in Stage I–II disease. It is reserved specifically for cases with positive margins (R1).",
+    "source": "Treatment Options for Early‑Stage Lung Cancer.md"
+  },
+  {
+    "id": "pearl-diver-187",
+    "topic": "Early-Stage Lung Cancer",
+    "statement": "If a surgical candidate has a ppoFEV1 of 35%, they should be deemed inoperable and referred for SBRT.",
+    "hint": "Is the predicted postoperative value a hard stop, or is there another functional test to arbitrate?",
+    "answer": false,
+    "explanation": "A ppoFEV1 <40% is not an automatic exclusion; it is a trigger for Cardiopulmonary Exercise Testing (CPET) to further stratify risk based on VO2peak.",
+    "source": "Treatment Options for Early‑Stage Lung Cancer.md"
+  },
+  {
+    "id": "pearl-diver-188",
+    "topic": "Early-Stage Lung Cancer",
+    "statement": "Adjuvant Alectinib is the standard of care for resected Stage II NSCLC harboring an EGFR exon 19 deletion.",
+    "hint": "Match the drug to the molecular target: ALK vs. EGFR.",
+    "answer": false,
+    "explanation": "Alectinib is an ALK inhibitor. The correct targeted therapy for EGFR 19del/L858R is Osimertinib.",
+    "source": "Treatment Options for Early‑Stage Lung Cancer.md"
+  },
+  {
+    "id": "pearl-diver-189",
+    "topic": "Rigid Bronchoscopy",
+    "statement": "Placement of a Y-stent during therapeutic bronchoscopy is associated with a decreased risk of 30-day mortality compared to simple dilation.",
+    "hint": "Consider whether patients requiring complex stenting (like Y-stents) have lighter or heavier disease burdens.",
+    "answer": false,
+    "explanation": "Y-stent placement is associated with *increased* 30-day mortality in registry data, likely reflecting a higher underlying disease burden and complexity.",
+    "source": "rigid-bronchoscopy-indications-technique.md"
+  },
+  {
+    "id": "pearl-diver-190",
+    "topic": "Thermal Ablative Therapies",
+    "statement": "Argon Plasma Coagulation (APC) carries a specific risk of gas embolism, which is most likely to occur if the gas flow is too low (<0.5 L/min).",
+    "hint": "Think about the mechanics of embolism: does it happen because of too little pressure or too much pressure forcing gas into vessels?",
+    "answer": false,
+    "explanation": "Gas embolism is a risk of *high* flow rates or improper technique (impaling tissue/firing while advancing). Flows should be capped at ≤1.0 L/min to reduce this risk.",
+    "source": "Thermal Ablatitive Therapies.md"
+  }
+]
+    
+    
+
+
+  
+
+
+
+  
+  
+    
