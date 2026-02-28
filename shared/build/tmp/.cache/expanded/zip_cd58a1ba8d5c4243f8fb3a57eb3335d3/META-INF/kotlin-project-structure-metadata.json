@@ -1,0 +1,297 @@
+{
+  "projectStructure": {
+    "formatVersion": "0.3.3",
+    "isPublishedAsRoot": "true",
+    "variants": [
+      {
+        "name": "androidNativeArm32ApiElements",
+        "sourceSet": [
+          "commonMain",
+          "pthreadAndroidMain",
+          "nativeCommonMain"
+        ]
+      },
+      {
+        "name": "androidNativeArm64ApiElements",
+        "sourceSet": [
+          "commonMain",
+          "pthreadAndroidMain",
+          "nativeCommonMain"
+        ]
+      },
+      {
+        "name": "androidNativeX64ApiElements",
+        "sourceSet": [
+          "commonMain",
+          "pthreadAndroidMain",
+          "nativeCommonMain"
+        ]
+      },
+      {
+        "name": "androidNativeX86ApiElements",
+        "sourceSet": [
+          "commonMain",
+          "pthreadAndroidMain",
+          "nativeCommonMain"
+        ]
+      },
+      {
+        "name": "iosArm32ApiElements",
+        "sourceSet": [
+          "commonMain",
+          "darwinMain",
+          "nativeCommonMain"
+        ]
+      },
+      {
+        "name": "iosArm64ApiElements",
+        "sourceSet": [
+          "commonMain",
+          "darwinMain",
+          "nativeCommonMain"
+        ]
+      },
+      {
+        "name": "iosSimulatorArm64ApiElements",
+        "sourceSet": [
+          "commonMain",
+          "darwinMain",
+          "nativeCommonMain"
+        ]
+      },
+      {
+        "name": "iosX64ApiElements",
+        "sourceSet": [
+          "commonMain",
+          "darwinMain",
+          "nativeCommonMain"
+        ]
+      },
+      {
+        "name": "jsLegacyApiElements",
+        "sourceSet": [
+          "commonMain"
+        ]
+      },
+      {
+        "name": "jsLegacyRuntimeElements",
+        "sourceSet": [
+          "commonMain"
+        ]
+      },
+      {
+        "name": "jsIrApiElements",
+        "sourceSet": [
+          "commonMain"
+        ]
+      },
+      {
+        "name": "jsIrRuntimeElements",
+        "sourceSet": [
+          "commonMain"
+        ]
+      },
+      {
+        "name": "jvmApiElements",
+        "sourceSet": [
+          "commonMain"
+        ]
+      },
+      {
+        "name": "jvmRuntimeElements",
+        "sourceSet": [
+          "commonMain"
+        ]
+      },
+      {
+        "name": "linuxArm32HfpApiElements",
+        "sourceSet": [
+          "commonMain",
+          "pthreadMain",
+          "nativeCommonMain"
+        ]
+      },
+      {
+        "name": "linuxMips32ApiElements",
+        "sourceSet": [
+          "commonMain",
+          "pthreadMain",
+          "nativeCommonMain"
+        ]
+      },
+      {
+        "name": "linuxX64ApiElements",
+        "sourceSet": [
+          "commonMain",
+          "pthreadMain",
+          "nativeCommonMain"
+        ]
+      },
+      {
+        "name": "macosArm64ApiElements",
+        "sourceSet": [
+          "commonMain",
+          "darwinMain",
+          "nativeCommonMain"
+        ]
+      },
+      {
+        "name": "macosX64ApiElements",
+        "sourceSet": [
+          "commonMain",
+          "darwinMain",
+          "nativeCommonMain"
+        ]
+      },
+      {
+        "name": "mingwX64ApiElements",
+        "sourceSet": [
+          "commonMain",
+          "mingwMain",
+          "nativeCommonMain"
+        ]
+      },
+      {
+        "name": "mingwX86ApiElements",
+        "sourceSet": [
+          "commonMain",
+          "mingwMain",
+          "nativeCommonMain"
+        ]
+      },
+      {
+        "name": "tvosArm64ApiElements",
+        "sourceSet": [
+          "commonMain",
+          "darwinMain",
+          "nativeCommonMain"
+        ]
+      },
+      {
+        "name": "tvosSimulatorArm64ApiElements",
+        "sourceSet": [
+          "commonMain",
+          "darwinMain",
+          "nativeCommonMain"
+        ]
+      },
+      {
+        "name": "tvosX64ApiElements",
+        "sourceSet": [
+          "commonMain",
+          "darwinMain",
+          "nativeCommonMain"
+        ]
+      },
+      {
+        "name": "watchosArm32ApiElements",
+        "sourceSet": [
+          "commonMain",
+          "darwinMain",
+          "nativeCommonMain"
+        ]
+      },
+      {
+        "name": "watchosArm64ApiElements",
+        "sourceSet": [
+          "commonMain",
+          "darwinMain",
+          "nativeCommonMain"
+        ]
+      },
+      {
+        "name": "watchosSimulatorArm64ApiElements",
+        "sourceSet": [
+          "commonMain",
+          "darwinMain",
+          "nativeCommonMain"
+        ]
+      },
+      {
+        "name": "watchosX64ApiElements",
+        "sourceSet": [
+          "commonMain",
+          "darwinMain",
+          "nativeCommonMain"
+        ]
+      },
+      {
+        "name": "watchosX86ApiElements",
+        "sourceSet": [
+          "commonMain",
+          "darwinMain",
+          "nativeCommonMain"
+        ]
+      }
+    ],
+    "sourceSets": [
+      {
+        "name": "commonMain",
+        "dependsOn": [],
+        "moduleDependency": [],
+        "binaryLayout": "klib"
+      },
+      {
+        "name": "darwinMain",
+        "dependsOn": [
+          "nativeCommonMain"
+        ],
+        "moduleDependency": [
+          "org.jetbrains.kotlin:kotlin-stdlib-common",
+          "co.touchlab:stately-common"
+        ],
+        "sourceSetCInteropMetadataDirectory": "darwinMain-cinterop",
+        "binaryLayout": "klib",
+        "hostSpecific": "true"
+      },
+      {
+        "name": "mingwMain",
+        "dependsOn": [
+          "nativeCommonMain"
+        ],
+        "moduleDependency": [
+          "org.jetbrains.kotlin:kotlin-stdlib-common",
+          "co.touchlab:stately-common"
+        ],
+        "sourceSetCInteropMetadataDirectory": "mingwMain-cinterop",
+        "binaryLayout": "klib"
+      },
+      {
+        "name": "nativeCommonMain",
+        "dependsOn": [
+          "commonMain"
+        ],
+        "moduleDependency": [
+          "org.jetbrains.kotlin:kotlin-stdlib-common",
+          "co.touchlab:stately-common"
+        ],
+        "sourceSetCInteropMetadataDirectory": "nativeCommonMain-cinterop",
+        "binaryLayout": "klib"
+      },
+      {
+        "name": "pthreadAndroidMain",
+        "dependsOn": [
+          "nativeCommonMain"
+        ],
+        "moduleDependency": [
+          "org.jetbrains.kotlin:kotlin-stdlib-common",
+          "co.touchlab:stately-common"
+        ],
+        "sourceSetCInteropMetadataDirectory": "pthreadAndroidMain-cinterop",
+        "binaryLayout": "klib"
+      },
+      {
+        "name": "pthreadMain",
+        "dependsOn": [
+          "nativeCommonMain"
+        ],
+        "moduleDependency": [
+          "org.jetbrains.kotlin:kotlin-stdlib-common",
+          "co.touchlab:stately-common"
+        ],
+        "sourceSetCInteropMetadataDirectory": "pthreadMain-cinterop",
+        "binaryLayout": "klib"
+      }
+    ]
+  }
+}

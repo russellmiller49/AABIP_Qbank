@@ -1,10 +1,14 @@
 [
     {
-        "merged": "com.russellmiller.iprep.androidApp-debug-68:/xml_data_extraction_rules.xml.flat",
-        "source": "com.russellmiller.iprep.androidApp-main-70:/xml/data_extraction_rules.xml"
+        "merged": "/Users/russellmiller/.gradle/daemon/9.2.1/com.russellmiller.iprep.androidApp-debug-68:/xml_data_extraction_rules.xml.flat",
+        "source": "/Users/russellmiller/.gradle/daemon/9.2.1/com.russellmiller.iprep.androidApp-main-70:/xml/data_extraction_rules.xml"
     },
     {
-        "merged": "com.russellmiller.iprep.androidApp-debug-68:/xml_backup_rules.xml.flat",
-        "source": "com.russellmiller.iprep.androidApp-main-70:/xml/backup_rules.xml"
+        "merged": "/Users/russellmiller/.gradle/daemon/9.2.1/com.russellmiller.iprep.androidApp-debug-68:/xml_backup_rules.xml.flat",
+        "source": "/Users/russellmiller/.gradle/daemon/9.2.1/com.russellmiller.iprep.androidApp-main-70:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.russellmiller.iprep.androidApp-debug-68:/drawable_aabip_logo.png.flat",
+        "source": "com.russellmiller.iprep.androidApp-main-70:/drawable/aabip_logo.png"
     }
 ]

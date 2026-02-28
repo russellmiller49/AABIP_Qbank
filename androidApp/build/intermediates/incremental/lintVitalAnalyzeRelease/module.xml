@@ -1,15 +1,16 @@
 <lint-module
     format="1"
-    dir="/Users/russellmiller/Projects/iprep/androidApp"
+    dir="/Users/russellmiller/Projects/AABIP_Qbank/androidApp"
     name=":androidApp"
     type="APP"
     maven="iprep:androidApp:unspecified"
-    agpVersion="8.13.0"
+    agpVersion="9.0.1"
     buildFolder="build"
-    bootClassPath="/Users/russellmiller/Library/Android/sdk/platforms/android-34/android.jar:/Users/russellmiller/Library/Android/sdk/build-tools/35.0.0/core-lambda-stubs.jar"
+    bootClassPath="/Users/russellmiller/Library/Android/sdk/platforms/android-34/android.jar:/Users/russellmiller/Library/Android/sdk/build-tools/36.0.0/core-lambda-stubs.jar"
     javaSourceLevel="1.8"
     compileTarget="android-34"
-    neverShrinking="true">
+    neverShrinking="true"
+    highlightGradualR8Api="false">
   <lintOptions
       abortOnError="true"
       absolutePaths="true"

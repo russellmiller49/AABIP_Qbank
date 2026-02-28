@@ -5,28 +5,27 @@
     minSdkVersion="24"
     targetSdkVersion="34"
     mergedManifest="build/intermediates/merged_manifest/release/processReleaseMainManifest/AndroidManifest.xml"
-    proguardFiles="build/intermediates/default_proguard_files/global/proguard-android-optimize.txt-8.13.0:proguard-rules.pro"
+    proguardFiles="build/intermediates/default_proguard_files/global/proguard-android-optimize.txt-9.0.1:proguard-rules.pro"
     partialResultsDir="build/intermediates/lint_vital_partial_results/release/lintVitalAnalyzeRelease/out"
-    desugaredMethodsFiles="/Users/russellmiller/.gradle/caches/8.13/transforms/c38caf1ba2cad5fcec2f3958c95b3517/transformed/D8BackportedDesugaredMethods.txt">
-  <buildFeatures
-      namespacing="REQUIRED"/>
+    desugaredMethodsFiles="/Users/russellmiller/.gradle/caches/9.2.1/transforms/8a9986a1b0dca2061fe721135722d19f/transformed/D8BackportedDesugaredMethods.txt">
+  <buildFeatures/>
   <sourceProviders>
     <sourceProvider
         manifests="src/main/AndroidManifest.xml"
         javaDirectories="src/main/java:src/release/java:src/main/kotlin:src/release/kotlin"
         resDirectories="src/main/res:src/release/res"
-        assetsDirectories="src/main/assets:src/release/assets"/>
+        assetsDirectories="src/main/assets:/Users/russellmiller/Projects/AABIP_Qbank/crossword:/Users/russellmiller/Projects/AABIP_Qbank/shared/src/commonMain/resources:src/release/assets"/>
   </sourceProviders>
   <testSourceProviders>
   </testSourceProviders>
   <testFixturesSourceProviders>
   </testFixturesSourceProviders>
   <artifact
-      classOutputs="build/intermediates/javac/release/compileReleaseJavaWithJavac/classes:build/tmp/kotlin-classes/release:build/kotlinToolingMetadata:build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/release/processReleaseResources/R.jar"
+      classOutputs="build/intermediates/javac/release/compileReleaseJavaWithJavac/classes:build/tmp/kotlin-classes/release:build/kotlinToolingMetadata:build/intermediates/compile_and_runtime_r_class_jar/release/processReleaseResources/R.jar"
       type="MAIN"
       applicationId="com.russellmiller.iprep"
       generatedSourceFolders="build/generated/ap_generated_sources/release/out"
       generatedResourceFolders="build/generated/res/resValues/release"
-      desugaredMethodsFiles="/Users/russellmiller/.gradle/caches/8.13/transforms/c38caf1ba2cad5fcec2f3958c95b3517/transformed/D8BackportedDesugaredMethods.txt">
+      desugaredMethodsFiles="/Users/russellmiller/.gradle/caches/9.2.1/transforms/8a9986a1b0dca2061fe721135722d19f/transformed/D8BackportedDesugaredMethods.txt">
   </artifact>
 </variant>

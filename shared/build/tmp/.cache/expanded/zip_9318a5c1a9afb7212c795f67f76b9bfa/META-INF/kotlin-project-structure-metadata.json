@@ -1,0 +1,260 @@
+{
+  "projectStructure": {
+    "formatVersion": "0.3.3",
+    "isPublishedAsRoot": "true",
+    "variants": [
+      {
+        "name": "iosArm64ApiElements",
+        "sourceSet": [
+          "commonMain",
+          "iosMain",
+          "appleMain",
+          "nativeLinuxLikeMain",
+          "nativeMain"
+        ]
+      },
+      {
+        "name": "iosSimulatorArm64ApiElements",
+        "sourceSet": [
+          "commonMain",
+          "iosMain",
+          "appleMain",
+          "nativeMain",
+          "nativeLinuxLikeMain"
+        ]
+      },
+      {
+        "name": "iosX64ApiElements",
+        "sourceSet": [
+          "commonMain",
+          "iosMain",
+          "appleMain",
+          "nativeMain",
+          "nativeLinuxLikeMain"
+        ]
+      },
+      {
+        "name": "linuxX64ApiElements",
+        "sourceSet": [
+          "commonMain",
+          "nativeLinuxLikeMain",
+          "nativeMain"
+        ]
+      },
+      {
+        "name": "macosArm64ApiElements",
+        "sourceSet": [
+          "commonMain",
+          "macosMain",
+          "appleMain",
+          "nativeMain",
+          "nativeLinuxLikeMain"
+        ]
+      },
+      {
+        "name": "macosX64ApiElements",
+        "sourceSet": [
+          "commonMain",
+          "macosMain",
+          "appleMain",
+          "nativeMain",
+          "nativeLinuxLikeMain"
+        ]
+      },
+      {
+        "name": "mingwX64ApiElements",
+        "sourceSet": [
+          "commonMain",
+          "nativeMain"
+        ]
+      },
+      {
+        "name": "tvosArm64ApiElements",
+        "sourceSet": [
+          "commonMain",
+          "tvosMain",
+          "appleMain",
+          "nativeMain",
+          "nativeLinuxLikeMain"
+        ]
+      },
+      {
+        "name": "tvosSimulatorArm64ApiElements",
+        "sourceSet": [
+          "commonMain",
+          "tvosMain",
+          "appleMain",
+          "nativeMain",
+          "nativeLinuxLikeMain"
+        ]
+      },
+      {
+        "name": "tvosX64ApiElements",
+        "sourceSet": [
+          "commonMain",
+          "tvosMain",
+          "appleMain",
+          "nativeMain",
+          "nativeLinuxLikeMain"
+        ]
+      },
+      {
+        "name": "watchosArm32ApiElements",
+        "sourceSet": [
+          "commonMain",
+          "watchosMain",
+          "appleMain",
+          "nativeMain",
+          "nativeLinuxLikeMain"
+        ]
+      },
+      {
+        "name": "watchosArm64ApiElements",
+        "sourceSet": [
+          "commonMain",
+          "watchosMain",
+          "appleMain",
+          "nativeMain",
+          "nativeLinuxLikeMain"
+        ]
+      },
+      {
+        "name": "watchosSimulatorArm64ApiElements",
+        "sourceSet": [
+          "commonMain",
+          "watchosMain",
+          "appleMain",
+          "nativeMain",
+          "nativeLinuxLikeMain"
+        ]
+      },
+      {
+        "name": "watchosX64ApiElements",
+        "sourceSet": [
+          "commonMain",
+          "watchosMain",
+          "appleMain",
+          "nativeMain",
+          "nativeLinuxLikeMain"
+        ]
+      }
+    ],
+    "sourceSets": [
+      {
+        "name": "appleMain",
+        "dependsOn": [
+          "nativeMain"
+        ],
+        "moduleDependency": [
+          "app.cash.sqldelight:runtime",
+          "co.touchlab:stately-concurrency",
+          "co.touchlab:sqliter-driver",
+          "org.jetbrains.kotlin:kotlin-stdlib-common"
+        ],
+        "sourceSetCInteropMetadataDirectory": "appleMain-cinterop",
+        "binaryLayout": "klib",
+        "hostSpecific": "true"
+      },
+      {
+        "name": "commonMain",
+        "dependsOn": [],
+        "moduleDependency": [
+          "app.cash.sqldelight:runtime",
+          "co.touchlab:stately-concurrency",
+          "co.touchlab:sqliter-driver",
+          "org.jetbrains.kotlin:kotlin-stdlib-common"
+        ],
+        "sourceSetCInteropMetadataDirectory": "commonMain-cinterop",
+        "binaryLayout": "klib"
+      },
+      {
+        "name": "iosMain",
+        "dependsOn": [
+          "appleMain"
+        ],
+        "moduleDependency": [
+          "app.cash.sqldelight:runtime",
+          "co.touchlab:stately-concurrency",
+          "co.touchlab:sqliter-driver",
+          "org.jetbrains.kotlin:kotlin-stdlib-common"
+        ],
+        "sourceSetCInteropMetadataDirectory": "iosMain-cinterop",
+        "binaryLayout": "klib",
+        "hostSpecific": "true"
+      },
+      {
+        "name": "macosMain",
+        "dependsOn": [
+          "appleMain"
+        ],
+        "moduleDependency": [
+          "app.cash.sqldelight:runtime",
+          "co.touchlab:stately-concurrency",
+          "co.touchlab:sqliter-driver",
+          "org.jetbrains.kotlin:kotlin-stdlib-common"
+        ],
+        "sourceSetCInteropMetadataDirectory": "macosMain-cinterop",
+        "binaryLayout": "klib",
+        "hostSpecific": "true"
+      },
+      {
+        "name": "nativeLinuxLikeMain",
+        "dependsOn": [
+          "nativeMain"
+        ],
+        "moduleDependency": [
+          "app.cash.sqldelight:runtime",
+          "co.touchlab:stately-concurrency",
+          "co.touchlab:sqliter-driver",
+          "org.jetbrains.kotlin:kotlin-stdlib-common"
+        ],
+        "sourceSetCInteropMetadataDirectory": "nativeLinuxLikeMain-cinterop",
+        "binaryLayout": "klib"
+      },
+      {
+        "name": "nativeMain",
+        "dependsOn": [
+          "commonMain"
+        ],
+        "moduleDependency": [
+          "app.cash.sqldelight:runtime",
+          "co.touchlab:stately-concurrency",
+          "co.touchlab:sqliter-driver",
+          "org.jetbrains.kotlin:kotlin-stdlib-common"
+        ],
+        "sourceSetCInteropMetadataDirectory": "nativeMain-cinterop",
+        "binaryLayout": "klib"
+      },
+      {
+        "name": "tvosMain",
+        "dependsOn": [
+          "appleMain"
+        ],
+        "moduleDependency": [
+          "app.cash.sqldelight:runtime",
+          "co.touchlab:stately-concurrency",
+          "co.touchlab:sqliter-driver",
+          "org.jetbrains.kotlin:kotlin-stdlib-common"
+        ],
+        "sourceSetCInteropMetadataDirectory": "tvosMain-cinterop",
+        "binaryLayout": "klib",
+        "hostSpecific": "true"
+      },
+      {
+        "name": "watchosMain",
+        "dependsOn": [
+          "appleMain"
+        ],
+        "moduleDependency": [
+          "app.cash.sqldelight:runtime",
+          "co.touchlab:stately-concurrency",
+          "co.touchlab:sqliter-driver",
+          "org.jetbrains.kotlin:kotlin-stdlib-common"
+        ],
+        "sourceSetCInteropMetadataDirectory": "watchosMain-cinterop",
+        "binaryLayout": "klib",
+        "hostSpecific": "true"
+      }
+    ]
+  }
+}

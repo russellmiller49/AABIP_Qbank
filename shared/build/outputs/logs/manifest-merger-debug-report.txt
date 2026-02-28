@@ -1,16 +1,16 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/russellmiller/Projects/iprep/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest6824507871239330713.xml:2:13-83
-INJECTED from /Users/russellmiller/Projects/iprep/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest6824507871239330713.xml:2:13-83
+ADDED from /Users/russellmiller/Projects/AABIP_Qbank/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest1978957876195484498.xml:2:13-83
+INJECTED from /Users/russellmiller/Projects/AABIP_Qbank/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest1978957876195484498.xml:2:13-83
 	package
-		INJECTED from /Users/russellmiller/Projects/iprep/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest6824507871239330713.xml
+		INJECTED from /Users/russellmiller/Projects/AABIP_Qbank/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest1978957876195484498.xml
 	xmlns:android
-		ADDED from /Users/russellmiller/Projects/iprep/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest6824507871239330713.xml:2:23-81
+		ADDED from /Users/russellmiller/Projects/AABIP_Qbank/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest1978957876195484498.xml:2:23-81
 uses-sdk
-INJECTED from /Users/russellmiller/Projects/iprep/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest6824507871239330713.xml reason: use-sdk injection requested
-INJECTED from /Users/russellmiller/Projects/iprep/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest6824507871239330713.xml
-INJECTED from /Users/russellmiller/Projects/iprep/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest6824507871239330713.xml
+INJECTED from /Users/russellmiller/Projects/AABIP_Qbank/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest1978957876195484498.xml reason: use-sdk injection requested
+INJECTED from /Users/russellmiller/Projects/AABIP_Qbank/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest1978957876195484498.xml
+INJECTED from /Users/russellmiller/Projects/AABIP_Qbank/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest1978957876195484498.xml
 	android:targetSdkVersion
-		INJECTED from /Users/russellmiller/Projects/iprep/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest6824507871239330713.xml
+		INJECTED from /Users/russellmiller/Projects/AABIP_Qbank/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest1978957876195484498.xml
 	android:minSdkVersion
-		INJECTED from /Users/russellmiller/Projects/iprep/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest6824507871239330713.xml
+		INJECTED from /Users/russellmiller/Projects/AABIP_Qbank/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest1978957876195484498.xml

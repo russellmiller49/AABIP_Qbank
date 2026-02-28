@@ -1,9 +1,9 @@
 <libraries>
   <library
       name="app.cash.sqldelight:android-driver:2.0.0:release@aar"
-      jars="/Users/russellmiller/.gradle/caches/8.13/transforms/1e8d57a50f9e62f84fb03cb826ed1df7/transformed/android-driver-2.0.0-release/jars/classes.jar"
+      jars="/Users/russellmiller/.gradle/caches/9.2.1/transforms/9998991a96fb95a3339f0cfd1cab39bf/transformed/android-driver-2.0.0-release/jars/classes.jar"
       resolved="app.cash.sqldelight:android-driver:2.0.0"
-      folder="/Users/russellmiller/.gradle/caches/8.13/transforms/1e8d57a50f9e62f84fb03cb826ed1df7/transformed/android-driver-2.0.0-release"
+      folder="/Users/russellmiller/.gradle/caches/9.2.1/transforms/9998991a96fb95a3339f0cfd1cab39bf/transformed/android-driver-2.0.0-release"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -81,9 +81,9 @@
       jars="/Users/russellmiller/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jdk7/1.8.22/4dabb8248310d833bb6a8b516024a91fd3d275c/kotlin-stdlib-jdk7-1.8.22.jar"
       resolved="org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.22"/>
   <library
-      name="org.jetbrains.kotlin:kotlin-stdlib:1.9.20@jar"
-      jars="/Users/russellmiller/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.9.20/e58b4816ac517e9cc5df1db051120c63d4cde669/kotlin-stdlib-1.9.20.jar"
-      resolved="org.jetbrains.kotlin:kotlin-stdlib:1.9.20"/>
+      name="org.jetbrains.kotlin:kotlin-stdlib:2.2.10@jar"
+      jars="/Users/russellmiller/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.2.10/30de6faa127a4a012db8e71bf1b9c0a99b1402b2/kotlin-stdlib-2.2.10.jar"
+      resolved="org.jetbrains.kotlin:kotlin-stdlib:2.2.10"/>
   <library
       name="org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.7.3@jar"
       jars="/Users/russellmiller/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-core-jvm/1.7.3/2b09627576f0989a436a00a4a54b55fa5026fb86/kotlinx-coroutines-core-jvm-1.7.3.jar"
@@ -94,9 +94,9 @@
       resolved="org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.7.3"/>
   <library
       name="androidx.sqlite:sqlite:2.3.1@aar"
-      jars="/Users/russellmiller/.gradle/caches/8.13/transforms/e33b27234e1bc7fe1a1f639c710aa706/transformed/sqlite-2.3.1/jars/classes.jar"
+      jars="/Users/russellmiller/.gradle/caches/9.2.1/transforms/508baab4bdbc082ad1508959f52369cf/transformed/sqlite-2.3.1/jars/classes.jar"
       resolved="androidx.sqlite:sqlite:2.3.1"
-      folder="/Users/russellmiller/.gradle/caches/8.13/transforms/e33b27234e1bc7fe1a1f639c710aa706/transformed/sqlite-2.3.1"
+      folder="/Users/russellmiller/.gradle/caches/9.2.1/transforms/508baab4bdbc082ad1508959f52369cf/transformed/sqlite-2.3.1"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -119,9 +119,9 @@
       resolved="org.slf4j:slf4j-api:1.7.36"/>
   <library
       name="androidx.sqlite:sqlite-framework:2.3.1@aar"
-      jars="/Users/russellmiller/.gradle/caches/8.13/transforms/1787ab82a37993fe2aa5ede00190c39b/transformed/sqlite-framework-2.3.1/jars/classes.jar"
+      jars="/Users/russellmiller/.gradle/caches/9.2.1/transforms/39c26e8e606375421ca77a9ce1077d56/transformed/sqlite-framework-2.3.1/jars/classes.jar"
       resolved="androidx.sqlite:sqlite-framework:2.3.1"
-      folder="/Users/russellmiller/.gradle/caches/8.13/transforms/1787ab82a37993fe2aa5ede00190c39b/transformed/sqlite-framework-2.3.1"
+      folder="/Users/russellmiller/.gradle/caches/9.2.1/transforms/39c26e8e606375421ca77a9ce1077d56/transformed/sqlite-framework-2.3.1"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"

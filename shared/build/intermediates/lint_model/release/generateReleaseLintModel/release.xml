@@ -5,14 +5,13 @@
     targetSdkVersion="24"
     mergedManifest="build/intermediates/merged_manifest/release/processReleaseManifest/AndroidManifest.xml"
     manifestMergeReport="build/outputs/logs/manifest-merger-release-report.txt"
-    proguardFiles="build/intermediates/default_proguard_files/global/proguard-android.txt-8.13.0"
+    proguardFiles="build/intermediates/default_proguard_files/global/proguard-android-optimize.txt-9.0.1"
     partialResultsDir="build/intermediates/lint_partial_results/release/lintAnalyzeRelease/out">
-  <buildFeatures
-      namespacing="REQUIRED"/>
+  <buildFeatures/>
   <sourceProviders>
     <sourceProvider
         manifests="src/androidMain/AndroidManifest.xml"
-        javaDirectories="src/main/java:src/release/java:src/androidMain/kotlin:src/main/kotlin:src/androidRelease/kotlin:src/release/kotlin"
+        javaDirectories="src/main/java:src/release/java:src/androidMain/kotlin:src/main/kotlin:src/release/kotlin"
         resDirectories="src/main/res:src/androidMain/res:src/release/res:src/androidRelease/res"
         assetsDirectories="src/main/assets:src/androidMain/assets:src/release/assets:src/androidRelease/assets"/>
   </sourceProviders>
@@ -26,6 +25,6 @@
       applicationId="com.russellmiller.iprep.shared"
       generatedSourceFolders="build/generated/ap_generated_sources/release/out"
       generatedResourceFolders="build/generated/res/resValues/release"
-      desugaredMethodsFiles="/Users/russellmiller/.gradle/caches/8.13/transforms/c38caf1ba2cad5fcec2f3958c95b3517/transformed/D8BackportedDesugaredMethods.txt">
+      desugaredMethodsFiles="/Users/russellmiller/.gradle/caches/9.2.1/transforms/8a9986a1b0dca2061fe721135722d19f/transformed/D8BackportedDesugaredMethods.txt">
   </artifact>
 </variant>

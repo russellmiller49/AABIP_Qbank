@@ -1,0 +1,151 @@
+{
+  "version": 1,
+  "root": "shared/src/commonMain/resources/assets",
+  "assets": [
+    {
+      "id": "ui.panel.dialog",
+      "category": "ui",
+      "path": "shared/src/commonMain/resources/assets/ui/ui_panel_dialog.png",
+      "source_pack": "ui-pack-adventure",
+      "source_file": "assets_work/extracted/kenney_ui-pack-adventure/PNG/Double/panel_border_brown.png",
+      "pattern": "**/*panel*.png"
+    },
+    {
+      "id": "ui.button.primary",
+      "category": "ui",
+      "path": "shared/src/commonMain/resources/assets/ui/ui_button_primary.png",
+      "source_pack": "ui-pack-adventure",
+      "source_file": "assets_work/extracted/kenney_ui-pack-adventure/PNG/Double/button_brown.png",
+      "pattern": "**/button_brown.png"
+    },
+    {
+      "id": "ui.button.secondary",
+      "category": "ui",
+      "path": "shared/src/commonMain/resources/assets/ui/ui_button_secondary.png",
+      "source_pack": "ui-pack-adventure",
+      "source_file": "assets_work/extracted/kenney_ui-pack-adventure/PNG/Double/button_grey.png",
+      "pattern": "**/button_grey.png"
+    },
+    {
+      "id": "ui.hp.frame",
+      "category": "ui",
+      "path": "shared/src/commonMain/resources/assets/ui/ui_hp_frame.png",
+      "source_pack": "ui-pack-adventure",
+      "source_file": "assets_work/extracted/kenney_ui-pack-adventure/PNG/Double/progress_green_border.png",
+      "pattern": "**/progress_green_border.png"
+    },
+    {
+      "id": "ui.hp.fill",
+      "category": "ui",
+      "path": "shared/src/commonMain/resources/assets/ui/ui_hp_fill.png",
+      "source_pack": "ui-pack-adventure",
+      "source_file": "assets_work/extracted/kenney_ui-pack-adventure/PNG/Double/progress_green.png",
+      "pattern": "**/progress_green.png"
+    },
+    {
+      "id": "icon.status.correct",
+      "category": "icons",
+      "path": "shared/src/commonMain/resources/assets/icons/icon_status_correct.png",
+      "source_pack": "game-icons",
+      "source_file": "assets_work/extracted/kenney_game-icons/PNG/White/2x/checkmark.png",
+      "pattern": "**/PNG/White/2x/checkmark.png"
+    },
+    {
+      "id": "icon.status.wrong",
+      "category": "icons",
+      "path": "shared/src/commonMain/resources/assets/icons/icon_status_wrong.png",
+      "source_pack": "game-icons",
+      "source_file": "assets_work/extracted/kenney_game-icons/PNG/White/2x/cross.png",
+      "pattern": "**/PNG/White/2x/cross.png"
+    },
+    {
+      "id": "icon.status.streak",
+      "category": "icons",
+      "path": "shared/src/commonMain/resources/assets/icons/icon_status_streak.png",
+      "source_pack": "board-game-icons",
+      "source_file": "assets_work/extracted/kenney_board-game-icons/PNG/Double (128px)/campfire.png",
+      "pattern": "**/campfire.png"
+    },
+    {
+      "id": "icon.buff.shield",
+      "category": "icons",
+      "path": "shared/src/commonMain/resources/assets/icons/icon_buff_shield.png",
+      "source_pack": "board-game-icons",
+      "source_file": "assets_work/extracted/kenney_board-game-icons/PNG/Double (128px)/shield.png",
+      "pattern": "**/shield.png"
+    },
+    {
+      "id": "icon.buff.heal",
+      "category": "icons",
+      "path": "shared/src/commonMain/resources/assets/icons/icon_buff_heal.png",
+      "source_pack": "board-game-icons",
+      "source_file": "assets_work/extracted/kenney_board-game-icons/PNG/Double (128px)/suit_hearts.png",
+      "pattern": "**/suit_hearts.png"
+    },
+    {
+      "id": "char.hero.medic",
+      "category": "chars",
+      "path": "shared/src/commonMain/resources/assets/chars/char_hero_medic.png",
+      "source_pack": "shape-characters",
+      "source_file": "assets_work/extracted/kenney_shape-characters/PNG/Default/green_body_circle.png",
+      "pattern": "**/green_body_circle.png"
+    },
+    {
+      "id": "char.enemy.virus_01",
+      "category": "chars",
+      "path": "shared/src/commonMain/resources/assets/chars/char_enemy_virus_01.png",
+      "source_pack": "shape-characters",
+      "source_file": "assets_work/extracted/kenney_shape-characters/PNG/Default/red_body_circle.png",
+      "pattern": "**/red_body_circle.png"
+    },
+    {
+      "id": "bg.arena.clinic_01",
+      "category": "bg",
+      "path": "shared/src/commonMain/resources/assets/bg/bg_arena_clinic_01.png",
+      "source_pack": "top-down-shooter",
+      "source_file": "assets_work/extracted/kenney_top-down-shooter/PNG/Tiles/tile_01.png",
+      "pattern": "**/*tiles*/*.png"
+    },
+    {
+      "id": "vfx.hit.small",
+      "category": "vfx",
+      "path": "shared/src/commonMain/resources/assets/vfx/vfx_hit_small.png",
+      "source_pack": "particle-pack",
+      "source_file": "assets_work/extracted/kenney_particle-pack/PNG (Transparent)/spark_01.png",
+      "pattern": "**/PNG (Transparent)/spark_01.png"
+    },
+    {
+      "id": "vfx.heal.burst",
+      "category": "vfx",
+      "path": "shared/src/commonMain/resources/assets/vfx/vfx_heal_burst.png",
+      "source_pack": "particle-pack",
+      "source_file": "assets_work/extracted/kenney_particle-pack/PNG (Transparent)/magic_01.png",
+      "pattern": "**/PNG (Transparent)/magic_01.png"
+    },
+    {
+      "id": "sfx.ui.tap",
+      "category": "sfx",
+      "path": "shared/src/commonMain/resources/assets/sfx/sfx_ui_tap.ogg",
+      "source_pack": "interface-sounds",
+      "source_file": "assets_work/extracted/kenney_interface-sounds/Audio/click_001.ogg",
+      "pattern": "**/*click*.*"
+    },
+    {
+      "id": "sfx.ui.correct",
+      "category": "sfx",
+      "path": "shared/src/commonMain/resources/assets/sfx/sfx_ui_correct.ogg",
+      "source_pack": "interface-sounds",
+      "source_file": "assets_work/extracted/kenney_interface-sounds/Audio/confirmation_001.ogg",
+      "pattern": "**/*confirm*.*"
+    },
+    {
+      "id": "sfx.ui.wrong",
+      "category": "sfx",
+      "path": "shared/src/commonMain/resources/assets/sfx/sfx_ui_wrong.ogg",
+      "source_pack": "interface-sounds",
+      "source_file": "assets_work/extracted/kenney_interface-sounds/Audio/error_001.ogg",
+      "pattern": "**/*error*.*"
+    }
+  ],
+  "errors": []
+}
